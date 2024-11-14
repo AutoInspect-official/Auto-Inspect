@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    
+    <title>AutoInspect | Sell Your Car with Confidence and Ease</title>
+    <meta name="description" content="Sell your car effortlessly with AutoInspect. Enjoy a trustworthy and hassle-free selling experience while gaining confidence in every step of the process.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../static/icon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <script defer src="../static/script.js"></script>
+</head>
+
+<body>
+<header>
+    <nav class="navbar" style="display: flex; align-items: center; padding: 10px;">
+        <div class="logo" style="display: flex; align-items: center;">
+            <img src="../static/logo.png" alt="CarInspect" style="width: 40px; height: 40px; margin-top: auto; border-radius: 50%; margin-right: 20px; filter: contrast(100%); filter: opacity(100%); pointer-events: none;">
+            <a href="Home.html">
+            <h1 style="margin: 0; font-size: 30px;">AutoInspect</h1>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="car_sell.html">Sell Your Car</a></li>
+        </ul>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+</header>
+
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+    });
+    </script>
+
+<main>
+<!-- Hero Section -->
+<section class="hero sell" style="height: 91vh; margin-bottom: 20px">
+    <h1>Want to sell a perfect car?</h1>
+    <h1>or a car with multiple issues?</h1>
+    <h2>No problem! We could buy your car in any condition.</h2>
+    <p>Note: We will buy your car with a price range based on the condition of the car.</p>
+    <a href="#paypal-button-container" class="submit-btn">Start Selling</a>
+</section>
+
+<!-- Selling Info Section -->
+<div class="sell-car-container" style="margin: 25px 10px 30px 10px">
+    <h1>Sell Your Car</h1>
+    <h2>Experience a seamless selling process with our secure and reliable form for just $5.00</h2>
+    <p>Rest assured, your transaction is safe, and our team is here to support you every step of the way!</p>
+</div>
+
+<!-- PayPal SDK Script -->
+<script src="https://www.paypal.com/sdk/js?client-id=BAAionfD-Ah0HIyyIV9_8dxh7QMLCU9S0HMAbeqAU6hRMq4k6Mn697UITlhsoDuD8Pgy490HOPg3C2OjjY&components=buttons,hosted-buttons&disable-funding=venmo&currency=USD"></script>
+
+<!-- Hosted Button Container -->
+<div id="paypal-container-LMVM7323VLA54"></div>
+
+<!-- Car Selling Form Section -->
+<section id="sell-form" class="sell-form-section" style="display: none;">
+    <h2>Tell Us About Your Car</h2>
+    <form id="car-sell-form">
+        <!-- Form Fields -->
+        <!-- Other input fields here... -->
+        <button type="submit" class="submit-button">Submit Car Details</button>
+    </form>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize PayPal Hosted Button
+        paypal.HostedButtons({
+            hostedButtonId: "LMVM7323VLA54",
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: { value: '5.00' }
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Payment completed by ' + details.payer.name.given_name);
+                    document.querySelector('.sell-form-section').style.display = 'block';
+                });
+            },
+            onError: function(err) {
+                console.error("PayPal Hosted Button Error:", err);
+                alert('An error occurred during the transaction. Please try again.');
+            }
+        }).render("#paypal-container-LMVM7323VLA54");
+    });
+
+    // Handle car sell form submission
+    document.getElementById('car-sell-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(this);
+
+        fetch('http://localhost:5500/api/submit-car', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json();
+        })
+        .then(data => {
+            alert(data.message);
+            this.reset();
+            document.querySelector('.sell-form-section').style.display = 'none';
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('There was an issue submitting your car details. Please try again.');
+        });
+    });
+</script>
+<br>
+<br>
+<br>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/670a5f212480f5b4f58c82b2/1ia087778';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+</script>
+<!--End of Tawk.to Script-->
+
+<!--footer-->
+<footer>
+    <div class="footer-container">
+      <!-- Logo and Description -->
+      <div class="footer-section logo-description">
+        <img src="../static/logo.webp" alt="Auto_Inspect logo" class="footer-logo">
+        <p>We provide reliable car verification and maintenance as well as easy selling services to keep your vehicle in top shape. Trust us for expert advice, detailed inspections, and high-quality service.
+        </p>
+      </div>
+  
+      <!-- Quick Links -->
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about_us.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+  
+      <!-- Our Services -->
+      <div class="footer-section">
+        <h3>Our Services</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Car Verification</a></li>
+          <li><a href="https://www.yourmechanic.com/book/newuser#zip" target="_blank">Maintenance & Repair</a></li>
+          <li><a href="index.html">Vehicle History Report</a></li>
+          <li><a href="car_sell.html">Sell Your Car</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61566611007985" target="_blank">24/7 Support</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact Info -->
+      <div class="footer-section" target="_blank">
+        <h3>Contact Us</h3>
+        <ul class="footer-links">
+          <li><a href="mailto:zainhaider.9388@gmail.com"><strong>Email:</strong> support@autoinspect.com</a></li>
+          <li><a href="tel:(123) 456-7890"><strong>Phone:</strong> +1 (775) 204-1487</a></li>
+          <li><strong>Address:</strong> 23600 Mercantile Road Suite C-100 Postbox ZH008223 Beachwood OH 44122, United States</li>
+        </ul>
+        <div class="footer-socials">
+            <a href="https://www.facebook.com/" class="footer-social-icon" aria-label="Follow us on Facebook" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.linkedin.com/" class="footer-social-icon" aria-label="Connect with us on LinkedIn" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/" class="footer-social-icon" aria-label="Follow us on Instagram" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.example.com/chat" class="footer-social-icon" aria-label="Chat with us" target="_blank">
+                <i class="fas fa-comment-alt"></i>
+            </a>            
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2024 Auto Inspect. All rights reserved. | <a href="policy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </div>
+</footer>
+
+</body>
+</html>

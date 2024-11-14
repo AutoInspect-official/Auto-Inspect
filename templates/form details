@@ -1,0 +1,13 @@
+<button onclick="handlePayment();">
+    Pay Now to Get Car History
+  </button>
+  
+  <script>
+    function handlePayment() {
+      // Open the Payoneer payment link in a new tab
+      window.open('YOUR_PAYONEER_PAYMENT_LINK', '_blank');
+  
+      // Redirect the current tab to the confirmation page
+      window.location.href = 'confirmation.html';
+    }
+  </script>
