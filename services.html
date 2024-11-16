@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    
+    <title>Auto Inspect | Fast & Reliable Car Services at Your Fingertips</title>
+    <meta name="description" content="Explore Auto Inspect’s expert car services, including vehicle verification, maintenance guidance, and hassle-free car sales. Get started today and keep your car in top shape or sell it effortlessly.">
+
+    <link rel="icon" href="../static/icon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<main>
+    <header>
+        <nav class="navbar" style="display: flex; align-items: center; padding: 10px;">
+            <div class="logo" style="display: flex; align-items: center;">
+                <img src="../static/logo.png" alt="CarInspect" style="width: 40px; height: 40px; margin-top: auto; border-radius: 50%; margin-right: 20px; filter: contrast(100%); filter: opacity(100%); pointer-events: none;">
+                <a href="Home.html">
+                <h1 style="margin: 0; font-size: 30px;">AutoInspect</h1>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="car_sell.html">Sell Your Car</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+    </script>
+
+<h2 style="text-align: center; margin: 90px auto; font-size: 45px; text-transform: uppercase;">Services</h2>
+<div class="container" background-image="car_evolution.jpg">
+    <section class="services-section">
+
+        <!-- Vehicle History Report Section -->
+        <div class="service-box">
+            <i class="fas fa-file-alt service-icon"></i>
+            <h2 class="service-title">Vehicle History Report</h2>
+            <p class="service-desc">Get comprehensive reports on any vehicle’s history, including previous ownership, accidents, maintenance records, and more.</p>
+            <a href="Home.html" class="service-action">Get Report</a>
+        </div>
+
+        <!-- Car Selling Section -->
+        <div class="service-box">
+            <i class="fas fa-car service-icon"></i>
+            <h2 class="service-title">Sell Your Car</h2>
+            <p class="service-desc">Easily list your vehicle for sale. Reach thousands of buyers and sell your car at the best price.</p>
+            <a href="/sell-your-car" class="service-action">Sell Now</a>
+        </div>
+
+        <!-- Maintenance Section -->
+        <div class="service-box">
+            <i class="fas fa-tools service-icon"></i>
+            <h2 class="service-title">Car Maintenance</h2>
+            <p class="service-desc">Schedule regular car maintenance services and get top-quality repairs from our trusted partner.</p>
+            <a href="https://www.yourmechanic.com/book/newuser#zip" target="_blank" class="service-action">Visit Maintenance Partner</a>
+        </div>
+    </section>
+</div>
+<br> <br> <br>
+<section id="our-missions" class="mission-section">
+    <div class="container">
+        <h2 class="section-title"><br>Our Mission</h2>
+        <div class="mission-content">
+            <div class="mission-item">
+                <h3>Comprehensive Vehicle Insights</h3>
+                <p>At Auto Inspect, we're committed to empowering you with the most accurate and detailed vehicle history reports. Whether you're buying or selling, our insights provide clarity and confidence, ensuring every transaction is transparent and stress-free.</p>
+            </div>
+            <div class="mission-item">
+                <h3>Hassle-Free Car Maintenance</h3>
+                <p>We believe that car care should be convenient. That’s why our platform connects you with expert maintenance and repair services—no matter where you are. From routine checkups to emergency fixes, we’re here to keep your vehicle in top condition.</p>
+            </div>
+            <div class="mission-item">
+                <h3>Simplified Car Selling</h3>
+                <p>We believe in a hassle-free car selling experience. Whether you're selling a pristine vehicle or one that has seen better days, Auto Inspect ensures a smooth, fair, and fast process with competitive offers.</p>
+            </div>
+            <br>
+            <hr style="width: 50%;">
+            <div class="mission-item">
+                <h3>Ready to Experience the Difference?</h3>
+                <p>Join the thousands of customers who trust Auto Inspect for all their vehicle needs. [Start Here] to get your comprehensive vehicle history report, schedule a repair, or sell your car today!</p>
+            </div> <br>
+        </div>
+    </div>
+</section>
+
+<!-- Ratings Section -->
+<section class="ratings-section">
+    <h2>What Our Customers Say</h2>
+    <div class="rating-stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+    </div>
+    <p class="rating-text">4.5 out of 5 stars</p>
+
+    <div class="customer-reviews">
+        <!-- Initial visible reviews -->
+        <div class="review-box">
+            <p class="reviewer-name">John Doe</p>
+            <p class="review-text">“The vehicle history report saved me from buying a car with hidden accident damage. 10/10 from my side!”</p>
+        </div>
+        <div class="review-box">
+            <p class="reviewer-name">Mark Johnson</p>
+            <p class="review-text">“I booked a maintenance service with their partner, and the experience was fantastic. My car is running perfectly now.”</p>
+        </div>
+        <div class="review-box">
+            <p class="reviewer-name">Jane Smith</p>
+            <p class="review-text">“Found the perfect car thanks to this service!”</p>
+        </div>
+
+        <!-- Hidden reviews -->
+        <div class="extra-reviews" style="display: none;">
+            <div class="review-box">
+                <p class="reviewer-name">James Thompson</p>
+                <p class="review-text">“Honestly, this is the most detailed report I’ve ever seen. I felt 100% confident selling my car knowing I could provide an accurate history to the buyer. You guys are amazing!”</p>
+            </div>
+            <div class="review-box">
+                <p class="reviewer-name">Harry</p>
+                <p class="review-text">“Great experience sir! Definitely worth it”</p>
+            </div>
+            <div class="review-box">
+                <p class="reviewer-name">Emily Parker</p>
+                <p class="review-text">“Wow, just wow! This report saved me from buying a real lemon. Can’t believe how thorough it was. Thank you!”</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Show More/Less Button -->
+    <button id="toggleReviewsBtn" onclick="toggleReviews()">Show More</button>
+
+    <!-- Rating Form -->
+    <h2 style="margin: 20px auto 15px auto;">Rate Us and Leave a Comment</h2>
+    <form id="ratingForm">
+        <label for="rating" class="heading-label">Rate us:</label>
+        <div class="star-rating">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+        </div>
+        <br>
+
+        <label for="name" class="heading-label">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        <br>
+        <label for="comment" class="heading-label">Your Comment:</label>
+        <textarea id="comment" name="comment" rows="4" placeholder="Write your comment here..."></textarea>
+        <br>
+        
+        <button type="button" onclick="submitReview()">Submit</button>
+    </form>
+</section>
+
+<script>
+    // Ratings
+let selectedRating = 0;
+
+// Star hover and click events
+document.querySelectorAll('.star').forEach(star => {
+    star.addEventListener('mouseover', () => {
+        resetStars();
+        fillStars(star.getAttribute('data-value'));
+    });
+
+    star.addEventListener('mouseout', () => {
+        resetStars();
+        if (selectedRating !== 0) {
+            fillStars(selectedRating);
+        }
+    });
+
+    star.addEventListener('click', () => {
+        selectedRating = star.getAttribute('data-value');
+        fillStars(selectedRating);
+    });
+});
+
+// Fill stars based on rating
+function fillStars(rating) {
+    document.querySelectorAll('.star').forEach(star => {
+        if (star.getAttribute('data-value') <= rating) {
+            star.classList.add('filled');
+        }
+    });
+}
+
+// Reset all stars to unfilled
+function resetStars() {
+    document.querySelectorAll('.star').forEach(star => {
+        star.classList.remove('filled');
+    });
+}
+
+// Submit review and add it to the review section
+function submitReview() {
+    const name = document.getElementById('name').value;
+    const comment = document.getElementById('comment').value;
+
+    if (selectedRating && name && comment) {
+        const reviewSection = document.querySelector('.customer-reviews');
+        const newReview = document.createElement('div');
+        newReview.classList.add('review-box');
+        newReview.innerHTML = `<p class="reviewer-name">${name}</p><p class="review-text">"${comment}"</p>`;
+        
+        // Prepend new review and reset the form
+        reviewSection.prepend(newReview);
+        document.getElementById('ratingForm').reset();
+        selectedRating = 0;
+        resetStars();
+        alert('Your review has been submitted!');
+
+        // Show extra reviews if the limit is reached
+        limitReviews();
+    } else {
+        alert('Please provide a name, rating, and a comment.');
+    }
+}
+
+// Toggle visibility of extra reviews
+function toggleReviews() {
+    const extraReviews = document.querySelector('.extra-reviews');
+    const toggleBtn = document.getElementById('toggleReviewsBtn');
+
+    if (extraReviews.style.display === 'none') {
+        extraReviews.style.display = 'block';
+        toggleBtn.textContent = 'Show Less';
+    } else {
+        extraReviews.style.display = 'none';
+        toggleBtn.textContent = 'Show More';
+    }
+}
+
+// Limit visible reviews to three initially
+function limitReviews() {
+    const reviews = document.querySelectorAll('.review-box');
+    const toggleBtn = document.getElementById('toggleReviewsBtn');
+
+    reviews.forEach((review, index) => {
+        review.style.display = index < 3 ? 'block' : 'none';
+    });
+
+    // Show toggle button if there are more than three reviews
+    toggleBtn.style.display = reviews.length > 3 ? 'block' : 'none';
+}
+
+// Initial setup on page load
+limitReviews();
+
+// Slide-in animation when section is in view
+document.addEventListener("DOMContentLoaded", () => {
+    const ratingsSection = document.querySelector('.ratings-section');
+
+    if (ratingsSection) {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    ratingsSection.classList.add('show');  // Add class when section in view
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        observer.observe(ratingsSection);
+    }
+});
+
+// rating animation
+
+// JavaScript to trigger the animation when the element comes into view
+document.addEventListener("DOMContentLoaded", function () {
+    const ratingsSection = document.querySelector('.ratings-section');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                ratingsSection.classList.add('show');
+                observer.unobserve(ratingsSection); // Stop observing once visible
+            }
+        });
+    });
+
+    observer.observe(ratingsSection);
+});
+</script>
+
+</main>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/670a5f212480f5b4f58c82b2/1ia087778';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+</script>
+<!--End of Tawk.to Script-->
+
+<script src="../static/script.js"></script>
+
+<!--footer-->
+<footer>
+    <div class="footer-container">
+      <!-- Logo and Description -->
+      <div class="footer-section logo-description">
+        <img src="../static/logo.webp" alt="Auto_Inspect logo" class="footer-logo">
+        <p>We provide reliable car verification and maintenance as well as easy selling services to keep your vehicle in top shape. Trust us for expert advice, detailed inspections, and high-quality service.
+        </p>
+      </div>
+  
+      <!-- Quick Links -->
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about_us.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+  
+      <!-- Our Services -->
+      <div class="footer-section">
+        <h3>Our Services</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Car Verification</a></li>
+          <li><a href="https://www.yourmechanic.com/book/newuser#zip" target="_blank">Maintenance & Repair</a></li>
+          <li><a href="index.html">Vehicle History Report</a></li>
+          <li><a href="car_sell.html">Sell Your Car</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61566611007985" target="_blank">24/7 Support</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact Info -->
+      <div class="footer-section" target="_blank">
+        <h3>Contact Us</h3>
+        <ul class="footer-links">
+          <li><a href="mailto:zainhaider.9388@gmail.com"><strong>Email:</strong> support@autoinspect.com</a></li>
+          <li><a href="tel:(123) 456-7890"><strong>Phone:</strong> +1 (775) 204-1487</a></li>
+          <li><strong>Address:</strong> 23600 Mercantile Road Suite C-100 Postbox ZH008223 Beachwood OH 44122, United States</li>
+        </ul>
+        <div class="footer-socials">
+            <a href="https://www.facebook.com/" class="footer-social-icon" aria-label="Follow us on Facebook" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.linkedin.com/" class="footer-social-icon" aria-label="Connect with us on LinkedIn" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/" class="footer-social-icon" aria-label="Follow us on Instagram" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.example.com/chat" class="footer-social-icon" aria-label="Chat with us" target="_blank">
+                <i class="fas fa-comment-alt"></i>
+            </a>            
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2024 Auto Inspect. All rights reserved. | <a href="policy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </div>
+</footer>
+
+</body>
+</html>

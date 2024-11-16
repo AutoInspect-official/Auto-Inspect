@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    
+    <title>Auto Inspect | Get Comprehensive Car History Reports Today</title>
+    <meta name="description" content="Obtain complete car history reports for confident buying and selling. Make informed decisions with detailed vehicle insights for a smart trade.">
+
+    <link rel="icon" href="../static/icon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<main>
+    <header>
+        <nav class="navbar" style="display: flex; align-items: center; padding: 10px;">
+            <div class="logo" style="display: flex; align-items: center;">
+                <img src="../static/logo.png" alt="CarInspect" style="width: 40px; height: 40px; margin-top: auto; border-radius: 50%; margin-right: 20px; filter: contrast(100%); filter: opacity(100%); pointer-events: none;">
+                <a href="Home.html">
+                <h1 style="margin: 0; font-size: 30px;">AutoInspect</h1>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="car_sell.html">Sell Your Car</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+        </script>
+<br>
+<br>
+
+<div class="info-box" id="car_info">
+    <h2>Car Details:</h2>
+    <div id="loading-message">Loading VIN data, please wait...</div>
+    <div id="error-message" style="display: none; color: red;">Failed to retrieve VIN data. Retrying...</div>
+    <p><strong>VIN:</strong> <span id="carVin"></span></p>
+    <p><strong>Year:</strong> <span id="carYear"></span></p>
+    <p><strong>Make:</strong> <span id="carMake"></span></p>
+    <p><strong>Model:</strong> <span id="carModel"></span></p>
+    <p><strong>Style:</strong> <span id="carStyle"></span></p>
+    <p><strong>Made In:</strong> <span id="carMadeIn"></span></p>
+    <p><strong>Fuel Type:</strong> <span id="fuelType"></span></p>
+    <p><strong>Vehicle Type:</strong> <span id="vehicleType"></span></p>
+    <p><strong>Trim Level:</strong> <span id="trimLevel"></span></p>
+    <p><strong>Engine Type:</strong> <span id="engineType"></span></p>
+    <p><strong>Transmission Type:</strong> <span id="transmissionType"></span></p>
+    <p><strong>Body Type:</strong> <span id="bodyType"></span></p>
+    <p><strong>Safety Rating:</strong> <span id="safetyRating"></span></p>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+    const vin = new URLSearchParams(window.location.search).get('vin');
+    document.getElementById('carVin').innerText = vin;
+
+    let attempt = 0;
+    const maxAttempts = 3;
+
+    async function fetchCarData() {
+        try {
+            const response = await fetch(`http://localhost:5500/api/vin/${vin}`);
+            
+            if (!response.ok) throw new Error('Failed to fetch car data');
+
+            const carData = await response.json();
+            document.getElementById('loading-message').style.display = 'none';
+            document.getElementById('error-message').style.display = 'none';
+
+            // Populate the data
+            document.getElementById('carYear').innerText = carData.year || "N/A";
+            document.getElementById('carMake').innerText = carData.make || "N/A";
+            document.getElementById('carModel').innerText = carData.model || "N/A";
+            document.getElementById('carStyle').innerText = carData.style || "N/A";
+            document.getElementById('carMadeIn').innerText = carData.madeIn || "N/A";
+            document.getElementById('fuelType').innerText = carData.fuelType || "N/A";
+            document.getElementById('vehicleType').innerText = carData.vehicleType || "N/A";
+            document.getElementById('trimLevel').innerText = carData.trimLevel || "N/A";
+            document.getElementById('engineType').innerText = carData.engineType || "N/A";
+            document.getElementById('transmissionType').innerText = carData.transmissionType || "N/A";
+            document.getElementById('bodyType').innerText = carData.bodyType || "N/A";
+            document.getElementById('safetyRating').innerText = carData.safetyRating || "N/A";
+        } catch (error) {
+            attempt++;
+            console.error('Attempt', attempt, 'Error fetching car data:', error);
+            document.getElementById('error-message').style.display = 'block';
+
+            if (attempt < maxAttempts) {
+                setTimeout(fetchCarData, 2000); // Retry after 2 seconds
+            } else {
+                document.getElementById('loading-message').style.display = 'none';
+                document.getElementById('error-message').innerText = "Failed to retrieve VIN data after multiple attempts. If this massage continues to occur please contact us. Regards.";
+            }
+        }
+    }
+
+    fetchCarData();
+});
+</script>
+
+
+<section class="premium-plan-section">
+    <div class="container">
+        <div class="content-box">
+            <h2>Unlock the <span>detailed car history</span></h2>
+            <p>Gain access to a comprehensive car history report with our premium plan for only <strong>$45.50</strong>.</p>
+
+            <form id="paymentForm" onsubmit="handlePayment(event);">
+                <div class="form-group">
+                    <label for="fullName" style="color: black;">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" style="color: black;">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone" style="color: black;">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="vin" style="color: black;">VIN</label>
+                    <input type="text" id="vin" name="vin" readonly>
+                </div>
+
+                <!-- PayPal button container -->
+                <div id="paypal-container-8RMFKBQB234FA"></div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- PayPal SDK and PayPal Hosted Button Code -->
+
+<script src="https://www.paypal.com/sdk/js?client-id=BAAionfD-Ah0HIyyIV9_8dxh7QMLCU9S0HMAbeqAU6hRMq4k6Mn697UITlhsoDuD8Pgy490HOPg3C2OjjY&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
+
+<script>
+    // Initialize PayPal Hosted Buttons
+    paypal.HostedButtons({
+        hostedButtonId: "8RMFKBQB234FA",
+    }).render("#paypal-container-8RMFKBQB234FA");
+
+    // JavaScript function for handling the form submission and redirect
+    function handlePayment(event) {
+        event.preventDefault();  // Prevent default form submission
+
+        // Retrieve form data
+        const fullName = document.getElementById('fullName').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const vin = document.getElementById('vin').value;
+
+        // Send form data to server
+        fetch('/submit-payment', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ fullName, email, phone, vin })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert(data.message);  // Inform user form data saved
+                // Note: PayPal button handles payment flow
+            } else {
+                alert(`Error: ${data.message}`);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('There was an error submitting the form. Please try again.');
+        });
+    }
+
+    // Load VIN from URL
+    window.onload = function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const vin = urlParams.get('vin');
+        if (vin) {
+            document.getElementById('vin').value = vin;
+        } else {
+            alert("VIN not found in the URL");
+        }
+    };
+</script>
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/670a5f212480f5b4f58c82b2/1ia087778';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+</script>
+<!--End of Tawk.to Script-->
+
+<script src="../static/script.js"></script>
+
+
+<!--footer-->
+<footer>
+    <div class="footer-container">
+      <!-- Logo and Description -->
+      <div class="footer-section logo-description">
+        <img src="../static/logo.webp" alt="Auto_Inspect logo" class="footer-logo">
+        <p>We provide reliable car verification and maintenance as well as easy selling services to keep your vehicle in top shape. Trust us for expert advice, detailed inspections, and high-quality service.
+        </p>
+      </div>
+  
+      <!-- Quick Links -->
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about_us.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+  
+      <!-- Our Services -->
+      <div class="footer-section">
+        <h3>Our Services</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Car Verification</a></li>
+          <li><a href="https://www.yourmechanic.com/book/newuser#zip" target="_blank">Maintenance & Repair</a></li>
+          <li><a href="index.html">Vehicle History Report</a></li>
+          <li><a href="car_sell.html">Sell Your Car</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61566611007985" target="_blank">24/7 Support</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact Info -->
+      <div class="footer-section" target="_blank">
+        <h3>Contact Us</h3>
+        <ul class="footer-links">
+          <li><a href="mailto:zainhaider.9388@gmail.com"><strong>Email:</strong> support@autoinspect.com</a></li>
+          <li><a href="tel:(123) 456-7890"><strong>Phone:</strong> +1 (775) 204-1487</a></li>
+          <li><strong>Address:</strong> 23600 Mercantile Road Suite C-100 Postbox ZH008223 Beachwood OH 44122, United States</li>
+        </ul>
+        <div class="footer-socials">
+            <a href="https://www.facebook.com/" class="footer-social-icon" aria-label="Follow us on Facebook" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.linkedin.com/" class="footer-social-icon" aria-label="Connect with us on LinkedIn" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/" class="footer-social-icon" aria-label="Follow us on Instagram" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.example.com/chat" class="footer-social-icon" aria-label="Chat with us" target="_blank">
+                <i class="fas fa-comment-alt"></i>
+            </a>            
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2024 Auto Inspect. All rights reserved. | <a href="policy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </div>
+</footer>
+
+</body>
+</html>
