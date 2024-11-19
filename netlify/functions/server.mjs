@@ -1,4 +1,4 @@
-import { scrapeVinData } from './vin-bot/vinbot.js'; // Ensure to add .js extension
+import { scrapeVinData } from '../../vin-bot/vinbot.js'; // Ensure to add .js extension
 import cors from 'cors';
 import nodemailer from 'nodemailer';
 import bodyParser from 'body-parser';
@@ -76,8 +76,17 @@ export const handler = async (event, context) => {
     }
 
     // Handle GET request for VIN scraping
-    if (event.httpMethod === 'GET' && event.path.startsWith('/api/vin/')) {
-        const vin = event.path.split('/').pop(); // Extract VIN from path
+    if (event.httpMethod === 'GET' && event.path === '/api/vin') {
+        const urlParams = new URLSearchParams(event.queryStringParameters); // Extract query params
+        const vin = urlParams.get('vin'); // Get 'vin' from query string
+
+        if (!vin) {
+            return {
+                statusCode: 400,
+                body: JSON.stringify({ error: 'VIN parameter is required' })
+            };
+        }
+
         try {
             const carData = await scrapeVinData(vin);
             return {
