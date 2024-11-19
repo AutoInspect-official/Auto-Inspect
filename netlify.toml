@@ -1,6 +1,6 @@
 [build]
   functions = "netlify/functions"  # Path to serverless functions
-  publish = "static"               # Path to your static files (HTML, CSS, JS, etc.)
+  publish = "."
 
 [functions]
   node_bundler = "esbuild"         # Use esbuild for bundling Node.js functions
