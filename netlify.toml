@@ -3,6 +3,4 @@
   publish = "static"               # Path to your static files (HTML, CSS, JS, etc.)
 
 [functions]
-  runtime = "nodejs18"             # Specify Node.js 18 runtime
-  node_bundler = "esbuild"         # Use esbuild to bundle Node.js functions
-  included_files = ["vin-bot/vinbot.js"] # Ensure vinbot.js is included in the function deployment
+  node_bundler = "esbuild"         # Use esbuild for bundling Node.js functions
