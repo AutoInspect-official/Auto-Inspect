@@ -1,7 +1,8 @@
 [build]
-  functions = "netlify/functions"  # Path where the serverless functions are stored
-  publish = "static"               # Path to your static assets (CSS, JS, images)
-  
+  functions = "netlify/functions"  # Path to serverless functions
+  publish = "static"               # Path to your static files (HTML, CSS, JS, etc.)
+
 [functions]
+  runtime = "nodejs18"             # Specify Node.js 18 runtime
   node_bundler = "esbuild"         # Use esbuild to bundle Node.js functions
-  runtime = "nodejs16"             # Ensure you're using a Node.js runtime compatible with ES modules
+  included_files = ["vin-bot/vinbot.js"] # Ensure vinbot.js is included in the function deployment
