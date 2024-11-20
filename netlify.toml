@@ -5,27 +5,10 @@
   ignore = "exit 0"                # A harmless script to ignore problematic plugins
 
 [functions]
-  node_bundler = "esbuild"         # Use esbuild for bundling Node.js functions
+  node_bundler = "esbuild"         # Use es-build for bundling Node.js functions
   included_files = ["vin-bot/vinbot.js"]  # Include vinbot.js from the vin-bot directory
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
-# Optional: Turn off specific plugins explicitly
-[[plugins]]
-  package = "@netlify/plugin-lighthouse"
-  enabled = false
-
-[[plugins]]
-  package = "netlify-plugin-js-obfuscator"
-  enabled = false
-
-[[plugins]]
-  package = "@netlify/plugin-sitemap"
-  enabled = false
-
-[[plugins]]
-  package = "@netlify/plugin-emails"
-  enabled = false
