@@ -1,10 +1,10 @@
 [build]
-  functions = "netlify/functions"   # Path to the functions directory (server.mjs)
-  publish = "static"                 # Frontend assets are in the "static" directory
+  functions = "netlify/functions"   # Path to the functions directory
+  publish = "static"                 # Path to static assets (if they are inside static/ folder)
 
 [functions]
   node_bundler = "esbuild"           # Use esbuild for bundling Node.js functions
-  included_files = ["vin-bot/vinbot.js"]  # Include vinbot.js file from the vin-bot folder
+  included_files = ["vin-bot/vinbot.js"]  # Include vinbot.js from the vin-bot directory
 
 [[redirects]]
   from = "/*"

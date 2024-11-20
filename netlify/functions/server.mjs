@@ -1,4 +1,4 @@
-import { scrapeVinData } from '../vin-bot/vinbot.js'; // Adjust path as per your project structure
+import { scrapeVinData } from '../../vin-bot/vinbot.js'; // Adjust path as per your project structure
 import cors from 'cors';
 import nodemailer from 'nodemailer';
 import bodyParser from 'body-parser';
