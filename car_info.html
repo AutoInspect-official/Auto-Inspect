@@ -127,12 +127,12 @@ document.addEventListener("DOMContentLoaded", async () => {
                     <label for="fullName" style="color: black;">Full Name</label>
                     <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="email" style="color: black;">Email</label>
                     <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="phone" style="color: black;">Phone</label>
                     <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
@@ -140,83 +140,61 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                 <div class="form-group">
                     <label for="vin" style="color: black;">VIN</label>
-                    <input type="text" id="vin" name="vin" readonly>
+                    <input type="text" id="vin" name="vin" value="4T1BE30K12U058669" readonly>
                 </div>
 
                 <!-- PayPal button container -->
-                <div id="paypal-container-8RMFKBQB234FA"></div>
+                <div id="paypal-container"></div>
             </form>
         </div>
     </div>
 </section>
 
 <script>
-    // Fetch the PayPal Client ID from Netlify function
+    // Fetch PayPal Client ID from the serverless function
     fetch('/.netlify/functions/getPaypalClientId')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Error fetching PayPal Client ID: ${response.statusText}`);
+            }
+            return response.json();
+        })
         .then(data => {
             const clientId = data.clientId;
 
-            // Load PayPal SDK dynamically with the fetched client ID
+            // Dynamically load PayPal SDK with the fetched client ID
             const script = document.createElement('script');
-            script.src = `https://www.paypal.com/sdk/js?client-id=${clientId}&components=buttons,hosted-buttons&disable-funding=venmo&currency=USD`;
+            script.src = `https://www.paypal.com/sdk/js?client-id=${clientId}&components=buttons&currency=USD`;
             script.onload = initializePayPalButton;
             document.body.appendChild(script);
         })
         .catch(error => {
-            console.error('Error loading PayPal client ID:', error);
-            alert('There was an issue loading PayPal. Please try again later.');
+            console.error('Error loading PayPal Client ID:', error);
+            alert('Unable to load PayPal. Please try again later.');
         });
 
-    // Function to initialize PayPal Hosted Button
+    // Initialize PayPal buttons
     function initializePayPalButton() {
-        document.addEventListener('DOMContentLoaded', function() {
-            paypal.HostedButtons({
-                hostedButtonId: "LMVM7323VLA54",
-                createOrder: function(data, actions) {
-                    return actions.order.create({
-                        purchase_units: [{
-                            amount: { value: '5.00' }
-                        }]
-                    });
-                },
-                onApprove: function(data, actions) {
-                    return actions.order.capture().then(function(details) {
-                        alert('Payment completed by ' + details.payer.name.given_name);
-                        document.querySelector('.sell-form-section').style.display = 'block';
-                    });
-                },
-                onError: function(err) {
-                    console.error("PayPal Hosted Button Error:", err);
-                    alert('An error occurred during the transaction. Please try again.');
-                }
-            }).render("#paypal-container");
-        });
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: { value: '45.50' }
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Payment completed by ' + details.payer.name.given_name);
+                });
+            },
+            onError: function(err) {
+                console.error('PayPal Error:', err);
+                alert('An error occurred during the transaction. Please try again.');
+            }
+        }).render('#paypal-container');
     }
-
-    // Handle car sell form submission
-    document.getElementById('car-sell-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        const formData = new FormData(this);
-
-        fetch('/api/submit-car', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            alert(data.message);
-            this.reset();
-            document.querySelector('.sell-form-section').style.display = 'none';
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('There was an issue submitting your car details. Please try again.');
-        });
-    });
 </script>
-
 
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">

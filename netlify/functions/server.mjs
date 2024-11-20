@@ -1,17 +1,22 @@
-import { scrapeVinData } from '../../vin-bot/vinbot.js'; // Ensure to add .js extension
+import { scrapeVinData } from './vin-bot/vinbot.js'; // Adjust path as per your project structure
 import cors from 'cors';
 import nodemailer from 'nodemailer';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
-import path from 'path';
 
 dotenv.config();
 
-// Initialize CORS and Body Parser as middleware
+// Middleware initialization
 const corsMiddleware = cors();
 const bodyParserMiddleware = bodyParser.json();
 
-// Function to send a notification email when a new form is submitted
+/**
+ * Send notification email to the admin with form details.
+ * @param {string} fullName - User's full name.
+ * @param {string} email - User's email address.
+ * @param {string} phone - User's phone number.
+ * @param {string} vin - Vehicle Identification Number.
+ */
 async function sendNotification(fullName, email, phone, vin) {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
@@ -34,77 +39,112 @@ async function sendNotification(fullName, email, phone, vin) {
 
     try {
         const info = await transporter.sendMail(mailOptions);
-        console.log('Notification email sent:', info.response);
+        console.log('Notification email sent successfully:', info.response);
     } catch (error) {
-        console.error('Error sending email:', error);
-        throw error;
+        console.error('Error sending email:', error.message);
+        throw new Error('Failed to send notification email.');
     }
 }
 
-// Netlify serverless function handler
-export const handler = async (event, context) => {
-    // Handle POST request for form submission
-    if (event.httpMethod === 'POST' && event.path === '/submit-payment') {
-        const { fullName, email, phone, vin } = JSON.parse(event.body);
+/**
+ * Handle the POST request to submit payment form data.
+ * @param {object} event - The request event.
+ */
+async function handlePaymentSubmission(event) {
+    const { fullName, email, phone, vin } = JSON.parse(event.body);
 
-        try {
-            // Save form data (you would implement your DB logic here)
-            console.log(`Saving form data: ${fullName}, ${email}, ${phone}, VIN: ${vin}`);
-
-            // Send notification to admin
-            await sendNotification(fullName, email, phone, vin);
-
-            // Return success response with transaction details for payment
-            return {
-                statusCode: 200,
-                body: JSON.stringify({
-                    success: true,
-                    message: 'Form data saved. Redirecting to payment...',
-                    transactionDetails: {
-                        amount: 45,
-                        description: 'Premium Plan for Detailed Car History'
-                    }
-                })
-            };
-        } catch (error) {
-            console.error('Error handling form submission:', error);
-            return {
-                statusCode: 500,
-                body: JSON.stringify({ success: false, message: 'Failed to process form submission' })
-            };
-        }
+    if (!fullName || !email || !phone || !vin) {
+        return {
+            statusCode: 400,
+            body: JSON.stringify({ success: false, message: 'All fields are required.' })
+        };
     }
 
-    // Handle GET request for VIN scraping
-    if (event.httpMethod === 'GET' && event.path === '/api/vin') {
-        const urlParams = new URLSearchParams(event.queryStringParameters); // Extract query params
-        const vin = urlParams.get('vin'); // Get 'vin' from query string
+    try {
+        console.log(`Received form submission: ${fullName}, ${email}, ${phone}, VIN: ${vin}`);
 
-        if (!vin) {
-            return {
-                statusCode: 400,
-                body: JSON.stringify({ error: 'VIN parameter is required' })
-            };
-        }
+        // Notify the admin
+        await sendNotification(fullName, email, phone, vin);
 
-        try {
-            const carData = await scrapeVinData(vin);
-            return {
-                statusCode: 200,
-                body: JSON.stringify(carData)
-            };
-        } catch (error) {
-            console.error('Error fetching VIN data:', error.message);
-            return {
-                statusCode: 500,
-                body: JSON.stringify({ error: 'Unable to retrieve car information at the moment. Please try again later.' })
-            };
-        }
+        return {
+            statusCode: 200,
+            body: JSON.stringify({
+                success: true,
+                message: 'Form data submitted successfully!',
+                transactionDetails: {
+                    amount: 45.50,
+                    description: 'Premium Plan for Detailed Car History'
+                }
+            })
+        };
+    } catch (error) {
+        console.error('Error processing form submission:', error.message);
+        return {
+            statusCode: 500,
+            body: JSON.stringify({ success: false, message: 'Failed to process form submission.' })
+        };
+    }
+}
+
+/**
+ * Handle GET request to scrape VIN data.
+ * @param {object} event - The request event.
+ */
+async function handleVinScraping(event) {
+    const vin = event.queryStringParameters?.vin;
+
+    if (!vin) {
+        return {
+            statusCode: 400,
+            body: JSON.stringify({ success: false, message: 'VIN parameter is required.' })
+        };
     }
 
-    // Default 404 handler for unsupported paths
-    return {
-        statusCode: 404,
-        body: JSON.stringify({ message: 'Not Found' })
-    };
+    try {
+        const carData = await scrapeVinData(vin);
+        return {
+            statusCode: 200,
+            body: JSON.stringify(carData)
+        };
+    } catch (error) {
+        console.error('Error scraping VIN data:', error.message);
+        return {
+            statusCode: 500,
+            body: JSON.stringify({ success: false, message: 'Failed to retrieve car information.' })
+        };
+    }
+}
+
+/**
+ * Main serverless function handler.
+ */
+export const handler = async (event) => {
+    console.log(`Incoming request: ${event.httpMethod} ${event.path}`);
+
+    try {
+        // Allow CORS
+        corsMiddleware({}, {}, () => {});
+        bodyParserMiddleware({}, {}, () => {});
+
+        // Route handling
+        if (event.httpMethod === 'POST' && event.path === '/submit-payment') {
+            return await handlePaymentSubmission(event);
+        }
+
+        if (event.httpMethod === 'GET' && event.path === '/api/vin') {
+            return await handleVinScraping(event);
+        }
+
+        // Default 404 for unsupported routes
+        return {
+            statusCode: 404,
+            body: JSON.stringify({ success: false, message: 'Endpoint not found.' })
+        };
+    } catch (error) {
+        console.error('Unhandled server error:', error.message);
+        return {
+            statusCode: 500,
+            body: JSON.stringify({ success: false, message: 'Internal server error.' })
+        };
+    }
 };
