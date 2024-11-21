@@ -12,10 +12,6 @@ const bodyParserMiddleware = bodyParser.json();
 
 /**
  * Send notification email to the admin with form details.
- * @param {string} fullName - User's full name.
- * @param {string} email - User's email address.
- * @param {string} phone - User's phone number.
- * @param {string} vin - Vehicle Identification Number.
  */
 async function sendNotification(fullName, email, phone, vin) {
     const transporter = nodemailer.createTransport({
@@ -48,7 +44,6 @@ async function sendNotification(fullName, email, phone, vin) {
 
 /**
  * Handle the POST request to submit payment form data.
- * @param {object} event - The request event.
  */
 async function handlePaymentSubmission(event) {
     const { fullName, email, phone, vin } = JSON.parse(event.body);
@@ -88,7 +83,6 @@ async function handlePaymentSubmission(event) {
 
 /**
  * Handle GET request to scrape VIN data.
- * @param {object} event - The request event.
  */
 async function handleVinScraping(event) {
     const vin = event.queryStringParameters?.vin;
@@ -116,6 +110,25 @@ async function handleVinScraping(event) {
 }
 
 /**
+ * Handle GET request to fetch PayPal Client ID.
+ */
+async function handleGetPaypalClientId() {
+    const clientId = process.env.PAYPAL_CLIENT_ID;
+
+    if (!clientId) {
+        return {
+            statusCode: 500,
+            body: JSON.stringify({ success: false, message: 'PayPal Client ID not found.' })
+        };
+    }
+
+    return {
+        statusCode: 200,
+        body: JSON.stringify({ clientId })
+    };
+}
+
+/**
  * Main serverless function handler.
  */
 export const handler = async (event) => {
@@ -133,6 +146,10 @@ export const handler = async (event) => {
 
         if (event.httpMethod === 'GET' && event.path === '/api/vin') {
             return await handleVinScraping(event);
+        }
+
+        if (event.httpMethod === 'GET' && event.path === '/getPaypalClientId') {
+            return await handleGetPaypalClientId();
         }
 
         // Default 404 for unsupported routes
