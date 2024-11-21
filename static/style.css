@@ -603,41 +603,51 @@ button:hover {
     padding: 80px 20px;
     text-align: center;
     color: rgb(27, 27, 27);
-}
+  }
 
-.container {
+  .container {
+    color: black; /* Text inside the container is black */
     max-width: 800px;
     margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.9);
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
+  }
 
-.content-box h2 {
+  .content-box h2 {
     font-size: 2.5em;
     margin-bottom: 10px;
-}
+  }
 
-.content-box h2 span {
-    color: rgb(0, 0, 0);
+  .content-box h2 span {
+    color: black; /* Bold part of the header is black */
     font-weight: bold;
-}
+  }
 
-.content-box p {
+  .content-box p {
+    color: black; /* Paragraph text is black */
     font-size: 1.5em;
     margin-bottom: 20px;
-}
+  }
 
-#paypal-container-8RMFKBQB234FA {
+  form .form-group label {
+    color: black; /* Label text color is black */
+    font-size: 1em;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  #paypal-container-8RMFKBQB234FA {
+    color: black;
     display: flex;               /* Use flexbox for centering */
     justify-content: center;     /* Center horizontally */
     align-items: center;         /* Center vertically */
     width: 100%;                 /* Full width */
-    max-width: 400px;           /* Maximum width */
+    max-width: 400px;            /* Maximum width */
     margin: 0 auto;              /* Centering on the page */
     padding: 20px;               /* Optional padding */
-}
+  }
 
 @media (max-width: 600px) {
     #paypal-container-8RMFKBQB234FA {
