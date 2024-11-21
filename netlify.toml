@@ -1,11 +1,10 @@
 [build]
   functions = "netlify/functions"   # Path to the functions directory
-  publish = "static"               # Path to static assets (if they are inside static/ folder)
-  # Disabling automatic plugin detection
-  ignore = "exit 0"                # A harmless script to ignore problematic plugins
+  publish = "."                    # Serve files from the root directory
+  ignore = "exit 0"                # Skip automatic plugin detection
 
 [functions]
-  node_bundler = "esbuild"         # Use es-build for bundling Node.js functions
+  node_bundler = "esbuild"         # Use esbuild for bundling Node.js functions
   included_files = ["vin-bot/vinbot.js"]  # Include vinbot.js from the vin-bot directory
 
 [[redirects]]
