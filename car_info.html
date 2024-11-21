@@ -123,22 +123,22 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             <form id="paymentForm" onsubmit="handlePayment(event);">
                 <div class="form-group">
-                    <label for="fullName" style="color: black;">Full Name</label>
+                    <label for="fullName">Full Name</label>
                     <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="email" style="color: black;">Email</label>
+                    <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="phone" style="color: black;">Phone</label>
+                    <label for="phone">Phone</label>
                     <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="vin" style="color: black;">VIN</label>
+                    <label for="vin">VIN</label>
                     <input type="text" id="vin" name="vin" value="4T1BE30K12U058669" readonly>
                 </div>
 
@@ -148,6 +148,130 @@ document.addEventListener("DOMContentLoaded", async () => {
         </div>
     </div>
 </section>
+
+<style>
+    /* General styles */
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    .premium-plan-section {
+        background-color: #ffffff;
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .content-box {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    h2 {
+        font-size: 2rem;
+        color: #333;
+    }
+
+    span {
+        color: #3498db;
+    }
+
+    p {
+        font-size: 1.2rem;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    strong {
+        font-size: 1.5rem;
+        color: #e74c3c;
+    }
+
+    /* Form styles */
+    .form-group {
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    label {
+        font-size: 1rem;
+        color: #333;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px;
+        margin-top: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+    }
+
+    input[readonly] {
+        background-color: #f0f0f0;
+        cursor: not-allowed;
+    }
+
+    input:focus {
+        outline: none;
+        border-color: #3498db;
+    }
+
+    /* Center PayPal button */
+    #paypal-container {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Responsiveness */
+    @media (max-width: 768px) {
+        .content-box {
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        .form-group input {
+            font-size: 0.9rem;
+            padding: 10px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        h2 {
+            font-size: 1.2rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+
+        .form-group input {
+            font-size: 0.8rem;
+            padding: 8px;
+        }
+    }
+</style>
 
 <script>
     // Directly use the PayPal Client ID (Replace this with your actual PayPal Client ID)
