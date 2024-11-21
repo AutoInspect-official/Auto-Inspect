@@ -150,27 +150,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 </section>
 
 <script>
-    // Fetch PayPal Client ID from the serverless function
-    fetch('/.netlify/functions/getPaypalClientId')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`Error fetching PayPal Client ID: ${response.statusText}`);
-            }
-            return response.json();
-        })
-        .then(data => {
-            const clientId = data.clientId;
+    // Directly use the PayPal Client ID (Replace this with your actual PayPal Client ID)
+    const PAYPAL_CLIENT_ID = 'BAAionfD-Ah0HIyyIV9_8dxh7QMLCU9S0HMAbeqAU6hRMq4k6Mn697UITlhsoDuD8Pgy490HOPg3C2OjjY';
 
-            // Dynamically load PayPal SDK with the fetched client ID
-            const script = document.createElement('script');
-            script.src = `https://www.paypal.com/sdk/js?client-id=${clientId}&components=buttons&currency=USD`;
-            script.onload = initializePayPalButton;
-            document.body.appendChild(script);
-        })
-        .catch(error => {
-            console.error('Error loading PayPal Client ID:', error);
-            alert('Unable to load PayPal. Please try again later.');
-        });
+    // Dynamically load PayPal SDK with the embedded client ID
+    const script = document.createElement('script');
+    script.src = `https://www.paypal.com/sdk/js?client-id=${PAYPAL_CLIENT_ID}&components=buttons&currency=USD`;
+    script.onload = initializePayPalButton;
+    document.body.appendChild(script);
 
     // Initialize PayPal buttons
     function initializePayPalButton() {

@@ -110,25 +110,6 @@ async function handleVinScraping(event) {
 }
 
 /**
- * Handle GET request to fetch PayPal Client ID.
- */
-async function handleGetPaypalClientId() {
-    const clientId = process.env.PAYPAL_CLIENT_ID;
-
-    if (!clientId) {
-        return {
-            statusCode: 500,
-            body: JSON.stringify({ success: false, message: 'PayPal Client ID not found.' })
-        };
-    }
-
-    return {
-        statusCode: 200,
-        body: JSON.stringify({ clientId })
-    };
-}
-
-/**
  * Main serverless function handler.
  */
 export const handler = async (event) => {
@@ -146,10 +127,6 @@ export const handler = async (event) => {
 
         if (event.httpMethod === 'GET' && event.path === '/api/vin') {
             return await handleVinScraping(event);
-        }
-
-        if (event.httpMethod === 'GET' && event.path === '/getPaypalClientId') {
-            return await handleGetPaypalClientId();
         }
 
         // Default 404 for unsupported routes
