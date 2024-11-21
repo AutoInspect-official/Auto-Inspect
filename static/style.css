@@ -632,7 +632,6 @@ button:hover {
   }
 
   form .form-group label {
-    color: black; /* Label text color is black */
     font-size: 1em;
     display: block;
     margin-bottom: 8px;
