@@ -8,6 +8,11 @@
   included_files = ["vin-bot/vinbot.js"]  # Include vinbot.js from the vin-bot directory (if needed)
 
 [[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/server"
+  status = 200
+
+[[redirects]]
   from = "/*"
-  to = "/.netlify/functions/server" # Redirect all routes to the serverless function
+  to = "/index.html"
   status = 200

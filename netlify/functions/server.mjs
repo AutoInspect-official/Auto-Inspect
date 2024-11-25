@@ -109,31 +109,30 @@ async function handleVinScraping(event) {
     }
 }
 
-require('dotenv').config(); // Load environment variables
-
+require('dotenv').config();
 const express = require('express');
 const app = express();
 
 // Check if ENV_CHECK is loaded
 const isEnvConnected = process.env.ENV_CHECK === 'connected';
-
-// Log status in the console
 if (isEnvConnected) {
   console.log('✅ .env file connected successfully');
 } else {
   console.error('❌ Failed to load .env file or ENV_CHECK variable is missing');
 }
 
-// Display status on the home page
-app.get('/', (req, res) => {
+// API Endpoint
+app.get('/api/status', (req, res) => {
   if (isEnvConnected) {
-    res.send('<h1>✅ .env file is connected</h1>');
+    res.json({ message: '✅ .env file is connected' });
   } else {
-    res.send('<h1>❌ .env file is not connected</h1>');
+    res.json({ message: '❌ .env file is not connected' });
   }
 });
 
-module.exports = app; // For Netlify deployment
+// Other API routes can be defined here...
+
+module.exports = app;
 
 /**
  * Main serverless function handler.
