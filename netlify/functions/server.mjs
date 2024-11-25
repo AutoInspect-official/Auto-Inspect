@@ -109,31 +109,6 @@ async function handleVinScraping(event) {
     }
 }
 
-require('dotenv').config();
-const express = require('express');
-const app = express();
-
-// Check if ENV_CHECK is loaded
-const isEnvConnected = process.env.ENV_CHECK === 'connected';
-if (isEnvConnected) {
-  console.log('✅ .env file connected successfully');
-} else {
-  console.error('❌ Failed to load .env file or ENV_CHECK variable is missing');
-}
-
-// API Endpoint
-app.get('/api/status', (req, res) => {
-  if (isEnvConnected) {
-    res.json({ message: '✅ .env file is connected' });
-  } else {
-    res.json({ message: '❌ .env file is not connected' });
-  }
-});
-
-// Other API routes can be defined here...
-
-module.exports = app;
-
 /**
  * Main serverless function handler.
  */

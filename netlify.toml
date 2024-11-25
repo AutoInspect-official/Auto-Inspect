@@ -4,13 +4,8 @@
   ignore = "exit 0"                # Skip automatic plugin detection
 
 [functions]
-  node_bundler = "esbuild"          # Use esbuild for bundling Node.js functions
-  included_files = ["vin-bot/vinbot.js"]  # Include vinbot.js from the vin-bot directory (if needed)
-
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/server"
-  status = 200
+  node_bundler = "esbuild"         # Use esbuild for bundling Node.js functions
+  included_files = ["vin-bot/vinbot.js"]  # Include vinbot.js from the vin-bot directory
 
 [[redirects]]
   from = "/*"

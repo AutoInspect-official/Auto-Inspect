@@ -516,20 +516,6 @@ form p:nth-of-type(3) {
     </form>
 </section>
 
-<script>
-    // Trigger the server check automatically when the page loads
-    window.addEventListener('load', async () => {
-      try {
-        const response = await fetch('/');
-        const text = await response.text();
-        console.log('Server Response:', text); // Log server response to the console
-        document.body.innerHTML += text; // Optionally, append the status to the page
-      } catch (error) {
-        console.error('Error connecting to the server:', error);
-      }
-    });
-  </script>
-
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
