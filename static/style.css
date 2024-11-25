@@ -4,56 +4,79 @@
     box-sizing: border-box;
 }
 
+/* Global Body Styling */
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #f1f1f1;
-    text-align: justify;
     margin: 0;
-    display: absolute;
-    align-items: center;
-    height: 100vh;
+    padding: 0;
+    justify-content: center;
+    align-items: flex-start; /* Align to the top of the page */
+    min-height: 100vh; /* Ensures full viewport height */
+    text-align: justify; /* Justify text in paragraphs */
 }
+
+/* Global Paragraph Styling */
+p {
+    font-size: 1.3rem; /* Set a consistent font size for paragraphs */
+    line-height: 1.6; /* Ensures good readability */
+}
+
+/* Example: Heading Styling */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 0.5em 0;
+}
+
+/* Optionally, add more specific styling for other elements */
+
 
 /* Header */
 header {
     height: 10vh;
     background-color: rgba(0, 0, 0, 0.90);
-    padding: 10px auto;
+    padding: 10px 20px; /* Added padding for spacing */
+    display: flex;
+    align-items: center; /* Ensures vertical centering of items */
     justify-content: space-between;
-    align-items: center;
     z-index: 5;
 }
 
 h1 {
     font-size: 3em;
-    color: rgba(0, 0, 0, 0.90); 
-    font-family: "Times New Roman", serif; 
+    color: white;
+    font-family: "Times New Roman", serif;
+    margin: 0;
 }
 
-p {
-    font-size: 1.5em;
-    margin: 10px auto;
+.logo {
+    display: flex;
+    align-items: center;
 }
 
-.logo h1 {
-    color: white; 
-    padding-top: 4px;
-    padding-bottom: 1.5px;
+.logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
 }
 
 .navbar {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     width: 100%;
+    align-items: center;
 }
 
 .nav-links {
-    padding-top: 4px;
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 50%;
+    padding-top: 4px;
+}
+
+.nav-links li {
+    position: relative;
 }
 
 .nav-links li a {
@@ -61,11 +84,53 @@ p {
     text-decoration: none;
     font-size: 18px;
     padding: 10px 15px;
+    display: block;
 }
 
 .nav-links li a:hover {
     background-color: #5c5c5c;
     border-radius: 5px;
+}
+
+/* Dropdown Menu Styling */
+.nav-links .dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Ensures it appears below the "Buy/Sell" button */
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 160px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 9999; 
+    padding: 10px 0;
+    list-style-type: none; /* Removes bullet points */
+    margin: 0; /* Resets default margins */
+    padding-left: 0; /* Ensures no unintended padding */
+    overflow-x: hidden; /* Prevents horizontal overflow */
+    max-width: calc(100vw - 20px); /* Ensures it doesn't exceed screen width */
+}
+
+.nav-links .dropdown .dropdown-menu li {
+    margin: 0; /* Ensures consistent spacing for items */
+    padding: 0; /* Removes any added padding */
+    list-style-type: none; /* Ensures list items remain without bullets */
+}
+
+.nav-links .dropdown .dropdown-menu li a {
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    display: block; /* Ensures full clickable area */
+}
+
+.nav-links .dropdown .dropdown-menu li a:hover {
+    background-color: #5c5c5c;
+    border-radius: 5px;
+}
+
+/* Show dropdown on hover */
+.nav-links .dropdown:hover .dropdown-menu {
+    display: block;
 }
 
 .hamburger {
@@ -79,19 +144,20 @@ p {
     height: 3px;
     background-color: white;
     margin: 2px;
-    padding: 2.3px;
 }
 
 @media (max-width: 768px) {
+    /* Mobile Navbar Styles */
     .nav-links {
         display: none;
         flex-direction: column;
-        width: 100%;
         position: absolute;
         top: 70px;
         left: 0;
         background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
         z-index: 10;
+        text-align: center;
     }
 
     .nav-links.open {
@@ -102,13 +168,25 @@ p {
         display: flex;
     }
 
-    .nav-links li {
-        text-align: center;
-        margin: 10px 0;
-    }
-
     .nav-links li a {
         font-size: 20px;
+        padding: 20px;
+    }
+
+    /* Ensure dropdown menu shows on mobile as well */
+    .nav-links .dropdown .dropdown-menu {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        list-style-type: none; /* Removes bullet points in mobile view */
+    }
+}
+
+/* Ensure Buy/Sell dropdown doesn't get hidden in mobile */
+@media (max-width: 768px) {
+    .nav-links .dropdown .dropdown-menu {
+        width: 100%;
     }
 }
 
@@ -153,6 +231,10 @@ p {
 
 .hero.faq::before {
     background-image: url('../static/faq.jpg');
+}
+
+.hero.service::before {
+    background-image: url('../static/over_all_mantainance.webp');
 }
 
 .hero h1 {
@@ -532,80 +614,7 @@ button:hover {
     }
 }
 
-/* VIN report info box */
-.info-box {
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    width: 90vw; 
-    max-width: 1000px; 
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 0 auto; 
-    text-align: center; 
-    animation: fadeIn 1.5s ease-in forwards; 
-}
-
-.info-box h2 {
-    margin-top: 20px;
-    margin-bottom: 30px;
-    font-size: 25px;
-    color: #333;
-}
-
-.info-box p {
-    text-align: left;
-    margin-bottom: 15px;
-    margin: 10px 0;
-    font-size: 20px;
-    color: #555;
-    line-height: 1.5; 
-    opacity: 0; 
-    animation: fadeInParagraph 0.5s ease-in forwards; 
-    animation-delay: var(--delay); 
-}
-
-.info-box p strong {
-    color: #333;
-}
-
-@keyframes fadeInParagraph {
-    from {
-        opacity: 0;
-        transform: translateY(10px); 
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0); 
-    }
-}
-
-@media (max-width: 768px) {
-    .info-box {
-        width: 90vw; 
-        padding: 15px; 
-    }
-
-    .info-box h2 {
-        font-size: 23px; 
-    }
-
-    .info-box p {
-        font-size: 18px; 
-    }
-}
-
-.premium-plan-section {
-    margin: 30px auto;
-    padding: 80px 20px;
-    text-align: center;
-    color: rgb(27, 27, 27);
-  }
-
-  .container {
+.container {
     color: black; /* Text inside the container is black */
     max-width: 800px;
     margin: 0 auto;
@@ -616,8 +625,8 @@ button:hover {
   }
 
   .content-box h2 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+      font-size: 2.5em;
+      margin-bottom: 10px;
   }
 
   .content-box h2 span {
@@ -635,6 +644,107 @@ button:hover {
     font-size: 1em;
     display: block;
     margin-bottom: 8px;
+}
+
+/* Partners Section */
+.partners-section {
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.partners-section .section-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.partners-section .section-desc {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Partners Slider */
+.partners-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px 0;
+    scrollbar-width: thick; /* Show scrollbar for Firefox */
+    scrollbar-color: #969696 transparent; /* Light scrollbar */
+    scroll-snap-type: x mandatory; /* Enables snapping */
+    align-items: center;
+}
+
+.partners-slider::-webkit-scrollbar {
+    height: 8px; /* Thin scrollbar */
+    background-color: transparent;
+}
+
+.partners-slider::-webkit-scrollbar-thumb {
+    background-color: #969696;
+    border-radius: 5px;
+}
+
+.partner {
+    flex: 0 0 auto;
+    background: white;
+    padding: 15px;
+    border-radius: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: center; /* Center each logo on scroll */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partner:hover {
+    transform: scale(1.1); /* Grows on hover */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.partner-logo {
+    width: 150px; /* Default size */
+    height: auto;
+    filter: grayscale(100%);
+    opacity: 0.8; /* Slightly dim by default */
+    border-radius: 50%;
+    transition: filter 0.5s ease, opacity 0.2s ease; /* Fast opacity transition */
+}
+
+.partner-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1; /* Fully clear */
+    transition: filter 0.5s ease, opacity 0.2s ease; /* Fast opacity transition */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .partners-slider {
+        gap: 15px;
+    }
+
+    .partner-logo {
+        width: 120px; /* Slightly smaller */
+    }
+}
+
+@media (max-width: 480px) {
+    .partner-logo {
+        width: 100px; /* Even smaller for narrow screens */
+    }
+}
+
+.premium-plan-section {
+    margin: 30px auto;
+    padding: 80px 20px;
+    text-align: center;
+    color: rgb(27, 27, 27);
   }
 
   #paypal-container-8RMFKBQB234FA {
@@ -905,75 +1015,121 @@ button[type="button"]:hover {
     color: #272727;
 }
 
-/* Services */
+/* Services Container */
 .container {
+    background-color: #f5f5f5;
     max-width: 1200px;
     margin: 50px auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-.services-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.service-box {
-    flex: 1;
-    min-width: 300px;
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    text-align: center;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column; 
-    justify-content: space-between; 
-    transition: transform 0.3s;
-}
-.service-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-.service-icon {
-    font-size: 48px;
-    margin-bottom: 20px;
-    color: #333;
-}
-.service-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-.service-desc {
-    font-size: 16px;
-    color: #555;
-    flex-grow: 1; 
-}
-.service-action {
-    margin-top: 20px;
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.90);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-.service-action:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px; /* Slightly increased padding for better spacing */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Softer shadow for a modern look */
+    border-radius: 12px; /* Slightly rounded edges for a softer appearance */
+    overflow: hidden;
+    color: #272727;
 }
 
+/* Services Section */
+.services-section {
+    background-color: #f5f5f5; /* Subtle separation */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Slightly wider boxes */
+    gap: 50px; /* Significantly increased gap for spaciousness */
+    padding: 40px; /* More padding around the grid for breathing room */
+}
+
+/* Service Boxes */
+.service-box {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 35px; /* Larger padding for better content spacing */
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Prevent overlap by creating a stacking context */
+}
+
+/* Hover Effect */
+.service-box:hover {
+    transform: translateY(-7px); /* Subtle upward movement */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced elevation effect */
+}
+
+/* Service Icons */
+.service-icon {
+    font-size: 55px; /* Slightly larger for prominence */
+    margin-bottom: 25px; /* Increased spacing from the title */
+    color: rgba(0, 0, 0, 0.9);
+}
+
+/* Service Title */
+.service-title {
+    font-size: 26px; /* Slightly larger text for emphasis */
+    font-weight: bold;
+    color: #272727;
+    margin-bottom: 20px;
+}
+
+/* Service Description */
+.service-desc {
+    font-size: 18px; /* Enhanced readability */
+    color: #555;
+    line-height: 1.8;
+    flex-grow: 1;
+    margin-bottom: 30px; /* More spacing before the button */
+}
+
+/* Call-to-Action Button */
+.service-action {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.9); /* Matching theme */
+    color: white;
+    padding: 14px 35px; /* Larger button for emphasis */
+    border-radius: 8px; /* Slightly rounded corners for a modern look */
+    font-size: 18px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.service-action:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly lighter on hover */
+    transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .services-section {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .service-box {
+        padding: 20px;
+    }
+    .service-title {
+        font-size: 22px;
+    }
+    .service-desc {
+        font-size: 16px;
+    }
+    .service-action {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+/* Mission Section */
 .mission-section {
+    background-color: #f5f5f5;
     padding: 60px 0;
 }
 
 .section-title {
-    margin-top: 15px;
     text-align: center;
     font-size: 36px;
-    color: #000000;
+    color: #333;
     margin-bottom: 40px;
     font-weight: bold;
 }
@@ -987,27 +1143,99 @@ button[type="button"]:hover {
 }
 
 .mission-item {
-    background-color: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
 }
 
 .mission-item:hover {
     transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .mission-item h3 {
     font-size: 28px;
-    color: rgb(0, 0, 0, 90);
+    color: rgba(0, 0, 0, 0.9); /* Updated to required color */
     margin-bottom: 15px;
 }
 
 .mission-item p {
     font-size: 18px;
-    color: #5f656b;
+    color: #555;
     line-height: 1.6;
+}
+
+/* Fix for Extra Space Below Buttons */
+.services-section img {
+    display: none; /* Hides unnecessary image causing space */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .services-section {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+        gap: 15px;
+    }
+
+    .service-box {
+        padding: 15px;
+    }
+
+    .service-title {
+        font-size: 20px;
+    }
+
+    .service-desc {
+        font-size: 14px;
+    }
+
+    .service-action {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .mission-item h3 {
+        font-size: 24px;
+    }
+
+    .mission-item p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-box {
+        padding: 10px;
+    }
+
+    .service-title {
+        font-size: 18px;
+    }
+
+    .service-desc {
+        font-size: 14px;
+    }
+
+    .service-action {
+        font-size: 14px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .mission-item h3 {
+        font-size: 20px;
+    }
+
+    .mission-item p {
+        font-size: 14px;
+    }
 }
 
 /* Car Sell Form */

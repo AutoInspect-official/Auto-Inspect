@@ -15,18 +15,29 @@
 
 <main>
     <header>
-        <nav class="navbar" style="display: flex; align-items: center; padding: 10px;">
+        <nav class="navbar">
             <div class="logo" style="display: flex; align-items: center;">
                 <img src="../static/logo.png" alt="CarInspect" style="width: 40px; height: 40px; margin-top: auto; border-radius: 50%; margin-right: 20px; filter: contrast(100%); filter: opacity(100%); pointer-events: none;">
                 <a href="Home.html">
-                <h1 style="margin: 0; font-size: 30px;">AutoInspect</h1>
+                    <h1 style="margin: 0; font-size: 30px;">AutoInspect</h1>
                 </a>
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="car_sell.html">Sell Your Car</a></li>
+                <li class="dropdown">
+                    <a class="buy-sell">Buy/Sell</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a target="_blank" href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1" class="dropdown-link">
+                                Buy a Car
+                            </a>
+                            <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024" alt="eBay Tracking Pixel" style="display: none;">
+                        </li>                        
+                        <li><a href="car_sell.html">Sell Your Car</a></li>
+                    </ul>
+                </li>
             </ul>
             <div class="hamburger">
                 <div class="line"></div>
@@ -34,7 +45,7 @@
                 <div class="line"></div>
             </div>
         </nav>
-    </header>
+    </header>    
 
     <script>
         const hamburger = document.querySelector('.hamburger');
@@ -45,34 +56,50 @@
         });
     </script>
 
-<h2 style="text-align: center; margin: 90px auto; font-size: 45px; text-transform: uppercase;">Services</h2>
+<!-- Hero Section -->
+<section class="hero service">
+    <h1>Services</h1>
+    <h2>Get served by the best professionals in the industry.</h2>
+</section>
+<h2 style="text-align: center; margin: 90px auto; font-size: 45px; text-transform: uppercase;"></h2>
 <div class="container" background-image="car_evolution.jpg">
+    
     <section class="services-section">
+        <section>
+            <!-- Vehicle History Report Section -->
+            <div class="service-box">
+                <i class="fas fa-file-alt service-icon"></i>
+                <h2 class="service-title">Vehicle History Report</h2>
+                <p class="service-desc">Get comprehensive reports on any vehicle’s history, including previous ownership, accidents, maintenance records, and more.</p>
+                <a href="Home.html" class="service-action">Get Report</a>
+            </div>
+        
+            <!-- Car Buying Section -->
+            <div class="service-box">
+                <i class="fas fa-shopping-cart service-icon"></i>
+                <h2 class="service-title">Buy a Car</h2>
+                <p class="service-desc">Find the perfect car for your needs from a wide selection of vehicles from trusted partners (Ebay Motors).</p>
+                <a target="_blank" href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1" class="service-action">Browse Cars</a>
+                <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024">
+            </div>
+            
+            <!-- Car Maintenance Section -->
+            <div class="service-box">
+                <i class="fas fa-tools service-icon"></i>
+                <h2 class="service-title">Car Maintenance</h2>
+                <p class="service-desc">Schedule regular car maintenance services and get top-quality repairs from our trusted partner.</p>
+                <a href="https://www.yourmechanic.com/book/newuser#zip" target="_blank" class="service-action">Visit Maintenance Partner</a>
+            </div>
 
-        <!-- Vehicle History Report Section -->
-        <div class="service-box">
-            <i class="fas fa-file-alt service-icon"></i>
-            <h2 class="service-title">Vehicle History Report</h2>
-            <p class="service-desc">Get comprehensive reports on any vehicle’s history, including previous ownership, accidents, maintenance records, and more.</p>
-            <a href="Home.html" class="service-action">Get Report</a>
-        </div>
+            <!-- Car Selling Section -->
+            <div class="service-box">
+                <i class="fas fa-car service-icon"></i>
+                <h2 class="service-title">Sell Your Car</h2>
+                <p class="service-desc">Easily list your vehicle for sale. Reach thousands of buyers and sell your car at the best price.</p>
+                <a href="/sell-your-car" class="service-action">Sell Now</a>
+            </div>
+        </section>
 
-        <!-- Car Selling Section -->
-        <div class="service-box">
-            <i class="fas fa-car service-icon"></i>
-            <h2 class="service-title">Sell Your Car</h2>
-            <p class="service-desc">Easily list your vehicle for sale. Reach thousands of buyers and sell your car at the best price.</p>
-            <a href="/sell-your-car" class="service-action">Sell Now</a>
-        </div>
-
-        <!-- Maintenance Section -->
-        <div class="service-box">
-            <i class="fas fa-tools service-icon"></i>
-            <h2 class="service-title">Car Maintenance</h2>
-            <p class="service-desc">Schedule regular car maintenance services and get top-quality repairs from our trusted partner.</p>
-            <a href="https://www.yourmechanic.com/book/newuser#zip" target="_blank" class="service-action">Visit Maintenance Partner</a>
-        </div>
-    </section>
 </div>
 <br> <br> <br>
 <section id="our-missions" class="mission-section">
@@ -95,7 +122,7 @@
             <hr style="width: 50%;">
             <div class="mission-item">
                 <h3>Ready to Experience the Difference?</h3>
-                <p>Join the thousands of customers who trust Auto Inspect for all their vehicle needs. [Start Here] to get your comprehensive vehicle history report, schedule a repair, or sell your car today!</p>
+                <p>Join the thousands of customers who trust Auto Inspect for all their vehicle needs. <a href="index.html" style="color: #333">Start Here</a> to get your comprehensive vehicle history report, schedule a repair, or sell your car today!</p>
             </div> <br>
         </div>
     </div>
@@ -348,13 +375,18 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="footer-section">
         <h3>Our Services</h3>
         <ul class="footer-links">
-          <li><a href="index.html">Car Verification</a></li>
-          <li><a href="https://www.yourmechanic.com/book/newuser#zip" target="_blank">Maintenance & Repair</a></li>
-          <li><a href="index.html">Vehicle History Report</a></li>
-          <li><a href="car_sell.html">Sell Your Car</a></li>
-          <li><a href="https://www.facebook.com/profile.php?id=61566611007985" target="_blank">24/7 Support</a></li>
+            <li><a href="index.html">Vehicle Verification Report</a></li>
+            <li><a href="https://www.yourmechanic.com/book/newuser#zip" target="_blank">Maintenance & Repair</a></li>
+            <li>
+                <a target="_blank" href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1" class="footer-action">
+                    Buy A Car
+                </a>
+                <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024" alt="eBay Tracking Pixel" style="display: none;">
+            </li>
+            <li><a href="car_sell.html">Sell Your Car</a></li>
+            <li><a href="https://tawk.to/chat/670a5f212480f5b4f58c82b2/1ia087778" target="_blank">24/7 Support</a></li>
         </ul>
-      </div>
+        </div>
   
       <!-- Contact Info -->
       <div class="footer-section" target="_blank">

@@ -4,10 +4,10 @@
   ignore = "exit 0"                # Skip automatic plugin detection
 
 [functions]
-  node_bundler = "esbuild"         # Use esbuild for bundling Node.js functions
-  included_files = ["vin-bot/vinbot.js"]  # Include vinbot.js from the vin-bot directory
+  node_bundler = "esbuild"          # Use esbuild for bundling Node.js functions
+  included_files = ["vin-bot/vinbot.js"]  # Include vinbot.js from the vin-bot directory (if needed)
 
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/.netlify/functions/server" # Redirect all routes to the serverless function
   status = 200

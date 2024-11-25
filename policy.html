@@ -57,27 +57,38 @@
 
 <body>
     <main>
-    <header>
-        <nav class="navbar" style="display: flex; align-items: center; padding: 10px;">
-            <div class="logo" style="display: flex; align-items: center;">
-                <img src="../static/logo.png" alt="CarInspect" style="width: 40px; height: 40px; margin-top: auto; border-radius: 50%; margin-right: 20px; filter: contrast(100%); filter: opacity(100%); pointer-events: none;">
-                <a href="Home.html">
-                <h1 style="margin: 0; font-size: 30px;">AutoInspect</h1>
-                </a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="car_sell.html">Sell Your Car</a></li>
-            </ul>
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-        </nav>
-    </header>
+        <header>
+            <nav class="navbar">
+                <div class="logo" style="display: flex; align-items: center;">
+                    <img src="../static/logo.png" alt="CarInspect" style="width: 40px; height: 40px; margin-top: auto; border-radius: 50%; margin-right: 20px; filter: contrast(100%); filter: opacity(100%); pointer-events: none;">
+                    <a href="Home.html">
+                        <h1 style="margin: 0; font-size: 30px;">AutoInspect</h1>
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="dropdown">
+                        <a class="buy-sell">Buy/Sell</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a target="_blank" href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1" class="dropdown-link">
+                                    Buy a Car
+                                </a>
+                                <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024" alt="eBay Tracking Pixel" style="display: none;">
+                            </li>                        
+                            <li><a href="car_sell.html">Sell Your Car</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </nav>
+        </header>    
 
     <script>
         const hamburger = document.querySelector('.hamburger');
@@ -215,13 +226,18 @@
       <div class="footer-section">
         <h3>Our Services</h3>
         <ul class="footer-links">
-          <li><a href="index.html">Car Verification</a></li>
-          <li><a href="https://www.yourmechanic.com/book/newuser#zip" target="_blank">Maintenance & Repair</a></li>
-          <li><a href="index.html">Vehicle History Report</a></li>
-          <li><a href="car_sell.html">Sell Your Car</a></li>
-          <li><a href="https://www.facebook.com/profile.php?id=61566611007985" target="_blank">24/7 Support</a></li>
+            <li><a href="index.html">Vehicle Verification Report</a></li>
+            <li><a href="https://www.yourmechanic.com/book/newuser#zip" target="_blank">Maintenance & Repair</a></li>
+            <li>
+                <a target="_blank" href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1" class="footer-action">
+                    Buy A Car
+                </a>
+                <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024" alt="eBay Tracking Pixel" style="display: none;">
+            </li>
+            <li><a href="car_sell.html">Sell Your Car</a></li>
+            <li><a href="https://tawk.to/chat/670a5f212480f5b4f58c82b2/1ia087778" target="_blank">24/7 Support</a></li>
         </ul>
-      </div>
+       </div>
   
       <!-- Contact Info -->
       <div class="footer-section" target="_blank">

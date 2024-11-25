@@ -18,18 +18,29 @@
 
 <main>
     <header>
-        <nav class="navbar" style="display: flex; align-items: center; padding: 10px;">
+        <nav class="navbar">
             <div class="logo" style="display: flex; align-items: center;">
                 <img src="../static/logo.png" alt="CarInspect" style="width: 40px; height: 40px; margin-top: auto; border-radius: 50%; margin-right: 20px; filter: contrast(100%); filter: opacity(100%); pointer-events: none;">
                 <a href="Home.html">
-                <h1 style="margin: 0; font-size: 30px;">AutoInspect</h1>
+                    <h1 style="margin: 0; font-size: 30px;">AutoInspect</h1>
                 </a>
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="car_sell.html">Sell Your Car</a></li>
+                <li class="dropdown">
+                    <a class="buy-sell">Buy/Sell</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a target="_blank" href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1" class="dropdown-link">
+                                Buy a Car
+                            </a>
+                            <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024" alt="eBay Tracking Pixel" style="display: none;">
+                        </li>                        
+                        <li><a href="car_sell.html">Sell Your Car</a></li>
+                    </ul>
+                </li>
             </ul>
             <div class="hamburger">
                 <div class="line"></div>
@@ -37,7 +48,7 @@
                 <div class="line"></div>
             </div>
         </nav>
-    </header>
+    </header>    
 
     <script>
         const hamburger = document.querySelector('.hamburger');
@@ -64,8 +75,76 @@
     </div>
 </div>
 
+<style>
+    form p {
+    font-size: 1em; 
+    text-align: center; 
+    color: white; 
+    margin: 5px 0; 
+    padding: 5px; 
+    border: none; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
 
-<<div class="form-container">
+/* Default styles for larger screens */
+form p:nth-of-type(1) {
+    font-size: calc(1rem + 1.5vw); 
+    color: white;
+}
+
+form p:nth-of-type(2) {
+    font-size: calc(0.9rem + 1.2vw); 
+    color: white;
+}
+
+form p:nth-of-type(3) {
+    font-size: calc(0.8rem + 1vw); 
+    color: whitesmoke;
+}
+
+/* Styles for mobile screens */
+@media (max-width: 600px) {
+    form p:nth-of-type(1) { 
+        font-size: calc(1rem + 1.5vw); 
+        color: white;
+    }
+
+    form p:nth-of-type(2) {
+        font-size: calc(0.9rem + 1.2vw); 
+        color: white;
+    }
+
+    form p:nth-of-type(3) {
+        font-size: calc(0.8rem + 1vw); 
+        color: whitesmoke;
+    }
+
+    .form-group, .form-group-right {
+        margin-bottom: 8px; 
+        width: 100%; 
+    }
+
+    .form-group input, .form-group-right input {
+        width: 100%;
+        padding: 6px; 
+        border: 1px solid white;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+
+    .form-group label, .form-group-right label {
+        font-size: 18px;
+    }
+
+    .custom-line {
+        width: 90%; 
+        margin: 8px 0;
+    }
+}
+</style>
+
+<div class="form-container">
     <form id="vinForm">
         <p><b>Get Certified Vehicle History Report</b></p>
         <p>Enter your car's <span class="tooltip"><u>VIN number</u></span> below:</p>
@@ -112,6 +191,51 @@
 
 </div>
 
+<!-- Partners Section -->
+<section class="partners-section">
+    <div class="container" style="background-color: #f1f1f1; border: none; box-shadow: none;">
+        <h2 class="section-title">Our Trusted Partners</h2>
+        <p class="section-desc">We are proud to collaborate with these industry-leading brands to deliver unmatched automotive services and solutions.</p>
+            <div class="partners-slider">
+                <div class="partner">
+                    <a href="https://www.carfax.com/" target="_blank">
+                        <img src="../static/carfax.png" alt="Carfax Logo" class="partner-logo">
+                    </a>
+                </div>
+                <div class="partner">
+                    <a href="https://www.yourmechanic.com/" target="_blank">
+                        <img src="../static/your_mechanic.png" alt="YourMechanic Logo" class="partner-logo">
+                    </a>
+                </div>
+                <div class="partner">
+                    <a href="https://www.kbb.com/" target="_blank">
+                        <img src="../static/kelleys_blue_book.png" alt="Kelley Blue Book Logo" class="partner-logo">
+                    </a>
+                </div>
+                <div class="partner">
+                    <a href="https://www.ebay.com/motors" target="_blank">
+                        <img src="../static/ebay.png" alt="eBay Motors Logo" class="partner-logo">
+                    </a>
+                </div>
+                <div class="partner">
+                    <a href="https://vehiclehistory.bja.ojp.gov/" target="_blank">
+                        <img src="../static/nmvtis.jpeg" alt="nmvtis Logo" class="partner-logo">
+                    </a>
+                </div>
+                <div class="partner">
+                    <a href="https://www.vincheck.info/" target="_blank">
+                        <img src="../static/vincheck.png" alt="VINCheck Logo" class="partner-logo">
+                    </a>
+                </div>
+                <div class="partner">
+                    <a href="https://www.vinfreecheck.com/motors" target="_blank">
+                        <img src="../static/vinfreecheck.jpeg" alt="VINFreeCheck Logo" class="partner-logo">
+                    </a>
+                </div>
+            </div>
+    </div>
+</section>
+
 <div class="return-policy" style="padding: 10%; color: white; background-color: rgb(0, 0, 0, 0.90);"> 
     <h1 style="text-align: center; margin: 40px auto; color: white;">Refund Policy</h1>
     <p style="margin: 14px auto;"><strong>Dear Valued Clients,</strong></p>
@@ -123,34 +247,75 @@
 <br>
 <br>
 
-<div class="container">
+<div class="container" style="background-color: white;">
+    <!-- Section: Verify Your Car -->
     <div class="section">
         <div class="text">
-            <h2><a href="index.html" style="color: Black;">VERIFY YOUR CAR</a></h2><br>
-            <p>Gain peace of mind with our comprehensive vehicle verification service. Obtain a detailed vehicle history report that includes essential information such as specifications, damage history, recall notices, and more. Whether you’re buying or selling, ensure you have all the facts.</p>
+            <h2>
+                <a href="index.html" style="color: Black; text-decoration: none;">VERIFY YOUR CAR</a>
+            </h2>
+            <p>
+                Gain peace of mind with our comprehensive vehicle verification service. Obtain a detailed vehicle 
+                history report that includes essential information such as specifications, damage history, 
+                recall notices, and more. Whether you’re buying or selling, ensure you have all the facts.
+            </p>
         </div>
         <div class="image">
-            <img src="../static/car_verify.webp" alt="vehicle verify">
+            <img src="../static/car_verify.webp" alt="Vehicle Verification" />
         </div>
     </div>
 
+    <!-- Section: Buy Your Ideal Car -->
+    <div class="section"> 
+        <div class="text">
+            <h2>
+                <a href="index.html" style="color: Black; text-decoration: none;">BUY YOUR IDEAL CAR</a>
+            </h2>
+            <p class="service-desc">
+                Explore a vast selection of vehicles tailored to your needs on eBay Motors. Whether you're searching for a reliable family car, a stylish coupe, or a powerful truck, find the perfect match effortlessly.
+            </p>
+            <a target="_blank" href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1" class="service-action" style="color: white; text-decoration: none; font-weight: bold;">Browse Cars</a>
+            <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024" alt="eBay Tracking Pixel" style="display: none;">
+        </div>
+        <div class="image">
+            <img src="../static/car_buy.jpg" alt="Find Your Ideal Car on eBay Motors" />
+        </div>
+    </div>
+    
+
+    <!-- Section: Maintain Your Car -->
     <div class="section">
         <div class="image">
-            <img src="../static/car_maintenance.jpg" alt="vehicle maintenance">
+            <img src="../static/car_maintenance.jpg" alt="Vehicle Maintenance" />
         </div>
         <div class="text">
-            <h2><a href="https://www.yourmechanic.com/book/newuser#zip" style="color: Black;">MAINTAIN IT REGULARLY</a></h2><br>
-            <p>Keep your vehicle in optimal condition with our hassle-free online booking system. Our trusted partners offer a wide range of maintenance services, from routine checks to upgrades, all performed under expert supervision. Stay proactive about your car’s health to ensure safety and reliability on the road.</p>
+            <h2>
+                <a href="https://www.yourmechanic.com/book/newuser#zip" style="color: Black; text-decoration: none;" target="_blank">MAINTAIN IT REGULARLY</a>
+            </h2>
+            <p>
+                Keep your vehicle in optimal condition with our hassle-free online booking system. Our trusted 
+                partners offer a wide range of maintenance services, from routine checks to upgrades, all 
+                performed under expert supervision. Stay proactive about your car’s health to ensure safety 
+                and reliability on the road.
+            </p>
         </div>
     </div>
 
+    <!-- Section: Sell Your Car -->
     <div class="section">
         <div class="text">
-            <h2><a href="car_sell.html" target="_blank" style="color: Black;">GET TIRED? SELL YOUR CAR</a></h2><br>
-            <p>Looking to sell your car? We accept vehicles of all brands and conditions, ensuring a smooth selling process tailored to your desired price. For an accurate valuation, please discuss your pricing preferences with us via our Live Chat feature. Let us assist you in making the sale hassle-free.</p>
+            <h2>
+                <a href="car_sell.html" style="color: Black; text-decoration: none;" target="_blank">GET TIRED? SELL YOUR CAR</a>
+            </h2>
+            <p>
+                Looking to sell your car? We accept vehicles of all brands and conditions, ensuring a smooth 
+                selling process tailored to your desired price. For an accurate valuation, please discuss your 
+                pricing preferences with us via our Live Chat feature. Let us assist you in making the sale 
+                hassle-free.
+            </p>
         </div>
         <div class="image">
-            <img src="../static/car_selling.jpg" alt="vehicle selling">
+            <img src="../static/selling.webp" alt="Sell Your Vehicle" />
         </div>
     </div>
 </div>
@@ -213,7 +378,7 @@
     }
 
     .why-point p {
-        font-size: 16px;
+        font-size: 18px;
         color: #000;
     }
 </style>
@@ -351,6 +516,20 @@
     </form>
 </section>
 
+<script>
+    // Trigger the server check automatically when the page loads
+    window.addEventListener('load', async () => {
+      try {
+        const response = await fetch('/');
+        const text = await response.text();
+        console.log('Server Response:', text); // Log server response to the console
+        document.body.innerHTML += text; // Optionally, append the status to the page
+      } catch (error) {
+        console.error('Error connecting to the server:', error);
+      }
+    });
+  </script>
+
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -392,16 +571,22 @@
       </div>
   
       <!-- Our Services -->
-      <div class="footer-section">
-        <h3>Our Services</h3>
-        <ul class="footer-links">
-          <li><a href="index.html">Car Verification</a></li>
-          <li><a href="https://www.yourmechanic.com/book/newuser#zip" target="_blank">Maintenance & Repair</a></li>
-          <li><a href="index.html">Vehicle History Report</a></li>
-          <li><a href="car_sell.html">Sell Your Car</a></li>
-          <li><a href="https://www.facebook.com/profile.php?id=61566611007985" target="_blank">24/7 Support</a></li>
-        </ul>
-      </div>
+    <div class="footer-section">
+    <h3>Our Services</h3>
+    <ul class="footer-links">
+        <li><a href="index.html">Vehicle Verification Report</a></li>
+        <li><a href="https://www.yourmechanic.com/book/newuser#zip" target="_blank">Maintenance & Repair</a></li>
+        <li>
+            <a target="_blank" href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1" class="footer-action">
+                Buy A Car
+            </a>
+            <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024" alt="eBay Tracking Pixel" style="display: none;">
+        </li>
+        <li><a href="car_sell.html">Sell Your Car</a></li>
+        <li><a href="https://tawk.to/chat/670a5f212480f5b4f58c82b2/1ia087778" target="_blank">24/7 Support</a></li>
+    </ul>
+    </div>
+
   
       <!-- Contact Info -->
       <div class="footer-section" target="_blank">
