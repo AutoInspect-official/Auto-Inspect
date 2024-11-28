@@ -87,6 +87,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     async function fetchCarData() {
         try {
+
             const response = await fetch(`https://autoinspect.netlify.app/.netlify/functions/api/vin?vin=${vin}`);
             
             if (!response.ok) throw new Error('Failed to fetch car data');

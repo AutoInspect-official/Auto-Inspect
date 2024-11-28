@@ -1,4 +1,4 @@
-import { scrapeVinData } from './vin-bot/vinbot.js';
+import { scrapeVinData } from './vin-bot/vinbot.js'; // Assuming vinbot.js contains a function to scrape VIN data
 import cors from 'cors';
 import nodemailer from 'nodemailer';
 import bodyParser from 'body-parser';
@@ -89,13 +89,40 @@ async function handleCarSaleSubmission(event) {
 }
 
 /**
+ * Handle the GET request for VIN data.
+ */
+async function handleVinDataRequest(event) {
+    const vin = new URLSearchParams(event.queryStringParameters).get('vin');
+    if (!vin) {
+        return {
+            statusCode: 400,
+            body: JSON.stringify({ success: false, message: 'VIN is required.' }),
+        };
+    }
+
+    try {
+        const carData = await scrapeVinData(vin); // Assuming scrapeVinData fetches car details based on VIN
+        return {
+            statusCode: 200,
+            body: JSON.stringify(carData),
+        };
+    } catch (error) {
+        console.error('Error fetching VIN data:', error.message);
+        return {
+            statusCode: 500,
+            body: JSON.stringify({ success: false, message: 'Failed to fetch VIN data.' }),
+        };
+    }
+}
+
+/**
  * Main serverless function handler.
  */
 export const handler = async (event) => {
     console.log(`Incoming request: ${event.httpMethod} ${event.path}`);
 
     try {
-        // Allow CORS
+        // Allow CORS and body parsing
         try {
             corsMiddleware({}, {}, () => {});
             bodyParserMiddleware({}, {}, () => {});
@@ -104,9 +131,14 @@ export const handler = async (event) => {
             throw new Error('Middleware initialization failed.');
         }
 
-        // Route handling
+        // Route handling for POST /submit-car
         if (event.httpMethod === 'POST' && event.path === '/submit-car') {
             return await handleCarSaleSubmission(event);
+        }
+
+        // Route handling for GET /api/vin
+        if (event.httpMethod === 'GET' && event.path === '/api/vin') {
+            return await handleVinDataRequest(event);
         }
 
         // Default 404 for unsupported routes
