@@ -71,78 +71,95 @@
 <!-- Selling Info Section -->
 <div class="sell-car-container" style="margin: 25px 10px 30px 10px">
     <h1>Sell Your Car</h1>
-    <h2>Experience a seamless selling process with our secure and reliable form for just $5.00</h2>
-    <p>Rest assured, your transaction is safe, and our team is here to support you every step of the way!</p>
+    <h2>Experience a seamless selling process with our secure form for just $5.00</h2>
+    <p>Your transaction is safe, and our team is here to assist you.</p>
 </div>
 
 <!-- PayPal SDK Script -->
 <script src="https://www.paypal.com/sdk/js?client-id=BAAionfD-Ah0HIyyIV9_8dxh7QMLCU9S0HMAbeqAU6hRMq4k6Mn697UITlhsoDuD8Pgy490HOPg3C2OjjY&components=buttons,hosted-buttons&disable-funding=venmo&currency=USD"></script>
 
 <!-- Hosted Button Container -->
-<div id="paypal-container-LMVM7323VLA54"></div>
+<div id="paypal-button-container"></div>
 
+<style>
+    label{
+        color: black;
+    }
+</style>
 <!-- Car Selling Form Section -->
-<section id="sell-form" class="sell-form-section" style="display: none;">
+<section id="sell-form" class="sell-form-section" style="display: block;">
     <h2>Tell Us About Your Car</h2>
     <form id="car-sell-form">
-        <!-- Form Fields -->
-        <!-- Other input fields here... -->
+        
+        <label for="vin">Car VIN:</label>
+        <input type="text" id="vin" name="vin" placeholder="4T1BE30K12U058669" required><br><br>
+        
+        <label for="make">Car Make:</label>
+        <input type="text" id="make" name="make" placeholder="Toyota" required><br><br>
+
+        <label for="model">Car Model:</label>
+        <input type="text" id="model" name="model" placeholder="Camry LE / SE / XLE" required><br><br>
+
+        <label for="year">Car Year:</label>
+        <input type="number" id="year" name="year" placeholder="2002" required><br><br>
+
+        <label for="price">Car Price (USD):</label>
+        <input type="number" id="price" name="price" placeholder="6,000" required><br><br>
+
         <button type="submit" class="submit-button">Submit Car Details</button>
     </form>
 </section>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Initialize PayPal Hosted Button
+    document.addEventListener('DOMContentLoaded', function () {
         paypal.HostedButtons({
-            hostedButtonId: "LMVM7323VLA54",
-            createOrder: function(data, actions) {
+            hostedButtonId: "LMVM7323VLA54", // Replace with your actual PayPal button ID
+            createOrder: function (data, actions) {
                 return actions.order.create({
                     purchase_units: [{
                         amount: { value: '5.00' }
                     }]
                 });
             },
-            onApprove: function(data, actions) {
-                return actions.order.capture().then(function(details) {
+            onApprove: function (data, actions) {
+                return actions.order.capture().then(function (details) {
                     alert('Payment completed by ' + details.payer.name.given_name);
-                    document.querySelector('.sell-form-section').style.display = 'block';
+                    document.querySelector('.sell-form-section').style.display = 'block'; // Show the form after payment
                 });
             },
-            onError: function(err) {
+            onError: function (err) {
                 console.error("PayPal Hosted Button Error:", err);
-                alert('An error occurred during the transaction. Please try again.');
+                alert('An error occurred during the transaction. Please try again or report us quickly.');
             }
-        }).render("#paypal-container-LMVM7323VLA54");
+        }).render("#paypal-button-container");
     });
 
     // Handle car sell form submission
-    document.getElementById('car-sell-form').addEventListener('submit', function(e) {
+    document.getElementById('car-sell-form').addEventListener('submit', function (e) {
         e.preventDefault();
 
         const formData = new FormData(this);
 
-        fetch('http://localhost:5500/api/submit-car', {
+        fetch('https://autoinspect.netlify.app/server/submit-car', {
             method: 'POST',
             body: formData
         })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok ' + response.statusText);
-            }
-            return response.json();
-        })
+        .then(response => response.json())
         .then(data => {
-            alert(data.message);
-            this.reset();
-            document.querySelector('.sell-form-section').style.display = 'none';
+            if (data.success) {
+                alert('Car details submitted successfully!');
+                this.reset();
+            } else {
+                alert('Failed to submit car details. Please try again.');
+            }
         })
         .catch(error => {
             console.error('Error:', error);
-            alert('There was an issue submitting your car details. Please try again.');
+            alert('An error occurred. Please try again.');
         });
     });
 </script>
+
 <br>
 <br>
 <br>

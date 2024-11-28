@@ -21,3 +21,4 @@ Thumbs.db
 # Ignore lock files (optional, if using Yarn or NPM)
 yarn.lock
 package-lock.json
+
