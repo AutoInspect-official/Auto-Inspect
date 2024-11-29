@@ -6,8 +6,13 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
-// Middleware initialization
-const corsMiddleware = cors();
+// Initialize CORS middleware
+const corsMiddleware = cors({
+    origin: '*', // Adjust this to restrict origins if necessary
+    methods: ['GET', 'POST'],
+});
+
+// Middleware for parsing JSON
 const bodyParserMiddleware = bodyParser.json();
 
 async function sendNotification(fullName, email, phone, vin, carDetails) {
@@ -45,9 +50,10 @@ async function handleCarSaleSubmission(event) {
     try {
         formData = JSON.parse(event.body);
     } catch (error) {
-        console.error('Error in handleCarSaleSubmission:', error.message);
+        console.error('Invalid JSON body:', error.message);
         return {
             statusCode: 400,
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ success: false, message: 'Invalid JSON body.' }),
         };
     }
@@ -58,6 +64,7 @@ async function handleCarSaleSubmission(event) {
         console.error('Missing required fields.');
         return {
             statusCode: 400,
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ success: false, message: 'All fields are required.' }),
         };
     }
@@ -68,25 +75,29 @@ async function handleCarSaleSubmission(event) {
 
         return {
             statusCode: 200,
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 success: true,
-                message: 'Details submitted successfully! The report would be provided soon on your email.',
+                message: 'Details submitted successfully! The report will be sent to your email.',
             }),
         };
     } catch (error) {
         console.error('Error processing submission:', error.message);
         return {
             statusCode: 500,
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ success: false, message: 'Failed to process form submission.' }),
         };
     }
 }
 
 async function handleVinDataRequest(event) {
-    const vin = new URLSearchParams(event.queryStringParameters).get('vin');
+    const queryParams = new URLSearchParams(event.queryStringParameters || {});
+    const vin = queryParams.get('vin');
     if (!vin) {
         return {
             statusCode: 400,
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ success: false, message: 'VIN is required.' }),
         };
     }
@@ -95,23 +106,28 @@ async function handleVinDataRequest(event) {
         const carData = await scrapeVinData(vin);
         return {
             statusCode: 200,
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(carData),
         };
     } catch (error) {
         console.error('Error fetching VIN data:', error.message);
         return {
             statusCode: 500,
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ success: false, message: 'Failed to fetch VIN data.' }),
         };
     }
 }
 
-module.exports.handler = async (event) => {
+module.exports.handler = async (event, context) => {
     console.log(`Incoming request: ${event.httpMethod} ${event.path}`);
+    console.log('Event object:', JSON.stringify(event, null, 2));
 
     try {
-        corsMiddleware({}, {}, () => {});
-        bodyParserMiddleware({}, {}, () => {});
+        // Apply CORS and body parsing middleware
+        await new Promise((resolve, reject) =>
+            corsMiddleware(event, {}, (err) => (err ? reject(err) : resolve()))
+        );
 
         if (event.httpMethod === 'POST' && event.path === '/submit-car') {
             return await handleCarSaleSubmission(event);
@@ -121,14 +137,17 @@ module.exports.handler = async (event) => {
             return await handleVinDataRequest(event);
         }
 
+        // Default 404 for unsupported routes
         return {
             statusCode: 404,
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ success: false, message: 'Endpoint not found.' }),
         };
     } catch (error) {
         console.error('Unhandled error:', error.message);
         return {
             statusCode: 500,
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ success: false, message: 'Internal server error.' }),
         };
     }
