@@ -1,19 +1,8 @@
 const { scrapeVinData } = require('./vin-bot/vinbot.js');
-const cors = require('cors');
 const nodemailer = require('nodemailer');
-const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 
 dotenv.config();
-
-// Initialize CORS middleware
-const corsMiddleware = cors({
-    origin: '*', // Adjust this to restrict origins if necessary
-    methods: ['GET', 'POST'],
-});
-
-// Middleware for parsing JSON
-const bodyParserMiddleware = bodyParser.json();
 
 async function sendNotification(fullName, email, phone, vin, carDetails) {
     try {
@@ -37,117 +26,76 @@ async function sendNotification(fullName, email, phone, vin, carDetails) {
             Car Details: ${JSON.stringify(carDetails)}`,
         };
 
-        const info = await transporter.sendMail(mailOptions);
-        console.log('Notification email sent successfully:', info.response);
+        await transporter.sendMail(mailOptions);
     } catch (error) {
-        console.error('Error in sendNotification:', error.message);
+        console.error('Error sending notification:', error.message);
         throw new Error('Failed to send notification email.');
     }
 }
 
-async function handleCarSaleSubmission(event) {
-    let formData;
-    try {
-        formData = JSON.parse(event.body);
-    } catch (error) {
-        console.error('Invalid JSON body:', error.message);
-        return {
-            statusCode: 400,
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ success: false, message: 'Invalid JSON body.' }),
-        };
-    }
+module.exports.handler = async (event) => {
+    const corsHeaders = {
+        'Access-Control-Allow-Origin': '*', // Adjust as needed
+        'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type',
+    };
 
-    const { fullName, email, phone, vin, carDetails } = formData;
-
-    if (!fullName || !email || !phone || !vin || !carDetails) {
-        console.error('Missing required fields.');
+    if (event.httpMethod === 'OPTIONS') {
         return {
-            statusCode: 400,
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ success: false, message: 'All fields are required.' }),
+            statusCode: 204,
+            headers: corsHeaders,
         };
     }
 
     try {
-        console.log(`Received form submission: ${fullName}, ${email}, ${phone}, VIN: ${vin}`);
-        await sendNotification(fullName, email, phone, vin, carDetails);
-
-        return {
-            statusCode: 200,
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                success: true,
-                message: 'Details submitted successfully! The report will be sent to your email.',
-            }),
-        };
-    } catch (error) {
-        console.error('Error processing submission:', error.message);
-        return {
-            statusCode: 500,
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ success: false, message: 'Failed to process form submission.' }),
-        };
-    }
-}
-
-async function handleVinDataRequest(event) {
-    const queryParams = new URLSearchParams(event.queryStringParameters || {});
-    const vin = queryParams.get('vin');
-    if (!vin) {
-        return {
-            statusCode: 400,
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ success: false, message: 'VIN is required.' }),
-        };
-    }
-
-    try {
-        const carData = await scrapeVinData(vin);
-        return {
-            statusCode: 200,
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(carData),
-        };
-    } catch (error) {
-        console.error('Error fetching VIN data:', error.message);
-        return {
-            statusCode: 500,
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ success: false, message: 'Failed to fetch VIN data.' }),
-        };
-    }
-}
-
-module.exports.handler = async (event, context) => {
-    console.log(`Incoming request: ${event.httpMethod} ${event.path}`);
-    console.log('Event object:', JSON.stringify(event, null, 2));
-
-    try {
-        // Apply CORS and body parsing middleware
-        await new Promise((resolve, reject) =>
-            corsMiddleware(event, {}, (err) => (err ? reject(err) : resolve()))
-        );
-
         if (event.httpMethod === 'POST' && event.path === '/submit-car') {
-            return await handleCarSaleSubmission(event);
+            const body = JSON.parse(event.body);
+            const { fullName, email, phone, vin, carDetails } = body;
+
+            if (!fullName || !email || !phone || !vin || !carDetails) {
+                return {
+                    statusCode: 400,
+                    headers: corsHeaders,
+                    body: JSON.stringify({ success: false, message: 'All fields are required.' }),
+                };
+            }
+
+            await sendNotification(fullName, email, phone, vin, carDetails);
+            return {
+                statusCode: 200,
+                headers: corsHeaders,
+                body: JSON.stringify({ success: true, message: 'Submission successful!' }),
+            };
         }
 
         if (event.httpMethod === 'GET' && event.path === '/api/vin') {
-            return await handleVinDataRequest(event);
+            const vin = new URLSearchParams(event.queryStringParameters).get('vin');
+            if (!vin) {
+                return {
+                    statusCode: 400,
+                    headers: corsHeaders,
+                    body: JSON.stringify({ success: false, message: 'VIN is required.' }),
+                };
+            }
+
+            const carData = await scrapeVinData(vin);
+            return {
+                statusCode: 200,
+                headers: corsHeaders,
+                body: JSON.stringify(carData),
+            };
         }
 
-        // Default 404 for unsupported routes
         return {
             statusCode: 404,
-            headers: { 'Content-Type': 'application/json' },
+            headers: corsHeaders,
             body: JSON.stringify({ success: false, message: 'Endpoint not found.' }),
         };
     } catch (error) {
         console.error('Unhandled error:', error.message);
         return {
             statusCode: 500,
-            headers: { 'Content-Type': 'application/json' },
+            headers: corsHeaders,
             body: JSON.stringify({ success: false, message: 'Internal server error.' }),
         };
     }
