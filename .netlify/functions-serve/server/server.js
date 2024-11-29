@@ -1,1 +1,1 @@
-module.exports = require('./netlify/functions/server.js')
+module.exports = require('./netlify/functions/server.cjs')

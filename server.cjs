@@ -1,8 +1,8 @@
-import { scrapeVinData } from './vin-bot/vinbot.js'; // Assuming vinbot.js contains a function to scrape VIN data
-import cors from 'cors';
-import nodemailer from 'nodemailer';
-import bodyParser from 'body-parser';
-import dotenv from 'dotenv';
+const { scrapeVinData } = require('./vin-bot/vinbot.js');
+const cors = require('cors');
+const nodemailer = require('nodemailer');
+const bodyParser = require('body-parser');
+const dotenv = require('dotenv');
 
 dotenv.config();
 
@@ -10,9 +10,6 @@ dotenv.config();
 const corsMiddleware = cors();
 const bodyParserMiddleware = bodyParser.json();
 
-/**
- * Send notification email to the admin with form details.
- */
 async function sendNotification(fullName, email, phone, vin, carDetails) {
     try {
         const transporter = nodemailer.createTransport({
@@ -38,20 +35,17 @@ async function sendNotification(fullName, email, phone, vin, carDetails) {
         const info = await transporter.sendMail(mailOptions);
         console.log('Notification email sent successfully:', info.response);
     } catch (error) {
-        console.error('Error in sendNotification:', error.stack || error.message);
+        console.error('Error in sendNotification:', error.message);
         throw new Error('Failed to send notification email.');
     }
 }
 
-/**
- * Handle the POST request to submit car sale data.
- */
 async function handleCarSaleSubmission(event) {
     let formData;
     try {
         formData = JSON.parse(event.body);
     } catch (error) {
-        console.error('Error in handleCarSaleSubmission (parsing request body):', error.stack || error.message);
+        console.error('Error in handleCarSaleSubmission:', error.message);
         return {
             statusCode: 400,
             body: JSON.stringify({ success: false, message: 'Invalid JSON body.' }),
@@ -61,7 +55,7 @@ async function handleCarSaleSubmission(event) {
     const { fullName, email, phone, vin, carDetails } = formData;
 
     if (!fullName || !email || !phone || !vin || !carDetails) {
-        console.error('Error in handleCarSaleSubmission: Missing required fields.');
+        console.error('Missing required fields.');
         return {
             statusCode: 400,
             body: JSON.stringify({ success: false, message: 'All fields are required.' }),
@@ -80,7 +74,7 @@ async function handleCarSaleSubmission(event) {
             }),
         };
     } catch (error) {
-        console.error('Error in handleCarSaleSubmission (processing submission):', error.stack || error.message);
+        console.error('Error processing submission:', error.message);
         return {
             statusCode: 500,
             body: JSON.stringify({ success: false, message: 'Failed to process form submission.' }),
@@ -88,9 +82,6 @@ async function handleCarSaleSubmission(event) {
     }
 }
 
-/**
- * Handle the GET request for VIN data.
- */
 async function handleVinDataRequest(event) {
     const vin = new URLSearchParams(event.queryStringParameters).get('vin');
     if (!vin) {
@@ -101,7 +92,7 @@ async function handleVinDataRequest(event) {
     }
 
     try {
-        const carData = await scrapeVinData(vin); // Assuming scrapeVinData fetches car details based on VIN
+        const carData = await scrapeVinData(vin);
         return {
             statusCode: 200,
             body: JSON.stringify(carData),
@@ -115,39 +106,27 @@ async function handleVinDataRequest(event) {
     }
 }
 
-/**
- * Main serverless function handler.
- */
-export const handler = async (event) => {
+module.exports.handler = async (event) => {
     console.log(`Incoming request: ${event.httpMethod} ${event.path}`);
 
     try {
-        // Allow CORS and body parsing
-        try {
-            corsMiddleware({}, {}, () => {});
-            bodyParserMiddleware({}, {}, () => {});
-        } catch (middlewareError) {
-            console.error('Error in handler (middleware initialization):', middlewareError.stack || middlewareError.message);
-            throw new Error('Middleware initialization failed.');
-        }
+        corsMiddleware({}, {}, () => {});
+        bodyParserMiddleware({}, {}, () => {});
 
-        // Route handling for POST /submit-car
         if (event.httpMethod === 'POST' && event.path === '/submit-car') {
             return await handleCarSaleSubmission(event);
         }
 
-        // Route handling for GET /api/vin
         if (event.httpMethod === 'GET' && event.path === '/api/vin') {
             return await handleVinDataRequest(event);
         }
 
-        // Default 404 for unsupported routes
         return {
             statusCode: 404,
             body: JSON.stringify({ success: false, message: 'Endpoint not found.' }),
         };
     } catch (error) {
-        console.error('Unhandled server error in handler:', error.stack || error.message);
+        console.error('Unhandled error:', error.message);
         return {
             statusCode: 500,
             body: JSON.stringify({ success: false, message: 'Internal server error.' }),
