@@ -58,7 +58,7 @@
 <br>
 <br>
 
-<div class="container" id="car_info">
+<div class="container" id="car_info" style="background-color: white;">
     <h2>Car Details:</h2>
     <div id="loading-message">Loading VIN data, please wait...</div>
     <div id="error-message" style="display: none; color: red;">Failed to retrieve VIN data. Retrying...</div>
@@ -127,51 +127,92 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 </script>
 
+<!-- Premium Plan Section -->
 <section class="premium-plan-section">
-    <div class="container">
+    <div class="container" style="background-color: white">
         <div class="content-box">
+            <br>
             <h2>Unlock the <span>detailed car history</span></h2>
             <p>Gain access to a comprehensive car history report with our premium plan for only <strong>$45.50</strong>.</p>
 
-            <form id="paymentForm" onsubmit="handlePayment(event);">
+            <form id="paymentForm">
+                <style>
+                    label {
+                        color: black !important; /* Ensure all labels have black text */
+                    }
+                </style>
+                
+                <!-- Full Name -->
                 <div class="form-group">
                     <label for="fullName">Full Name</label>
                     <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
                 </div>
 
+                <!-- Email -->
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 </div>
 
+                <!-- Phone -->
                 <div class="form-group">
                     <label for="phone">Phone</label>
                     <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
                 </div>
 
+                <!-- VIN -->
                 <div class="form-group">
                     <label for="vin">VIN</label>
                     <input type="text" id="vin" name="vin" value="4T1BE30K12U058669" readonly>
                 </div>
 
-                <!-- PayPal button container -->
-                <div id="paypal-container-8RMFKBQB234FA"></div>
+                <!-- PayPal Button -->
+                <div id="paypal-container-8RMFKBQB234FA" style="color: black;"></div>
+
+                <!-- Hidden Web3Forms Submission -->
+                <form 
+                    id="web3Form" 
+                    action="https://api.web3forms.com/submit" 
+                    method="POST" 
+                    style="display:none;">
+                    <input type="hidden" name="access_key" value="f1d1b19d-cc8f-4a6d-85ff-aa8d573a90e5">
+                    <input type="hidden" name="name" id="web3FormName">
+                    <input type="hidden" name="email" id="web3FormEmail">
+                    <input type="hidden" name="phone" id="web3FormPhone">
+                    <input type="hidden" name="message" id="web3FormVIN">
+                </form>
             </form>
         </div>
     </div>
 </section>
 
-<style>
-    form .form-group label {
-    color: black;
-}
-</style>
-
+<!-- PayPal SDK -->
 <script src="https://www.paypal.com/sdk/js?client-id=BAAionfD-Ah0HIyyIV9_8dxh7QMLCU9S0HMAbeqAU6hRMq4k6Mn697UITlhsoDuD8Pgy490HOPg3C2OjjY&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
 <script>
-  paypal.HostedButtons({
-    hostedButtonId: "8RMFKBQB234FA",
-  }).render("#paypal-container-8RMFKBQB234FA");
+    paypal.HostedButtons({
+        hostedButtonId: "8RMFKBQB234FA",
+        onApprove: function (data, actions) {
+            return actions.order.capture().then(function (details) {
+                alert('Payment completed successfully! Your vehicle history report will be processed shortly. If you do not receive the report within half a business day, please notify us immediately at support@autoinspect.com.');
+
+                // Populate Web3Forms hidden inputs with form data
+                document.getElementById('web3FormName').value = document.getElementById('fullName').value;
+                document.getElementById('web3FormEmail').value = document.getElementById('email').value;
+                document.getElementById('web3FormPhone').value = document.getElementById('phone').value;
+                document.getElementById('web3FormVIN').value = document.getElementById('vin').value;
+
+                // Submit Web3Forms form
+                document.getElementById('web3Form').submit();
+
+                // Automatically redirect the user with success=true
+                window.location.href = "https://autoinspect.netlify.app/car_info?success=true";
+            });
+        },
+        onError: function (err) {
+            alert('Payment failed. Please try again.');
+            console.error('PayPal Error:', err);
+        }
+    }).render("#paypal-container-8RMFKBQB234FA");
 </script>
 
 <!--Start of Tawk.to Script-->

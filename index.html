@@ -21,9 +21,10 @@
         <nav class="navbar">
             <div class="logo" style="display: flex; align-items: center;">
                 <img src="../static/logo.png" alt="CarInspect" style="width: 40px; height: 40px; margin-top: auto; border-radius: 50%; margin-right: 20px; filter: contrast(100%); filter: opacity(100%); pointer-events: none;">
-                <a href="Home.html">
-                    <h1 style="margin: 0; font-size: 30px;">AutoInspect</h1>
-                </a>
+                <a href="Home.html" style="display: flex; flex-direction: column;">
+                    <h1 style="margin: 0; font-size: 30px;">AutoInspect</h1></a>
+                    <span class="powered-by" aria-hidden="true">&nbsp; | Powered by Netlify</span>
+                
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -94,7 +95,7 @@ form p:nth-of-type(1) {
 }
 
 form p:nth-of-type(2) {
-    font-size: calc(0.9rem + 1.2vw); 
+    font-size: calc(0.8rem + 1vw); 
     color: white;
 }
 
@@ -111,7 +112,7 @@ form p:nth-of-type(3) {
     }
 
     form p:nth-of-type(2) {
-        font-size: calc(0.9rem + 1.2vw); 
+        font-size: calc(0.8rem + 1vw); 
         color: white;
     }
 
@@ -601,6 +602,7 @@ form p:nth-of-type(3) {
   
     <div class="footer-bottom">
       <p>&copy; 2024 Auto Inspect. All rights reserved. | <a href="policy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+      <p class="powered-by">Powered by Netlify</p>
     </div>
 </footer>
 
