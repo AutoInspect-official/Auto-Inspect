@@ -20,16 +20,16 @@
         <nav class="navbar">
             <div class="logo" style="display: flex; align-items: center;">
                 <img src="../static/logo.png" alt="CarInspect" style="width: 40px; height: 40px; margin-top: auto; border-radius: 50%; margin-right: 20px; filter: contrast(100%); filter: opacity(100%); pointer-events: none;">
-                <a href="Home.html">
-                    <h1 style="margin: 0; font-size: 30px;">AutoInspect</h1>
-                </a>
+                <a href="Home.html" style="display: flex; flex-direction: column;">
+                    <h1 style="margin: 0; font-size: 30px;">AutoInspect</h1></a>
+                    <span class="powered-by" aria-hidden="true">&nbsp; | Powered by Netlify</span>
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li class="dropdown">
-                    <a class="buy-sell">Buy/Sell</a>
+                    <a class="buy-sell" href="#">Buy/Sell</a>
                     <ul class="dropdown-menu">
                         <li>
                             <a target="_blank" href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1" class="dropdown-link">
@@ -61,8 +61,8 @@
 <main>
 <!-- Hero Section -->
 <section class="hero sell" style="height: 91vh; margin-bottom: 20px">
-    <h1>Want to sell a perfect car?</h1>
-    <h1>or a car with multiple issues?</h1>
+    <h1 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Want to sell a perfect car?</h1>
+    <h1 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">or a car with multiple issues?</h1>
     <h2>No problem! We could buy your car in any condition.</h2>
     <p>Note: We will buy your car with a price range based on the condition of the car.</p>
     <br>
@@ -72,7 +72,7 @@
 <!-- Selling Info Section -->
  <br>
 <div class="sell-car-container" style="margin: 25px 10px 30px 10px">
-    <h1>Sell Your Car</h1>
+    <h2 class="section-title"><u>Sell Your Car</u></h2>
     <h2>Experience a seamless selling process with our secure form for just $5.00</h2>
     <p>Your transaction is safe, and our team is here to assist you.</p>
 </div>
@@ -81,16 +81,16 @@
 <script src="https://www.paypal.com/sdk/js?client-id=BAAionfD-Ah0HIyyIV9_8dxh7QMLCU9S0HMAbeqAU6hRMq4k6Mn697UITlhsoDuD8Pgy490HOPg3C2OjjY&components=buttons,hosted-buttons&disable-funding=venmo&currency=USD"></script>
 
 <!-- Hosted Button Container -->
-<div id="paypal-button-container"></div>
-
-<style>
+ <style>
     label{
         color: black;
     }
 </style>
+<div id="paypal-button-container"></div>
+
 <!-- Car Selling Form Section -->
 <section id="sell-form" class="sell-form-section" style="display: none;">
-    <h2>Tell Us About Your Car</h2>
+    <h2 class="section-title"><u>Tell Us About Your Car</u></h2>
     <form action="https://formbold.com/s/3jgOq" method="POST" id="car-sell-form">
         <label for="vin">Car VIN:</label>
         <input type="text" id="vin" name="message" placeholder="4T1BE30K12U058669" required><br><br>
@@ -233,6 +233,7 @@
   
     <div class="footer-bottom">
       <p>&copy; 2024 Auto Inspect. All rights reserved. | <a href="policy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+      <p class="powered-by">Powered by Netlify</p>
     </div>
 </footer>
 

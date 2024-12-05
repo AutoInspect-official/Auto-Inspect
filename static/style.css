@@ -4,45 +4,41 @@
     box-sizing: border-box;
 }
 
-/* Global Body Styling */
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #f1f1f1;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
     justify-content: center;
-    align-items: flex-start; /* Align to the top of the page */
-    min-height: 100vh; /* Ensures full viewport height */
-    text-align: justify; /* Justify text in paragraphs */
+    align-items: flex-start; 
+    min-height: 100vh; 
+    text-align: justify; 
 }
 
-/* Global Paragraph Styling */
 p {
-    font-size: 1.3rem; /* Set a consistent font size for paragraphs */
-    line-height: 1.6; /* Ensures good readability */
+    font-size: 1.3rem; 
+    line-height: 1.6; 
 }
 
-/* Example: Heading Styling */
 h1, h2, h3, h4, h5, h6 {
     margin: 0 0 0.5em 0;
 }
-
-/* Optionally, add more specific styling for other elements */
-
 
 /* Header */
 header {
     height: 10vh;
     background-color: rgba(0, 0, 0, 0.90);
-    padding: 10px 20px; /* Added padding for spacing */
+    padding: 10px 20px; 
     display: flex;
-    align-items: center; /* Ensures vertical centering of items */
+    align-items: center; 
     justify-content: space-between;
-    z-index: 5;
+    z-index: 5000;
 }
 
+
+
 h1 {
-    font-size: 3em;
+    font-size: 2.5em;
     color: white;
     font-family: "Times New Roman", serif;
     margin: 0;
@@ -92,49 +88,48 @@ h1 {
     border-radius: 5px;
 }
 
-/* Small "Powered by Netlify" text */
 .powered-by {
-    font-size: 13px; /* Small size */
-    color: rgb(223, 223, 223); /* Subtle color */
-    margin-top: 2px; /* Space below the website name */
-    text-align: center; /* Align under the name */
+    font-size: 13px; 
+    color: rgb(223, 223, 223);
+    margin-top: 2px; 
+    text-align: center; 
 }
 
 @media (max-width: 768px) {
     .powered-by {
-        font-size: 10px; /* Smaller for mobile */
+        font-size: 10px; 
     }
 }
 
-/* Dropdown Menu Styling */
 .nav-links .dropdown .dropdown-menu {
     display: none;
     position: absolute;
-    top: 100%; /* Ensures it appears below the "Buy/Sell" button */
+    top: 100%; 
     left: 0;
     background-color: rgba(0, 0, 0, 0.7);
     width: 160px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     z-index: 9999; 
     padding: 10px 0;
-    list-style-type: none; /* Removes bullet points */
-    margin: 0; /* Resets default margins */
-    padding-left: 0; /* Ensures no unintended padding */
-    overflow-x: hidden; /* Prevents horizontal overflow */
-    max-width: calc(100vw - 20px); /* Ensures it doesn't exceed screen width */
+    list-style-type: none; 
+    margin: 0; 
+    padding-left: 0; 
+    overflow-x: hidden; 
+    max-width: calc(100vw - 20px); 
 }
 
 .nav-links .dropdown .dropdown-menu li {
-    margin: 0; /* Ensures consistent spacing for items */
-    padding: 0; /* Removes any added padding */
-    list-style-type: none; /* Ensures list items remain without bullets */
+    margin: 0; 
+    padding: 0; 
+    list-style-type: none; 
 }
 
 .nav-links .dropdown .dropdown-menu li a {
     color: white;
     padding: 8px 15px;
     text-decoration: none;
-    display: block; /* Ensures full clickable area */
+    display: block; 
+    z-index: 9999;
 }
 
 .nav-links .dropdown .dropdown-menu li a:hover {
@@ -142,7 +137,6 @@ h1 {
     border-radius: 5px;
 }
 
-/* Show dropdown on hover */
 .nav-links .dropdown:hover .dropdown-menu {
     display: block;
 }
@@ -161,7 +155,6 @@ h1 {
 }
 
 @media (max-width: 768px) {
-    /* Mobile Navbar Styles */
     .nav-links {
         display: none;
         flex-direction: column;
@@ -187,17 +180,15 @@ h1 {
         padding: 20px;
     }
 
-    /* Ensure dropdown menu shows on mobile as well */
     .nav-links .dropdown .dropdown-menu {
         position: relative;
         top: 0;
         left: 0;
         width: 100%;
-        list-style-type: none; /* Removes bullet points in mobile view */
+        list-style-type: none; 
     }
 }
 
-/* Ensure Buy/Sell dropdown doesn't get hidden in mobile */
 @media (max-width: 768px) {
     .nav-links .dropdown .dropdown-menu {
         width: 100%;
@@ -214,7 +205,7 @@ h1 {
     color: white;
     width: 100%;
     margin: 0;
-    height: 40vh; 
+    height: 50vh; 
     overflow: hidden; 
 }
 
@@ -253,10 +244,10 @@ h1 {
 
 .hero h1 {
     color: white;
-    font-size: 3rem;
+    font-size: 2.5rem;
     position: relative;
     margin-bottom: 30px;
-    z-index: 1000;
+    z-index: 0;
     opacity: 0; 
     transform: translateY(20px); 
     animation: fadeInUp 1s ease forwards; 
@@ -294,7 +285,7 @@ h1 {
 }
 
 html {
-    scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+    scroll-behavior: smooth; 
 }
 
 .submit-btn {
@@ -326,7 +317,7 @@ html {
     justify-content: center;
 }
 
-.mySlides {
+.mySlides{
     display: none; 
     width: 100%; 
     height: 100%; 
@@ -340,7 +331,6 @@ html {
     z-index: -30; 
 }
 
-/* Next & previous buttons */
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -381,7 +371,7 @@ html {
     background-color: rgba(0, 0, 0, 0.90);
 }
 
-/* Form container */
+/* VIN Form container */
 .form-container {
     align-items: center;
     display: flex; 
@@ -398,7 +388,25 @@ html {
     width: 55%; 
     max-width: 4000px; 
     opacity: 0; 
-    animation: fadeIn 0.5s forwards; 
+    animation: fadeIn 1.3s forwards; 
+}
+
+@media (min-width: 2000px) {
+    .form-container{
+        width: 55%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .form-container{
+        width: 70%;
+    }
+}
+
+@media (max-width: 700px) {
+    .form-container{
+        width: 85%;
+    }
 }
 
 @keyframes fadeIn {
@@ -425,7 +433,12 @@ form p {
     box-sizing: border-box; 
 }
 
-/* Default styles for larger screens */
+form .form-group label {
+    font-size: 1em;
+    display: block;
+    margin-bottom: 8px;
+}
+
 form p:nth-of-type(1) {
     font-size: calc(1rem + 1.5vw); 
     color: white;
@@ -441,7 +454,6 @@ form p:nth-of-type(3) {
     color: whitesmoke;
 }
 
-/* Styles for mobile screens */
 @media (max-width: 600px) {
     form p:nth-of-type(1) { 
         font-size: calc(1rem + 1.5vw); 
@@ -481,7 +493,6 @@ form p:nth-of-type(3) {
     }
 }
 
-/* General Form Styles */
 form {
     display: flex;
     flex-direction: column;
@@ -520,7 +531,6 @@ form {
     box-sizing: border-box;
 }
 
-/* on-hover-info */
 .tooltip {
     position: relative;
     display: inline-block;
@@ -629,36 +639,14 @@ button:hover {
 }
 
 .container {
-    color: black; /* Text inside the container is black */
+    color: black; 
     max-width: 800px;
     margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: #f4f4f4;
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   }
-
-  .content-box h2 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-  }
-
-  .content-box h2 span {
-    color: black; /* Bold part of the header is black */
-    font-weight: bold;
-  }
-
-  .content-box p {
-    color: black; /* Paragraph text is black */
-    font-size: 1.5em;
-    margin-bottom: 20px;
-  }
-
-  form .form-group label {
-    font-size: 1em;
-    display: block;
-    margin-bottom: 8px;
-}
 
 /* Partners Section */
 .partners-section {
@@ -676,29 +664,19 @@ button:hover {
     letter-spacing: 1px;
 }
 
-.partners-section .section-desc {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 40px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Partners Slider */
 .partners-slider {
     display: flex;
     overflow-x: auto;
     gap: 20px;
     padding: 10px 0;
-    scrollbar-width: thick; /* Show scrollbar for Firefox */
-    scrollbar-color: #969696 transparent; /* Light scrollbar */
-    scroll-snap-type: x mandatory; /* Enables snapping */
+    scrollbar-width: thick; 
+    scrollbar-color: #969696 transparent; 
+    scroll-snap-type: x mandatory; 
     align-items: center;
 }
 
 .partners-slider::-webkit-scrollbar {
-    height: 8px; /* Thin scrollbar */
+    height: 8px; 
     background-color: transparent;
 }
 
@@ -713,47 +691,47 @@ button:hover {
     padding: 15px;
     border-radius: 50px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    scroll-snap-align: center; /* Center each logo on scroll */
+    scroll-snap-align: center; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .partner:hover {
-    transform: scale(1.1); /* Grows on hover */
+    transform: scale(1.1); 
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .partner-logo {
-    width: 150px; /* Default size */
+    width: 150px;
     height: auto;
     filter: grayscale(100%);
-    opacity: 0.8; /* Slightly dim by default */
+    opacity: 0.8; 
     border-radius: 50%;
-    transition: filter 0.5s ease, opacity 0.2s ease; /* Fast opacity transition */
+    transition: filter 0.5s ease, opacity 0.2s ease; 
 }
 
 .partner-logo:hover {
     filter: grayscale(0%);
-    opacity: 1; /* Fully clear */
-    transition: filter 0.5s ease, opacity 0.2s ease; /* Fast opacity transition */
+    opacity: 1; 
+    transition: filter 0.5s ease, opacity 0.2s ease; 
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .partners-slider {
         gap: 15px;
     }
 
     .partner-logo {
-        width: 120px; /* Slightly smaller */
+        width: 120px; 
     }
 }
 
 @media (max-width: 480px) {
     .partner-logo {
-        width: 100px; /* Even smaller for narrow screens */
+        width: 100px; 
     }
 }
 
+/* Premium Plan */
 .premium-plan-section {
     margin: 30px auto;
     padding: 80px 20px;
@@ -763,23 +741,22 @@ button:hover {
 
   #paypal-container-8RMFKBQB234FA {
     color: black;
-    display: flex;               /* Use flexbox for centering */
-    justify-content: center;     /* Center horizontally */
-    align-items: center;         /* Center vertically */
-    width: 100%;                 /* Full width */
-    max-width: 400px;            /* Maximum width */
-    margin: 0 auto;              /* Centering on the page */
-    padding: 20px;               /* Optional padding */
+    display: flex;               
+    justify-content: center;     
+    align-items: center;         
+    width: 100%;                 
+    max-width: 400px;            
+    margin: 0 auto;              
+    padding: 20px;               
   }
 
 @media (max-width: 600px) {
     #paypal-container-8RMFKBQB234FA {
-        max-width: 100%;         /* Full width on smaller screens */
-        padding: 10px;           /* Adjust padding */
+        max-width: 100%;         
+        padding: 10px;          
     }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .content-box h2 {
         font-size: 2em;
@@ -795,57 +772,55 @@ button:hover {
     }
 }
 
-/* PayPal Button Container */
+/* PayPal Buttons */
 #paypal-button-container,
 #paypal-container-LMVM7323VLA54 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;             /* Padding around button */
-    margin: 20px auto;         /* Center-align with spacing */
-    border-radius: 8px;        /* Rounded corners */
-    width: 100%;               /* Full-width on smaller screens */
-    max-width: 400px;          /* Limit the width */
+    padding: 20px;             
+    margin: 20px auto;         
+    border-radius: 8px;
+    width: 100%;               
+    max-width: 400px;          
 }
 
-/* Optional Style for Text within Container */
 #paypal-container-LMVM7323VLA54 {
-    font-size: 1.1em;          /* Slightly larger text */
-    color: #333;               /* Darker text color */
-    text-align: center;        /* Center-align text */
+    font-size: 1.1em;         
+    color: #333;               
+    text-align: center;       
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     #paypal-button-container,
     #paypal-container-LMVM7323VLA54 {
-        padding: 15px;         /* Adjust padding for smaller screens */
-        margin: 15px auto;     /* Adjust margin for smaller screens */
-        max-width: 90%;        /* Allow more width on small screens */
+        padding: 15px;        
+        margin: 15px auto;    
+        max-width: 90%;        
     }
 
     #paypal-container-LMVM7323VLA54 {
-        font-size: 1em;        /* Adjust font size for better readability */
+        font-size: 1em;        
     }
 }
 
 @media (max-width: 480px) {
     #paypal-button-container,
     #paypal-container-LMVM7323VLA54 {
-        padding: 10px;         /* Further adjust padding for very small screens */
-        margin: 10px auto;     /* Further adjust margin for very small screens */
-        max-width: 95%;        /* Allow nearly full width on very small screens */
+        padding: 10px;        
+        margin: 10px auto;     
+        max-width: 95%;       
     }
 
     #paypal-container-LMVM7323VLA54 {
-        font-size: 0.9em;      /* Slightly smaller text for very small screens */
+        font-size: 0.9em;     
     }
 }
 
 /* Rating */
 .ratings-section {
     padding: 40px;
-    background-color: #f1f1f1; /* Lightened background for a softer look */
+    background-color: #f4f4f4; 
     border-radius: 10px;
     margin: 10vw auto;
     max-width: 1000px;
@@ -859,7 +834,7 @@ button:hover {
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(20px); /* Slight upward movement */
+        transform: translateY(20px); 
     }
     to {
         opacity: 1;
@@ -870,31 +845,31 @@ button:hover {
 .ratings-section.show {
     opacity: 1; 
     visibility: visible; 
-    animation: fadeIn 0.6s ease-out; /* Apply animation */
+    animation: fadeIn 0.6s ease-out; 
 }
 
 .rating-stars {
-    margin: 15px auto;
+    margin: 16px auto;
 }
 
 .rating-stars i {
     color: #ffc107;
-    font-size: 22px;
+    font-size: 20px;
     margin-right: 3px;
 }
 
 .rating-text {
-    font-size: 18px;
+    font-size: 20px;
     color: #333;
     margin-bottom: 20px;
 }
 
 .heading-label {
-    color: #333; /* Changed for better contrast */
-    font-weight: bold; /* Added font-weight for emphasis */
+    font-size: 20px;
+    color: #333; 
+    font-weight: bold; 
 }
 
-/* Fade-in animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -912,16 +887,16 @@ button:hover {
     margin-bottom: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     text-align: left;
-    opacity: 0; /* Initially hidden */
-    animation: fadeIn 0.5s forwards; /* Apply fade-in animation */
+    opacity: 0;
+    animation: fadeIn 0.5s forwards; 
 }
 
 .review-box.visible {
-    opacity: 1; /* Make visible on class change */
+    opacity: 1; 
 }
 
 .review-box:hover {
-    transform: translateY(-2px); /* Slight lift effect on hover */
+    transform: translateY(-2px); 
 }
 
 .reviewer-name {
@@ -932,25 +907,25 @@ button:hover {
 }
 
 .review-text {
-    font-size: 16px; /* Adjusted font size for better readability */
+    font-size: 18px; 
     color: #555;
 }
 
 #toggleReviewsBtn {
-    background-color: #333; /* Darker button color for contrast */
+    background-color: #333; 
     color: white;
     border: none;
     padding: 12px 30px;
     border-radius: 30px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
     margin-top: 20px;
-    transition: background-color 0.3s ease, transform 0.2s; /* Added transform for a subtle effect */
+    transition: background-color 0.3s ease, transform 0.2s; 
 }
 
 #toggleReviewsBtn:hover {
-    background-color: #555; /* Slightly lighter on hover */
-    transform: scale(1.05); /* Slight grow effect on hover */
+    background-color: #555; 
+    transform: scale(1.05);
 }
 
 /* Rating Form */
@@ -978,35 +953,35 @@ textarea, input[type="text"] {
     border-radius: 5px;
     border: 1px solid #bbb8b8;
     margin-bottom: 10px;
-    transition: border-color 0.3s; /* Transition for border color */
+    transition: border-color 0.3s;
 }
 
 textarea:focus, input[type="text"]:focus {
-    border-color: #ffc107; /* Highlight border color on focus */
+    border-color: #ffc107; 
 }
 
 button[type="button"] {
-    background-color: #333; /* Darker button color for consistency */
+    background-color: #333;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s; /* Added transform for effect */
+    transition: background-color 0.3s ease, transform 0.2s; 
 }
 
 button[type="button"]:hover {
-    background-color: #555; /* Slightly lighter on hover */
-    transform: scale(1.05); /* Slight grow effect on hover */
+    background-color: #555; 
+    transform: scale(1.05); 
 }
 
 /* car sell */
 .sell-car-container {
     margin: 25px 10px;
     padding: 20px;
-    border-radius: 8px; /* Rounded corners */
-    text-align: center; /* Centered text */
-    color: Black; /* Darker text color for readability */
+    border-radius: 8px; 
+    text-align: center;
+    color: Black; 
 }
 
 .sell-car-container h1 {
@@ -1027,230 +1002,6 @@ button[type="button"]:hover {
     font-size: auto;
     margin-top: 10px;
     color: #272727;
-}
-
-/* Services Container */
-.container {
-    background-color: #f5f5f5;
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 30px; /* Slightly increased padding for better spacing */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Softer shadow for a modern look */
-    border-radius: 12px; /* Slightly rounded edges for a softer appearance */
-    overflow: hidden;
-    color: #272727;
-}
-
-/* Services Section */
-.services-section {
-    background-color: #f5f5f5; /* Subtle separation */
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Slightly wider boxes */
-    gap: 50px; /* Significantly increased gap for spaciousness */
-    padding: 40px; /* More padding around the grid for breathing room */
-}
-
-/* Service Boxes */
-.service-box {
-    margin-bottom: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 35px; /* Larger padding for better content spacing */
-    background-color: white;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative; /* Prevent overlap by creating a stacking context */
-}
-
-/* Hover Effect */
-.service-box:hover {
-    transform: translateY(-7px); /* Subtle upward movement */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced elevation effect */
-}
-
-/* Service Icons */
-.service-icon {
-    font-size: 55px; /* Slightly larger for prominence */
-    margin-bottom: 25px; /* Increased spacing from the title */
-    color: rgba(0, 0, 0, 0.9);
-}
-
-/* Service Title */
-.service-title {
-    font-size: 26px; /* Slightly larger text for emphasis */
-    font-weight: bold;
-    color: #272727;
-    margin-bottom: 20px;
-}
-
-/* Service Description */
-.service-desc {
-    font-size: 18px; /* Enhanced readability */
-    color: #555;
-    line-height: 1.8;
-    flex-grow: 1;
-    margin-bottom: 30px; /* More spacing before the button */
-}
-
-/* Call-to-Action Button */
-.service-action {
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.9); /* Matching theme */
-    color: white;
-    padding: 14px 35px; /* Larger button for emphasis */
-    border-radius: 8px; /* Slightly rounded corners for a modern look */
-    font-size: 18px;
-    text-decoration: none;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.service-action:hover {
-    background-color: rgba(0, 0, 0, 0.7); /* Slightly lighter on hover */
-    transform: scale(1.05);
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .services-section {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    .service-box {
-        padding: 20px;
-    }
-    .service-title {
-        font-size: 22px;
-    }
-    .service-desc {
-        font-size: 16px;
-    }
-    .service-action {
-        font-size: 16px;
-        padding: 10px 20px;
-    }
-}
-
-/* Mission Section */
-.mission-section {
-    background-color: #f1f1f1;
-    padding: 60px 0;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 40px;
-    font-weight: bold;
-}
-
-.mission-content {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.mission-item {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-}
-
-.mission-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.mission-item h3 {
-    font-size: 28px;
-    color: rgba(0, 0, 0, 0.9); /* Updated to required color */
-    margin-bottom: 15px;
-}
-
-.mission-item p {
-    font-size: 18px;
-    color: #555;
-    line-height: 1.6;
-}
-
-/* Fix for Extra Space Below Buttons */
-.services-section img {
-    display: none; /* Hides unnecessary image causing space */
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .services-section {
-        grid-template-columns: 1fr; /* Single column for smaller screens */
-        gap: 15px;
-    }
-
-    .service-box {
-        padding: 15px;
-    }
-
-    .service-title {
-        font-size: 20px;
-    }
-
-    .service-desc {
-        font-size: 14px;
-    }
-
-    .service-action {
-        padding: 8px 20px;
-        font-size: 14px;
-    }
-
-    .section-title {
-        font-size: 28px;
-    }
-
-    .mission-item h3 {
-        font-size: 24px;
-    }
-
-    .mission-item p {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    .service-box {
-        padding: 10px;
-    }
-
-    .service-title {
-        font-size: 18px;
-    }
-
-    .service-desc {
-        font-size: 14px;
-    }
-
-    .service-action {
-        font-size: 14px;
-    }
-
-    .section-title {
-        font-size: 24px;
-    }
-
-    .mission-item h3 {
-        font-size: 20px;
-    }
-
-    .mission-item p {
-        font-size: 14px;
-    }
 }
 
 /* Car Sell Form */
@@ -1296,68 +1047,288 @@ label{
     margin-right: 10px; 
 }
 
+/* Services - Home */
 .container {
-max-width: 1200px;
-margin: 0 auto;
-padding: 20px;
+    background-color: #f4f4f4;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .section {
-display: flex;
-align-items: stretch; 
-margin: 40px 0;
-opacity: 0; 
-transform: translateY(20px); 
-transition: opacity 1s ease-out, transform 1s ease-out; 
-}
-
-.section.visible {
-opacity: 1; 
-transform: translateY(0); 
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
 }
 
 .section:nth-child(even) {
-flex-direction: row-reverse; 
+    flex-direction: row-reverse; 
 }
 
 .text {
-text-align: justify;
-flex: 1;
-padding: 20px;
-display: flex;
-flex-direction: column; 
-justify-content: center; 
+    flex: 1;
+    padding: 20px;
+    text-align: justify;
 }
 
 .image {
-flex: 1;
-padding: 20px;
-display: flex; 
-align-items: center; 
-justify-content: center; 
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .image img {
-width: auto; 
-height: 300px; 
-object-fit: cover; 
-transition: transform 1s ease-out; 
+    width: 100%;
+    max-width: 600px; 
+    height: auto;
+    object-fit: cover;
 }
 
-.section.visible .image img {
-transform: translateX(0); 
+/* Mobile View: Force Images Below Text */
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column !important; /* Stack the text and image vertically */
+    }
+
+    .image {
+        margin-top: 20px; /* Space between text and image */
+    }
+
+    .text, .image {
+        width: 100%; /* Ensure both text and image take up full width */
+    }
+
+    .image img {
+        max-width: 100%; /* Ensure the image scales properly */
+        height: auto;    /* Maintain aspect ratio */
+    }
+}
+
+
+/* Services Container */
+.container {
+    background-color: #f4f4f4;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px; 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); 
+    border-radius: 12px; 
+    overflow: hidden;
+    color: #272727;
+}
+
+.services-section {
+    background-color: #f4f4f4; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    gap: 50px; 
+    padding: 10px; 
+}
+
+.service-box {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 35px; 
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; 
+}
+
+.service-box:hover {
+    transform: translateY(-7px); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.service-icon {
+    font-size: 55px; 
+    margin-bottom: 25px;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.service-title {
+    font-size: 26px; 
+    font-weight: bold;
+    color: #272727;
+    margin-bottom: 20px;
+}
+
+.service-desc {
+    color: #555;
+    line-height: 1.8;
+    flex-grow: 1;
+    margin-bottom: 30px;
+}
+
+.service-action {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.9); 
+    color: white;
+    padding: 14px 35px; 
+    border-radius: 8px; 
+    font-size: 20px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.service-action:hover {
+    background-color: rgba(0, 0, 0, 0.7); 
+    transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
-.section {
-    flex-direction: column; 
-}
-.image img {
-    max-width: 100%; 
-    height: auto; 
-}
+    .services-section {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .service-box {
+        padding: 20px;
+    }
+    .service-title {
+        font-size: 22px;
+    }
+    .service-desc {
+        font-size: 16px;
+    }
+    .service-action {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
 }
 
+/* Mission Section */
+.mission-section {
+    background-color: #f4f4f4;
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.mission-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.mission-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.mission-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.mission-item h3 {
+    font-size: 28px;
+    color: rgba(0, 0, 0, 0.9); 
+    margin-bottom: 15px;
+}
+
+.mission-item p {
+    font-size: 19px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.services-section img {
+    display: none; 
+}
+
+@media (max-width: 768px) {
+    .services-section {
+        grid-template-columns: 1fr; 
+        gap: 15px;
+    }
+
+    .service-box {
+        padding: 15px;
+    }
+
+    .service-title {
+        font-size: 20px;
+    }
+
+    .section-title{
+        font-size: 22px;
+    }
+
+    .service-desc {
+        font-size: 14px;
+    }
+
+    .service-action {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .mission-item h3 {
+        font-size: 24px;
+    }
+
+    .mission-item p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-box {
+        padding: 10px;
+    }
+
+    .service-title {
+        font-size: 18px;
+    }
+
+    .section-title{
+        font-size: 20px;
+    }
+
+    .service-desc {
+        font-size: 14px;
+    }
+
+    .service-action {
+        font-size: 14px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .mission-item h3 {
+        font-size: 20px;
+    }
+
+    .mission-item p {
+        font-size: 14px;
+    }
+}
+
+/* Contact Us */
 .contact-section {
     padding: 60px 20px;
     background-color: #fff;
@@ -1374,19 +1345,6 @@ transform: translateX(0);
     animation: slideIn 0.9s ease forwards; 
 }
 
-.contact-head h1 {
-    color: #333;
-    font-size: 36px;
-    margin-bottom: 10px;
-    animation: bounceIn 0.5s forwards; 
-}
-
-.contact-head p {
-    font-size: 18px;
-    color: #666;
-    animation: fadeInUp 0.5s forwards; 
-}
-
 .contact-form-container {
     width: 60%;
     opacity: 0; 
@@ -1400,7 +1358,7 @@ transform: translateX(0);
 .form-group label {
     display: block;
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .form-group input,
@@ -1434,7 +1392,6 @@ transform: translateX(0);
     transform: translateY(-2px); 
 }
 
-/* Contact Us */
 .contact-info {
     width: 35%;
     padding: 20px;
@@ -1452,12 +1409,12 @@ transform: translateX(0);
 }
 
 .contact-info p {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 10px;
 }
 
 .contact-info i {
-    margin-right: 10px;
+    margin-right: 12px;
     color: rgba(0, 0, 0, 0.90);
 }
 
@@ -1569,11 +1526,12 @@ transform: translateX(0);
 }
 
 .faq-item {
+    background-color:  #f9f9f9;
     margin-bottom: 2rem;
 }
 
 .faq-item h3 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     color: #292929;
     cursor: pointer;
     margin-bottom: 1rem;
@@ -1605,7 +1563,6 @@ transform: translateX(0);
 }
 
 .faq-item p {
-    font-size: 1.5rem;
     color: #555;
     display: none;
     line-height: 1.8;
@@ -1621,7 +1578,7 @@ transform: translateX(0);
     display: block;
     opacity: 1;
     color: #444; 
-    background-color: #f9f9f9; 
+    background-color: #f9f9f9;
 }
 
 .faq-item.active p {
@@ -1737,10 +1694,10 @@ footer {
   }
 
   footer .powered-by {
-    font-size: 15px; /* Subtle size for Netlify mention */
+    font-size: 15px; 
     color: #bbb;
     margin-top: 5px;
-    pointer-events: none; /* Not clickable */
-    user-select: none; /* Prevent selection */
-    cursor: default; /* Regular pointer style */
+    pointer-events: none; 
+    user-select: none; 
+    cursor: default; 
 }

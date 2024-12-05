@@ -8,8 +8,8 @@
         
     <title>Auto Inspect – Trusted Vehicle History Reports & Easy Car Selling</title>
     <meta name="description" content="Auto Inspect offers trusted vehicle history reports, reliable car selling, and expert maintenance guide. Enter your VIN for a detailed car report or sell your car hassle-free.">
-
     <link rel="icon" href="../static/icon.png" type="image/x-icon">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
@@ -22,16 +22,15 @@
             <div class="logo" style="display: flex; align-items: center;">
                 <img src="../static/logo.png" alt="CarInspect" style="width: 40px; height: 40px; margin-top: auto; border-radius: 50%; margin-right: 20px; filter: contrast(100%); filter: opacity(100%); pointer-events: none;">
                 <a href="Home.html" style="display: flex; flex-direction: column;">
-                    <h1 style="margin: 0; font-size: 30px;">AutoInspect</h1></a>
-                    <span class="powered-by" aria-hidden="true">&nbsp; | Powered by Netlify</span>
-                
+                <h1 style="margin: 0; font-size: 30px;">AutoInspect</h1></a>
+                <span class="powered-by" aria-hidden="true">&nbsp; | Powered by Netlify</span>
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li class="dropdown">
-                    <a class="buy-sell">Buy/Sell</a>
+                    <a class="buy-sell" href="#">Buy/Sell</a>
                     <ul class="dropdown-menu">
                         <li>
                             <a target="_blank" href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1" class="dropdown-link">
@@ -63,92 +62,23 @@
     <!-- Featured slide -->
 <div class="slideshow-container" style="pointer-events: none;">
     <div class="mySlides fade" style="display: block">
-        <img src="../static/car_fixing.jpg" alt="fixing a car" class="responsive-image">
+        <img src="../static/car_fixing.webp" alt="fixing a car" class="responsive-image">
     </div>
     <div class="mySlides fade">
-        <img src="../static/over_all.jpg" alt="fixing a car" class="responsive-image">
+        <img src="../static/over_all.webp" alt="fixing a car" class="responsive-image">
     </div>
     <div class="mySlides fade">
-        <img src="../static/car_washing.avif" alt="washing the car" class="responsive-image">
+        <img src="../static/car_washing.webp" alt="washing the car" class="responsive-image">
     </div>
     <div class="mySlides fade">
-        <img src="../static/car_evolution.jpg" alt="evolution of car" class="responsive-image">
+        <img src="../static/car_evolution.webp" alt="evolution of car" class="responsive-image">
     </div>
 </div>
 
-<style>
-    form p {
-    font-size: 1em; 
-    text-align: center; 
-    color: white; 
-    margin: 5px 0; 
-    padding: 5px; 
-    border: none; 
-    width: 100%; 
-    box-sizing: border-box; 
-}
-
-/* Default styles for larger screens */
-form p:nth-of-type(1) {
-    font-size: calc(1rem + 1.5vw); 
-    color: white;
-}
-
-form p:nth-of-type(2) {
-    font-size: calc(0.8rem + 1vw); 
-    color: white;
-}
-
-form p:nth-of-type(3) {
-    font-size: calc(0.8rem + 1vw); 
-    color: whitesmoke;
-}
-
-/* Styles for mobile screens */
-@media (max-width: 600px) {
-    form p:nth-of-type(1) { 
-        font-size: calc(1rem + 1.5vw); 
-        color: white;
-    }
-
-    form p:nth-of-type(2) {
-        font-size: calc(0.8rem + 1vw); 
-        color: white;
-    }
-
-    form p:nth-of-type(3) {
-        font-size: calc(0.8rem + 1vw); 
-        color: whitesmoke;
-    }
-
-    .form-group, .form-group-right {
-        margin-bottom: 8px; 
-        width: 100%; 
-    }
-
-    .form-group input, .form-group-right input {
-        width: 100%;
-        padding: 6px; 
-        border: 1px solid white;
-        border-radius: 4px;
-        font-size: 14px;
-    }
-
-    .form-group label, .form-group-right label {
-        font-size: 18px;
-    }
-
-    .custom-line {
-        width: 90%; 
-        margin: 8px 0;
-    }
-}
-</style>
-
 <div class="form-container">
     <form id="vinForm">
-        <p><b>Get Certified Vehicle History Report</b></p>
-        <p>Enter your car's <span class="tooltip"><u>VIN number</u></span> below:</p>
+        <h2 class="section-title" style="color: white; text-transform: uppercase; margin-bottom: 5px"><u>GET CERTIFIED VEHICLE HISTORY REPORT</u></h2>
+        <p style="font-size: x-large;">Enter your car's <span class="tooltip"><u>VIN number</u></span> below:</p>
         <hr class="custom-line">
         <div class="form-group">
             <label for="vin">Enter <u>VIN</u>: </label>
@@ -194,9 +124,9 @@ form p:nth-of-type(3) {
 
 <!-- Partners Section -->
 <section class="partners-section">
-    <div class="container" style="background-color: #f1f1f1; border: none; box-shadow: none;">
-        <h2 class="section-title">Our Trusted Partners</h2>
-        <p class="section-desc">We are proud to collaborate with these industry-leading brands to deliver unmatched automotive services and solutions.</p>
+    <div class="container" style="background-color: #f4f4f4; border: none; box-shadow: none;">
+        <h2 class="section-title"><u>Our Trusted Partners</u></h2>
+        <p>We are proud to collaborate with these industry-leading brands to deliver unmatched automotive services and solutions.</p>
             <div class="partners-slider">
                 <div class="partner">
                     <a href="https://www.carfax.com/" target="_blank">
@@ -234,12 +164,15 @@ form p:nth-of-type(3) {
                     </a>
                 </div>
             </div>
+        <br>
+        <br>
+        <p>Attention to all collaboration-interested parties! we are delighted to shake hands together providing reliable services to potential users. For further query you are committed to apply directly contacting the founder. To email him directly <a href="mailto:zanecarter.9388@gmail.com" style="color: #222">click here</a>.</p>
     </div>
 </section>
 
 <div class="return-policy" style="padding: 10%; color: white; background-color: rgb(0, 0, 0, 0.90);"> 
-    <h1 style="text-align: center; margin: 40px auto; color: white;">Refund Policy</h1>
-    <p style="margin: 14px auto;"><strong>Dear Valued Clients,</strong></p>
+    <h2 class="section-title" style="color: white; text-transform: uppercase;"><u>Refund Policy</u></h2>
+    <p style="margin: 14px auto;">Dear Valued Clients,</p>
     <p>Your satisfaction is our top priority, and we want you to feel confident in your purchase. We offer a full refund within three days of your purchase if you are not completely satisfied.</p>
     <p>We take pride in providing comprehensive vehicle history reports sourced from an authorized NMVTIS provider. If you need to request a refund, simply contact our service team. The process is straightforward, and your refund will be processed within three working days.</p>
     <p>For detailed information, please read our full refund policy.</p>
@@ -253,7 +186,7 @@ form p:nth-of-type(3) {
     <div class="section">
         <div class="text">
             <h2>
-                <a href="index.html" style="color: Black; text-decoration: none;">VERIFY YOUR CAR</a>
+                <a href="index.html" style="color: Black;">VERIFY YOUR CAR</a>
             </h2>
             <p>
                 Gain peace of mind with our comprehensive vehicle verification service. Obtain a detailed vehicle 
@@ -270,28 +203,26 @@ form p:nth-of-type(3) {
     <div class="section"> 
         <div class="text">
             <h2>
-                <a href="index.html" style="color: Black; text-decoration: none;">BUY YOUR IDEAL CAR</a>
+                <a target="_blank" href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1" style="color: Black;">BUY YOUR IDEAL CAR</a>
+                <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024" alt="eBay Tracking Pixel" style="display: none;">
             </h2>
-            <p class="service-desc">
+            <p>
                 Explore a vast selection of vehicles tailored to your needs on eBay Motors. Whether you're searching for a reliable family car, a stylish coupe, or a powerful truck, find the perfect match effortlessly.
-            </p>
+            </p><br>
             <a target="_blank" href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1" class="service-action" style="color: white; text-decoration: none; font-weight: bold;">Browse Cars</a>
             <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024" alt="eBay Tracking Pixel" style="display: none;">
         </div>
         <div class="image">
-            <img src="../static/car_buy.jpg" alt="Find Your Ideal Car on eBay Motors" />
+            <img src="../static/car_buy2.jpg" alt="Find Your Ideal Car on eBay Motors" />
         </div>
     </div>
     
 
     <!-- Section: Maintain Your Car -->
     <div class="section">
-        <div class="image">
-            <img src="../static/car_maintenance.jpg" alt="Vehicle Maintenance" />
-        </div>
         <div class="text">
             <h2>
-                <a href="https://www.yourmechanic.com/book/newuser#zip" style="color: Black; text-decoration: none;" target="_blank">MAINTAIN IT REGULARLY</a>
+                <a href="https://www.yourmechanic.com/book/newuser#zip" style="color: Black;" target="_blank">MAINTAIN IT REGULARLY</a>
             </h2>
             <p>
                 Keep your vehicle in optimal condition with our hassle-free online booking system. Our trusted 
@@ -300,13 +231,16 @@ form p:nth-of-type(3) {
                 and reliability on the road.
             </p>
         </div>
+        <div class="image" style="z-index: 137;">
+            <img src="../static/car_maintenance2.jpg" alt="Vehicle Maintenance" />
+        </div>
     </div>
 
     <!-- Section: Sell Your Car -->
     <div class="section">
         <div class="text">
             <h2>
-                <a href="car_sell.html" style="color: Black; text-decoration: none;" target="_blank">GET TIRED? SELL YOUR CAR</a>
+                <a href="car_sell.html" style="color: Black;" target="_blank">GET TIRED? SELL YOUR CAR</a>
             </h2>
             <p>
                 Looking to sell your car? We accept vehicles of all brands and conditions, ensuring a smooth 
@@ -315,7 +249,7 @@ form p:nth-of-type(3) {
                 hassle-free.
             </p>
         </div>
-        <div class="image">
+        <div class="image" style="z-index: 137;">
             <img src="../static/selling.webp" alt="Sell Your Vehicle" />
         </div>
     </div>
@@ -386,8 +320,8 @@ form p:nth-of-type(3) {
 
 <section id="why-auto-inspect">
     <div class="why-container">
-        <h2>Why Choose Auto Inspect?</h2>
-        <p>Auto Inspect offers a comprehensive, reliable, and professional car verification service, ensuring that you make informed decisions when buying or selling a vehicle.</p>
+        <h2 class="section-title"><u>WHY CHOOSE AUTO INSPECT?</u></h2>
+        <p>Auto Inspect offers a comprehensive, reliable, and professional platform for all your car services at one place, ensuring that you make informed decisions when buying or selling a vehicle.</p>
     </div>
     
     <div class="why-points">
@@ -448,7 +382,7 @@ form p:nth-of-type(3) {
 
 <!-- Ratings Section -->
 <section class="ratings-section">
-    <h2>What Our Customers Say</h2>
+    <h2 class="section-title" style="text-transform: uppercase;"><u>What Our Customers Say</u></h2>
     <div class="rating-stars">
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
@@ -461,8 +395,12 @@ form p:nth-of-type(3) {
     <div class="customer-reviews">
         <!-- Initial visible reviews -->
         <div class="review-box">
-            <p class="reviewer-name">John Doe</p>
-            <p class="review-text">“The vehicle history report saved me from buying a car with hidden accident damage. 10/10 from my side!”</p>
+            <p class="reviewer-name">Emily Parker</p>
+            <p class="review-text">“The vehicle history report saved me from buying a car with hidden accident damage. 9/10 from my side!”</p>
+        </div>
+        <div class="review-box">
+            <p class="reviewer-name">Harry</p>
+            <p class="review-text">“Great experience sir! Definitely worth it”</p>
         </div>
         <div class="review-box">
             <p class="reviewer-name">Mark Johnson</p>
@@ -480,11 +418,7 @@ form p:nth-of-type(3) {
                 <p class="review-text">“Honestly, this is the most detailed report I’ve ever seen. I felt 100% confident selling my car knowing I could provide an accurate history to the buyer. You guys are amazing!”</p>
             </div>
             <div class="review-box">
-                <p class="reviewer-name">Harry</p>
-                <p class="review-text">“Great experience sir! Definitely worth it”</p>
-            </div>
-            <div class="review-box">
-                <p class="reviewer-name">Emily Parker</p>
+                <p class="reviewer-name">John Doe</p>
                 <p class="review-text">“Wow, just wow! This report saved me from buying a real lemon. Can’t believe how thorough it was. Thank you!”</p>
             </div>
         </div>
@@ -492,9 +426,11 @@ form p:nth-of-type(3) {
 
     <!-- Show More/Less Button -->
     <button id="toggleReviewsBtn" onclick="toggleReviews()">Show More</button>
-
+<br>
+<br>
+<br>
     <!-- Rating Form -->
-    <h2 style="margin: 20px auto 15px auto;">Rate Us and Leave a Comment</h2>
+    <h2 class="section-title" style="text-transform: uppercase;"><u>Rate Us and Leave a Comment</u></h2>
     <form id="ratingForm">
         <label for="rating" class="heading-label">Rate us:</label>
         <div class="star-rating">

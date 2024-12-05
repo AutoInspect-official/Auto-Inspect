@@ -18,16 +18,16 @@
         <nav class="navbar">
             <div class="logo" style="display: flex; align-items: center;">
                 <img src="../static/logo.png" alt="CarInspect" style="width: 40px; height: 40px; margin-top: auto; border-radius: 50%; margin-right: 20px; filter: contrast(100%); filter: opacity(100%); pointer-events: none;">
-                <a href="Home.html">
-                    <h1 style="margin: 0; font-size: 30px;">AutoInspect</h1>
-                </a>
+                <a href="Home.html" style="display: flex; flex-direction: column;">
+                    <h1 style="margin: 0; font-size: 30px;">AutoInspect</h1></a>
+                    <span class="powered-by" aria-hidden="true">&nbsp; | Powered by Netlify</span>
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li class="dropdown">
-                    <a class="buy-sell">Buy/Sell</a>
+                    <a class="buy-sell" href="#">Buy/Sell</a>
                     <ul class="dropdown-menu">
                         <li>
                             <a target="_blank" href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1" class="dropdown-link">
@@ -58,23 +58,23 @@
 <br>
 <br>
 
-<div class="container" id="car_info" style="background-color: white;">
-    <h2>Car Details:</h2>
+<div class="container" id="car_info" style="margin-top: 10px; ">
+    <h2 class="section-title" style="text-align: centre; text-transform: uppercase;"><u>Car Details:</u></h2>
     <div id="loading-message">Loading VIN data, please wait...</div>
-    <div id="error-message" style="display: none; color: red;">Failed to retrieve VIN data. Retrying...</div>
-    <p><strong>VIN:</strong> <span id="carVin"></span></p>
-    <p><strong>Year:</strong> <span id="carYear"></span></p>
-    <p><strong>Make:</strong> <span id="carMake"></span></p>
-    <p><strong>Model:</strong> <span id="carModel"></span></p>
-    <p><strong>Style:</strong> <span id="carStyle"></span></p>
-    <p><strong>Made In:</strong> <span id="carMadeIn"></span></p>
-    <p><strong>Fuel Type:</strong> <span id="fuelType"></span></p>
-    <p><strong>Vehicle Type:</strong> <span id="vehicleType"></span></p>
-    <p><strong>Trim Level:</strong> <span id="trimLevel"></span></p>
-    <p><strong>Engine Type:</strong> <span id="engineType"></span></p>
-    <p><strong>Transmission Type:</strong> <span id="transmissionType"></span></p>
-    <p><strong>Body Type:</strong> <span id="bodyType"></span></p>
-    <p><strong>Safety Rating:</strong> <span id="safetyRating"></span></p>
+        <div id="error-message" style="display: none; color: red;">Failed to retrieve VIN data. Retrying...</div>
+        <p><strong>VIN:</strong> <span id="carVin"></span></p>
+        <p><strong>Year:</strong> <span id="carYear"></span></p>
+        <p><strong>Make:</strong> <span id="carMake"></span></p>
+        <p><strong>Model:</strong> <span id="carModel"></span></p>
+        <p><strong>Style:</strong> <span id="carStyle"></span></p>
+        <p><strong>Made In:</strong> <span id="carMadeIn"></span></p>
+        <p><strong>Fuel Type:</strong> <span id="fuelType"></span></p>
+        <p><strong>Vehicle Type:</strong> <span id="vehicleType"></span></p>
+        <p><strong>Trim Level:</strong> <span id="trimLevel"></span></p>
+        <p><strong>Engine Type:</strong> <span id="engineType"></span></p>
+        <p><strong>Transmission Type:</strong> <span id="transmissionType"></span></p>
+        <p><strong>Body Type:</strong> <span id="bodyType"></span></p>
+        <p><strong>Safety Rating:</strong> <span id="safetyRating"></span></p>
 </div>
 
 <script>
@@ -129,16 +129,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 <!-- Premium Plan Section -->
 <section class="premium-plan-section">
-    <div class="container" style="background-color: white">
+    <div class="container" style="border: black; background-color: white;">
         <div class="content-box">
             <br>
-            <h2>Unlock the <span>detailed car history</span></h2>
+            <h2 class="section-title" style="text-transform: uppercase;"><u>Unlock the <span>detailed car history</span></u></h2>
             <p>Gain access to a comprehensive car history report with our premium plan for only <strong>$45.50</strong>.</p>
 
             <form id="paymentForm">
                 <style>
                     label {
-                        color: black !important; /* Ensure all labels have black text */
+                        color: black !important; 
                     }
                 </style>
                 

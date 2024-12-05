@@ -1,4 +1,4 @@
-import axios from 'axios';
+const axios = require('axios');
 
 // Function to scrape VIN data from NHTSA API
 export const scrapeVinData = async (vin) => {

@@ -219,11 +219,11 @@ function limitReviews() {
     const toggleBtn = document.getElementById('toggleReviewsBtn');
 
     reviews.forEach((review, index) => {
-        review.style.display = index < 3 ? 'block' : 'none';
+        review.style.display = index < 4 ? 'block' : 'none';
     });
 
     // Show toggle button if there are more than three reviews
-    toggleBtn.style.display = reviews.length > 3 ? 'block' : 'none';
+    toggleBtn.style.display = reviews.length > 4 ? 'block' : 'none';
 }
 
 // Initial setup on page load

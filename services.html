@@ -18,16 +18,16 @@
         <nav class="navbar">
             <div class="logo" style="display: flex; align-items: center;">
                 <img src="../static/logo.png" alt="CarInspect" style="width: 40px; height: 40px; margin-top: auto; border-radius: 50%; margin-right: 20px; filter: contrast(100%); filter: opacity(100%); pointer-events: none;">
-                <a href="Home.html">
-                    <h1 style="margin: 0; font-size: 30px;">AutoInspect</h1>
-                </a>
+                <a href="Home.html" style="display: flex; flex-direction: column;">
+                    <h1 style="margin: 0; font-size: 30px;">AutoInspect</h1></a>
+                    <span class="powered-by" aria-hidden="true">&nbsp; | Powered by Netlify</span>
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li class="dropdown">
-                    <a class="buy-sell">Buy/Sell</a>
+                    <a class="buy-sell" href="#">Buy/Sell</a>
                     <ul class="dropdown-menu">
                         <li>
                             <a target="_blank" href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1" class="dropdown-link">
@@ -58,12 +58,12 @@
 
 <!-- Hero Section -->
 <section class="hero service">
-    <h1>Services</h1>
+    <h1 style="text-transform: uppercase;"><u>Services</u></h1>
     <h2>Get served by the best professionals in the industry.</h2>
 </section>
 <h2 style="text-align: center; margin: 90px auto; font-size: 45px; text-transform: uppercase;"></h2>
-<div class="container" style="background-color: #f1f1f1;">
-    <section class="services-section" style="background-color: #f1f1f1;">
+<div class="container">
+    <section class="services-section">
         <section>
             <!-- Vehicle History Report Section -->
             <div class="service-box">
@@ -100,15 +100,18 @@
         </section>
 
 </div>
-<br> <br> <br>
 <section id="our-missions" class="mission-section">
-    <div class="container" style="background-color: #f1f1f1; box-shadow: none;">
-        <h2 class="section-title"><br>Our Mission</h2>
+    <div class="container" style=" box-shadow: none;">
+        <h2 class="section-title"><br><u>Our Mission</u></h2>
         <div class="mission-content">
             <p>Our mission is to sum-up all your vehicle related matters at one dashboard and provide you with the easy click facility to control your vehicle concerns. All who wishes to shake hands with us are welcomed always. Our today’s focus mainly include: </p>
             <div class="mission-item">
                 <h3>Comprehensive Vehicle Insights</h3>
                 <p>At Auto Inspect, we're committed to empowering you with the most accurate and detailed vehicle history reports. Whether you're buying or selling, our insights provide clarity and confidence, ensuring every transaction is transparent and stress-free.</p>
+            </div>
+            <div class="mission-item">
+                <h3>Buying An Ideal Car</h3>
+                <p>We provide a safe and trustworthy environment and a variety of choice to buy instant vehicle.</p>
             </div>
             <div class="mission-item">
                 <h3>Hassle-Free Car Maintenance</h3>
@@ -123,14 +126,14 @@
             <div class="mission-item">
                 <h3>Ready to Experience the Difference?</h3>
                 <p>Join the thousands of customers who trust Auto Inspect for all their vehicle needs. <a href="index.html" style="color: #333">Start Here</a> to get your comprehensive vehicle history report, schedule a repair, or sell your car today!</p>
-            </div> <br>
+            </div> 
         </div>
     </div>
 </section>
 
 <!-- Ratings Section -->
 <section class="ratings-section">
-    <h2>What Our Customers Say</h2>
+    <h2 class="section-title"><u>What Our Customers Say</u></h2>
     <div class="rating-stars">
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
@@ -145,6 +148,10 @@
         <div class="review-box">
             <p class="reviewer-name">John Doe</p>
             <p class="review-text">“The vehicle history report saved me from buying a car with hidden accident damage. 10/10 from my side!”</p>
+        </div>
+        <div class="review-box">
+            <p class="reviewer-name">Harry</p>
+            <p class="review-text">“Great experience sir! Definitely worth it”</p>
         </div>
         <div class="review-box">
             <p class="reviewer-name">Mark Johnson</p>
@@ -162,10 +169,6 @@
                 <p class="review-text">“Honestly, this is the most detailed report I’ve ever seen. I felt 100% confident selling my car knowing I could provide an accurate history to the buyer. You guys are amazing!”</p>
             </div>
             <div class="review-box">
-                <p class="reviewer-name">Harry</p>
-                <p class="review-text">“Great experience sir! Definitely worth it”</p>
-            </div>
-            <div class="review-box">
                 <p class="reviewer-name">Emily Parker</p>
                 <p class="review-text">“Wow, just wow! This report saved me from buying a real lemon. Can’t believe how thorough it was. Thank you!”</p>
             </div>
@@ -174,9 +177,9 @@
 
     <!-- Show More/Less Button -->
     <button id="toggleReviewsBtn" onclick="toggleReviews()">Show More</button>
-
+<br>
     <!-- Rating Form -->
-    <h2 style="margin: 20px auto 15px auto;">Rate Us and Leave a Comment</h2>
+    <h2 class="section-title"><u>Rate Us and Leave a Comment</u></h2>
     <form id="ratingForm">
         <label for="rating" class="heading-label">Rate us:</label>
         <div class="star-rating">
@@ -415,6 +418,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
     <div class="footer-bottom">
       <p>&copy; 2024 Auto Inspect. All rights reserved. | <a href="policy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+      <p class="powered-by">Powered by Netlify</p>
     </div>
 </footer>
 

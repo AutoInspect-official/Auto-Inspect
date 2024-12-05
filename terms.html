@@ -17,16 +17,16 @@
         <nav class="navbar">
             <div class="logo" style="display: flex; align-items: center;">
                 <img src="../static/logo.png" alt="CarInspect" style="width: 40px; height: 40px; margin-top: auto; border-radius: 50%; margin-right: 20px; filter: contrast(100%); filter: opacity(100%); pointer-events: none;">
-                <a href="Home.html">
-                    <h1 style="margin: 0; font-size: 30px;">AutoInspect</h1>
-                </a>
+                <a href="Home.html" style="display: flex; flex-direction: column;">
+                    <h1 style="margin: 0; font-size: 30px;">AutoInspect</h1></a>
+                    <span class="powered-by" aria-hidden="true">&nbsp; | Powered by Netlify</span>
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li class="dropdown">
-                    <a class="buy-sell">Buy/Sell</a>
+                    <a class="buy-sell" href="#">Buy/Sell</a>
                     <ul class="dropdown-menu">
                         <li>
                             <a target="_blank" href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1" class="dropdown-link">
@@ -58,7 +58,7 @@
     <main>
             <!-- Hero Section -->
             <section class="hero terms">
-                <h1>Terms and Conditions</h1>
+                <h1 style="text-transform: uppercase;"><u>Terms and Conditions</u></h1>
                 <h2>Please Review and Accept Our Terms Carefully</h2>
             </section>
         <style>
@@ -78,7 +78,6 @@
             
             .content p {
                 margin-bottom: 1.5rem; 
-                font-size: 1.5rem; 
                 color: #292929; 
             }
             
@@ -232,6 +231,7 @@
   
     <div class="footer-bottom">
       <p>&copy; 2024 Auto Inspect. All rights reserved. | <a href="policy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+      <p class="powered-by">Powered by Netlify</p>
     </div>
 </footer>
 
