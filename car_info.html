@@ -58,73 +58,85 @@
 <br>
 <br>
 
-<div class="container" id="car_info" style="margin-top: 10px; ">
-    <h2 class="section-title" style="text-align: centre; text-transform: uppercase;"><u>Car Details:</u></h2>
+<div class="container" id="car_info" style="margin-top: 10px;">
+    <h2 class="section-title"><u>Car Details:</u></h2>
     <div id="loading-message">Loading VIN data, please wait...</div>
-        <div id="error-message" style="display: none; color: red;">Failed to retrieve VIN data. Retrying...</div>
-        <p><strong>VIN:</strong> <span id="carVin"></span></p>
-        <p><strong>Year:</strong> <span id="carYear"></span></p>
-        <p><strong>Make:</strong> <span id="carMake"></span></p>
-        <p><strong>Model:</strong> <span id="carModel"></span></p>
-        <p><strong>Style:</strong> <span id="carStyle"></span></p>
-        <p><strong>Made In:</strong> <span id="carMadeIn"></span></p>
-        <p><strong>Fuel Type:</strong> <span id="fuelType"></span></p>
-        <p><strong>Vehicle Type:</strong> <span id="vehicleType"></span></p>
-        <p><strong>Trim Level:</strong> <span id="trimLevel"></span></p>
-        <p><strong>Engine Type:</strong> <span id="engineType"></span></p>
-        <p><strong>Transmission Type:</strong> <span id="transmissionType"></span></p>
-        <p><strong>Body Type:</strong> <span id="bodyType"></span></p>
-        <p><strong>Safety Rating:</strong> <span id="safetyRating"></span></p>
+    <div id="error-message" style="display: none;">Failed to retrieve VIN data. Retrying...</div>
+    <p><strong>VIN:</strong> <span id="carVin"></span></p>
+    <p><strong>Year:</strong> <span id="carYear"></span></p>
+    <p><strong>Make:</strong> <span id="carMake"></span></p>
+    <p><strong>Model:</strong> <span id="carModel"></span></p>
+    <p><strong>Style:</strong> <span id="carStyle"></span></p>
+    <p><strong>Made In:</strong> <span id="carMadeIn"></span></p>
+    <p><strong>Fuel Type:</strong> <span id="fuelType"></span></p>
+    <p><strong>Vehicle Type:</strong> <span id="vehicleType"></span></p>
+    <p><strong>Trim Level:</strong> <span id="trimLevel"></span></p>
+    <p><strong>Engine Type:</strong> <span id="engineType"></span></p>
+    <p><strong>Transmission Type:</strong> <span id="transmissionType"></span></p>
+    <p><strong>Body Type:</strong> <span id="bodyType"></span></p>
+    <p><strong>Safety Rating:</strong> <span id="safetyRating"></span></p>
 </div>
 
 <script>
 document.addEventListener("DOMContentLoaded", async () => {
     const vin = new URLSearchParams(window.location.search).get('vin');
-    document.getElementById('carVin').innerText = vin;
 
+    if (!vin) {
+        document.getElementById('loading-message').style.display = 'none';
+        document.getElementById('error-message').style.display = 'block';
+        document.getElementById('error-message').innerText = 
+            "No VIN number provided in the URL. Please provide a valid VIN.";
+        return; // Stop execution if no VIN is provided
+    }
+
+    document.getElementById('carVin').innerText = vin;
     let attempt = 0;
     const maxAttempts = 3;
 
-    async function fetchCarData() {
+    async function fetchVinData() {
         try {
+            const url = `https://vpic.nhtsa.dot.gov/api/vehicles/decodevinvalues/${vin}?format=json`;
+            const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
+            const response = await fetch(proxyUrl);
 
-            const response = await fetch(`https://autoinspect.netlify.app/.netlify/functions/api/vin?vin=${vin}`);
-            
-            if (!response.ok) throw new Error('Failed to fetch car data');
+            if (!response.ok) throw new Error('Failed to fetch VIN data');
 
-            const carData = await response.json();
+            const data = (await response.json()).contents;
+            const carData = JSON.parse(data).Results[0];
+
+            // Populate data
             document.getElementById('loading-message').style.display = 'none';
             document.getElementById('error-message').style.display = 'none';
-
-            // Populate the data
-            document.getElementById('carYear').innerText = carData.year || "N/A";
-            document.getElementById('carMake').innerText = carData.make || "N/A";
-            document.getElementById('carModel').innerText = carData.model || "N/A";
-            document.getElementById('carStyle').innerText = carData.style || "N/A";
-            document.getElementById('carMadeIn').innerText = carData.madeIn || "N/A";
-            document.getElementById('fuelType').innerText = carData.fuelType || "N/A";
-            document.getElementById('vehicleType').innerText = carData.vehicleType || "N/A";
-            document.getElementById('trimLevel').innerText = carData.trimLevel || "N/A";
-            document.getElementById('engineType').innerText = carData.engineType || "N/A";
-            document.getElementById('transmissionType').innerText = carData.transmissionType || "N/A";
-            document.getElementById('bodyType').innerText = carData.bodyType || "N/A";
-            document.getElementById('safetyRating').innerText = carData.safetyRating || "N/A";
+            document.getElementById('carYear').innerText = carData.ModelYear || "N/A";
+            document.getElementById('carMake').innerText = carData.Make || "N/A";
+            document.getElementById('carModel').innerText = carData.Model || "N/A";
+            document.getElementById('carStyle').innerText = carData.BodyClass || "N/A";
+            document.getElementById('carMadeIn').innerText = carData.PlantCountry || "N/A";
+            document.getElementById('fuelType').innerText = carData.FuelTypePrimary || "N/A";
+            document.getElementById('vehicleType').innerText = carData.VehicleType || "N/A";
+            document.getElementById('trimLevel').innerText = carData.Trim || "N/A";
+            document.getElementById('engineType').innerText = carData.EngineConfiguration || "N/A";
+            document.getElementById('transmissionType').innerText = carData.TransmissionStyle || "N/A";
+            document.getElementById('bodyType').innerText = carData.BodyClass || "N/A";
+            document.getElementById('safetyRating').innerText = "Not Available from API"; // Static
         } catch (error) {
             attempt++;
-            console.error('Attempt', attempt, 'Error fetching car data:', error);
+            console.error(`Attempt ${attempt}:`, error);
             document.getElementById('error-message').style.display = 'block';
 
             if (attempt < maxAttempts) {
-                setTimeout(fetchCarData, 2000); // Retry after 2 seconds
+                setTimeout(fetchVinData, 2000);
             } else {
                 document.getElementById('loading-message').style.display = 'none';
-                document.getElementById('error-message').innerText = "Failed to retrieve VIN data after multiple attempts. If this massage continues to occur please contact us. Regards.";
+                document.getElementById('error-message').innerText = 
+                    "Failed to retrieve VIN data after multiple attempts. Please contact support.";
             }
         }
     }
 
-    fetchCarData();
+    fetchVinData();
 });
+
 </script>
 
 <!-- Premium Plan Section -->
@@ -238,7 +250,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       <!-- Logo and Description -->
       <div class="footer-section logo-description">
         <img src="../static/logo.webp" alt="Auto_Inspect logo" class="footer-logo">
-        <p>We provide reliable car verification and maintenance as well as easy selling services to keep your vehicle in top shape. Trust us for expert advice, detailed inspections, and high-quality service.
+        <p>We provide reliable car verification and maintenance as well as easy buying/selling services to keep your vehicle in top shape. Trust us for expert advice, detailed inspections, and high-quality services.
         </p>
       </div>
   

@@ -1,23 +1,12 @@
 [build]
-  functions = "./"                     # Path to the functions directory (root since your server.mjs is there)
-  publish = "./"                        # Serve files from the root directory
-  ignore = "exit 0"                     # Skip automatic plugin detection, if necessary
+  functions = "./"                     
+  publish = "./"                        
+  ignore = "exit 0"                     
 
 [functions]
   node_bundler = "esbuild"
-  included_files = ["vin-bot/vinbot.js"] # Include vinbot.js for VIN processing
-
-[[redirects]]
-  from = "/submit-car"
-  to = "/.netlify/functions/server/submit-car"
-  status = 200
-
-[[redirects]]
-  from = "/api/vin"
-  to = "/.netlify/functions/server/api/vin"
-  status = 200
 
 [[redirects]]
   from = "/*"
-  to = "/index.html" # SPA catch-all routing
+  to = "/index.html" 
   status = 200

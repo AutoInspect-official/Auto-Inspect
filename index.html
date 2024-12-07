@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="k4SUwh2-N5XahEXqwttK4phPwJIfdMIxkFu1qJL1iRI" />
         
-    <title>Auto Inspect – Trusted Vehicle History Reports & Easy Car Selling</title>
-    <meta name="description" content="Auto Inspect offers trusted vehicle history reports, reliable car selling, and expert maintenance guide. Enter your VIN for a detailed car report or sell your car hassle-free.">
+    <title>Auto Inspect – Comprehensive Vehicle History Reports & Hassle-Free Car Services USA</title>
+    <meta name="description" content="Discover trusted vehicle history reports, seamless car buying/selling, and expert maintenance tips at Auto Inspect. Enter your VIN for detailed insights or buy or sell your car with ease in the USA.">
     <link rel="icon" href="../static/icon.png" type="image/x-icon">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -60,25 +60,25 @@
     </script>
 
     <!-- Featured slide -->
-<div class="slideshow-container" style="pointer-events: none;">
-    <div class="mySlides fade" style="display: block">
-        <img src="../static/car_fixing.webp" alt="fixing a car" class="responsive-image">
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="../static/car_fixing.webp" alt="Fixing a car in the garage" class="responsive-image">
+        </div>
+        <div class="mySlides fade">
+            <img src="../static/over_all.webp" alt="Car maintenance overview" class="responsive-image">
+        </div>
+        <div class="mySlides fade">
+            <img src="../static/car_washing.webp" alt="Car being washed" class="responsive-image">
+        </div>
+        <div class="mySlides fade">
+            <img src="../static/car_evolution.webp" alt="Evolution of cars through history" class="responsive-image">
+        </div>
     </div>
-    <div class="mySlides fade">
-        <img src="../static/over_all.webp" alt="fixing a car" class="responsive-image">
-    </div>
-    <div class="mySlides fade">
-        <img src="../static/car_washing.webp" alt="washing the car" class="responsive-image">
-    </div>
-    <div class="mySlides fade">
-        <img src="../static/car_evolution.webp" alt="evolution of car" class="responsive-image">
-    </div>
-</div>
 
 <div class="form-container">
     <form id="vinForm">
         <h2 class="section-title" style="color: white; text-transform: uppercase; margin-bottom: 5px"><u>GET CERTIFIED VEHICLE HISTORY REPORT</u></h2>
-        <p style="font-size: x-large;">Enter your car's <span class="tooltip"><u>VIN number</u></span> below:</p>
+        <p style="font-size: x-large;">Enter your car's US based <span class="tooltip"><u>VIN number</u></span> below:</p>
         <hr class="custom-line">
         <div class="form-group">
             <label for="vin">Enter <u>VIN</u>: </label>
@@ -97,11 +97,11 @@
 <script>
     document.getElementById('vinForm').addEventListener('submit', function(event) {
         event.preventDefault();
-        const vin = document.getElementById('vin').value.trim(); // Correct the ID to match the input field
+        const vin = document.getElementById('vin').value.trim();
 
         if (vin) {
-            // Redirect to the car info page with the VIN as a query parameter
-            window.location.href = `http://localhost:5500/car_info.html?vin=${vin}`;
+            // Redirect to the car info page with VIN as query parameter
+            window.location.href = `${window.location.origin}/car_info.html?vin=${vin}`;
         } else {
             alert('Please enter a valid VIN.');
         }
@@ -114,69 +114,67 @@
 </div>
 
     <!-- Dots/circles -->
-<div style= "text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-    <span class="dot" onclick="currentSlide(4)"></span>
-
-</div>
+    <div style="text-align: center;">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+        <span class="dot" onclick="currentSlide(4)"></span> 
+    </div>
 
 <!-- Partners Section -->
-<section class="partners-section">
+<section class="partners-section"> 
     <div class="container" style="background-color: #f4f4f4; border: none; box-shadow: none;">
-        <h2 class="section-title"><u>Our Trusted Partners</u></h2>
-        <p>We are proud to collaborate with these industry-leading brands to deliver unmatched automotive services and solutions.</p>
-            <div class="partners-slider">
-                <div class="partner">
-                    <a href="https://www.carfax.com/" target="_blank">
-                        <img src="../static/carfax.png" alt="Carfax Logo" class="partner-logo">
-                    </a>
-                </div>
-                <div class="partner">
-                    <a href="https://www.yourmechanic.com/" target="_blank">
-                        <img src="../static/your_mechanic.png" alt="YourMechanic Logo" class="partner-logo">
-                    </a>
-                </div>
-                <div class="partner">
-                    <a href="https://www.kbb.com/" target="_blank">
-                        <img src="../static/kelleys_blue_book.png" alt="Kelley Blue Book Logo" class="partner-logo">
-                    </a>
-                </div>
-                <div class="partner">
-                    <a href="https://www.ebay.com/motors" target="_blank">
-                        <img src="../static/ebay.png" alt="eBay Motors Logo" class="partner-logo">
-                    </a>
-                </div>
-                <div class="partner">
-                    <a href="https://vehiclehistory.bja.ojp.gov/" target="_blank">
-                        <img src="../static/nmvtis.jpeg" alt="nmvtis Logo" class="partner-logo">
-                    </a>
-                </div>
-                <div class="partner">
-                    <a href="https://www.vincheck.info/" target="_blank">
-                        <img src="../static/vincheck.png" alt="VINCheck Logo" class="partner-logo">
-                    </a>
-                </div>
-                <div class="partner">
-                    <a href="https://www.vinfreecheck.com/motors" target="_blank">
-                        <img src="../static/vinfreecheck.jpeg" alt="VINFreeCheck Logo" class="partner-logo">
-                    </a>
-                </div>
+        <h2 class="section-title"><u>Trusted Partners in Automotive Excellence</u></h2>
+        <p>We proudly collaborate with trusted industry leaders to provide top-tier automotive services, ensuring accuracy and reliability for our valued customers.</p>
+        <div class="partners-slider">
+            <div class="partner">
+                <a href="https://www.carfax.com/" target="_blank">
+                    <img src="../static/carfax.png" alt="Carfax Logo - Vehicle History Reports" class="partner-logo">
+                </a>
             </div>
-        <br>
-        <br>
-        <p>Attention to all collaboration-interested parties! we are delighted to shake hands together providing reliable services to potential users. For further query you are committed to apply directly contacting the founder. To email him directly <a href="mailto:zanecarter.9388@gmail.com" style="color: #222">click here</a>.</p>
+            <div class="partner">
+                <a href="https://www.yourmechanic.com/" target="_blank">
+                    <img src="../static/your_mechanic.png" alt="YourMechanic Logo - Mobile Car Repairs" class="partner-logo">
+                </a>
+            </div>
+            <div class="partner">
+                <a href="https://www.kbb.com/" target="_blank">
+                    <img src="../static/kelleys_blue_book.png" alt="Kelley Blue Book Logo - Vehicle Pricing" class="partner-logo">
+                </a>
+            </div>
+            <div class="partner">
+                <a href="https://www.ebay.com/motors" target="_blank">
+                    <img src="../static/ebay.png" alt="eBay Motors Logo - Vehicle Parts Marketplace" class="partner-logo">
+                </a>
+            </div>
+            <div class="partner">
+                <a href="https://vehiclehistory.bja.ojp.gov/" target="_blank">
+                    <img src="../static/nmvtis.jpeg" alt="NMVTIS Logo - Title & History Data Provider" class="partner-logo">
+                </a>
+            </div>
+            <div class="partner">
+                <a href="https://www.vincheck.info/" target="_blank">
+                    <img src="../static/vincheck.png" alt="VINCheck Logo - Free Recall Data" class="partner-logo">
+                </a>
+            </div>
+            <div class="partner">
+                <a href="https://www.vinfreecheck.com/motors" target="_blank">
+                    <img src="../static/vinfreecheck.jpeg" alt="VINFreeCheck Logo - Affordable History Reports" class="partner-logo">
+                </a>
+            </div>
+        </div>
+        <h2 class="section-title" style="margin-top: 50px;"><u>Partner with Us</u></h2>
+        <p><b>Collaborate with industry experts!</b><br>We invite businesses to join us in offering trusted vehicle solutions. For inquiries, <a href="mailto:zanecarter.9388@gmail.com" style="color: #222">email our founder</a> directly.</p>
+        <p>Let’s help our customers together!</p>
     </div>
 </section>
 
-<div class="return-policy" style="padding: 10%; color: white; background-color: rgb(0, 0, 0, 0.90);"> 
+<div class="return-policy" style="padding: 10%; color: white; background-color: rgba(0, 0, 0, 0.90);"> 
     <h2 class="section-title" style="color: white; text-transform: uppercase;"><u>Refund Policy</u></h2>
-    <p style="margin: 14px auto;">Dear Valued Clients,</p>
-    <p>Your satisfaction is our top priority, and we want you to feel confident in your purchase. We offer a full refund within three days of your purchase if you are not completely satisfied.</p>
-    <p>We take pride in providing comprehensive vehicle history reports sourced from an authorized NMVTIS provider. If you need to request a refund, simply contact our service team. The process is straightforward, and your refund will be processed within three working days.</p>
-    <p>For detailed information, please read our full refund policy.</p>
-    <p>Thank you for choosing us!</p>
+    <p>We value your trust and confidence in our services. If you're not satisfied, we offer a <b>full refund within 3 days</b> of purchase.</p>
+    <p>Our reports are sourced from authorized NMVTIS providers, guaranteeing reliable data. Requesting a refund is simple—just contact our support team, and we’ll process it within three business days.</p>
+    <p>Read our <a href="policy.html" style="color: white;">detailed refund policy</a> for more information.</p>
+    <p>Thank you for choosing us for your vehicle history needs!</p>
 </div>
 <br>
 <br>
@@ -189,9 +187,7 @@
                 <a href="index.html" style="color: Black;">VERIFY YOUR CAR</a>
             </h2>
             <p>
-                Gain peace of mind with our comprehensive vehicle verification service. Obtain a detailed vehicle 
-                history report that includes essential information such as specifications, damage history, 
-                recall notices, and more. Whether you’re buying or selling, ensure you have all the facts.
+                Ensure confidence in your purchase with our detailed vehicle verification reports. Access critical insights like specifications, damage history, recalls, and more. Perfect for buyers and sellers seeking transparency.
             </p>
         </div>
         <div class="image">
@@ -207,7 +203,7 @@
                 <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024" alt="eBay Tracking Pixel" style="display: none;">
             </h2>
             <p>
-                Explore a vast selection of vehicles tailored to your needs on eBay Motors. Whether you're searching for a reliable family car, a stylish coupe, or a powerful truck, find the perfect match effortlessly.
+                Discover a diverse range of vehicles on eBay Motors. From reliable family cars to sleek coupes and tough trucks, find the perfect car that matches your needs and budget.
             </p><br>
             <a target="_blank" href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1" class="service-action" style="color: white; text-decoration: none; font-weight: bold;">Browse Cars</a>
             <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024" alt="eBay Tracking Pixel" style="display: none;">
@@ -225,10 +221,7 @@
                 <a href="https://www.yourmechanic.com/book/newuser#zip" style="color: Black;" target="_blank">MAINTAIN IT REGULARLY</a>
             </h2>
             <p>
-                Keep your vehicle in optimal condition with our hassle-free online booking system. Our trusted 
-                partners offer a wide range of maintenance services, from routine checks to upgrades, all 
-                performed under expert supervision. Stay proactive about your car’s health to ensure safety 
-                and reliability on the road.
+                Keep your vehicle running smoothly with our maintenance partners. Schedule services like routine checks or expert repairs online. Prioritize your car’s health for safer, reliable drives.
             </p>
         </div>
         <div class="image" style="z-index: 137;">
@@ -243,10 +236,7 @@
                 <a href="car_sell.html" style="color: Black;" target="_blank">GET TIRED? SELL YOUR CAR</a>
             </h2>
             <p>
-                Looking to sell your car? We accept vehicles of all brands and conditions, ensuring a smooth 
-                selling process tailored to your desired price. For an accurate valuation, please discuss your 
-                pricing preferences with us via our Live Chat feature. Let us assist you in making the sale 
-                hassle-free.
+                Ready to sell your ride? We make the process seamless for vehicles of all brands and conditions. Use our Live Chat to get an accurate valuation and finalize your sale hassle-free.
             </p>
         </div>
         <div class="image" style="z-index: 137;">
@@ -307,6 +297,12 @@
         border-radius: 8px;
     }
 
+    @media(max-width: 700px){
+        .why-point{
+            flex: 1 50%;
+        }
+    }
+
     .why-point h3 {
         font-size: 24px;
         color: #000;
@@ -321,41 +317,52 @@
 <section id="why-auto-inspect">
     <div class="why-container">
         <h2 class="section-title"><u>WHY CHOOSE AUTO INSPECT?</u></h2>
-        <p>Auto Inspect offers a comprehensive, reliable, and professional platform for all your car services at one place, ensuring that you make informed decisions when buying or selling a vehicle.</p>
+        <p>Auto Inspect is your one-stop solution for reliable car services, including verifying, buying, selling, and maintaining vehicles. Make informed decisions with our professional tools and trusted expertise.</p>
     </div>
     
     <div class="why-points">
         <div class="why-point" id="point1">
-            <h3>Comprehensive Reports</h3>
-            <p>Our reports cover accident history, title status, open recalls, service history, and more. You get a complete history of the vehicle you're interested in.</p>
+            <h3>Comprehensive Vehicle Reports</h3>
+            <p>Access detailed vehicle history, including accident records, title status, open recalls, and service logs. Stay informed when buying or selling a car.</p>
         </div>
         
         <div class="why-point" id="point2">
-            <h3>Expert Maintenance Insights</h3>
-            <p>Get professional advice on how to maintain your vehicle, extend its lifespan, and ensure peak performance throughout its life cycle.</p>
+            <h3>Expert Maintenance Advice</h3>
+            <p>Enhance your vehicle’s performance and lifespan with professional maintenance recommendations tailored to your car's needs.</p>
         </div>
 
         <div class="why-point" id="point3">
-            <h3>Sell Your Car Effortlessly</h3>
-            <p>Whether your car is in perfect condition or has multiple issues, we can help you sell it quickly, offering competitive pricing based on its condition.</p>
+            <h3>Find Your Perfect Car</h3>
+            <p>Discover a wide selection of vehicles with verified histories. Whether it’s a family car, a luxury model, or a powerful truck, we help you find the best match for your needs.</p>
         </div>
     </div>
 
     <div class="why-points">
         <div class="why-point" id="point4">
-            <h3>Trusted by Thousands</h3>
-            <p>Our service has been trusted by thousands of customers across the country, providing them with accurate and trustworthy vehicle history reports.</p>
+            <h3>Sell Your Car with Ease</h3>
+            <p>Get competitive offers for cars in any condition. Our seamless process helps you sell quickly and hassle-free.</p>
         </div>
 
         <div class="why-point" id="point5">
-            <h3>Round-the-Clock Support</h3>
-            <p>Our customer support team is available 24/7 to assist you with any questions or issues you may have regarding our services.</p>
+            <h3>Learn about your car</h3>
+            <p>Looks like a car lover! We have chosen a best platform for your reliable learning.</p>
         </div>
 
         <div class="why-point" id="point6">
-            <h3>Secure and Easy Payments</h3>
-            <p>We offer a secure and hassle-free payment process. Choose from multiple payment methods, ensuring a seamless transaction every time.</p>
+            <h3>Trusted by Thousands</h3>
+            <p>Join thousands of satisfied customers who rely on our accurate, transparent, and trustworthy car services nationwide.</p>
         </div>
+
+        <div class="why-point" id="point7">
+            <h3>24/7 Customer Support</h3>
+            <p>Our dedicated support team is available around the clock to assist with any inquiries or service issues.</p>
+        </div>
+
+        <div class="why-point" id="point8">
+            <h3>Secure and Easy Payments</h3>
+            <p>Enjoy multiple payment options with our fast, secure, and hassle-free checkout process, making every transaction worry-free.</p>
+        </div>
+        
     </div>
 </section>
 
@@ -363,14 +370,14 @@
     gsap.registerPlugin(ScrollTrigger);
 
     // Animations for each point
-    const points = ['#point1', '#point2', '#point3', '#point4', '#point5', '#point6'];
+    const points = ['#point1', '#point2', '#point3', '#point4', '#point5', '#point6', '#point7' , '#point8'];
 
     points.forEach(point => {
         gsap.from(point, {
             scrollTrigger: {
                 trigger: point,
                 start: "top 75%",  
-                end: "top 25%",    
+                end: "top 30%",    
                 scrub: true        
             },
             opacity: 0,
@@ -391,41 +398,49 @@
         <i class="fas fa-star-half-alt"></i>
     </div>
     <p class="rating-text">4.5 out of 5 stars</p>
-
     <div class="customer-reviews">
+        <p>Discover why thousands of automotive buyers, sellers, and owners across the USA trust Auto Inspect for reliable vehicle history reports, seamless services, and expert advice.</p>
+    <br>
         <!-- Initial visible reviews -->
         <div class="review-box">
             <p class="reviewer-name">Emily Parker</p>
             <p class="review-text">“The vehicle history report saved me from buying a car with hidden accident damage. 9/10 from my side!”</p>
         </div>
         <div class="review-box">
-            <p class="reviewer-name">Harry</p>
-            <p class="review-text">“Great experience sir! Definitely worth it”</p>
+            <p class="reviewer-name">Harry Scott</p>
+            <p class="review-text">“Amazing service! The process was smooth, and the details were spot-on. Definitely worth it.”</p>
         </div>
+        
         <div class="review-box">
-            <p class="reviewer-name">Mark Johnson</p>
-            <p class="review-text">“I booked a maintenance service with their partner, and the experience was fantastic. My car is running perfectly now.”</p>
+            <p class="reviewer-name">James Thompson</p>
+            <p class="review-text">“I was here to verify the car i bought but realized that its just for USA based cars”</p>
         </div>
+        
         <div class="review-box">
             <p class="reviewer-name">Jane Smith</p>
-            <p class="review-text">“Found the perfect car thanks to this service!”</p>
+            <p class="review-text">“Thanks to Auto Inspect, I found my dream car! Highly recommend their services.”</p>
         </div>
 
         <!-- Hidden reviews -->
         <div class="extra-reviews" style="display: none;">
+
             <div class="review-box">
-                <p class="reviewer-name">James Thompson</p>
-                <p class="review-text">“Honestly, this is the most detailed report I’ve ever seen. I felt 100% confident selling my car knowing I could provide an accurate history to the buyer. You guys are amazing!”</p>
+                <p class="reviewer-name">John freidman</p>
+                <p class="review-text">“Wow! This service saved me from buying a real lemon. The details were incredibly thorough. Thank you so much!”</p>
             </div>
+
             <div class="review-box">
-                <p class="reviewer-name">John Doe</p>
-                <p class="review-text">“Wow, just wow! This report saved me from buying a real lemon. Can’t believe how thorough it was. Thank you!”</p>
+                <p class="reviewer-name">Mark Johnson</p>
+                <p class="review-text">“Booked a maintenance service through their partner, and the experience was fantastic. My car is running perfectly now.”</p>
             </div>
+
         </div>
-    </div>
+    </div>    
 
     <!-- Show More/Less Button -->
     <button id="toggleReviewsBtn" onclick="toggleReviews()">Show More</button>
+
+    <p>Join the growing community of satisfied customers. <a href="services.html" style="color: #222; font-weight: bold;">Explore Our Services</a> today!</p>
 <br>
 <br>
 <br>
@@ -477,7 +492,7 @@
       <!-- Logo and Description -->
       <div class="footer-section logo-description">
         <img src="../static/logo.webp" alt="Auto_Inspect logo" class="footer-logo">
-        <p>We provide reliable car verification and maintenance as well as easy selling services to keep your vehicle in top shape. Trust us for expert advice, detailed inspections, and high-quality service.
+        <p>We provide reliable car verification and maintenance as well as easy buying/selling services to keep your vehicle in top shape. Trust us for expert advice, detailed inspections, and high-quality services.
         </p>
       </div>
   

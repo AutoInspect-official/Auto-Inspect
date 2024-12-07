@@ -1059,10 +1059,18 @@ label{
     display: flex;
     align-items: center;
     margin: 40px 0;
+    opacity: 0; /* Initial state: invisible */
+    transform: translateY(50px); /* Initial state: moved down */
+    transition: all 0.5s ease-in-out; /* Smooth animation */
+}
+
+.section.visible {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Reset position */
 }
 
 .section:nth-child(even) {
-    flex-direction: row-reverse; 
+    flex-direction: row-reverse;
 }
 
 .text {
@@ -1081,31 +1089,30 @@ label{
 
 .image img {
     width: 100%;
-    max-width: 600px; 
+    max-width: 600px;
     height: auto;
     object-fit: cover;
 }
 
-/* Mobile View: Force Images Below Text */
+/* Mobile View */
 @media (max-width: 768px) {
     .section {
-        flex-direction: column !important; /* Stack the text and image vertically */
+        flex-direction: column !important;
     }
 
     .image {
-        margin-top: 20px; /* Space between text and image */
+        margin-top: 20px;
     }
 
     .text, .image {
-        width: 100%; /* Ensure both text and image take up full width */
+        width: 100%;
     }
 
     .image img {
-        max-width: 100%; /* Ensure the image scales properly */
-        height: auto;    /* Maintain aspect ratio */
+        max-width: 100%;
+        height: auto;
     }
 }
-
 
 /* Services Container */
 .container {
