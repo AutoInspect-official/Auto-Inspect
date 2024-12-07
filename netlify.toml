@@ -1,12 +1,9 @@
 [build]
-  functions = "./"                     
-  publish = "./"                        
-  ignore = "exit 0"                     
-
-[functions]
-  node_bundler = "esbuild"
+  base = "."                       # Ensure it points to the correct root of the project
+  publish = "./"                    # The folder where the built site will be published
+  ignore = "exit 0"                 # Skip deployment if a build fails
 
 [[redirects]]
   from = "/*"
-  to = "/index.html" 
+  to = "/index.html"
   status = 200
