@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             document.getElementById('engineType').innerText = carData.EngineConfiguration || "N/A";
             document.getElementById('transmissionType').innerText = carData.TransmissionStyle || "N/A";
             document.getElementById('bodyType').innerText = carData.BodyClass || "N/A";
-            document.getElementById('safetyRating').innerText = "Not Available from API"; // Static
+            document.getElementById('safetyRating').innerText = "Not Found"; // Static
         } catch (error) {
             attempt++;
             console.error(`Attempt ${attempt}:`, error);
