@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="robots" content="noindex, follow">
+        <meta name="author" content="AutoInspect">
+        <link rel="canonical" href="https://autoinspect.netlify.app/404">
+    
+        <title>404 Not Found | AutoInspect</title>
+        <meta name="description" content="Discover AutoInspect: From vehicle history reports to car maintenance, buying, and selling. Explore expert services for your automotive needs.">
+        <meta name="keywords" content="404 Page, Page not found, brocken url">
+        <link rel="icon" href="../static/icon.png" type="image/png">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../static/style.css">
+    
+        <!-- JSON-LD Structured Data -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "404 Not Found | AutoInspect",
+          "description": "This 404 error page helps users navigate AutoInspect services including vehicle history reports, car maintenance, buying, and selling.",
+          "url": "https://www.autoinspect.netlify.app/404",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.autoinspect.netlify.app/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+        </script>
+    <style>
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            text-align: center;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .notification {
+            background-color: #f5f5f5;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .container img {
+            width: 300px;
+            height: 250px;
+            margin: 2px 0;
+        }
+        h1 {
+            font-size: 3rem;
+            margin: 10px 0;
+        }
+        p {
+            font-size: 1rem;
+            margin: 10px 0 20px;
+        }
+        .redirects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        .redirect {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 200px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fefefe;
+            transition: box-shadow 0.3s ease;
+        }
+        .redirect:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .redirect i {
+            font-size: 2rem;
+            color: rgb(0, 0, 0, 90);
+            margin-bottom: 10px;
+        }
+        .redirect a {
+            text-decoration: none;
+            color: rgb(0, 0, 0, 7);
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<header>
+    <nav class="navbar">
+        <div class="logo" style="display: flex; align-items: center;">
+            <img src="../static/logo.png" alt="CarInspect" style="width: 40px; height: 40px; margin-top: auto; border-radius: 50%; margin-right: 20px; filter: contrast(100%); filter: opacity(100%); pointer-events: none;">
+            <a href="Home.html" style="display: flex; flex-direction: column;">
+            <h1 style="margin: 0; font-size: 30px;">AutoInspect</h1></a>
+            <span class="powered-by" aria-hidden="true">&nbsp; | Powered by Netlify</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="dropdown">
+                <a class="buy-sell" href="#">Buy/Sell</a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a target="_blank" href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1" class="dropdown-link">
+                            Buy a Car
+                        </a>
+                        <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024" alt="eBay Tracking Pixel" style="display: none;">
+                    </li>                        
+                    <li><a href="car_sell.html">Sell Your Car</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+</header>    
+
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+    });
+</script>
+
+<body>
+    <div class="container">
+        <!-- Notification -->
+        <div class="notification">
+            If you think this is a mistake, please <a href="mailto:support@autoinspect.netlify.app" style="color: #721c24; text-decoration: underline;">contact our support team</a>.
+        </div>
+        
+        <!-- 404 Content -->
+        <img src="../static/404.webp" alt="404 Error">
+        <p>Oops! The page you're looking for doesn't exist or has been moved. Double-check the URL for any typos.</p>
+        
+        <!-- Re-directions -->
+        <h2>Quick Links</h2>
+        <div class="redirects">
+            <div class="redirect">
+                <i class="fa fa-file-text"></i>
+                <a href="index.html">Vehicle History Reports</a>
+                <p>Get comprehensive vehicle history details.</p>
+            </div>
+            <div class="redirect">
+                <i class="fa fa-shopping-cart"></i>
+                <a target="_blank" href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1">Car Buying</a>
+                <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024">
+                <p>Explore our tips and services for buying a car.</p>
+            </div>
+            <div class="redirect">
+                <i class="fa fa-cogs"></i>
+                <a href="https://www.yourmechanic.com/book/newuser#zip">Car Maintenance</a>
+                <p>Discover expert car maintenance services.</p>
+            </div>
+            <div class="redirect">
+                <i class="fa fa-handshake-o"></i>
+                <a href="car_sell.html">Car Selling</a>
+                <p>Sell your car quickly and with ease.</p>
+            </div>
+        </div>
+    </div>
+
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/670a5f212480f5b4f58c82b2/1ia087778';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+</script>
+<!--End of Tawk.to Script-->
+
+<script src="../static/script.js"></script>
+  
+<!--footer-->
+<footer>
+    <div class="footer-container">
+      <!-- Logo and Description -->
+      <div class="footer-section logo-description">
+        <img src="../static/logo.webp" alt="Auto_Inspect logo" class="footer-logo">
+        <p>We provide reliable car verification and maintenance as well as easy buying/selling services to keep your vehicle in top shape. Trust us for expert advice, detailed inspections, and high-quality services.
+        </p>
+      </div>
+  
+      <!-- Quick Links -->
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+  
+      <!-- Our Services -->
+    <div class="footer-section">
+    <h3>Our Services</h3>
+    <ul class="footer-links">
+        <li><a href="index.html">Vehicle Verification Report</a></li>
+        <li><a href="https://www.yourmechanic.com/book/newuser#zip" target="_blank">Maintenance & Repair</a></li>
+        <li>
+            <a target="_blank" href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1" class="footer-action">
+                Buy A Car
+            </a>
+            <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024" alt="eBay Tracking Pixel" style="display: none;">
+        </li>
+        <li><a href="car_sell.html">Sell Your Car</a></li>
+        <li><a href="https://tawk.to/chat/670a5f212480f5b4f58c82b2/1ia087778" target="_blank">24/7 Support</a></li>
+    </ul>
+    </div>
+
+  
+      <!-- Contact Info -->
+      <div class="footer-section" target="_blank">
+        <h3>Contact Us</h3>
+        <ul class="footer-links">
+          <li><a href="mailto:zanecarter.9388@gmail.com"><strong>Email:</strong> support@autoinspect.netlify.app</a></li>
+          <li><a href="tel:+1 (775) 204-1487"><strong>Phone:</strong> +1 (775) 204-1487</a></li>
+          <li><strong>Address:</strong> 23600 Mercantile Road Suite C-100 Postbox ZH008223 Beachwood OH 44122, United States</li>
+        </ul>
+        <div class="footer-socials">
+            <a href="https://www.facebook.com/" class="footer-social-icon" aria-label="Follow us on Facebook" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.linkedin.com/" class="footer-social-icon" aria-label="Connect with us on LinkedIn" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/" class="footer-social-icon" aria-label="Follow us on Instagram" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://tawk.to/chat/670a5f212480f5b4f58c82b2/1ia087778" class="footer-social-icon" aria-label="Chat with us" target="_blank">
+                <i class="fas fa-comment-alt"></i>
+            </a>            
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2024 Auto Inspect. All rights reserved. | <a href="policy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+      <p class="powered-by">Powered by Netlify</p>
+    </div>
+</footer>
+</body>
+</html>

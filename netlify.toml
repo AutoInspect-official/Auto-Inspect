@@ -1,9 +1,9 @@
 [build]
   base = "."                       # Ensure it points to the correct root of the project
-  publish = "./"                    # The folder where the built site will be published
-  ignore = "exit 0"                 # Skip deployment if a build fails
+  publish = "./"                   # The folder where the built site will be published
+  ignore = "exit 0"                # Skip deployment if a build fails
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  from = "/*"                      # Catch all paths
+  to = "/404.html"                 # Redirect to the custom 404 page
+  status = 404                     # Use the 404 status code for broken or unknown URLs

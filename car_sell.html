@@ -1,19 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <head>
+        <!-- Basic Meta Tags -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>AutoInspect | Sell Your Car with Confidence and Ease</title>
-    <meta name="description" content="Sell your car effortlessly with AutoInspect. Enjoy a trustworthy and hassle-free selling experience while gaining confidence in every step of the process.">
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="../static/icon.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="../static/style.css">
-    <script defer src="../static/script.js"></script>
-</head>
+        <!-- SEO Meta Tags -->
+        <title>AutoInspect | Sell Your Car Quickly and Easily</title>
+        <meta name="description" content="Sell your car effortlessly with AutoInspect. Our platform offers a reliable and streamlined process, detailed insights, and expert advice to ensure a seamless car-selling experience in the USA.">
+        <meta name="keywords" content="Sell my car, Hassle-free car selling, Car resale value, Cars for sale, Used cars for sale, Vehicle inspection, Easy car selling platform">
+        <meta name="author" content="AutoInspect">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://autoinspect.netlify.app/car_sell">
+    
+        <!-- Favicon -->
+        <link rel="icon" href="https://autoinspect.netlify.app/static/icon.png" type="image/png">
+    
+        <!-- CSS and Fonts -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="../static/style.css">
+    
+        <!-- Open Graph Meta Tags (Social Sharing) -->
+        <meta property="og:title" content="AutoInspect | Sell Your Car Quickly and Easily">
+        <meta property="og:description" content="Sell your car effortlessly with AutoInspect. Our platform offers a reliable and streamlined process, detailed insights, and expert advice to ensure a seamless car-selling experience in the USA.">
+        <meta property="og:image" content="https://autoinspect.netlify.app/static/icon.png">
+        <meta property="og:url" content="https://autoinspect.netlify.app/sell_car">
+        <meta property="og:type" content="website">
+    
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="AutoInspect | Sell Your Car Quickly and Easily">
+        <meta name="twitter:description" content="Sell your car effortlessly with AutoInspect. Our platform offers a reliable and streamlined process, detailed insights, and expert advice to ensure a seamless car-selling experience in the USA.">
+        <meta name="twitter:image" content="https://autoinspect.netlify.app/static/icon.png">
+    
+        <!-- Structured Data (Schema.org) -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Sell Your Car Quickly and Easily",
+            "description": "Sell your car effortlessly with AutoInspect. Our platform offers a reliable and streamlined process, detailed insights, and expert advice to ensure a seamless car-selling experience in the USA.",
+            "publisher": {
+                "@type": "Organization",
+                "name": "AutoInspect",
+                "logo": "https://autoinspect.netlify.app/static/icon.png"
+            }
+        }
+        </script>
+    
+        <!-- Analytics and JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js" defer></script>
+    </head>    
 
 <body>
     <header>
@@ -64,14 +104,14 @@
     <h1 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Want to sell a perfect car?</h1>
     <h1 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">or a car with multiple issues?</h1>
     <h2>No problem! We could buy your car in any condition.</h2>
-    <p>Note: We will buy your car with a price range based on the condition of the car.</p>
+    <p>Note: We will buy your car with a price range based on the authentic market price. We also provide it in our <a href="index.html" style="color: white; text-decoration: underline;">vehicle history report</a>.</p>
     <br>
-    <a href="#paypal-button-container" class="submit-btn">Start Selling</a>
+    <a href="#sell-car-container" class="submit-btn">Start Selling</a>
 </section>
 
 <!-- Selling Info Section -->
  <br>
-<div class="sell-car-container" style="margin: 25px 10px 30px 10px">
+<div class="sell-car-container" style="margin: 25px 10px 30px 10px; justify-content: center;">
     <h2 class="section-title"><u>Sell Your Car</u></h2>
     <h2>Experience a seamless selling process with our secure form for just $5.00</h2>
     <p>Your transaction is safe, and our team is here to assist you.</p>
@@ -115,12 +155,11 @@
     </form>
 </section>
 
-<!-- PayPal Button Integration -->
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         // Initialize PayPal Hosted Buttons
         paypal.HostedButtons({
-            hostedButtonId: "LMVM7323VLA54", // Replace with your PayPal hosted button ID
+            hostedButtonId: "LMVM7323VLA54", // PayPal hosted button ID
             createOrder: function (data, actions) {
                 return actions.order.create({
                     purchase_units: [{
@@ -182,8 +221,8 @@
         <h3>Quick Links</h3>
         <ul class="footer-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about_us.html">About Us</a></li>
           <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="faq.html">FAQ</a></li>
         </ul>

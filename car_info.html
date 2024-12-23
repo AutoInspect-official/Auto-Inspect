@@ -1,17 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <head>
+        <!-- Basic Meta Tags -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Auto Inspect | Get Comprehensive Car History Reports Today</title>
-    <meta name="description" content="Obtain complete car history reports for confident buying and selling. Make informed decisions with detailed vehicle insights for a smart trade.">
-
-    <link rel="icon" href="../static/icon.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="../static/style.css">
-</head>
+        <!-- SEO Meta Tags -->
+        <title>AutoInspect | Comprehensive Car History Reports & Expert Vehicle Insights</title>
+        <meta name="description" content="Access detailed car history reports and expert vehicle insights with AutoInspect. Make informed buying and selling decisions effortlessly with trusted data.">
+        <meta name="keywords" content="Car history report, Vehicle inspection, Pre-purchase car inspection, Car inspection near me, Sell my car, Buy used cars, Vehicle insights, Car maintenance tips">
+        <meta name="author" content="AutoInspect">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://autoinspect.netlify.app/car_info">
+    
+        <!-- Favicon -->
+        <link rel="icon" href="../static/icon.png" type="image/png">
+    
+        <!-- CSS and Fonts -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="../static/style.css">
+    
+        <!-- Open Graph Meta Tags (Social Sharing) -->
+        <meta property="og:title" content="AutoInspect | Comprehensive Car History Reports & Expert Vehicle Insights">
+        <meta property="og:description" content="Discover trusted car history reports and detailed vehicle insights for informed buying and selling. AutoInspect makes vehicle research easy and reliable.">
+        <meta property="og:image" content="../static/icon.png">
+        <meta property="og:url" content="https://www.autoinspect.netlify.app/car_info">
+        <meta property="og:type" content="website">
+    
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="AutoInspect | Comprehensive Car History Reports">
+        <meta name="twitter:description" content="Get reliable car history reports and insights for smart buying and selling. Trust AutoInspect for expert vehicle information.">
+        <meta name="twitter:image" content="../static/icon.png">
+    
+        <!-- Structured Data (Schema.org) -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Comprehensive Car History Reports",
+            "description": "Access detailed car history reports and expert vehicle insights with AutoInspect. Make informed buying and selling decisions effortlessly with trusted data.",
+            "publisher": {
+                "@type": "Organization",
+                "name": "AutoInspect",
+                "logo": "https://www.autoinspect.netlify.app/static/icon.png"
+            }
+        }
+        </script>
+    
+        <!-- Analytics and JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js" defer></script>
+    </head>    
 
 <main>
     <header>
@@ -75,6 +117,7 @@
     <p><strong>Transmission Type:</strong> <span id="transmissionType"></span></p>
     <p><strong>Body Type:</strong> <span id="bodyType"></span></p>
     <p><strong>Safety Rating:</strong> <span id="safetyRating"></span></p>
+    <button id="scrollToPremium" class="btn btn-primary" style="margin-top: 15px;" aria-label="Scroll to Premium Plan Section">Get Complete Report</button>
 </div>
 
 <script>
@@ -136,6 +179,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     fetchVinData();
 });
+
+// Scroll to Premium Plan Section
+document.getElementById('scrollToPremium').addEventListener('click', () => {
+        const premiumSection = document.querySelector('.premium-plan-section');
+        if (premiumSection) {
+            premiumSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
 
 </script>
 
@@ -205,7 +256,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         hostedButtonId: "8RMFKBQB234FA",
         onApprove: function (data, actions) {
             return actions.order.capture().then(function (details) {
-                alert('Payment completed successfully! Your vehicle history report will be processed shortly. If you do not receive the report within half a business day, please notify us immediately at support@autoinspect.com.');
+                alert('Payment completed successfully! Your vehicle history report will be emailed to you soon.');
 
                 // Populate Web3Forms hidden inputs with form data
                 document.getElementById('web3FormName').value = document.getElementById('fullName').value;
@@ -259,8 +310,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         <h3>Quick Links</h3>
         <ul class="footer-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about_us.html">About Us</a></li>
           <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="faq.html">FAQ</a></li>
         </ul>
