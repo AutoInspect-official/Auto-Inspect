@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Looking to buy a used car? Get expert advice on the essential questions to ask before making your purchase. Learn how to inspect cars like a pro with AutoInspect.">
+    <meta name="keywords"
+        content="Used car buying tips, Essential questions, Pre-purchase car inspection, Vehicle evaluation, AutoInspect, Car inspection guide">
+    <meta name="author" content="AutoInspect">
+    <meta name="robots" content="index, follow">
+    <title>Essential Questions to Ask Before Buying a Used Car | AutoInspect</title>
+    <link rel="canonical" href="https://autoinspect.netlify.app/essential-questions-before-buying-a-used-car">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Essential Questions to Ask Before Buying a Used Car | AutoInspect">
+    <meta property="og:description"
+        content="Get expert guidance on what to ask before buying a used car. Ensure you make a smart purchase with practical inspection tips from AutoInspect.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://autoinspect.netlify.app/essential-questions-before-buying-a-used-car">
+    <meta property="og:image" content="https://autoinspect.netlify.app/static/car-inspection-guide.png">
+    <meta property="og:site_name" content="AutoInspect">
+
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Essential Questions to Ask Before Buying a Used Car | AutoInspect">
+    <meta name="twitter:description"
+        content="Ensure you're asking the right questions before buying a used car. AutoInspect helps you with the essential tips to make a smart purchase.">
+    <meta name="twitter:image" content="https://autoinspect.netlify.app/static/car-inspection-guide.png">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../static/icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../static/css/all.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/blog.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo" style="display: flex; align-items: center;">
+                <img src="../static/logo.png" alt="AutoInspect"
+                    style="width: 40px; height: 40px; margin-top: auto; border-radius: 50%; margin-right: 20px; filter: contrast(100%); filter: opacity(100%); pointer-events: none;">
+                <a href="index.html" style="display: flex; flex-direction: column;">
+                    <h1 style="margin: 0; font-size: 30px;">AutoInspect</h1>
+                </a>
+                <span class="powered-by" aria-hidden="true">&nbsp; | Powered by Netlify</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="dropdown">
+                    <a class="buy-sell" href="#">Buy/Sell</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a target="_blank"
+                                href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1"
+                                class="dropdown-link">
+                                Buy a Car
+                            </a>
+                            <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024"
+                                alt="eBay Tracking Pixel" style="display: none;">
+                        </li>
+                        <li><a href="car_sell.html">Sell Your Car</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+    </script>
+
+    <div id="content-wrapper">
+        <!-- Table of Contents -->
+        <div id="table-of-contents">
+            <aside id="toc-container">
+                <div class="toc-header">
+                    <h2 class="toc-title">Table of Contents</h2>
+                    <button id="toc-toggle-btn" aria-label="Toggle TOC">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <nav id="toc-content">
+                    <ul class="toc-list">
+                        <li><a href="#sec-intro" class="toc-link">Introduction</a></li>
+                        <li><a href="#sec-vehicle-history" class="toc-link">What’s the Vehicle’s History?</a></li>
+                        <li><a href="#sec-mileage" class="toc-link">How Many Miles Does the Car Have?</a></li>
+                        <li><a href="#sec-maintenance-history" class="toc-link">What Is the Car’s Maintenance and
+                                Service History?</a></li>
+                        <li><a href="#sec-known-issues" class="toc-link">Are There Any Ongoing or Known Issues?</a></li>
+                        <li><a href="#sec-inspection" class="toc-link">Can I Take the Car for an Inspection?</a></li>
+                        <li><a href="#sec-why-selling" class="toc-link">Why Are You Selling the Car?</a></li>
+                        <li><a href="#sec-asking-price" class="toc-link">What Is the Asking Price? Is It Negotiable?</a>
+                        </li>
+                        <li><a href="#sec-conclusion" class="toc-link">Conclusion</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const tocToggleBtn = document.getElementById("toc-toggle-btn");
+                const tocContent = document.getElementById("toc-content");
+
+                tocToggleBtn.addEventListener("click", () => {
+                    if (tocContent.style.display === "block") {
+                        tocContent.style.display = "none"; // Collapse the TOC
+                        tocToggleBtn.innerHTML = '<i class="fas fa-chevron-down"></i>';
+                    } else {
+                        tocContent.style.display = "block"; // Expand the TOC
+                        tocToggleBtn.innerHTML = '<i class="fas fa-chevron-up"></i>';
+                    }
+                });
+            });
+        </script>
+
+        <!-- Content Container -->
+        <div id="blog-post">
+            <!-- Main Heading -->
+            <h1 style="color: black; text-align: center;">Essential Questions to Ask Before Buying a Used Car</h1>
+
+            <!-- Social Media Share -->
+            <div id="social-share">
+                <p>Share this post:</p>
+                <a href="#" class="social-icon" id="facebook-share" title="Share on Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon" id="twitter-share" title="Share on Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-icon" id="linkedin-share" title="Share on LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="social-icon" id="copy-link" title="Copy Link">
+                    <i class="fas fa-copy"></i>
+                </a>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Get the current page URL
+                    const currentURL = encodeURIComponent(window.location.href);
+                    const postTitle = encodeURIComponent(document.querySelector('h1').innerText); // Blog post title
+
+                    // Facebook Share
+                    document.getElementById('facebook-share').addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const facebookURL = `https://www.facebook.com/sharer/sharer.php?u=${currentURL}`;
+                        window.open(facebookURL, '_blank', 'width=600,height=400');
+                    });
+
+                    // Twitter Share
+                    document.getElementById('twitter-share').addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const twitterURL = `https://twitter.com/intent/tweet?url=${currentURL}&text=${postTitle}`;
+                        window.open(twitterURL, '_blank', 'width=600,height=400');
+                    });
+
+                    // LinkedIn Share
+                    document.getElementById('linkedin-share').addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const linkedinURL = `https://www.linkedin.com/sharing/share-offsite/?url=${currentURL}`;
+                        window.open(linkedinURL, '_blank', 'width=600,height=400');
+                    });
+
+                    // Copy Link functionality
+                    document.getElementById('copy-link').addEventListener('click', function (e) {
+                        e.preventDefault();
+                        navigator.clipboard.writeText(decodeURIComponent(currentURL))
+                            .then(() => alert('Link copied to clipboard!'))
+                            .catch((error) => console.error('Error copying link:', error));
+                    });
+                });
+            </script>
+
+            <!-- Feature Image -->
+            <div id="feature-image">
+                <img src="../static/questions_before_purchasing_a_used_car.jpeg" alt="Pre-Purchase Car Inspection"
+                    class="responsive-image" loading="lazy">
+            </div>
+
+            <!-- Content Body -->
+            <div id="main-content">
+
+                <!-- Section 1: Introduction to Buying a Used Car -->
+                <section id="sec-intro" class="content-section">
+                    <h2 class="section-title">Introduction</h2>
+                    <p class="section-paragraph">
+                        Buying a used car can be an exciting, yet daunting, experience. While the prospect of getting a
+                        good deal on a car that’s still in great condition is appealing, it’s important to approach the
+                        purchase with caution. There’s always the possibility that the car could have hidden issues that
+                        may not be immediately apparent.
+                    </p> <br>
+                    <p class="section-paragraph">
+                        To ensure you make a smart investment, asking the right questions is essential. The answers you
+                        receive can help you avoid unpleasant surprises down the road and give you the information you
+                        need to make an informed decision.
+                    </p> <br>
+                    <p class="section-paragraph">
+                        In this blog, we’ll explore the essential questions you should ask before buying a used car,
+                        ensuring you’re well-prepared to make the right choice. If you're considering a pre-purchase
+                        inspection, check out our guide on <a
+                            href="https://autoinspect.netlify.app/used-car-inspections-guide-smart-decisions"
+                            target="_blank">Pre-Purchase Inspections</a>.
+                    </p>
+                </section>
+
+                <!-- Section 2: Vehicle History -->
+                <section id="sec-vehicle-history" class="content-section">
+                    <h2 class="section-title">1. What’s the Vehicle’s History?</h2>
+                    <p class="section-paragraph"><strong>Why It’s Important:</strong> A vehicle’s history can reveal a
+                        lot about its condition and whether it’s had any major issues in the past. You should always ask
+                        for a detailed vehicle history report to ensure the car has not been involved in any major
+                        accidents, had extensive repairs, or experienced flooding or other significant damage.</p>
+                    <h3 class="subsection-title">Questions to Ask:</h3>
+                    <ul class="section-list">
+                        <li>Has the car been in any accidents?</li>
+                        <li>Is there any history of major repairs or replacements?</li>
+                        <li>Does the vehicle have a clean title (i.e., not branded as salvaged or rebuilt)?</li>
+                        <li>Has the car ever been used as a rental, taxi, or fleet vehicle?</li>
+                    </ul>
+                    <h3 class="subsection-title">How to Get the Information:</h3>
+                    <p class="section-paragraph">
+                        Request the vehicle identification number (VIN) from the seller and use it to obtain a history
+                        report from trusted sources like <a href="https://autoinspect.netlify.app"
+                            target="_blank">AutoInspect</a> or <a href="https://www.autocheck.com"
+                            target="_blank">AutoCheck</a>. These reports will provide the vehicle's basic information
+                        and important details about the car's past, including accident records, service history, and
+                        title information.
+                    </p>
+                </section>
+
+                <!-- Section 3: Mileage -->
+                <section id="sec-mileage" class="content-section">
+                    <h2 class="section-title">2. How Many Miles Does the Car Have?</h2>
+                    <p class="section-paragraph"><strong>Why It’s Important:</strong> Mileage is one of the most
+                        critical factors in determining the value and longevity of a used car. A car with high mileage
+                        may have more wear and tear on its engine and other components, potentially leading to more
+                        frequent repairs.</p>
+                    <h3 class="subsection-title">Questions to Ask:</h3>
+                    <ul class="section-list">
+                        <li>How many miles has the car been driven?</li>
+                        <li>Is the mileage consistent with the car’s age?</li>
+                        <li>Are there any signs that the odometer may have been tampered with?</li>
+                    </ul>
+                    <h3 class="subsection-title">How to Interpret the Answer:</h3>
+                    <ul class="section-list">
+                        <li><strong>Low Mileage:</strong> While low mileage can be a positive factor, it’s important to
+                            ensure that the car has been properly maintained, as vehicles that sit unused for long
+                            periods can experience issues like dry rot in tires or seals.</li>
+                        <li><strong>High Mileage:</strong> A car with high mileage may still have plenty of life left if
+                            it has been well-maintained. However, be prepared for potential repairs in the future,
+                            especially if the car is over 100,000 miles.</li>
+                    </ul>
+                </section>
+
+                <!-- Section 4: Maintenance and Service History -->
+                <section id="sec-maintenance-history" class="content-section">
+                    <h2 class="section-title">3. What Is the Car’s Maintenance and Service History?</h2>
+                    <p class="section-paragraph"><strong>Why It’s Important:</strong> A well-maintained car is likely to
+                        be more reliable and last longer than one that hasn’t been serviced regularly. Asking about the
+                        car’s service history can help you determine whether it has been properly cared for and whether
+                        any major components need replacing soon.</p>
+                    <h3 class="subsection-title">Questions to Ask:</h3>
+                    <ul class="section-list">
+                        <li>Do you have the maintenance records for the car?</li>
+                        <li>Has the car had any recent repairs or service?</li>
+                        <li>Has it had any major issues (e.g., transmission repairs, engine replacements)?</li>
+                    </ul>
+                    <h3 class="subsection-title">How to Interpret the Answer:</h3>
+                    <ul class="section-list">
+                        <li><strong>Regular Maintenance:</strong> A car that has received regular oil changes, brake
+                            checks, tire rotations, and other routine maintenance is more likely to perform well and
+                            have fewer surprises down the road.</li>
+                        <li><strong>Major Repairs:</strong> If the car has had significant repairs (e.g., a new engine
+                            or transmission), consider how this might affect the car’s future performance. While these
+                            repairs can extend the life of the vehicle, they can also be a sign that the car has had
+                            previous issues.</li>
+                    </ul>
+                </section>
+
+                <!-- Section 5: Known Issues -->
+                <section id="sec-known-issues" class="content-section">
+                    <h2 class="section-title">4. Are There Any Ongoing or Known Issues?</h2>
+                    <p class="section-paragraph"><strong>Why It’s Important:</strong> Even the most well-maintained used
+                        cars can have issues. It’s crucial to understand if there are any existing problems with the car
+                        that need attention. If the seller is hesitant or unwilling to disclose issues, it could be a
+                        red flag.</p>
+                    <h3 class="subsection-title">Questions to Ask:</h3>
+                    <ul class="section-list">
+                        <li>Are there any known issues with the car (e.g., engine, transmission, brakes)?</li>
+                        <li>Has the car ever failed an inspection or required significant repairs?</li>
+                        <li>Are there any warning lights currently on in the dashboard?</li>
+                    </ul>
+                    <h3 class="subsection-title">How to Interpret the Answer:</h3>
+                    <ul class="section-list">
+                        <li><strong>Honesty:</strong> A reputable seller should be open about any issues the car has, no
+                            matter how minor. If the seller is upfront about problems and offers to fix them or adjust
+                            the price accordingly, it shows transparency and trustworthiness.</li>
+                        <li><strong>Avoiding the Question:</strong> If the seller seems reluctant to answer or avoids
+                            addressing potential issues, consider this a red flag. It’s best to walk away if you feel
+                            like you’re not receiving honest information.</li>
+                    </ul>
+                </section>
+
+                <!-- Section 6: Inspection -->
+                <section id="sec-inspection" class="content-section">
+                    <h2 class="section-title">5. Can I Take the Car for an Inspection?</h2>
+                    <p class="section-paragraph"><strong>Why It’s Important:</strong> Having the car inspected by a
+                        qualified mechanic is one of the best ways to ensure that it’s in good condition. A professional
+                        inspection can reveal hidden problems, like frame damage or engine issues, that may not be
+                        apparent to the untrained eye.</p>
+                    <h3 class="subsection-title">Questions to Ask:</h3>
+                    <ul class="section-list">
+                        <li>Can I take the car to my mechanic for an inspection before buying?</li>
+                        <li>Are you willing to negotiate on the price if the inspection reveals minor issues?</li>
+                    </ul>
+                    <h3 class="subsection-title">How to Interpret the Answer:</h3>
+                    <ul class="section-list">
+                        <li><strong>Willingness to Inspect:</strong> If the seller is open to letting you have the car
+                            inspected, it indicates they have confidence in the vehicle’s condition. Avoid sellers who
+                            refuse to let you take the car to an independent mechanic.</li>
+                        <li><strong>Negotiation:</strong> If the inspection reveals minor issues, the seller may be
+                            willing to negotiate on price or fix the problems before selling, providing you with an
+                            opportunity to make a fair deal.</li>
+                    </ul>
+                </section>
+
+                <!-- Section 7: Why Are You Selling the Car? -->
+                <section id="sec-why-selling" class="content-section">
+                    <h2 class="section-title">Why Are You Selling the Car?</h2>
+                    <p class="section-paragraph">
+                        Understanding why the seller is parting with the car can offer valuable insight into its
+                        condition. A seller might have personal reasons for selling, but if the car is being sold due to
+                        frequent repairs or other problems, it could be a sign to proceed with caution.
+                    </p>
+                    <h3 class="subsection-title">Questions to Ask:</h3>
+                    <ul class="section-list">
+                        <li>Why are you selling the car?</li>
+                        <li>How long have you owned the car?</li>
+                        <li>Was the car ever involved in any major accidents or insurance claims?</li>
+                    </ul>
+                    <h3 class="subsection-title">How to Interpret the Answer:</h3>
+                    <ul class="section-list">
+                        <li><strong>Neutral Reason:</strong> If the seller is parting with the car due to life changes
+                            (e.g., moving, upgrading to a new car), it’s usually a good sign. This suggests the car may
+                            still be in good condition and has been properly maintained.</li>
+                        <li><strong>Unusual Reason:</strong> If the seller is vague or gives a reason that raises
+                            questions (e.g., frequent breakdowns or repairs), this could be a red flag, and it’s worth
+                            investigating further.</li>
+                    </ul>
+                </section>
+
+                <!-- Section 8: What Is the Asking Price? Is It Negotiable? -->
+                <section id="sec-asking-price" class="content-section">
+                    <h2 class="section-title">What Is the Asking Price? Is It Negotiable?</h2>
+                    <p class="section-paragraph">
+                        The asking price is one of the most important factors in the decision-making process. While you
+                        can research the car’s market value to get an idea of whether the price is fair, it’s always
+                        worth asking if there’s room for negotiation.
+                    </p>
+                    <h3 class="subsection-title">Questions to Ask:</h3>
+                    <ul class="section-list">
+                        <li>What is the asking price, and how did you arrive at it?</li>
+                        <li>Is the price negotiable?</li>
+                        <li>Are there any extra fees I should be aware of?</li>
+                    </ul>
+                    <h3 class="subsection-title">How to Interpret the Answer:</h3>
+                    <ul class="section-list">
+                        <li><strong>Market Comparison:</strong> The price should be in line with similar cars of the
+                            same make, model, age, and condition. If the asking price seems high compared to comparable
+                            cars, be prepared to negotiate.</li>
+                        <li><strong>Flexibility:</strong> If the seller is open to negotiation, you may have some room
+                            to lower the price, especially if you’ve identified any issues during your inspection.</li>
+                    </ul>
+                </section>
+
+                <!-- Section 9: Conclusion -->
+                <section id="sec-conclusion" class="content-section">
+                    <h2 class="section-title">Conclusion</h2>
+                    <p class="section-paragraph">
+                        Asking the right questions before buying a used car is essential to making an informed decision.
+                        By getting answers to these key questions, you’ll have a clearer understanding of the car’s
+                        condition, history, and value, helping you avoid unexpected costs and ensure you're making a
+                        sound investment.
+                    </p>
+                    <h3 class="section-title">Key Takeaways</h3>
+                    <ul class="section-list">
+                        <li>Always inquire about the <a href="https://autoinspect.netlify.app" target="_blank">vehicle’s
+                                history</a>, mileage, and maintenance records.</li>
+                        <li>Be sure to ask about any ongoing issues and request a pre-purchase inspection.</li>
+                        <li>Understanding the seller’s motivations and the car’s market value can help you negotiate a
+                            fair price.</li>
+                    </ul>
+                    <p class="section-paragraph">
+                        With the right information and approach, you can confidently purchase a used car that will serve
+                        you well for years to come.
+                    </p>
+                </section>
+
+                <section id="sec-related-posts" class="content-section">
+
+                    <div class="container" style="box-shadow: none;">
+                        <h2 class="section-title">Related Posts</h2>
+
+                        <div class="blog-post" data-category="verification buying">
+                            <img src="../static/inspecting_a_used_car.jpg" alt="Inspecting A Used Car" loading="lazy">
+                            <div class="blog-post-content">
+                                <a href="used-car-inspections-guide-smart-decisions.html" class="blog-post-title">Used
+                                    Car
+                                    Inspections: Your Ultimate Guide to Smart and Safe Buying Decisions</a>
+                                <div class="blog-post-meta">Published on: 2024-12-01</div>
+                                <p class="blog-post-description">Understand why pre-purchase inspections are crucial for
+                                    ensuring
+                                    your investment in a used car is worthwhile.</p>
+                            </div>
+                        </div>
+
+                        <div class="blog-post" data-category="verification buying">
+                            <img src="../static/over_all_mantainance.webp" alt="Best Maintenance Options" loading="lazy">
+                            <div class="blog-post-content">
+                                <a href="step-by-step-vehicle-evaluation.html" class="blog-post-title">Is This Car Worth
+                                    Buying? A
+                                    Step-by-Step Vehicle Evaluation Guide</a>
+                                <div class="blog-post-meta">Published on: 2025-01-15</div>
+                                <p class="blog-post-description">Follow this detailed guide to evaluate a vehicle’s
+                                    condition and
+                                    determine if it’s worth buying.</p>
+                            </div>
+                        </div>
+
+                        <div class="blog-post" data-category="verification buying">
+                            <img src="../static/over_all_mantainance.webp" alt="Best Maintenance Options" loading="lazy">
+                            <div class="blog-post-content">
+                                <a href="used-car-inspection-tips.html" class="blog-post-title">Top 5 Used Car
+                                    Inspection Tips Every
+                                    Buyer Should Know</a>
+                                <div class="blog-post-meta">Published on: 2025-01-10</div>
+                                <p class="blog-post-description">Learn the top tips for inspecting a used car before
+                                    making a
+                                    purchase to avoid future regrets.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    window.addEventListener("load", function () {
+        setTimeout(function () {
+            var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/670a5f212480f5b4f58c82b2/1ia087778';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        }, 3000); // Delay by 3 seconds
+    });
+</script>
+<!--End of Tawk.to Script-->
+
+    <!--footer-->
+    <footer>
+        <div class="footer-container">
+            <!-- Logo and Description -->
+            <div class="footer-section logo-description">
+                <img src="../static/logo.webp" alt="Auto_Inspect logo" class="footer-logo">
+                <p>We provide reliable car verification and maintenance as well as easy buying/selling services to keep
+                    your vehicle in top shape. Trust us for expert advice, detailed inspections, and high-quality
+                    services.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Our Services -->
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Vehicle Verification Report</a></li>
+                    <li><a href="https://www.yourmechanic.com/book/newuser#zip" target="_blank">Maintenance & Repair</a>
+                    </li>
+                    <li>
+                        <a target="_blank"
+                            href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1"
+                            class="footer-action">
+                            Buy A Car
+                        </a>
+                        <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024"
+                            alt="eBay Tracking Pixel" style="display: none;">
+                    </li>
+                    <li><a href="car_sell.html">Sell Your Car</a></li>
+                    <li><a href="https://tawk.to/chat/670a5f212480f5b4f58c82b2/1ia087778" target="_blank">24/7
+                            Support</a></li>
+                </ul>
+            </div>
+
+
+            <!-- Contact Info -->
+            <div class="footer-section" target="_blank">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li><a href="mailto:zanecarter.9388@gmail.com"><strong>Email:</strong>
+                            support@autoinspect.netlify.app</a></li>
+                    <li><a href="tel:+1 (775) 204-1487"><strong>Phone:</strong> +1 (775) 204-1487</a></li>
+                    <li><strong>Address:</strong> 23600 Mercantile Road Suite C-100 Postbox ZH008223 Beachwood OH 44122,
+                        United States</li>
+                </ul>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/" class="footer-social-icon" aria-label="Follow us on Facebook"
+                        target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" class="footer-social-icon"
+                        aria-label="Connect with us on LinkedIn" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" class="footer-social-icon" aria-label="Follow us on Instagram"
+                        target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://tawk.to/chat/670a5f212480f5b4f58c82b2/1ia087778" class="footer-social-icon"
+                        aria-label="Chat with us" target="_blank">
+                        <i class="fas fa-comment-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Auto Inspect. All rights reserved. | <a href="policy.html">Privacy Policy</a> | <a
+                    href="terms.html">Terms of Service</a></p>
+            <p class="powered-by">Powered by Netlify</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,43 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Explore our upcoming blog filled with expert insights on car maintenance, buying tips, and the latest automotive trends. Stay tuned for valuable updates!">
-        <meta name="keywords" content="car blogs, automotive tips, car maintenance, buying a car, car trends">
-        <meta name="author" content="AutoInspect">
-        <meta name="robots" content="index, follow">
-        <link rel="canonical" href="https://autoinspect.netlify.app/blog">
 
-        <title>AutoInspect | Blog Coming Soon - Important Automotive Insights & Tips </title>
-        
-        <!-- Favicon -->
-        <link rel="icon" href="../static/icon.png" type="image/x-icon">
-    
-        <!-- Stylesheet -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="../static/style.css">    
-        <!-- Open Graph Meta Tags -->
-        <meta property="og:title" content="Blog Coming Soon - Insights & Tips | Your Company Name">
-        <meta property="og:description" content="Stay updated! Our blog on car maintenance, tips, and trends is launching soon. Follow us for expert insights.">
-        <meta property="og:image" content="../static/icon.png">
-        <meta property="og:url" content="https://autoinspect.netlify.app/blog">
-        <meta property="og:type" content="website">
-    
-        <!-- Twitter Card -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Blog Coming Soon - Insights & Tips | Your Company Name">
-        <meta name="twitter:description" content="Stay updated! Our blog on car maintenance, tips, and trends is launching soon. Follow us for expert insights.">
-        <meta name="twitter:image" content="../static/icon.png">
-        
-        <!-- Structured Data for SEO -->
-        <script type="application/ld+json">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Discover expert insights on car inspections, maintenance, buying/selling tips, and automotive trends. Your ultimate guide to making smarter automotive decisions.">
+    <meta name="keywords"
+        content="car inspections, car maintenance tips, pre-purchase inspection, automotive trends, buying a car, car repair, used car inspection">
+    <meta name="author" content="AutoInspect">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://autoinspect.netlify.app/blog">
+
+    <title>AutoInspect Blog: Ultimate Destination for Expert Automotive Insights, Practical Tips</title>
+
+    <link rel="icon" href="/static/icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../static/css/all.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title"
+        content="AutoInspect Blog - Ultimate Destination for Expert Automotive Insights, Practical Tips">
+    <meta property="og:description"
+        content="Expert tips on car inspections, maintenance, and buying guides. Stay informed with AutoInspect’s latest insights for smarter automotive choices.">
+    <meta property="og:image" content="https://autoinspect.netlify.app/static/icon.png">
+    <meta property="og:url" content="https://autoinspect.netlify.app/blog">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title"
+        content="AutoInspect Blog - Ultimate Destination for Expert Automotive Insights, Practical Tips">
+    <meta name="twitter:description"
+        content="Expert tips on car inspections, maintenance, and buying guides. Stay informed with AutoInspect’s latest insights for smarter automotive choices.">
+    <meta name="twitter:image" content="https://autoinspect.netlify.app/static/icon.png">
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "Blog Coming Soon",
-            "description": "Explore our upcoming blog filled with expert insights on car maintenance, buying tips, and the latest automotive trends. Stay tuned for valuable updates!",
+            "@type": "Blog",
+            "name": "AutoInspect Blog",
+            "description": "Discover expert insights on car inspections, maintenance, buying tips, and automotive trends. Your ultimate guide to making smarter automotive decisions.",
+            "url": "https://autoinspect.netlify.app/blog",
             "publisher": {
                 "@type": "Organization",
                 "name": "AutoInspect",
@@ -45,18 +51,275 @@
                     "@type": "ImageObject",
                     "url": "https://autoinspect.netlify.app/static/icon.png"
                 }
-            }
+            },
+            "image": "https://autoinspect.netlify.app/static/icon.png",
+            "inLanguage": "en-US"
         }
-        </script>
-    </head>
-    
+    </script>
+</head>
+
+<style>
+    /* Blog Post Landing Page*/
+
+    .search-bar {
+        display: flex;
+        /* Align input and button horizontally */
+        justify-content: center;
+        /* Center the elements */
+        align-items: center;
+        /* Align elements vertically */
+        margin: 20px auto;
+        /* Center the bar on the page */
+        flex-wrap: nowrap;
+        /* Prevent wrapping for larger screens */
+    }
+
+    .search-bar input {
+        margin-top: 25px;
+        margin-left: 8px;
+        padding: 10px;
+        width: 300px;
+        border-radius: 25px 0 0 25px;
+        border: 1px solid #ddd;
+        font-size: 16px;
+        outline: none;
+        height: 40px;
+        /* Set explicit height for consistency */
+        box-sizing: border-box;
+        /* Prevent overflow issues */
+    }
+
+    .search-bar button {
+        margin-right: 8px;
+        padding: 0 20px;
+        /* Adjust horizontal padding */
+        background: rgb(0, 0, 0, 90);
+        color: white;
+        border: none;
+        border-radius: 0 25px 25px 0;
+        cursor: pointer;
+        font-size: 16px;
+        height: 40px;
+        /* Match height with input */
+        display: flex;
+        align-items: center;
+        /* Ensure text is vertically centered */
+        justify-content: center;
+        /* Center text horizontally */
+        box-sizing: border-box;
+        /* Prevent overflow issues */
+    }
+
+    .search-bar button:hover {
+        background: rgb(0, 0, 0, 7);
+    }
+
+    .blog-container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 20px auto;
+    }
+
+    .blog-posts {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        /* Adjusts columns dynamically */
+        gap: 20px;
+        /* Adds spacing between blog post cards */
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+            /* Start slightly below */
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+            /* End in the original position */
+        }
+    }
+
+    .blog-post {
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .blog-post.animate {
+        animation: fadeIn 0.5s ease-out;
+        opacity: 1;
+        /* Fully visible after animation */
+        transform: translateY(0);
+        /* Reset position */
+    }
+
+    .blog-post img {
+        width: 100%;
+        height: 200px;
+
+        object-fit: cover;
+    }
+
+    .blog-post-content {
+        padding: 15px;
+    }
+
+    .blog-post-title {
+        font-size: 1.4rem;
+        color: #111111;
+        text-decoration: solid;
+        font-weight: bolder;
+        margin: 0 0 10px;
+    }
+
+    .blog-post-title:hover {
+        text-decoration: underline;
+    }
+
+    .blog-post-meta {
+        font-size: 1rem;
+        color: #333333;
+        margin-bottom: 10px;
+    }
+
+    .blog-post-description {
+        font-size: 1.2rem;
+        color: #222222;
+        margin: 0;
+    }
+
+    @media (max-width: 300px) {
+        .search-bar {
+            flex-wrap: wrap;
+            /* Allow wrapping */
+        }
+
+        .search-bar input,
+        .search-bar button {
+            width: 100%;
+            /* Take full width of the container */
+            margin: 5px 8px 0px 8px;
+            /* Add spacing between elements */
+            border-radius: 25px;
+        }
+
+        .search-bar input {
+            font-size: 14px;
+            /* Adjust font size for small screens */
+        }
+
+        .search-bar button {
+            font-size: 14px;
+            /* Adjust font size for small screens */
+        }
+
+        .blog-posts {
+            grid-template-columns: 1fr;
+            /* Single column for blog posts */
+        }
+
+        .blog-post img {
+            height: 150px;
+            /* Reduce image height for smaller screens */
+        }
+    }
+
+    .filter-section {
+        width: 100%;
+        max-width: 300px;
+        padding: 15px;
+        background: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin: 20px auto;
+    }
+
+    .filter-section h3 {
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+        color: #333;
+    }
+
+    .filter-section label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 1rem;
+        color: #555;
+    }
+
+    .filter-section input[type="checkbox"] {
+        margin-right: 8px;
+    }
+
+    .filter-section button {
+        background: rb(0, 0, 0, 90);
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 8px 12px;
+        font-size: 1rem;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .filter-section button:hover {
+        background: rgb(0, 0, 0, 90);
+    }
+
+    .reload-button {
+        background-color: rgb(0, 0, 0, 90);
+        color: white;
+        /* White text */
+        border: none;
+        /* Remove border */
+        border-radius: 5px;
+        /* Rounded corners */
+        padding: 10px 20px;
+        /* Padding for size */
+        font-size: 1em;
+        /* Adjust font size */
+        cursor: pointer;
+        /* Pointer cursor on hover */
+        margin-top: 10px;
+        /* Add some spacing from the text */
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        /* Smooth hover effect */
+    }
+
+    .reload-button:hover {
+        background-color: rgb(0, 0, 0, 7);
+        transform: scale(1.05);
+        /* Slight zoom effect on hover */
+    }
+
+    .reload-button:active {
+        background-color: rgba(0, 0, 0, 0.8);
+        transform: scale(1);
+    }
+
+    #noResultsMessage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+
 <body>
     <header>
         <nav class="navbar">
             <div class="logo" style="display: flex; align-items: center;">
-                <img src="../static/logo.png" alt="CarInspect" style="width: 40px; height: 40px; margin-top: auto; border-radius: 50%; margin-right: 20px; filter: contrast(100%); filter: opacity(100%); pointer-events: none;">
+                <img src="../static/logo.png" alt="AutoInspect"
+                    style="width: 40px; height: 40px; margin-top: auto; border-radius: 50%; margin-right: 20px; filter: contrast(100%); filter: opacity(100%); pointer-events: none;">
                 <a href="index.html" style="display: flex; flex-direction: column;">
-                <h1 style="margin: 0; font-size: 30px;">AutoInspect</h1></a>
+                    <h1 style="margin: 0; font-size: 30px;">AutoInspect</h1>
+                </a>
                 <span class="powered-by" aria-hidden="true">&nbsp; | Powered by Netlify</span>
             </div>
             <ul class="nav-links">
@@ -67,11 +330,14 @@
                     <a class="buy-sell" href="#">Buy/Sell</a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a target="_blank" href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1" class="dropdown-link">
+                            <a target="_blank"
+                                href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1"
+                                class="dropdown-link">
                                 Buy a Car
                             </a>
-                            <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024" alt="eBay Tracking Pixel" style="display: none;">
-                        </li>                        
+                            <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024"
+                                alt="eBay Tracking Pixel" style="display: none;">
+                        </li>
                         <li><a href="car_sell.html">Sell Your Car</a></li>
                     </ul>
                 </li>
@@ -82,7 +348,7 @@
                 <div class="line"></div>
             </div>
         </nav>
-    </header>    
+    </header>
 
     <script>
         const hamburger = document.querySelector('.hamburger');
@@ -93,81 +359,452 @@
         });
     </script>
 
-    <div class="container">
-        <h1 style="color: black;">Our Blog is Coming Soon!</h1>
-        <p>Exciting insights, tips, and updates are on the way. Stay tuned for engaging content crafted just for you!</p>
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for blogs..." oninput="filterBlogs()" />
+        <button type="button" onclick="filterBlogs()">Search</button>
     </div>
 
-<!--footer-->
-<footer>
-    <div class="footer-container">
-      <!-- Logo and Description -->
-      <div class="footer-section logo-description">
-        <img src="../static/logo.webp" alt="Auto_Inspect logo" class="footer-logo">
-        <p>We provide reliable car verification and maintenance as well as easy buying/selling services to keep your vehicle in top shape. Trust us for expert advice, detailed inspections, and high-quality services.
-        </p>
-      </div>
-  
-      <!-- Quick Links -->
-      <div class="footer-section">
-        <h3>Quick Links</h3>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-        </ul>
-      </div>
-  
-      <!-- Our Services -->
-    <div class="footer-section">
-    <h3>Our Services</h3>
-    <ul class="footer-links">
-        <li><a href="index.html">Vehicle Verification Report</a></li>
-        <li><a href="https://www.yourmechanic.com/book/newuser#zip" target="_blank">Maintenance & Repair</a></li>
-        <li>
-            <a target="_blank" href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1" class="footer-action">
-                Buy A Car
-            </a>
-            <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024" alt="eBay Tracking Pixel" style="display: none;">
-        </li>
-        <li><a href="car_sell.html">Sell Your Car</a></li>
-        <li><a href="https://tawk.to/chat/670a5f212480f5b4f58c82b2/1ia087778" target="_blank">24/7 Support</a></li>
-    </ul>
-    </div>
 
-  
-      <!-- Contact Info -->
-      <div class="footer-section" target="_blank">
-        <h3>Contact Us</h3>
-        <ul class="footer-links">
-          <li><a href="mailto:zanecarter.9388@gmail.com"><strong>Email:</strong> support@autoinspect.netlify.app</a></li>
-          <li><a href="tel:+1 (775) 204-1487"><strong>Phone:</strong> +1 (775) 204-1487</a></li>
-          <li><strong>Address:</strong> 23600 Mercantile Road Suite C-100 Postbox ZH008223 Beachwood OH 44122, United States</li>
-        </ul>
-        <div class="footer-socials">
-            <a href="https://www.facebook.com/" class="footer-social-icon" aria-label="Follow us on Facebook" target="_blank">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://www.linkedin.com/" class="footer-social-icon" aria-label="Connect with us on LinkedIn" target="_blank">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://www.instagram.com/" class="footer-social-icon" aria-label="Follow us on Instagram" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://tawk.to/chat/670a5f212480f5b4f58c82b2/1ia087778" class="footer-social-icon" aria-label="Chat with us" target="_blank">
-                <i class="fas fa-comment-alt"></i>
-            </a>            
+    <div class="blog-container">
+
+        <div class="blog-posts" id="blogPosts">
+
+            <div class="filter-section" id="filterSection">
+                <h3>Filter Blogs</h3>
+                <form id="filterForm">
+                    <label>
+                        <input type="checkbox" name="category" value="verification">
+                        Verification
+                    </label>
+                    <label>
+                        <input type="checkbox" name="category" value="buying">
+                        Buying
+                    </label>
+                    <label>
+                        <input type="checkbox" name="category" value="maintenance">
+                        Maintenance
+                    </label>
+                    <label>
+                        <input type="checkbox" name="category" value="selling">
+                        Selling
+                    </label>
+                    <button type="button" onclick="applyFilter()">Apply Filter</button>
+                </form>
+            </div>
+
+            <div id="noResultsMessage" style="display: none; text-align: center; font-size: 1.2em; margin: 20px;">
+                <p>No posts match your search or filter criteria.</p>
+                <button onclick="location.reload()" class="reload-button">Go back</button>
+            </div>
+
+            <!-- Blog Post 1 -->
+            <div class="blog-post" data-category="verification buying">
+                <img src="../static/inspecting_a_used_car.jpg" alt="Inspecting A Used Car" loading="lazy">
+                <div class="blog-post-content">
+                    <a href="used-car-inspections-guide-smart-decisions.html" class="blog-post-title">Used Car
+                        Inspections: Your Ultimate Guide to Smart and Safe Buying Decisions</a>
+                    <div class="blog-post-meta">Published on: 2024-12-01</div>
+                    <p class="blog-post-description">Understand why pre-purchase inspections are crucial for ensuring
+                        your investment in a used car is worthwhile.</p>
+                </div>
+            </div>
+
+            <!-- Blog Post 2 -->
+            <div class="blog-post" data-category="maintenance">
+                <img src="../static/vehicle_immediate_inspection.png" alt="Calling An Immediate Vehicle Inspection"
+                    loading="lazy">
+                <div class="blog-post-content">
+                    <a href="top-10-indicators-vehicle-requires-immediate-inspection.html" class="blog-post-title">Top
+                        10 Indicators Your Vehicle Requires Immediate Inspection</a>
+                    <div class="blog-post-meta">Published on: 2024-12-08</div>
+                    <p class="blog-post-description">Learn the warning signs that your vehicle needs urgent attention to
+                        avoid costly repairs.</p>
+                </div>
+            </div>
+
+            <!-- Blog Post 3 -->
+            <div class="blog-post" data-category="verification">
+                <img src="../static/comprehensive_vehicle_checklist.jpeg" alt="Analyzing Vehicle Checklist"
+                    loading="lazy">
+                <div class="blog-post-content">
+                    <a href="comprehensive-vehicle-inspection-checklist.html" class="blog-post-title">Comprehensive
+                        Vehicle Inspection Checklist: What’s Included?</a>
+                    <div class="blog-post-meta">Published on: 2024-12-15</div>
+                    <p class="blog-post-description">Explore the essential components of a thorough vehicle inspection
+                        to ensure safety and reliability.</p>
+                </div>
+            </div>
+
+            <!-- Blog Post 4 -->
+            <div class="blog-post" data-category="verification">
+                <img src="../static/reliable_online_car _inspection.jpeg" alt="Online Car Inspection" loading="lazy">
+                <div class="blog-post-content">
+                    <a href="insights-of-online-inspection.html" class="blog-post-title">Are Online Car Inspections
+                        Reliable? Key Insights You Need</a>
+                    <div class="blog-post-meta">Published on: 2024-12-20</div>
+                    <p class="blog-post-description">Discover the benefits and potential drawbacks of online car
+                        inspections in today’s digital age.</p>
+                </div>
+            </div>
+
+            <!-- Blog Post 5 -->
+            <div class="blog-post" data-category="verification maintenance">
+                <img src="../static/important_insights_of_vehicle_report.jpeg" alt="Vehicle Infographic Report"
+                    loading="lazy">
+                <div class="blog-post-content">
+                    <a href="key-insights-vehicle-history-report.html" class="blog-post-title">Why a Vehicle History
+                        Report Is a Must for Car Buyers: Key Insights You Should Know</a>
+                    <div class="blog-post-meta">Published on: 2024-12-25</div>
+                    <p class="blog-post-description">Learn why a Vehicle History Report is essential for car buyers.
+                        Understand its significance, how it helps make informed decisions, and the key insights you need
+                        to ensure a safe and smart purchase.</p>
+                </div>
+            </div>
+
+            <!-- Blog Post 6 -->
+            <div class="blog-post" data-category="maintenance">
+                <img src="../static/regular_inspection_save_money.jpeg" alt="No Issues Found While Maintenance"
+                    loading="lazy">
+                <div class="blog-post-content">
+                    <a href="regular-vehicle-maintenance-saves-money.html" class="blog-post-title">How Regular Vehicle
+                        Maintenance Saves You Money Over Time</a>
+                    <div class="blog-post-meta">Published on: 2024-12-28</div>
+                    <p class="blog-post-description">Understand how consistent vehicle inspections can prevent expensive
+                        repairs and extend your car’s lifespan.</p>
+                </div>
+            </div>
+
+            <!-- Blog Post 7 -->
+            <div class="blog-post" data-category="maintenance">
+                <img src="../static/futuristic_car_maintenance.jpeg" alt="Futuristic Car Maintenance" loading="lazy">
+                <div class="blog-post-content">
+                    <a href="future-of-car-maintenance.html" class="blog-post-title">The Future of Car Maintenance:
+                        Embracing Smart Technology and AI-Driven Inspections</a>
+                    <div class="blog-post-meta">Published on: 2024-12-01</div>
+                    <p class="blog-post-description">Explore how technology is transforming car maintenance and
+                        inspections for greater efficiency.</p>
+                </div>
+            </div>
+
+            <!-- Blog Post 8 -->
+            <div class="blog-post" data-category="maintenance">
+                <img src="../static/car_maintenance_checklist.jpeg" alt="Car Maintenance Checklist" loading="lazy">
+                <div class="blog-post-content">
+                    <a href="ultimate-vehicle-maintenance-checklist.html" class="blog-post-title">The Ultimate Car
+                        Maintenance Checklist: Keep Your Vehicle Running Like New</a>
+                    <div class="blog-post-meta">Published on: 2024-12-08</div>
+                    <p class="blog-post-description">Follow this comprehensive checklist to maintain your car in peak
+                        condition for years to come.</p>
+                </div>
+            </div>
+
+            <!-- Blog Post 9 -->
+            <div class="blog-post" data-category="maintenance">
+                <img src="../static/common_car_problems.jpeg" alt="Cars With Common Problem" loading="lazy">
+                <div class="blog-post-content">
+                    <a href="common-car-problems.html" class="blog-post-title">Identifying Common Car Problems and How
+                        to Detect Them Early</a>
+                    <div class="blog-post-meta">Published on: 2024-12-15</div>
+                    <p class="blog-post-description">Identify common car issues before they escalate into major problems
+                        with these expert tips.</p>
+                </div>
+            </div>
+
+            <!-- Blog Post 10 -->
+            <div class="blog-post" data-category="verification">
+                <img src="../static/car_inspection_failed.jpeg" alt="Car Inspection Failed" loading="lazy">
+                <div class="blog-post-content">
+                    <a href="car-inspection-failed.html" class="blog-post-title">Failed Your Car Inspection? Here's Your
+                        Next Step</a>
+                    <div class="blog-post-meta">Published on: 2024-12-20</div>
+                    <p class="blog-post-description">Get actionable advice on how to address a failed car inspection and
+                        get back on the road.</p>
+                </div>
+            </div>
+
+            <!-- Blog Post 11 -->
+            <div class="blog-post" data-category="maintenance">
+                <img src="../static/car_noises.jpeg" alt="Car Making Noise" loading="lazy">
+                <div class="blog-post-content">
+                    <a href="car-noises-and-their-solutions.html" class="blog-post-title">Understanding Car Noises:
+                        Common Issues and Their Solutions</a>
+                    <div class="blog-post-meta">Published on: 2024-12-25</div>
+                    <p class="blog-post-description">Identify the reasons behind unusual car noises and learn how to fix
+                        them before they worsen.</p>
+                </div>
+            </div>
+
+            <!-- Blog Post 12 -->
+            <div class="blog-post" data-category="buying selling">
+                <img src="../static/online_vs_physical_car_trade.jpeg" alt="Online or Physical Car Trade"
+                    loading="lazy">
+                <div class="blog-post-content">
+                    <a href="online-vs-physical-car-trade.html" class="blog-post-title">Online vs. Physical Car Trade:
+                        Which Option Is Right for You?</a>
+                    <div class="blog-post-meta">Published on: 2024-12-28</div>
+                    <p class="blog-post-description">Weigh the pros and cons of trading cars online versus in-person to
+                        make an informed decision.</p>
+                </div>
+            </div>
+
+            <!-- Blog Post 13 -->
+            <div class="blog-post" data-category="verification buying">
+                <img src="../static/questions_before_purchasing_a_used_car.jpeg" alt="Questions before Buying Car"
+                    loading="lazy">
+                <div class="blog-post-content">
+                    <a href="essential-questions-before-buying-a-used-car.html" class="blog-post-title">Essential
+                        Questions to Ask Before Buying a Used Car</a>
+                    <div class="blog-post-meta">Published on: 2025-01-01</div>
+                    <p class="blog-post-description">Ask these crucial questions to ensure a smooth and informed used
+                        car buying experience.</p>
+                </div>
+            </div>
+
+            <!-- Blog Post 14 -->
+            <div class="blog-post" data-category="selling">
+                <img src="../static/car_terms.jpg" alt="Pre Sale Inspection" loading="lazy">
+                <div class="blog-post-content">
+                    <a href="accelarate-your-car-sell-with-pre-purchase-inspection.html"
+                        class="blog-post-title">Accelerate Your Car Sale with a Pre-Sale Inspection</a>
+                    <div class="blog-post-meta">Published on: 2025-01-05</div>
+                    <p class="blog-post-description">Discover how a pre-sale inspection can help you sell your car
+                        quickly and at a better price.</p>
+                </div>
+            </div>
+
+            <!-- Blog Post 15 -->
+            <div class="blog-post" data-category="verification buying">
+                <img src="../static/over_all_mantainance.webp" alt="Best Maintenance Options" loading="lazy">
+                <div class="blog-post-content">
+                    <a href="used-car-inspection-tips.html" class="blog-post-title">Top 5 Used Car Inspection Tips Every
+                        Buyer Should Know</a>
+                    <div class="blog-post-meta">Published on: 2025-01-10</div>
+                    <p class="blog-post-description">Learn the top tips for inspecting a used car before making a
+                        purchase to avoid future regrets.</p>
+                </div>
+            </div>
+
+            <!-- Blog Post 16 -->
+            <div class="blog-post" data-category="verification buying">
+                <img src="../static/regular_inspection_save_money.jpeg" alt="Vehicle Evaluation Before Buying"
+                    loading="lazy">
+                <div class="blog-post-content">
+                    <a href="step-by-step-vehicle-evaluation.html" class="blog-post-title">Is This Car Worth Buying? A
+                        Step-by-Step Vehicle Evaluation Guide</a>
+                    <div class="blog-post-meta">Published on: 2025-01-15</div>
+                    <p class="blog-post-description">Follow this detailed guide to evaluate a vehicle’s condition and
+                        determine if it’s worth buying.</p>
+                </div>
+            </div>
+
+            <!-- Blog Post 17 -->
+            <div class="blog-post" data-category="selling">
+                <img src="../static/car_sell.jpg" alt="Boost Cars Resale Price" loading="lazy">
+                <div class="blog-post-content">
+                    <a href="boost-car-resale-value.html" class="blog-post-title">Simple Ways to Boost Your Car’s Resale
+                        Value</a>
+                    <div class="blog-post-meta">Published on: 2025-01-20</div>
+                    <p class="blog-post-description">Learn simple yet effective ways to increase your car’s resale value
+                        before selling.</p>
+                </div>
+            </div>
+
+            <!-- Blog Post 18 -->
+            <div class="blog-post" data-category="verification buying">
+                <img src="../static/faq.jpg" alt="Finding Information of Salvage Car" loading="lazy">
+                <div class="blog-post-content">
+                    <a href="buying-a-salvage-car.html" class="blog-post-title">Is It Safe to Buy a Salvage Car?
+                        Essential Information You Should Know</a>
+                    <div class="blog-post-meta">Published on: 2025-01-25</div>
+                    <p class="blog-post-description">Understand the risks and benefits of buying a salvage car to make a
+                        well-informed decision.</p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  
-    <div class="footer-bottom">
-      <p>&copy; 2024 Auto Inspect. All rights reserved. | <a href="policy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
-      <p class="powered-by">Powered by Netlify</p>
-    </div>
-</footer>
+
+    <script>
+        function applyFilter() {
+            const input = document.getElementById('searchInput').value.toLowerCase(); // Search input
+            const selectedCategories = Array.from(
+                document.querySelectorAll('input[name="category"]:checked') // Get checked categories
+            ).map(input => input.value);
+
+            const blogPosts = document.querySelectorAll('.blog-post'); // All blog posts
+            let visibleCount = 0; // Counter for visible posts
+
+            blogPosts.forEach(post => {
+                const title = post.querySelector('.blog-post-title').textContent.toLowerCase();
+                const description = post.querySelector('.blog-post-description').textContent.toLowerCase();
+                const categories = post.getAttribute('data-category').split(" "); // Split categories into an array
+
+                // Check if post matches search and category filters
+                const matchesSearch = title.includes(input) || description.includes(input);
+                const matchesCategory =
+                    selectedCategories.length === 0 ||
+                    selectedCategories.some(category => categories.includes(category)); // Check for any matching category
+
+                if (matchesSearch && matchesCategory) {
+                    post.style.display = "block"; // Show post
+                    visibleCount++; // Increment visible count
+                    post.classList.add('animate'); // Add animation class
+                    // Retrigger animation
+                    setTimeout(() => post.classList.remove('animate'), 500);
+                } else {
+                    post.style.display = "none"; // Hide post
+                    post.classList.remove('animate'); // Remove animation
+                }
+            });
+
+            const noResultsMessage = document.getElementById('noResultsMessage');
+            const filterSection = document.getElementById('filterSection');
+
+            if (visibleCount === 0) {
+                noResultsMessage.style.display = "flex"; // Show "no results" message
+                filterSection.style.display = "none"; // Hide filter box
+            } else {
+                noResultsMessage.style.display = "none"; // Hide "no results" message
+                filterSection.style.display = "block"; // Show filter box
+            }
+        }
+
+        // Function to show all blog posts initially
+        function showAllPosts() {
+            const blogPosts = document.querySelectorAll('.blog-post');
+            blogPosts.forEach(post => {
+                post.style.display = "block"; // Show all posts by default
+                post.classList.add('animate'); // Add animation
+                // Retrigger animation
+                setTimeout(() => post.classList.remove('animate'), 500);
+            });
+
+            const noResultsMessage = document.getElementById('noResultsMessage');
+            const filterSection = document.getElementById('filterSection');
+
+            noResultsMessage.style.display = "none"; // Ensure no results message is hidden
+            filterSection.style.display = "block"; // Show filter section
+        }
+
+        // Clear filters and reset to default view
+        function clearFilters() {
+            document.getElementById('searchInput').value = ""; // Clear search input
+            document.querySelectorAll('input[name="category"]').forEach(checkbox => {
+                checkbox.checked = false; // Uncheck all categories
+            });
+            showAllPosts(); // Show all posts
+        }
+
+        // Event listeners for real-time updates
+        document.getElementById('searchInput').addEventListener('input', applyFilter); // Search
+        document.querySelectorAll('input[name="category"]').forEach(checkbox => {
+            checkbox.addEventListener('change', applyFilter); // Filter
+        });
+
+        // Show all posts on page load
+        document.addEventListener('DOMContentLoaded', showAllPosts);
+    </script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        window.addEventListener("load", function () {
+            setTimeout(function () {
+                var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+                var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+                s1.async = true;
+                s1.src = 'https://embed.tawk.to/670a5f212480f5b4f58c82b2/1ia087778';
+                s1.charset = 'UTF-8';
+                s1.setAttribute('crossorigin', '*');
+                s0.parentNode.insertBefore(s1, s0);
+            }, 3000); // Delay by 3 seconds
+        });
+    </script>
+    <!--End of Tawk.to Script-->
+
+    <!--footer-->
+    <footer>
+        <div class="footer-container">
+            <!-- Logo and Description -->
+            <div class="footer-section logo-description">
+                <img src="../static/logo.webp" alt="Auto_Inspect logo" class="footer-logo">
+                <p>We provide reliable car verification and maintenance as well as easy buying/selling services to keep
+                    your vehicle in top shape. Trust us for expert advice, detailed inspections, and high-quality
+                    services.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Our Services -->
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Vehicle Verification Report</a></li>
+                    <li><a href="https://www.yourmechanic.com/book/newuser#zip" target="_blank">Maintenance & Repair</a>
+                    </li>
+                    <li>
+                        <a target="_blank"
+                            href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1"
+                            class="footer-action">
+                            Buy A Car
+                        </a>
+                        <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024"
+                            alt="eBay Tracking Pixel" style="display: none;">
+                    </li>
+                    <li><a href="car_sell.html">Sell Your Car</a></li>
+                    <li><a href="https://tawk.to/chat/670a5f212480f5b4f58c82b2/1ia087778" target="_blank">24/7
+                            Support</a></li>
+                </ul>
+            </div>
+
+
+            <!-- Contact Info -->
+            <div class="footer-section" target="_blank">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li><a href="mailto:zanecarter.9388@gmail.com"><strong>Email:</strong>
+                            support@autoinspect.netlify.app</a></li>
+                    <li><a href="tel:+1 (775) 204-1487"><strong>Phone:</strong> +1 (775) 204-1487</a></li>
+                    <li><strong>Address:</strong> 23600 Mercantile Road Suite C-100 Postbox ZH008223 Beachwood OH 44122,
+                        United States</li>
+                </ul>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/" class="footer-social-icon" aria-label="Follow us on Facebook"
+                        target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" class="footer-social-icon"
+                        aria-label="Connect with us on LinkedIn" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" class="footer-social-icon" aria-label="Follow us on Instagram"
+                        target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://tawk.to/chat/670a5f212480f5b4f58c82b2/1ia087778" class="footer-social-icon"
+                        aria-label="Chat with us" target="_blank">
+                        <i class="fas fa-comment-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Auto Inspect. All rights reserved. | <a href="policy.html">Privacy Policy</a> | <a
+                    href="terms.html">Terms of Service</a></p>
+            <p class="powered-by">Powered by Netlify</p>
+        </div>
+    </footer>
 
 </body>
+
 </html>

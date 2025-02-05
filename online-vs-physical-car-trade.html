@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore the pros and cons of online and physical car trade options. Discover which method suits you best with expert insights from AutoInspect.">
+    <meta name="keywords"
+        content="Online car trade, Physical car trade, Car selling options, Vehicle trade comparison, AutoInspect, Car selling tips">
+    <meta name="author" content="AutoInspect">
+    <meta name="robots" content="index, follow">
+    <title>Online vs. Physical Car Trade: Which Option Is Right for You? | AutoInspect</title>
+    <link rel="canonical" href="https://autoinspect.netlify.app/online-vs-physical-car-trade">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Online vs. Physical Car Trade: Which Option Is Right for You? | AutoInspect">
+    <meta property="og:description"
+        content="Compare online and physical car trade options with AutoInspect's expert advice. Find the best way to sell your car based on your needs.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://autoinspect.netlify.app/online-vs-physical-car-trade">
+    <meta property="og:image" content="https://autoinspect.netlify.app/static/car-inspection-guide.png">
+    <meta property="og:site_name" content="AutoInspect">
+
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Online vs. Physical Car Trade: Which Option Is Right for You? | AutoInspect">
+    <meta name="twitter:description"
+        content="Unsure whether to trade your car online or in person? Get expert advice to make the best decision with AutoInspect.">
+    <meta name="twitter:image" content="https://autoinspect.netlify.app/static/car-inspection-guide.png">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../static/icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../static/css/all.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/blog.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo" style="display: flex; align-items: center;">
+                <img src="../static/logo.png" alt="AutoInspect"
+                    style="width: 40px; height: 40px; margin-top: auto; border-radius: 50%; margin-right: 20px; filter: contrast(100%); filter: opacity(100%); pointer-events: none;">
+                <a href="index.html" style="display: flex; flex-direction: column;">
+                    <h1 style="margin: 0; font-size: 30px;">AutoInspect</h1>
+                </a>
+                <span class="powered-by" aria-hidden="true">&nbsp; | Powered by Netlify</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="dropdown">
+                    <a class="buy-sell" href="#">Buy/Sell</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a target="_blank"
+                                href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1"
+                                class="dropdown-link">
+                                Buy a Car
+                            </a>
+                            <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024"
+                                alt="eBay Tracking Pixel" style="display: none;">
+                        </li>
+                        <li><a href="car_sell.html">Sell Your Car</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+    </script>
+
+    <div id="content-wrapper">
+        <!-- Table of Contents -->
+        <div id="table-of-contents">
+            <aside id="toc-container">
+                <div class="toc-header">
+                    <h2 class="toc-title">Table of Contents</h2>
+                    <button id="toc-toggle-btn" aria-label="Toggle TOC">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <nav id="toc-content">
+                    <ul class="toc-list">
+                        <li><a href="#sec-intro" class="toc-link">Introduction</a></li>
+                        <li><a href="#sec-online-car-trading" class="toc-link">The Advantages of Online Car Trading</a>
+                        </li>
+                        <li><a href="#sec-physical-car-trading" class="toc-link">The Benefits of Physical Car
+                                Trading</a></li>
+                        <li><a href="#sec-drawbacks-online-trading" class="toc-link">The Drawbacks of Online Car
+                                Trading</a></li>
+                        <li><a href="#sec-drawbacks-physical-trading" class="toc-link">The Drawbacks of Physical Car
+                                Trading</a></li>
+                        <li><a href="#sec-which-option" class="toc-link">Which Option is Right for You?</a></li>
+                        <li><a href="#sec-conclusion" class="toc-link">Conclusion</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const tocToggleBtn = document.getElementById("toc-toggle-btn");
+                const tocContent = document.getElementById("toc-content");
+
+                tocToggleBtn.addEventListener("click", () => {
+                    if (tocContent.style.display === "block") {
+                        tocContent.style.display = "none"; // Collapse the TOC
+                        tocToggleBtn.innerHTML = '<i class="fas fa-chevron-down"></i>';
+                    } else {
+                        tocContent.style.display = "block"; // Expand the TOC
+                        tocToggleBtn.innerHTML = '<i class="fas fa-chevron-up"></i>';
+                    }
+                });
+            });
+        </script>
+
+        <!-- Content Container -->
+        <div id="blog-post">
+            <!-- Main Heading -->
+            <h1 style="color: black; text-align: center;">Online vs. Physical Car Trade: Which Option Is Right for You?
+            </h1>
+
+            <!-- Social Media Share -->
+            <div id="social-share">
+                <p>Share this post:</p>
+                <a href="#" class="social-icon" id="facebook-share" title="Share on Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon" id="twitter-share" title="Share on Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-icon" id="linkedin-share" title="Share on LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="social-icon" id="copy-link" title="Copy Link">
+                    <i class="fas fa-copy"></i>
+                </a>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Get the current page URL
+                    const currentURL = encodeURIComponent(window.location.href);
+                    const postTitle = encodeURIComponent(document.querySelector('h1').innerText); // Blog post title
+
+                    // Facebook Share
+                    document.getElementById('facebook-share').addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const facebookURL = `https://www.facebook.com/sharer/sharer.php?u=${currentURL}`;
+                        window.open(facebookURL, '_blank', 'width=600,height=400');
+                    });
+
+                    // Twitter Share
+                    document.getElementById('twitter-share').addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const twitterURL = `https://twitter.com/intent/tweet?url=${currentURL}&text=${postTitle}`;
+                        window.open(twitterURL, '_blank', 'width=600,height=400');
+                    });
+
+                    // LinkedIn Share
+                    document.getElementById('linkedin-share').addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const linkedinURL = `https://www.linkedin.com/sharing/share-offsite/?url=${currentURL}`;
+                        window.open(linkedinURL, '_blank', 'width=600,height=400');
+                    });
+
+                    // Copy Link functionality
+                    document.getElementById('copy-link').addEventListener('click', function (e) {
+                        e.preventDefault();
+                        navigator.clipboard.writeText(decodeURIComponent(currentURL))
+                            .then(() => alert('Link copied to clipboard!'))
+                            .catch((error) => console.error('Error copying link:', error));
+                    });
+                });
+            </script>
+
+            <!-- Feature Image -->
+            <div id="feature-image">
+                <img src="../static/car_noises.jpeg" alt="Pre-Purchase Car Inspection" class="responsive-image"
+                    loading="lazy">
+            </div>
+
+            <!-- Content Body -->
+            <div id="main-content">
+
+                <section id="sec-intro" class="content-section">
+                    <h2 class="section-title">Introduction</h2>
+                    <p class="section-paragraph">
+                        When it comes to selling or trading your car, the process has evolved significantly over the
+                        years. Traditionally, car trading was done through local dealerships or face-to-face
+                        negotiations. However, with the rise of the internet, <a href="https://www.autotrader.com"
+                            target="_blank">online car trading platforms</a> have become increasingly popular, offering
+                        convenience and a wider market reach.
+                        But which option is better for you—online car trading or going through a physical dealership? In
+                        this blog, we’ll explore the pros and cons of both options to help you determine which route
+                        best suits your needs.
+                    </p>
+                </section>
+
+                <section id="sec-online-car-trading" class="content-section">
+                    <h2 class="section-title">The Advantages of Online Car Trading</h2>
+                    <h3 class="subsection-title">Convenience and Accessibility</h3>
+                    <p class="section-paragraph">
+                        One of the biggest advantages of online car trading is convenience. You can start the process
+                        from the comfort of your home, eliminating the need to visit multiple dealerships, negotiate in
+                        person, or deal with time constraints. Online platforms allow you to get instant quotes, compare
+                        offers, and even schedule pick-up times without leaving your house. <a
+                            href="https://www.autoinspect.netlify.app" target="_blank">AutoInspect</a> and similar sites
+                        also provide vehicle history reports that can be helpful when pricing your car.
+                    </p>
+                    <h3 class="subsection-title">Wider Audience Reach</h3>
+                    <p class="section-paragraph">
+                        Online platforms typically have a much larger reach than local dealerships. By listing your car
+                        on a website, your vehicle can be seen by a broader audience, including buyers across the
+                        country. This gives you a higher chance of finding a buyer who is willing to pay your desired
+                        price, especially for specialized or rare vehicles. Platforms such as <a
+                            href="https://www.cargurus.com" target="_blank">CarGurus</a> allow you to access a vast
+                        market.
+                    </p>
+                    <h3 class="subsection-title">Faster Process</h3>
+                    <p class="section-paragraph">
+                        In many cases, online car trading platforms offer quicker transactions. Some platforms even
+                        allow you to receive payment the same day the car is sold, providing a fast and hassle-free
+                        experience. This can be especially appealing if you're looking to sell quickly or need cash for
+                        an emergency. Sites like <a href="https://www.carvana.com/sell-my-car"
+                            target="_blank">Carvana</a> and <a
+                            href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1"
+                            target="_blank">Ebay</a> will offer you a fast experience.
+                    </p>
+                    <h3 class="subsection-title">Transparency and Flexibility</h3>
+                    <p class="section-paragraph">
+                        With online car trading, you often have more control over the pricing process. Many platforms
+                        allow you to set your own price or negotiate with interested buyers, giving you more flexibility
+                        compared to the fixed pricing models of physical dealerships. Plus, online platforms typically
+                        offer transparent, detailed pricing information and appraisal tools to help you understand the
+                        value of your car. Platforms like <a href="https://www.kbb.com" target="_blank">Kelley Blue
+                            Book</a> can assist in determining the fair market value of your car.
+                    </p>
+                </section>
+
+                <section id="sec-physical-car-trading" class="content-section">
+                    <h2 class="section-title">The Benefits of Physical Car Trading (Dealerships)</h2>
+                    <h3 class="subsection-title">Personal Interaction and Expert Appraisal</h3>
+                    <p class="section-paragraph">
+                        One of the major benefits of selling or trading your car at a physical dealership is the
+                        personal interaction. Many people prefer face-to-face communication when it comes to something
+                        as valuable as their car. Dealerships often employ expert appraisers who can provide a detailed
+                        and professional evaluation of your vehicle.
+                        If you're uncertain about your car’s value, a dealership can offer insights into the condition
+                        of your vehicle, its marketability, and the best price they can offer. This can give you peace
+                        of mind, especially if you’re unsure about online valuations. Websites like <a
+                            href="https://www.edmunds.com" target="_blank">Edmunds</a> provide tools for online
+                        appraisals but might still lack the personalized touch of a dealer.
+                    </p>
+                    <h3 class="subsection-title">Trade-In Convenience</h3>
+                    <p class="section-paragraph">
+                        If you're planning to buy a new or used car, a physical dealership offers the convenience of
+                        trading in your old car right there and then. Many dealerships offer trade-in programs where
+                        they assess the value of your car and apply it as a down payment toward a new vehicle. This
+                        eliminates the need for a separate selling process and streamlines the purchase of your next
+                        car. For example, <a href="https://www.toyota.com" target="_blank">Toyota dealerships</a> often
+                        feature trade-in programs for easy transitions.
+                    </p>
+                    <h3 class="subsection-title">No Need to Worry About Scams</h3>
+                    <p class="section-paragraph">
+                        While reputable online platforms are generally safe, the risk of scams is higher in online
+                        transactions. When trading at a physical dealership, you eliminate this concern since you’re
+                        dealing with licensed, regulated businesses. Additionally, dealerships often provide paperwork
+                        and warranties to ensure the legitimacy of the transaction.
+                    </p>
+                    <h3 class="subsection-title">Test Drive and Immediate Transaction</h3>
+                    <p class="section-paragraph">
+                        When working with a physical dealership, you have the option to conduct a test drive if you’re
+                        buying a car on the spot. This can give you a more hands-on experience with the car you're
+                        purchasing and help you make a more informed decision. Plus, the deal can be closed immediately,
+                        allowing you to drive off in your new vehicle without waiting for third-party transactions.
+                    </p>
+                </section>
+
+                <section id="sec-drawbacks-online-trading" class="content-section">
+                    <h2 class="section-title">The Drawbacks of Online Car Trading</h2>
+                    <h3 class="subsection-title">Lack of Personal Interaction</h3>
+                    <p class="section-paragraph">
+                        While online platforms offer convenience, they also lack the personal touch that comes with
+                        face-to-face interactions. If you’re someone who values speaking with a person directly or
+                        discussing the finer details of a deal, online car trading might not be the best option. There’s
+                        also less opportunity for you to negotiate or ask questions during the process.
+                    </p>
+                    <h3 class="subsection-title">Limited Negotiation Opportunities</h3>
+                    <p class="section-paragraph">
+                        While some online platforms allow for negotiations, others may not provide the same flexibility
+                        as physical dealerships. The initial offers you receive online can sometimes be fixed, with
+                        limited room for back-and-forth bargaining. This could potentially result in a lower final price
+                        than you might have been able to secure through negotiation at a physical location.
+                    </p>
+                    <h3 class="subsection-title">Longer Wait Times for Finalizing the Sale</h3>
+                    <p class="section-paragraph">
+                        Although many online platforms promise quick transactions, the actual process of completing the
+                        sale may take longer than expected. If the buyer is not local, shipping or transportation of the
+                        vehicle may be required, which can add additional time and cost to the process. Additionally, if
+                        you are selling on a marketplace, you might have to wait longer to find a buyer compared to
+                        working with a dealership.
+                    </p>
+                </section>
+
+                <section id="sec-drawbacks-physical-trading" class="content-section">
+                    <h2 class="section-title">The Drawbacks of Physical Car Trading</h2>
+                    <h3 class="subsection-title">Lower Offers and Fees</h3>
+                    <p class="section-paragraph">
+                        Dealerships often offer lower trade-in values for your car compared to what you could
+                        potentially get through online platforms. This is because dealerships typically aim to resell
+                        the car at a profit, so they may factor in repair costs, reconditioning fees, and other expenses
+                        when determining the price. In addition, dealerships may charge processing or administrative
+                        fees that reduce your overall payout.
+                    </p>
+                    <h3 class="subsection-title">Time-Consuming Process</h3>
+                    <p class="section-paragraph">
+                        While physical car trading offers a streamlined process, it can still be time-consuming. You
+                        might need to visit multiple dealerships, get appraisals, and negotiate with different sellers
+                        to secure the best deal. This can be especially burdensome if you’re juggling other
+                        responsibilities and don’t have the time to dedicate to the process.
+                    </p>
+                    <h3 class="subsection-title">Pressure to Buy</h3>
+                    <p class="section-paragraph">
+                        One downside of working with a physical dealership is the pressure to buy a car on the spot.
+                        Salespeople are often incentivized to push for sales, which can lead to added stress and a sense
+                        of urgency in closing the deal. If you’re simply looking to sell or trade-in your car, this
+                        pressure can detract from the experience.
+                    </p>
+                </section>
+
+
+                <section id="sec-which-option" class="content-section">
+                    <h2 class="section-title">Which Option is Right for You?</h2>
+                    <h3 class="subsection-title"><a
+                            href="https://www.cargurus.com/?px8324=p2&sourceContext=cargurusTM&cgcid=2161&cgagid=910472&ax8324=63580845&type=GoogleAdWordsSearch&kw=cargurus&matchtype=e&ad=261318744220&placement=&networktype=g&device=c&devicemodel=&adposition=&physloc=9058761&intloc=&aceid=&cid=141954540&agid=7773125700&tgtid=kwd-5133662569&fid=&gad_source=1&gclid=Cj0KCQiAv628BhC2ARIsAIJIiK9CbEJK8RaRpFpMgX9kYEHlcZef4Z9Zu9IRzawUM6gJCk5qENct6tsaAqSEEALw_wcB"
+                            target="_blank">Go Online</a> If:</h3>
+                    <ul class="section-list">
+                        <li>You value convenience and want to start the process from the comfort of your home.
+                        <li>You’re looking for a wider audience and want the chance to reach potential buyers or dealers
+                            nationwide.
+                        <li>You prefer a faster transaction, especially if you’re looking to sell quickly and without
+                            delays.
+                        <li>You feel comfortable with online valuations and negotiating remotely.
+                    </ul>
+                    <h3 class="subsection-title">Go Physical If:</h3>
+                    <ul class="section-list">
+                        <li>You prefer the personal interaction and expert appraisals that come with working directly
+                            with a dealership.
+                        <li>You’re trading in your car as part of purchasing a new vehicle and want a streamlined
+                            process.
+                        <li>You want to avoid the potential risk of scams or fraud in online transactions.
+                        <li>You want the immediate ability to test drive a new car while trading in your old one.
+                    </ul>
+                </section>
+
+                <section id="sec-conclusion" class="content-section">
+                    <h2 class="section-title">Conclusion</h2>
+                    <p class="section-paragraph">
+                        Both online and physical car trading have their unique advantages and drawbacks. Online
+                        platforms offer greater convenience, broader market access, and faster transactions, while
+                        physical dealerships provide personal interaction, expert appraisals, and the ability to trade
+                        in your car on the spot. By considering your needs, timeline, and level of comfort with each
+                        option, you can make an informed decision that works best for you.
+                    </p>
+                    <h3 class="section-title">Key Takeaways</h3>
+                    <ul class="section-list">
+                        <li>Online car trading offers convenience, a wider audience, and quicker transactions but may
+                            have limited negotiation flexibility. <a
+                                href="https://heyauto.com/blog/tips-&-tricks/pros-and-cons-when-selling-your-car-online?srsltid=AfmBOoqljBmwTi_MkPA8XnvCmAxBeGxJb4KI6FjFyh_felidXxLc5K1Y"
+                                target="_blank">Learn more</a></li>
+                        <li>Physical car trading allows for expert appraisals, immediate transactions, and less risk of
+                            scams but may offer lower trade-in values and involve more time. <a
+                                href="https://www.tricitychryslerdodgejeepram.com/the-benefits-of-trading-in-your-car-at-a-dealership/"
+                                target="_blank">Learn more</a></li>
+                        <li>Choose the option that aligns with your priorities, whether it’s convenience, price, or
+                            personal interaction. <a
+                                href="https://www.jeffbelzer.com/blogs/2740/general/10-essential-steps-for-trading-in-your-vehicle/"
+                                target="_blank">Learn more</a></li>
+                    </ul>
+                    <p class="section-paragraph">
+                        No matter which routes you take, remember that understanding your car's value and your
+                        priorities will help you make the best decision.
+                    </p>
+                </section>
+
+                <section id="sec-related-posts" class="content-section">
+
+                    <div class="container" style="box-shadow: none;">
+                        <h2 class="section-title">Related Posts</h2>
+
+                        <div class="blog-post" data-category="verification">
+                            <img src="../static/reliable_online_car _inspection.jpeg" alt="Online Car Inspection" loading="lazy">
+                            <div class="blog-post-content">
+                                <a href="insights-of-online-inspection.html" class="blog-post-title">Are Online Car
+                                    Inspections
+                                    Reliable? Key Insights You Need</a>
+                                <div class="blog-post-meta">Published on: 2024-12-20</div>
+                                <p class="blog-post-description">Discover the benefits and potential drawbacks of online
+                                    car
+                                    inspections in today’s digital age.</p>
+                            </div>
+                        </div>
+
+                        <div class="blog-post" data-category="verification buying">
+                            <img src="../static/inspecting_a_used_car.jpg" alt="Inspecting A Used Car" loading="lazy">
+                            <div class="blog-post-content">
+                                <a href="used-car-inspections-guide-smart-decisions.html" class="blog-post-title">Used
+                                    Car
+                                    Inspections: Your Ultimate Guide to Smart and Safe Buying Decisions</a>
+                                <div class="blog-post-meta">Published on: 2024-12-01</div>
+                                <p class="blog-post-description">Understand why pre-purchase inspections are crucial for
+                                    ensuring
+                                    your investment in a used car is worthwhile.</p>
+                            </div>
+                        </div>
+
+                        <div class="blog-post" data-category="verification buying">
+                            <img src="../static/questions_before_purchasing_a_used_car.jpeg" alt="Questions before Buying Car"
+                                loading="lazy">
+                            <div class="blog-post-content">
+                                <a href="essential-questions-before-buying-a-used-car.html"
+                                    class="blog-post-title">Essential
+                                    Questions to Ask Before Buying a Used Car</a>
+                                <div class="blog-post-meta">Published on: 2025-01-01</div>
+                                <p class="blog-post-description">Ask these crucial questions to ensure a smooth and
+                                    informed used
+                                    car buying experience.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    window.addEventListener("load", function () {
+        setTimeout(function () {
+            var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/670a5f212480f5b4f58c82b2/1ia087778';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        }, 3000); // Delay by 3 seconds
+    });
+</script>
+<!--End of Tawk.to Script-->
+
+    <!--footer-->
+    <footer>
+        <div class="footer-container">
+            <!-- Logo and Description -->
+            <div class="footer-section logo-description">
+                <img src="../static/logo.webp" alt="Auto_Inspect logo" class="footer-logo">
+                <p>We provide reliable car verification and maintenance as well as easy buying/selling services to keep
+                    your vehicle in top shape. Trust us for expert advice, detailed inspections, and high-quality
+                    services.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Our Services -->
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Vehicle Verification Report</a></li>
+                    <li><a href="https://www.yourmechanic.com/book/newuser#zip" target="_blank">Maintenance & Repair</a>
+                    </li>
+                    <li>
+                        <a target="_blank"
+                            href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1"
+                            class="footer-action">
+                            Buy A Car
+                        </a>
+                        <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024"
+                            alt="eBay Tracking Pixel" style="display: none;">
+                    </li>
+                    <li><a href="car_sell.html">Sell Your Car</a></li>
+                    <li><a href="https://tawk.to/chat/670a5f212480f5b4f58c82b2/1ia087778" target="_blank">24/7
+                            Support</a></li>
+                </ul>
+            </div>
+
+
+            <!-- Contact Info -->
+            <div class="footer-section" target="_blank">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li><a href="mailto:zanecarter.9388@gmail.com"><strong>Email:</strong>
+                            support@autoinspect.netlify.app</a></li>
+                    <li><a href="tel:+1 (775) 204-1487"><strong>Phone:</strong> +1 (775) 204-1487</a></li>
+                    <li><strong>Address:</strong> 23600 Mercantile Road Suite C-100 Postbox ZH008223 Beachwood OH 44122,
+                        United States</li>
+                </ul>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/" class="footer-social-icon" aria-label="Follow us on Facebook"
+                        target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" class="footer-social-icon"
+                        aria-label="Connect with us on LinkedIn" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" class="footer-social-icon" aria-label="Follow us on Instagram"
+                        target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://tawk.to/chat/670a5f212480f5b4f58c82b2/1ia087778" class="footer-social-icon"
+                        aria-label="Chat with us" target="_blank">
+                        <i class="fas fa-comment-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Auto Inspect. All rights reserved. | <a href="policy.html">Privacy Policy</a> | <a
+                    href="terms.html">Terms of Service</a></p>
+            <p class="powered-by">Powered by Netlify</p>
+        </div>
+    </footer>
+</body>
+
+</html>

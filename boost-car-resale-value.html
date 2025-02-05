@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Learn simple and effective ways to boost your car's resale value. Discover tips for maintenance, upgrades, and presentation with AutoInspect.">
+    <meta name="keywords"
+        content="Boost car resale value, Car selling tips, Vehicle upgrades, Car maintenance, AutoInspect, Resale value guide">
+    <meta name="author" content="AutoInspect">
+    <meta name="robots" content="index, follow">
+    <title>Simple Ways to Boost Your Car’s Resale Value | AutoInspect</title>
+    <link rel="canonical" href="https://autoinspect.netlify.app/boost-car-resale-value">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Simple Ways to Boost Your Car’s Resale Value | AutoInspect">
+    <meta property="og:description"
+        content="Discover how to maximize your car's resale value with AutoInspect. Get expert tips on maintenance, minor repairs, and presentation to attract buyers.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://autoinspect.netlify.app/boost-car-resale-value">
+    <meta property="og:image" content="https://autoinspect.netlify.app/static/car-resale-value-guide.png">
+    <meta property="og:site_name" content="AutoInspect">
+
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Simple Ways to Boost Your Car’s Resale Value | AutoInspect">
+    <meta name="twitter:description"
+        content="Maximize your car's resale value with actionable tips from AutoInspect. Learn about essential repairs, upgrades, and presentation techniques.">
+    <meta name="twitter:image" content="https://autoinspect.netlify.app/static/car-resale-value-guide.png">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../static/icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../static/css/all.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/blog.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo" style="display: flex; align-items: center;">
+                <img src="../static/logo.png" alt="AutoInspect"
+                    style="width: 40px; height: 40px; margin-top: auto; border-radius: 50%; margin-right: 20px; filter: contrast(100%); filter: opacity(100%); pointer-events: none;">
+                <a href="index.html" style="display: flex; flex-direction: column;">
+                    <h1 style="margin: 0; font-size: 30px;">AutoInspect</h1>
+                </a>
+                <span class="powered-by" aria-hidden="true">&nbsp; | Powered by Netlify</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="dropdown">
+                    <a class="buy-sell" href="#">Buy/Sell</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a target="_blank"
+                                href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1"
+                                class="dropdown-link">
+                                Buy a Car
+                            </a>
+                            <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024"
+                                alt="eBay Tracking Pixel" style="display: none;">
+                        </li>
+                        <li><a href="car_sell.html">Sell Your Car</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+    </script>
+
+    <div id="content-wrapper">
+        <!-- Table of Contents -->
+        <div id="table-of-contents">
+            <aside id="toc-container">
+                <div class="toc-header">
+                    <h2 class="toc-title">Table of Contents</h2>
+                    <button id="toc-toggle-btn" aria-label="Toggle TOC">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <nav id="toc-content">
+                    <ul class="toc-list">
+                        <li><a href="#sec-intro" class="toc-link">Introduction</a></li>
+                        <li><a href="#sec-maintenance" class="toc-link">Keep Up with Regular Maintenance</a></li>
+                        <li><a href="#sec-interior" class="toc-link">Keep the Interior Clean and Well-Kept</a></li>
+                        <li><a href="#sec-exterior" class="toc-link">Address Small Exterior Repairs</a></li>
+                        <li><a href="#sec-upgrades" class="toc-link">Upgrade Key Features</a></li>
+                        <li><a href="#sec-mileage-documents" class="toc-link">Keep the Mileage Low</a></li>
+                        <li><a href="#sec-conclusion" class="toc-link">Conclusion</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const tocToggleBtn = document.getElementById("toc-toggle-btn");
+                const tocContent = document.getElementById("toc-content");
+
+                tocToggleBtn.addEventListener("click", () => {
+                    if (tocContent.style.display === "block") {
+                        tocContent.style.display = "none"; // Collapse the TOC
+                        tocToggleBtn.innerHTML = '<i class="fas fa-chevron-down"></i>';
+                    } else {
+                        tocContent.style.display = "block"; // Expand the TOC
+                        tocToggleBtn.innerHTML = '<i class="fas fa-chevron-up"></i>';
+                    }
+                });
+            });
+        </script>
+
+        <!-- Content Container -->
+        <div id="blog-post">
+            <!-- Main Heading -->
+            <h1 style="color: black; text-align: center;">Simple Ways to Boost Your Car’s Resale Value</h1>
+
+            <!-- Social Media Share -->
+            <div id="social-share">
+                <p>Share this post:</p>
+                <a href="#" class="social-icon" id="facebook-share" title="Share on Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon" id="twitter-share" title="Share on Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-icon" id="linkedin-share" title="Share on LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="social-icon" id="copy-link" title="Copy Link">
+                    <i class="fas fa-copy"></i>
+                </a>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Get the current page URL
+                    const currentURL = encodeURIComponent(window.location.href);
+                    const postTitle = encodeURIComponent(document.querySelector('h1').innerText); // Blog post title
+
+                    // Facebook Share
+                    document.getElementById('facebook-share').addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const facebookURL = `https://www.facebook.com/sharer/sharer.php?u=${currentURL}`;
+                        window.open(facebookURL, '_blank', 'width=600,height=400');
+                    });
+
+                    // Twitter Share
+                    document.getElementById('twitter-share').addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const twitterURL = `https://twitter.com/intent/tweet?url=${currentURL}&text=${postTitle}`;
+                        window.open(twitterURL, '_blank', 'width=600,height=400');
+                    });
+
+                    // LinkedIn Share
+                    document.getElementById('linkedin-share').addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const linkedinURL = `https://www.linkedin.com/sharing/share-offsite/?url=${currentURL}`;
+                        window.open(linkedinURL, '_blank', 'width=600,height=400');
+                    });
+
+                    // Copy Link functionality
+                    document.getElementById('copy-link').addEventListener('click', function (e) {
+                        e.preventDefault();
+                        navigator.clipboard.writeText(decodeURIComponent(currentURL))
+                            .then(() => alert('Link copied to clipboard!'))
+                            .catch((error) => console.error('Error copying link:', error));
+                    });
+                });
+            </script>
+
+            <!-- Feature Image -->
+            <div id="feature-image">
+                <img src="../static/car_sell.jpg" alt="Pre-Purchase Car Inspection" class="responsive-image"
+                    loading="lazy">
+            </div>
+
+            <!-- Content Body -->
+            <div id="main-content">
+
+                <!-- Section 1: Introduction -->
+                <section id="sec-intro" class="content-section">
+                    <h2 class="section-title">Introduction</h2>
+                    <p class="section-paragraph">
+                        Whether you’re planning to <a href="https://www.cars.com/sell/" target="_blank">sell your
+                            car</a> in the near future or just want to maintain its value over time, boosting your car’s
+                        resale value is an important consideration. A higher resale value means more money in your
+                        pocket when it’s time to part ways with your vehicle. While some factors—like the car’s make,
+                        model, and age—are out of your control, there are several simple ways to enhance its value and
+                        appeal to potential buyers.
+                    </p> <br>
+                    <p class="section-paragraph">
+                        In this blog, we’ll explore practical and effective strategies that can help you boost your
+                        car’s resale value. By taking care of your vehicle and making a few strategic upgrades, you can
+                        ensure that you get the most money when it’s time to <a
+                            href="https://autoinspect.netlify.app/car_sell" target="_blank">sell your car</a>.
+                    </p>
+                </section>
+
+                <!-- Section 2: Maintenance -->
+                <section id="sec-maintenance" class="content-section">
+                    <h2 class="section-title">1. Keep Up with Regular Maintenance</h2>
+                    <p class="section-paragraph">
+                        One of the simplest and most effective ways to boost your car’s resale value is by keeping up
+                        with regular maintenance. A well-maintained vehicle is much more attractive to buyers because it
+                        shows that the car has been cared for and is less likely to have hidden issues.
+                    </p>
+                    <h3 class="subsection-title">Maintenance Tips:</h3>
+                    <ul class="section-list">
+                        <li><strong>Oil Changes:</strong> Regular oil changes are essential for engine health. Follow
+                            the manufacturer's recommended oil change intervals.</li>
+                        <li><strong>Tire Care:</strong> Keep the tires properly inflated and check for signs of wear.
+                            Rotating the tires regularly helps ensure even wear and extends their lifespan.</li>
+                        <li><strong>Brake Inspections:</strong> Get your brakes inspected regularly and replace pads and
+                            rotors as needed. Brakes are one of the first things potential buyers will check, so ensure
+                            they’re in good condition.</li>
+                        <li><strong>Fluids and Filters:</strong> Regularly check and replace fluids (engine coolant,
+                            brake fluid, transmission fluid) and filters (air filter, cabin filter) to keep everything
+                            running smoothly.</li>
+                    </ul>
+                    <p class="section-paragraph">
+                        Regular maintenance doesn’t just improve your car’s performance; it also helps to prevent major
+                        issues that can lower its resale value. Buyers will appreciate a well-maintained vehicle, and
+                        they may even be willing to pay more for it.
+                    </p>
+                </section>
+
+                <!-- Section 3: Interior Care -->
+                <section id="sec-interior" class="content-section">
+                    <h2 class="section-title">2. Keep the Interior Clean and Well-Kept</h2>
+                    <p class="section-paragraph">
+                        The interior of your car plays a significant role in how potential buyers perceive its overall
+                        value. A clean, fresh interior suggests that the car has been well cared for, while a cluttered,
+                        dirty interior can make a bad impression.
+                    </p>
+                    <h3 class="subsection-title">Interior Tips:</h3>
+                    <ul class="section-list">
+                        <li><strong>Regular Cleaning:</strong> Vacuum the carpets, seats, and floor mats to remove dirt,
+                            dust, and debris. Wipe down the dashboard and other surfaces with appropriate cleaning
+                            products to keep them free from dust and stains.</li>
+                        <li><strong>Seat Protection:</strong> Use seat covers to protect the upholstery from stains and
+                            wear. Clean and condition leather seats regularly to prevent cracking or fading.</li>
+                        <li><strong>Fix Interior Issues:</strong> Repair minor damages such as cracks in the dashboard,
+                            worn-out buttons, or loose trim pieces. Fixing small imperfections can make the car feel
+                            newer and more desirable to buyers.</li>
+                        <li><strong>Odor Control:</strong> Ensure your car smells fresh. A lingering musty or smoky odor
+                            can deter buyers. Use air fresheners or have the interior professionally cleaned to
+                            eliminate odors.</li>
+                    </ul>
+                    <p class="section-paragraph">
+                        A clean and well-kept interior not only increases the car’s appeal but also gives buyers
+                        confidence that it has been cared for over the years. A pristine interior can often sway a
+                        buyer’s decision in your favor.
+                    </p>
+                </section>
+
+                <!-- Section 4: Exterior Care -->
+                <section id="sec-exterior" class="content-section">
+                    <h2 class="section-title">3. Address Small Exterior Repairs</h2>
+                    <p class="section-paragraph">
+                        The exterior appearance of your car is the first thing potential buyers will notice. Dings,
+                        scratches, and faded paint can all reduce the car’s value. Addressing small repairs can go a
+                        long way in boosting its resale value.
+                    </p>
+                    <h3 class="subsection-title">Exterior Tips:</h3>
+                    <ul class="section-list">
+                        <li><strong>Paint Touch-Ups:</strong> If your car has chips or scratches in the paint, consider
+                            getting them touched up to improve its overall appearance.</li>
+                        <li><strong>Fix Dents:</strong> Small dents can be repaired relatively inexpensively through
+                            paintless dent removal (PDR). This improves the overall look and resale value.</li>
+                        <li><strong>Headlights & Taillights:</strong> Use a <a
+                                href="https://www.rac.co.uk/drive/advice/how-to/headlight-restoration-guide/"
+                                target="_blank">headlight restoration kit</a> to clean foggy or discolored lights,
+                            improving both the look and functionality.</li>
+                        <li><strong>Windshield Repair:</strong> Repair chips or cracks in the windshield to avoid
+                            deterring buyers.</li>
+                    </ul>
+                    <p class="section-paragraph">
+                        Taking care of these small exterior issues is an affordable way to enhance your car’s curb
+                        appeal and boost its resale value.
+                    </p>
+                </section>
+
+                <!-- Section 5: Upgrades -->
+                <section id="sec-upgrades" class="content-section">
+                    <h2 class="section-title">4. Upgrade Key Features</h2>
+                    <p class="section-paragraph">
+                        Upgrading certain key features can make your vehicle stand out to potential buyers, improving
+                        both its functionality and appeal.
+                    </p>
+                    <h3 class="subsection-title">Upgrade Tips:</h3>
+                    <ul class="section-list">
+                        <li><strong>Infotainment System:</strong> Upgrade to a modern system with features like
+                            Bluetooth, Apple CarPlay, or Android Auto.</li>
+                        <li><strong>New Tires:</strong> Replace old tires to improve safety and appearance, reassuring
+                            buyers that they won’t need to invest in tires immediately.</li>
+                        <li><strong>Floor Mats & Seat Covers:</strong> Replace worn-out mats and consider high-quality
+                            seat covers for a fresher look.</li>
+                    </ul>
+                    <p class="section-paragraph">
+                        Thoughtful upgrades don’t have to be expensive but can significantly enhance your car’s
+                        perceived value.
+                    </p>
+                </section>
+
+                <!-- Section 6: Mileage & Documentation -->
+                <section id="sec-mileage-documents" class="content-section">
+                    <h2 class="section-title">5. Keep the Mileage Low (or at Least Manageable)</h2>
+                    <p class="section-paragraph">
+                        Lower mileage generally means a higher resale value, as cars with fewer miles are seen as more
+                        reliable.
+                    </p>
+                    <h3 class="subsection-title">Mileage Tips:</h3>
+                    <ul class="section-list">
+                        <li><strong>Limit Long Road Trips:</strong> Avoid unnecessary long trips to keep the mileage
+                            manageable.</li>
+                        <li><strong>Service Records:</strong> Maintain a complete service record to reassure buyers
+                            about the car’s maintenance history, even with higher mileage.</li>
+                    </ul>
+                    <p class="section-paragraph">
+                        Buyers value transparency, so providing service records can help offset concerns about higher
+                        mileage.
+                    </p>
+                </section>
+
+                <!-- Section 7: Conclusion -->
+                <section id="sec-conclusion" class="content-section">
+                    <h2 class="section-title">Conclusion</h2>
+                    <p class="section-paragraph">
+                        Boosting your car’s resale value doesn’t require a major overhaul or expensive upgrades. By
+                        following these simple tips—maintaining the vehicle, cleaning the interior and exterior,
+                        addressing small repairs, upgrading key features, managing mileage, and keeping your documents
+                        organized—you can significantly increase your car’s value and appeal to potential buyers.
+                    </p>
+                    <h3 class="subsection-title">Key Takeaways:</h3>
+                    <ul class="section-list">
+                        <li>Regular maintenance is essential to maintaining your car’s value and performance.</li>
+                        <li>Keep the interior clean and address small damages to improve the car’s appeal.</li>
+                        <li>Minor exterior repairs, like touch-ups and fixing dents, can increase the car’s value.</li>
+                        <li>Thoughtful upgrades, such as modern infotainment systems, can make your car more attractive
+                            to buyers.</li>
+                        <li>Lower mileage and a well-organized maintenance history can help preserve your car’s resale
+                            value.</li>
+                    </ul>
+                    <p class="section-paragraph">
+                        By taking these steps, you can maximize your car’s resale value and make it a more attractive
+                        option for potential buyers.
+                    </p>
+                </section>
+
+                <section id="sec-related-posts" class="content-section">
+
+                    <div class="container" style="box-shadow: none;">
+                        <h2 class="section-title">Related Posts</h2>
+
+                        <div class="blog-post" data-category="selling">
+                            <img src="../static/car_terms.jpg" alt="Pre Sale Inspection" loading="lazy">
+                            <div class="blog-post-content">
+                                <a href="accelarate-your-car-sell-with-pre-purchase-inspection.html"
+                                    class="blog-post-title">Accelerate Your Car Sale with a Pre-Sale Inspection</a>
+                                <div class="blog-post-meta">Published on: 2025-01-05</div>
+                                <p class="blog-post-description">Discover how a pre-sale inspection can help you sell
+                                    your car
+                                    quickly and at a better price.</p>
+                            </div>
+                        </div>
+
+                        <div class="blog-post" data-category="maintenance">
+                            <img src="../static/car_maintenance_checklist.jpeg" alt="Car Maintenance Checklist" loading="lazy">
+                            <div class="blog-post-content">
+                                <a href="ultimate-vehicle-maintenance-checklist.html" class="blog-post-title">The
+                                    Ultimate Car
+                                    Maintenance Checklist: Keep Your Vehicle Running Like New</a>
+                                <div class="blog-post-meta">Published on: 2024-12-08</div>
+                                <p class="blog-post-description">Follow this comprehensive checklist to maintain your
+                                    car in peak
+                                    condition for years to come.</p>
+                            </div>
+                        </div>
+
+                        <div class="blog-post" data-category="maintenance">
+                            <img src="../static/over_all_mantainance.webp" alt="Best Maintenance Options" loading="lazy">
+                            <div class="blog-post-content">
+                                <a href="regular-vehicle-maintenance-saves-money.html" class="blog-post-title">How
+                                    Regular Vehicle
+                                    Maintenance Saves You Money Over Time</a>
+                                <div class="blog-post-meta">Published on: 2024-12-28</div>
+                                <p class="blog-post-description">Understand how consistent vehicle inspections can
+                                    prevent expensive
+                                    repairs and extend your car’s lifespan.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    window.addEventListener("load", function () {
+        setTimeout(function () {
+            var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/670a5f212480f5b4f58c82b2/1ia087778';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        }, 3000); // Delay by 3 seconds
+    });
+</script>
+<!--End of Tawk.to Script-->
+
+    <!--footer-->
+    <footer>
+        <div class="footer-container">
+            <!-- Logo and Description -->
+            <div class="footer-section logo-description">
+                <img src="../static/logo.webp" alt="Auto_Inspect logo" class="footer-logo">
+                <p>We provide reliable car verification and maintenance as well as easy buying/selling services to keep
+                    your vehicle in top shape. Trust us for expert advice, detailed inspections, and high-quality
+                    services.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Our Services -->
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Vehicle Verification Report</a></li>
+                    <li><a href="https://www.yourmechanic.com/book/newuser#zip" target="_blank">Maintenance & Repair</a>
+                    </li>
+                    <li>
+                        <a target="_blank"
+                            href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1"
+                            class="footer-action">
+                            Buy A Car
+                        </a>
+                        <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024"
+                            alt="eBay Tracking Pixel" style="display: none;">
+                    </li>
+                    <li><a href="car_sell.html">Sell Your Car</a></li>
+                    <li><a href="https://tawk.to/chat/670a5f212480f5b4f58c82b2/1ia087778" target="_blank">24/7
+                            Support</a></li>
+                </ul>
+            </div>
+
+
+            <!-- Contact Info -->
+            <div class="footer-section" target="_blank">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li><a href="mailto:zanecarter.9388@gmail.com"><strong>Email:</strong>
+                            support@autoinspect.netlify.app</a></li>
+                    <li><a href="tel:+1 (775) 204-1487"><strong>Phone:</strong> +1 (775) 204-1487</a></li>
+                    <li><strong>Address:</strong> 23600 Mercantile Road Suite C-100 Postbox ZH008223 Beachwood OH 44122,
+                        United States</li>
+                </ul>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/" class="footer-social-icon" aria-label="Follow us on Facebook"
+                        target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" class="footer-social-icon"
+                        aria-label="Connect with us on LinkedIn" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" class="footer-social-icon" aria-label="Follow us on Instagram"
+                        target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://tawk.to/chat/670a5f212480f5b4f58c82b2/1ia087778" class="footer-social-icon"
+                        aria-label="Chat with us" target="_blank">
+                        <i class="fas fa-comment-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Auto Inspect. All rights reserved. | <a href="policy.html">Privacy Policy</a> | <a
+                    href="terms.html">Terms of Service</a></p>
+            <p class="powered-by">Powered by Netlify</p>
+        </div>
+    </footer>
+</body>
+
+</html>

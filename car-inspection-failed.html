@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Failed your car inspection? Discover actionable steps to fix issues, pass your next inspection, and maintain your vehicle with expert tips from AutoInspect.">
+    <meta name="keywords"
+        content="Failed car inspection, Car inspection tips, Fix car issues, Vehicle maintenance, Pre-inspection guide, AutoInspect">
+    <meta name="author" content="AutoInspect">
+    <meta name="robots" content="index, follow">
+    <title>Failed Your Car Inspection? Here's Your Next Step | AutoInspect</title>
+    <link rel="canonical" href="https://autoinspect.netlify.app/car-inspection-failed">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Failed Your Car Inspection? Here's Your Next Step | AutoInspect">
+    <meta property="og:description"
+        content="Learn the steps to address common car issues and pass your next inspection with ease. Get reliable vehicle care advice from AutoInspect.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://autoinspect.netlify.app/car-inspection-failed">
+    <meta property="og:image" content="https://autoinspect.netlify.app/static/car-inspection-guide.png">
+    <meta property="og:site_name" content="AutoInspect">
+
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Failed Your Car Inspection? Here's Your Next Step | AutoInspect">
+    <meta name="twitter:description"
+        content="Failed your inspection? Get practical tips to fix your car and ensure success on your next try. AutoInspect makes it simple.">
+    <meta name="twitter:image" content="https://autoinspect.netlify.app/static/car-inspection-guide.png">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../static/icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../static/css/all.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/blog.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo" style="display: flex; align-items: center;">
+                <img src="../static/logo.png" alt="AutoInspect"
+                    style="width: 40px; height: 40px; margin-top: auto; border-radius: 50%; margin-right: 20px; filter: contrast(100%); filter: opacity(100%); pointer-events: none;">
+                <a href="index.html" style="display: flex; flex-direction: column;">
+                    <h1 style="margin: 0; font-size: 30px;">AutoInspect</h1>
+                </a>
+                <span class="powered-by" aria-hidden="true">&nbsp; | Powered by Netlify</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="dropdown">
+                    <a class="buy-sell" href="#">Buy/Sell</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a target="_blank"
+                                href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1"
+                                class="dropdown-link">
+                                Buy a Car
+                            </a>
+                            <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024"
+                                alt="eBay Tracking Pixel" style="display: none;">
+                        </li>
+                        <li><a href="car_sell.html">Sell Your Car</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+    </script>
+
+    <div id="content-wrapper">
+        <!-- Table of Contents -->
+        <div id="table-of-contents">
+            <aside id="toc-container">
+                <div class="toc-header">
+                    <h2 class="toc-title">Table of Contents</h2>
+                    <button id="toc-toggle-btn" aria-label="Toggle TOC">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <nav id="toc-content">
+                    <ul class="toc-list">
+                        <li><a href="#sec-intro" class="toc-link">Introduction</a></li>
+                        <li><a href="#sec-why-car-failed" class="toc-link">Understand Why Your Car Failed</a></li>
+                        <li><a href="#sec-options-after-failure" class="toc-link">Don’t Panic – You’ve Got Options</a>
+                        </li>
+                        <li><a href="#sec-repair-cost" class="toc-link">Determine the Cost of Repairs</a></li>
+                        <li><a href="#sec-perform-repairs" class="toc-link">Perform the Repairs</a></li>
+                        <li><a href="#sec-second-opinion" class="toc-link">Get a Second Opinion</a></li>
+                        <li><a href="#sec-re-inspection-process" class="toc-link">Re-Inspection Process</a></li>
+                        <li><a href="#sec-alternatives" class="toc-link">Alternatives If Repairs Aren’t Feasible</a>
+                        </li>
+                        <li><a href="#sec-stay-proactive" class="toc-link">Stay Proactive to Avoid Future Failures</a>
+                        </li>
+                        <li><a href="#sec-conclusion" class="toc-link">Conclusion</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const tocToggleBtn = document.getElementById("toc-toggle-btn");
+                const tocContent = document.getElementById("toc-content");
+
+                tocToggleBtn.addEventListener("click", () => {
+                    if (tocContent.style.display === "block") {
+                        tocContent.style.display = "none"; // Collapse the TOC
+                        tocToggleBtn.innerHTML = '<i class="fas fa-chevron-down"></i>';
+                    } else {
+                        tocContent.style.display = "block"; // Expand the TOC
+                        tocToggleBtn.innerHTML = '<i class="fas fa-chevron-up"></i>';
+                    }
+                });
+            });
+        </script>
+
+        <!-- Content Container -->
+        <div id="blog-post">
+            <!-- Main Heading -->
+            <h1 style="color: black; text-align: center;">Failed Your Car Inspection? Here's Your Next Step</h1>
+
+            <!-- Social Media Share -->
+            <div id="social-share">
+                <p>Share this post:</p>
+                <a href="#" class="social-icon" id="facebook-share" title="Share on Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon" id="twitter-share" title="Share on Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-icon" id="linkedin-share" title="Share on LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="social-icon" id="copy-link" title="Copy Link">
+                    <i class="fas fa-copy"></i>
+                </a>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Get the current page URL
+                    const currentURL = encodeURIComponent(window.location.href);
+                    const postTitle = encodeURIComponent(document.querySelector('h1').innerText); // Blog post title
+
+                    // Facebook Share
+                    document.getElementById('facebook-share').addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const facebookURL = `https://www.facebook.com/sharer/sharer.php?u=${currentURL}`;
+                        window.open(facebookURL, '_blank', 'width=600,height=400');
+                    });
+
+                    // Twitter Share
+                    document.getElementById('twitter-share').addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const twitterURL = `https://twitter.com/intent/tweet?url=${currentURL}&text=${postTitle}`;
+                        window.open(twitterURL, '_blank', 'width=600,height=400');
+                    });
+
+                    // LinkedIn Share
+                    document.getElementById('linkedin-share').addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const linkedinURL = `https://www.linkedin.com/sharing/share-offsite/?url=${currentURL}`;
+                        window.open(linkedinURL, '_blank', 'width=600,height=400');
+                    });
+
+                    // Copy Link functionality
+                    document.getElementById('copy-link').addEventListener('click', function (e) {
+                        e.preventDefault();
+                        navigator.clipboard.writeText(decodeURIComponent(currentURL))
+                            .then(() => alert('Link copied to clipboard!'))
+                            .catch((error) => console.error('Error copying link:', error));
+                    });
+                });
+            </script>
+
+            <!-- Feature Image -->
+            <div id="feature-image">
+                <img src="../static/car_inspection_failed.jpeg" alt="Pre-Purchase Car Inspection"
+                    class="responsive-image" loading="lazy">
+            </div>
+
+            <!-- Content Body -->
+            <div id="main-content">
+
+                <!-- Introduction Section -->
+                <section id="sec-intro" class="content-section">
+                    <h2 class="section-title">Introduction</h2>
+                    <p class="section-paragraph">
+                        Failing a car inspection can be a frustrating experience, but it’s important to understand that
+                        it doesn’t mean the end of the road for your vehicle. Car inspections are designed to ensure
+                        that your vehicle is safe to drive and meets environmental standards. If your car fails, it’s
+                        not necessarily a reflection of its overall condition, but rather a sign that specific areas
+                        need attention.
+                    </p> <br>
+                    <p class="section-paragraph">
+                        In this blog, we’ll guide you through what to do if your car fails its inspection and how to
+                        take the right steps toward getting it back on the road.
+                    </p>
+                </section>
+
+                <!-- Section 1: Understand Why Your Car Failed -->
+                <section id="sec-why-car-failed" class="content-section">
+                    <h2 class="section-title">1. Understand Why Your Car Failed</h2>
+                    <p class="section-paragraph">
+                        <strong>What Failed?</strong> The first step after a failed inspection is to understand exactly
+                        why your car did not pass. Car inspections typically focus on a few key areas:
+                    </p>
+                    <ul class="section-list">
+                        <li><strong>Emissions:</strong> High levels of pollutants can indicate a problem with the
+                            exhaust system or engine.</li>
+                        <li><strong>Brakes:</strong> Worn-out brake pads or malfunctioning braking components can be
+                            dangerous and fail the inspection.</li>
+                        <li><strong>Tires:</strong> Bald tires or incorrect tire pressure may result in a failure.</li>
+                        <li><strong>Lights and Signals:</strong> Non-functioning headlights, brake lights, or turn
+                            signals are a common reason for failure.</li>
+                        <li><strong>Suspension:</strong> Issues with shocks, struts, or alignment can affect your car’s
+                            handling and safety.</li>
+                        <li><strong>Windshield:</strong> Cracked windshields or damaged wipers can be a safety hazard
+                            and cause failure.</li>
+                    </ul>
+                    <p class="section-paragraph">
+                        <strong>Check the Report:</strong> The inspection center will provide you with a detailed report
+                        outlining the specific reasons for the failure. Review the report carefully and identify which
+                        areas need repair or attention. Here’s a helpful resource on <a
+                            href="https://www.trucksafe.com/post/understanding-roadside-inspection-reports"
+                            target="_blank">understanding inspection reports</a>.
+                    </p>
+                </section>
+
+                <!-- Section 2: Don’t Panic – You’ve Got Options -->
+                <section id="sec-options-after-failure" class="content-section">
+                    <h2 class="section-title">2. Don’t Panic – You’ve Got Options</h2>
+                    <p class="section-paragraph">
+                        <strong>Re-Inspection Window:</strong> Many inspection centers offer a re-inspection after
+                        repairs have been made. Once your car has been fixed, you can bring it back for a re-inspection,
+                        often at a reduced cost or for free, depending on the rules of the facility.
+                    </p> <br>
+                    <p class="section-paragraph">
+                        <strong>Temporary Permit:</strong> In some cases, if your car is still technically operable but
+                        fails on minor issues, you may be eligible for a temporary permit. This allows you to continue
+                        driving your car until the issues are resolved, usually with a deadline for when the car must
+                        pass re-inspection.
+                    </p>
+                </section>
+
+                <!-- Section 3: Determine the Cost of Repairs -->
+                <section id="sec-repair-costs" class="content-section">
+                    <h2 class="section-title">3. Determine the Cost of Repairs</h2>
+                    <p class="section-paragraph">
+                        <strong>Evaluate the Required Fixes:</strong> Once you’ve pinpointed the issues that led to the
+                        failed inspection, it’s time to get an estimate for repairs. You have a few options here:
+                    </p>
+                    <ul class="section-list">
+                        <li><strong>Independent Mechanic:</strong> Taking your car to an independent mechanic can often
+                            be more affordable than visiting a dealership. Here’s a guide to finding a <a
+                                href="https://www.consumerreports.org/cars/car-repair-maintenance/how-to-find-a-high-quality-car-repair-shop-a9066489721/"
+                                target="_blank">reliable independent mechanic</a>.</li>
+                        <li><strong>Specialist:</strong> If your car failed in a specific area, such as emissions or
+                            brakes, consider going to a specialist for that particular repair. Check out this <a
+                                href="https://parmaccs.com/blog/car-repair-costs-local-or-dealers/"
+                                target="_blank">comparison of specialists vs. general repair shops</a>.</li>
+                        <li><strong>Dealership:</strong> If your car is under warranty or you prefer original parts, a
+                            dealership may be the best route, though their services are typically more expensive. Learn
+                            about <a
+                                href="https://www.mandalbuickgmc.com/the-top-5-advantages-of-getting-your-car-repaired-at-a-dealership/"
+                                target="_blank">when to choose a dealership for repairs</a>.</li>
+                    </ul>
+                    <p class="section-paragraph">
+                        <strong>Consider the Costs vs. Value:</strong> Before proceeding with expensive repairs, it’s
+                        important to consider the cost of repairs in relation to the value of your car. If the repairs
+                        are costly but your car is old or has low resale value, it might be time to think about whether
+                        the repair is worth it. Here’s a helpful guide on <a
+                            href="https://www.progressive.com/lifelanes/when-to-replace-car/" target="_blank">deciding
+                            when not to repair your car</a>.
+                    </p>
+                </section>
+
+                <!-- Section 4: Perform the Repairs -->
+                <section id="sec-perform-repairs" class="content-section">
+                    <h2 class="section-title">4. Perform the Repairs</h2>
+                    <p class="section-paragraph">
+                        <strong>DIY or Professional Help?</strong> Some car repairs can be tackled by DIY enthusiasts,
+                        especially if you have a bit of mechanical knowledge. <a
+                            href="https://www.jcwhitney.com/auto-parts/car-maintenance-made-easy-a-guide-for-diy-enthusiasts/"
+                            target="_blank">This guide</a> could help to tackle out simple issues yourself.
+                    </p> <br>
+                    <p class="section-paragraph">
+                        However, for more complex issues like emissions problems, brake repairs, or suspension issues,
+                        it's best to leave the work to a <a
+                            href="https://www.artofmanliness.com/skills/manly-know-how/how-to-find-an-honest-and-reliable-mechanic/"
+                            target="_blank">professional mechanic</a>. These repairs can be dangerous or require
+                        specialized tools and knowledge, so professional help will ensure the job is done correctly.
+                    </p> <br>
+                    <p class="section-paragraph">
+                        <strong>Focus on Safety:</strong> When performing repairs, always prioritize safety. Brake
+                        systems, suspension issues, and electrical repairs are crucial for your vehicle’s safe
+                        operation. Never skip essential repairs in favor of cutting corners.
+                    </p>
+                </section>
+
+                <!-- Section 5: Get a Second Opinion -->
+                <section id="sec-second-opinion" class="content-section">
+                    <h2 class="section-title">5. Get a Second Opinion</h2>
+                    <p class="section-paragraph">
+                        <strong>If You’re Unsure About the Diagnosis:</strong> Sometimes, a failed car inspection can
+                        feel like a surprise, especially if you weren’t aware of any issues before the test. If you’re
+                        uncertain about the results, it’s perfectly okay to <a
+                            href="https://law.stackexchange.com/questions/62544/seek-second-opinion-for-failed-vehicle-inspection"
+                            target="_blank">get a second opinion</a>. A different mechanic or inspection center may
+                        provide you with a clearer picture or offer alternative repair solutions.
+                    </p> <br>
+                    <p class="section-paragraph">
+                        <strong>Reviewing the Work:</strong> Once repairs are completed, have the same or a different
+                        mechanic double-check the work to ensure everything is in good shape. For example, if you had
+                        brake pads replaced, make sure the new pads were properly installed and that the braking system
+                        functions as it should.
+                    </p>
+                </section>
+
+                <!-- Section 6: Re-Inspection Process -->
+                <section id="sec-re-inspection-process" class="content-section">
+                    <h2 class="section-title">6. Re-Inspection Process</h2>
+                    <p class="section-paragraph">
+                        <strong>Get Your Car Inspected Again:</strong> After completing the necessary repairs, schedule
+                        a <a href="https://autoinspect.netlify.app/used-car-inspections-guide-smart-decisions"
+                            target="_blank">re-inspection</a>. Depending on the inspection rules in your area, you may
+                        be required to show proof of repairs before the re-inspection. This can usually be done with
+                        receipts from your mechanic or repair shop.
+                    </p> <br>
+                    <p class="section-paragraph">
+                        <strong>What to Expect:</strong> During the re-inspection, the technician will check that the
+                        problems that caused the failure have been fixed and will re-test the failed areas. If your car
+                        passes, you’ll be issued a passing certificate, allowing you to legally drive your vehicle on
+                        the road.
+                    </p> <br>
+                    <p class="section-paragraph">
+                        <strong>Additional Costs:</strong> Be prepared for the cost of re-inspection, which is often
+                        lower than the <a
+                            href="https://inspektlabs.com/blog/how-much-does-a-car-inspection-cost/#:~:text=Some%20states%20require%20both%20an,pay%20between%20%2450%2D%24200."
+                            target="_blank">initial inspection fee</a>, but not always free. Make sure you’re aware of
+                        the cost structure in your area.
+                    </p>
+                </section>
+
+                <!-- Section 7: Alternatives If Repairs Aren’t Feasible -->
+                <section id="sec-alternatives" class="content-section">
+                    <h2 class="section-title">7. Alternatives If Repairs Aren’t Feasible</h2>
+                    <p class="section-paragraph">
+                        <strong>Selling or Trading Your Car:</strong> If the cost of repairs is too high, you may want
+                        to consider <a
+                            href="https://carbrain.com/sell-your-non-working-car?kw=sell%20your%20car%20running%20or%20not&utm_campaign=CB|Damaged/Phrase/Sell_Running_Or_Not/Gen_OG&gad_source=1&gclid=Cj0KCQiAv628BhC2ARIsAIJIiK8S7Ub7FwPixW9RoW5zXIJHpCBSkwYgbPoJvK2OjNpXXNfymiptyJIaAqOeEALw_wcB"
+                            target="_blank">selling or trading in your vehicle</a>. Many buyers or dealerships are
+                        willing to purchase cars that have failed inspections, especially if they’re priced accordingly.
+                        You can use the funds to help purchase a new or used car that meets the inspection standards.
+                    </p> <br>
+                    <p class="section-paragraph">
+                        <strong>Consider a Salvage Title:</strong> In some cases, if the repairs are beyond what you’re
+                        willing to invest, you may be able to sell the car as a <a
+                            href="https://carbrain.com/sell-your-salvage-car" target="_blank">salvage vehicle</a>. This
+                        means the car is sold with a disclosure that it has failed inspection and may need significant
+                        repairs to be roadworthy again. This option may provide you with some return on your vehicle,
+                        although it can limit your buyer pool.
+                    </p>
+                </section>
+
+                <!-- Section 8: Stay Proactive to Avoid Future Failures -->
+                <section id="sec-stay-proactive" class="content-section">
+                    <h2 class="section-title">8. Stay Proactive to Avoid Future Failures</h2>
+                    <p class="section-paragraph">
+                        <strong>Regular Maintenance:</strong> To avoid future inspection failures, keep up with <a
+                            href="https://autoinspect.netlify.app/regular-vehicle-maintenance-saves-money"
+                            target="_blank">regular car maintenance</a>. Regular oil changes, brake inspections, and
+                        tire rotations can prevent many common issues that lead to failed inspections. Preventative
+                        maintenance helps ensure that your car is always in good condition, reducing the chances of
+                        surprises during an inspection.
+                    </p> <br>
+                    <p class="section-paragraph">
+                        <strong>Keep Your Car Clean:</strong> A clean car can also pass its inspection with fewer
+                        issues. Make sure that the undercarriage is free of debris, and the engine is kept clean, as
+                        dirt buildup can sometimes lead to misleading results during emissions testing.
+                    </p>
+                </section>
+
+                <!-- Section 9: Conclusion -->
+                <section id="sec-conclusion" class="content-section">
+                    <h2 class="section-title">9. Conclusion</h2>
+                    <p class="section-paragraph">
+                        Failing a car inspection doesn’t have to be the end of the line for your vehicle. By
+                        understanding the reasons behind the failure and taking the right steps to address them, you can
+                        ensure your car meets safety and environmental standards. Whether you choose to repair, sell, or
+                        trade your vehicle, remember that staying informed and proactive is the key to keeping your car
+                        running smoothly and safely on the road.
+                    </p>
+                    <h3 class="section-title">Key Takeaways:</h3>
+                    <ul class="section-list">
+                        <li>Understand exactly why your car failed its inspection and focus on necessary repairs.</li>
+                        <li>Consider your options: repair, sell, or trade your vehicle based on the cost of repairs.
+                        </li>
+                        <li>Keep up with regular maintenance to prevent future failures and keep your car in good
+                            condition.</li>
+                    </ul>
+                    <p class="section-paragraph">
+                        Taking these steps will not only help you pass the next inspection but also extend the life of
+                        your vehicle.
+                    </p>
+                </section>
+
+                <section id="sec-related-posts" class="content-section">
+
+                    <div class="container" style="box-shadow: none;">
+                        <h2 class="section-title">Related Posts</h2>
+
+                        <div class="blog-post" data-category="maintenance">
+                            <img src="../static/common_car_problems.jpeg" alt="Cars With Common Problem" loading="lazy">
+                            <div class="blog-post-content">
+                                <a href="common-car-problems.html" class="blog-post-title">Identifying Common Car
+                                    Problems and How
+                                    to Detect Them Early</a>
+                                <div class="blog-post-meta">Published on: 2024-12-15</div>
+                                <p class="blog-post-description">Identify common car issues before they escalate into
+                                    major problems
+                                    with these expert tips.</p>
+                            </div>
+                        </div>
+
+                        <div class="blog-post" data-category="verification">
+                            <img src="../static/comprehensive_vehicle_checklist.jpeg" alt="Analyzing Vehicle Checklist" loading="lazy">
+                            <div class="blog-post-content">
+                                <a href="comprehensive-vehicle-inspection-checklist.html"
+                                    class="blog-post-title">Comprehensive
+                                    Vehicle Inspection Checklist: What’s Included?</a>
+                                <div class="blog-post-meta">Published on: 2024-12-15</div>
+                                <p class="blog-post-description">Explore the essential components of a thorough vehicle
+                                    inspection
+                                    to ensure safety and reliability.</p>
+                            </div>
+                        </div>
+
+                        <!-- Blog Post 2 -->
+                        <div class="blog-post" data-category="maintenance">
+                            <img src="../static/vehicle_immediate_inspection.png" alt="Calling An Immediate Vehicle Inspection" loading="lazy">
+                            <div class="blog-post-content">
+                                <a href="top-10-indicators-vehicle-requires-immediate-inspection.html"
+                                    class="blog-post-title">Top
+                                    10 Indicators Your Vehicle Requires Immediate Inspection</a>
+                                <div class="blog-post-meta">Published on: 2024-12-08</div>
+                                <p class="blog-post-description">Learn the warning signs that your vehicle needs urgent
+                                    attention to
+                                    avoid costly repairs.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    window.addEventListener("load", function () {
+        setTimeout(function () {
+            var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/670a5f212480f5b4f58c82b2/1ia087778';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        }, 3000); // Delay by 3 seconds
+    });
+</script>
+<!--End of Tawk.to Script-->
+
+    <!--footer-->
+    <footer>
+        <div class="footer-container">
+            <!-- Logo and Description -->
+            <div class="footer-section logo-description">
+                <img src="../static/logo.webp" alt="Auto_Inspect logo" class="footer-logo">
+                <p>We provide reliable car verification and maintenance as well as easy buying/selling services to keep
+                    your vehicle in top shape. Trust us for expert advice, detailed inspections, and high-quality
+                    services.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Our Services -->
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Vehicle Verification Report</a></li>
+                    <li><a href="https://www.yourmechanic.com/book/newuser#zip" target="_blank">Maintenance & Repair</a>
+                    </li>
+                    <li>
+                        <a target="_blank"
+                            href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1"
+                            class="footer-action">
+                            Buy A Car
+                        </a>
+                        <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024"
+                            alt="eBay Tracking Pixel" style="display: none;">
+                    </li>
+                    <li><a href="car_sell.html">Sell Your Car</a></li>
+                    <li><a href="https://tawk.to/chat/670a5f212480f5b4f58c82b2/1ia087778" target="_blank">24/7
+                            Support</a></li>
+                </ul>
+            </div>
+
+
+            <!-- Contact Info -->
+            <div class="footer-section" target="_blank">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li><a href="mailto:zanecarter.9388@gmail.com"><strong>Email:</strong>
+                            support@autoinspect.netlify.app</a></li>
+                    <li><a href="tel:+1 (775) 204-1487"><strong>Phone:</strong> +1 (775) 204-1487</a></li>
+                    <li><strong>Address:</strong> 23600 Mercantile Road Suite C-100 Postbox ZH008223 Beachwood OH 44122,
+                        United States</li>
+                </ul>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/" class="footer-social-icon" aria-label="Follow us on Facebook"
+                        target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" class="footer-social-icon"
+                        aria-label="Connect with us on LinkedIn" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" class="footer-social-icon" aria-label="Follow us on Instagram"
+                        target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://tawk.to/chat/670a5f212480f5b4f58c82b2/1ia087778" class="footer-social-icon"
+                        aria-label="Chat with us" target="_blank">
+                        <i class="fas fa-comment-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Auto Inspect. All rights reserved. | <a href="policy.html">Privacy Policy</a> | <a
+                    href="terms.html">Terms of Service</a></p>
+            <p class="powered-by">Powered by Netlify</p>
+        </div>
+    </footer>
+</body>
+
+</html>

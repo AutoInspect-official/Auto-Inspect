@@ -247,18 +247,27 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// Rating animation
-document.addEventListener("DOMContentLoaded", function () {
-    const ratingsSection = document.querySelector('.ratings-section');
+// return confirmation alert
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                ratingsSection.classList.add('show');
-                observer.unobserve(ratingsSection); // Stop observing once visible
-            }
-        });
+    // Check if it's the user's first visit during this session
+    if (!sessionStorage.getItem('firstPage')) {
+        sessionStorage.setItem('firstPage', window.location.href); // Set the first page URL
+    }
+
+    // Detect when the user is about to leave
+    window.addEventListener('beforeunload', function (event) {
+        const firstPage = sessionStorage.getItem('firstPage'); // Get the first page
+        const currentUrl = window.location.href; // Current page URL
+
+        // Show the alert only if:
+        // 1. The user is leaving the first page
+        // 2. The back button would navigate away from the site (not to another internal page)
+        if (currentUrl === firstPage && document.referrer && !document.referrer.includes(window.location.hostname)) {
+            // Customize the message
+            event.preventDefault();
+            event.returnValue = 'Are you sure you want to leave? You might miss important insights!';
+            return 'Are you sure you want to leave?';
+        }
     });
 
-    observer.observe(ratingsSection);
-});
+

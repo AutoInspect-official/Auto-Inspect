@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Looking for expert tips on inspecting used cars? Discover the top 5 essential car inspection tips every buyer should know with AutoInspect.">
+    <meta name="keywords"
+        content="Used car inspection tips, Car buying guide, Vehicle evaluation, Pre-purchase inspection, AutoInspect, Car inspection guide">
+    <meta name="author" content="AutoInspect">
+    <meta name="robots" content="index, follow">
+    <title>Top 5 Used Car Inspection Tips Every Buyer Should Know | AutoInspect</title>
+    <link rel="canonical" href="https://autoinspect.netlify.app/used-car-inspection-tips">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Top 5 Used Car Inspection Tips Every Buyer Should Know | AutoInspect">
+    <meta property="og:description"
+        content="Master the essential steps for inspecting used cars before purchase. AutoInspect provides practical tips to help you make an informed decision.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://autoinspect.netlify.app/used-car-inspection-tips">
+    <meta property="og:image" content="https://autoinspect.netlify.app/static/car-inspection-guide.png">
+    <meta property="og:site_name" content="AutoInspect">
+
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Top 5 Used Car Inspection Tips Every Buyer Should Know | AutoInspect">
+    <meta name="twitter:description"
+        content="Ensure you're inspecting used cars effectively with AutoInspect's top 5 tips. Make smarter purchasing decisions with expert guidance.">
+    <meta name="twitter:image" content="https://autoinspect.netlify.app/static/car-inspection-guide.png">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../static/icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../static/css/all.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/blog.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo" style="display: flex; align-items: center;">
+                <img src="../static/logo.png" alt="AutoInspect"
+                    style="width: 40px; height: 40px; margin-top: auto; border-radius: 50%; margin-right: 20px; filter: contrast(100%); filter: opacity(100%); pointer-events: none;">
+                <a href="index.html" style="display: flex; flex-direction: column;">
+                    <h1 style="margin: 0; font-size: 30px;">AutoInspect</h1>
+                </a>
+                <span class="powered-by" aria-hidden="true">&nbsp; | Powered by Netlify</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="dropdown">
+                    <a class="buy-sell" href="#">Buy/Sell</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a target="_blank"
+                                href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1"
+                                class="dropdown-link">
+                                Buy a Car
+                            </a>
+                            <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024"
+                                alt="eBay Tracking Pixel" style="display: none;">
+                        </li>
+                        <li><a href="car_sell.html">Sell Your Car</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+    </script>
+
+    <div id="content-wrapper">
+        <!-- Table of Contents -->
+        <div id="table-of-contents">
+            <aside id="toc-container">
+                <div class="toc-header">
+                    <h2 class="toc-title">Table of Contents</h2>
+                    <button id="toc-toggle-btn" aria-label="Toggle TOC">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <nav id="toc-content">
+                    <ul class="toc-list">
+                        <li><a href="#sec-intro" class="toc-link">Introduction</a></li>
+                        <li><a href="#sec-exterior-condition" class="toc-link">Check the Vehicle’s Exterior
+                                Condition</a></li>
+                        <li><a href="#sec-interior-condition" class="toc-link">Evaluate the Vehicle’s Interior</a></li>
+                        <li><a href="#sec-engine-transmission" class="toc-link">Inspect the Engine and Transmission</a>
+                        </li>
+                        <li><a href="#sec-tires-suspension" class="toc-link">Check the Tires and Suspension</a></li>
+                        <li><a href="#sec-test-drive" class="toc-link">Test the Car’s Performance with a Test Drive</a>
+                        </li>
+                        <li><a href="#sec-bonus-tip" class="toc-link">Bonus Tip</a></li>
+                        <li><a href="#sec-conclusion" class="toc-link">Conclusion</a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const tocToggleBtn = document.getElementById("toc-toggle-btn");
+                const tocContent = document.getElementById("toc-content");
+
+                tocToggleBtn.addEventListener("click", () => {
+                    if (tocContent.style.display === "block") {
+                        tocContent.style.display = "none"; // Collapse the TOC
+                        tocToggleBtn.innerHTML = '<i class="fas fa-chevron-down"></i>';
+                    } else {
+                        tocContent.style.display = "block"; // Expand the TOC
+                        tocToggleBtn.innerHTML = '<i class="fas fa-chevron-up"></i>';
+                    }
+                });
+            });
+        </script>
+
+        <!-- Content Container -->
+        <div id="blog-post">
+            <!-- Main Heading -->
+            <h1 style="color: black; text-align: center;">Top 5 Used Car Inspection Tips Every Buyer Should Know</h1>
+
+            <!-- Social Media Share -->
+            <div id="social-share">
+                <p>Share this post:</p>
+                <a href="#" class="social-icon" id="facebook-share" title="Share on Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon" id="twitter-share" title="Share on Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-icon" id="linkedin-share" title="Share on LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="social-icon" id="copy-link" title="Copy Link">
+                    <i class="fas fa-copy"></i>
+                </a>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Get the current page URL
+                    const currentURL = encodeURIComponent(window.location.href);
+                    const postTitle = encodeURIComponent(document.querySelector('h1').innerText); // Blog post title
+
+                    // Facebook Share
+                    document.getElementById('facebook-share').addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const facebookURL = `https://www.facebook.com/sharer/sharer.php?u=${currentURL}`;
+                        window.open(facebookURL, '_blank', 'width=600,height=400');
+                    });
+
+                    // Twitter Share
+                    document.getElementById('twitter-share').addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const twitterURL = `https://twitter.com/intent/tweet?url=${currentURL}&text=${postTitle}`;
+                        window.open(twitterURL, '_blank', 'width=600,height=400');
+                    });
+
+                    // LinkedIn Share
+                    document.getElementById('linkedin-share').addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const linkedinURL = `https://www.linkedin.com/sharing/share-offsite/?url=${currentURL}`;
+                        window.open(linkedinURL, '_blank', 'width=600,height=400');
+                    });
+
+                    // Copy Link functionality
+                    document.getElementById('copy-link').addEventListener('click', function (e) {
+                        e.preventDefault();
+                        navigator.clipboard.writeText(decodeURIComponent(currentURL))
+                            .then(() => alert('Link copied to clipboard!'))
+                            .catch((error) => console.error('Error copying link:', error));
+                    });
+                });
+            </script>
+
+            <!-- Feature Image -->
+            <div id="feature-image">
+                <img src="../static/over_all_mantainance.webp" alt="Pre-Purchase Car Inspection"
+                    class="responsive-image" loading="lazy">
+            </div>
+
+            <!-- Content Body -->
+            <div id="main-content">
+
+                <!-- Section 1: Introduction -->
+                <section id="sec-intro" class="content-section">
+                    <h2 class="section-title">Introduction</h2>
+                    <p class="section-paragraph">
+                        Buying a used car can be an exciting yet daunting experience. With so many options available,
+                        how do you ensure that you’re making a smart choice? The key lies in performing a thorough
+                        inspection before committing to a purchase. Whether you're a first-time buyer or someone looking
+                        to upgrade, understanding the essential steps to inspect a used car can save you time, money,
+                        and potential headaches down the road.
+                    </p> <br>
+                    <p class="section-paragraph">
+                        In this blog, we’ll cover the top five used car inspection tips that every buyer should know.
+                        These tips will help you evaluate the car's condition, uncover hidden problems, and ensure
+                        you're getting the best value for your money.
+                    </p>
+                </section>
+
+                <!-- Section 2: Check the Vehicle’s Exterior Condition -->
+                <section id="sec-exterior-condition" class="content-section">
+                    <h2 class="section-title">1. Check the Vehicle’s Exterior Condition</h2>
+                    <p class="section-paragraph">
+                        The first step in inspecting any used car is to examine its exterior. While the car’s looks
+                        might not tell the whole story, a thorough inspection of its body can reveal underlying issues
+                        that might not be immediately obvious.
+                    </p>
+                    <h3 class="subsection-title">What to Look For:</h3>
+                    <ul class="section-list">
+                        <li><strong>Body Panels:</strong> Inspect the car’s body for any signs of dents, scratches, or
+                            rust. Pay close attention to areas like the door edges, wheel wells, and undercarriage,
+                            where rust can develop over time.</li>
+                        <li><strong>Paint Consistency:</strong> Look for uneven paint or differences in color, which may
+                            indicate that parts of the car have been repainted due to accidents or repairs.</li>
+                        <li><strong>Alignment:</strong> Ensure the panels line up properly. Misaligned panels can be a
+                            sign of a past collision or structural issues.</li>
+                        <li><strong>Windshield & Windows:</strong> Check for cracks or chips in the windshield, as
+                            repairs can be costly. Ensure all windows move smoothly and that seals are intact to avoid
+                            water leaks.</li>
+                    </ul>
+                    <p class="section-paragraph">
+                        A well-maintained exterior often suggests that the car has been cared for, but take your time to
+                        inspect every angle for hidden damage.
+                    </p>
+                </section>
+
+                <!-- Section 3: Evaluate the Vehicle’s Interior -->
+                <section id="sec-interior-condition" class="content-section">
+                    <h2 class="section-title">2. Evaluate the Vehicle’s Interior</h2>
+                    <p class="section-paragraph">
+                        While the exterior provides clues about the car's history, the interior reveals how well the
+                        vehicle has been maintained over the years. A clean, well-kept interior is often a good
+                        indicator that the car has been taken care of.
+                    </p>
+                    <h3 class="subsection-title">What to Look For:</h3>
+                    <ul class="section-list">
+                        <li><strong>Seats & Upholstery:</strong> Check the seats for tears, stains, or excessive wear.
+                            If the car’s upholstery looks worn out, it might suggest the car has seen a lot of use, even
+                            if it’s listed as low mileage.</li>
+                        <li><strong>Dashboard & Controls:</strong> Test all of the car’s controls, including the air
+                            conditioning, heater, and infotainment system. These features can be expensive to repair if
+                            they’re not working correctly. For more on car systems, visit our <a
+                                href="https://douradocars.com/best-car-interior-top-features/?srsltid=AfmBOoqec6c-fgg3aEk58ppRJ8s2PlzUaH0hj3eZ3iZhGDlrve1lEu5f"
+                                target="_blank">guide to essential car features</a>.</li>
+                        <li><strong>Odor:</strong> Pay attention to any musty or unpleasant smells, as they could be
+                            signs of mold or water damage, which can be costly to repair.</li>
+                        <li><strong>Safety Features:</strong> Ensure that airbags, seatbelts, and other safety features
+                            are intact and functioning. A malfunctioning safety system could be a dealbreaker for many
+                            buyers.</li>
+                    </ul>
+                    <p class="section-paragraph">
+                        A well-maintained interior not only reflects the car’s overall care but also ensures comfort and
+                        functionality during your daily drives.
+                    </p>
+                </section>
+
+                <!-- Section 4: Inspect the Engine and Transmission -->
+                <section id="sec-engine-transmission" class="content-section">
+                    <h2 class="section-title">3. Inspect the Engine and Transmission</h2>
+                    <p class="section-paragraph">
+                        The engine is the heart of any vehicle, and the transmission plays a crucial role in how
+                        smoothly the car runs. A thorough inspection of these components is essential for determining
+                        the vehicle’s long-term reliability.
+                    </p>
+                    <h3 class="subsection-title">What to Look For:</h3>
+                    <ul class="section-list">
+                        <li><strong>Oil Levels & Condition:</strong> Check the oil levels and look for any signs of
+                            contamination (such as a milky texture or unusual color). Dirty or low oil levels may
+                            indicate poor maintenance.</li>
+                        <li><strong>Engine Fluids:</strong> In addition to the oil, check the coolant, brake fluid, and
+                            transmission fluid. Low or dirty fluids could signal underlying mechanical issues.</li>
+                        <li><strong>Leaks:</strong> Inspect around the engine for any signs of leaks. Oil, coolant, or
+                            transmission fluid leaks could indicate serious problems that need immediate attention.</li>
+                        <li><strong>Transmission Behavior:</strong> When test-driving the car, pay attention to how the
+                            transmission shifts. It should change gears smoothly without any jerking or hesitation. Any
+                            abnormal shifting behavior could indicate a transmission problem. For tips on identifying
+                            transmission issues, refer to this <a
+                                href="https://www.nationaltransmission.ca/common-transmission-issues/"
+                                target="_blank">National Transmission’s article</a>.</li>
+                    </ul>
+                    <p class="section-paragraph">
+                        If you're not familiar with how to check these components yourself, it’s worth having a
+                        professional mechanic conduct a more thorough inspection.
+                    </p>
+                </section>
+
+                <!-- Section 5: Check the Tires and Suspension -->
+                <section id="sec-tires-suspension" class="content-section">
+                    <h2 class="section-title">4. Check the Tires and Suspension</h2>
+                    <p class="section-paragraph">
+                        The condition of the tires and suspension system is an important factor in the overall safety
+                        and performance of the vehicle. Tires that are in poor shape or a suspension system that is not
+                        functioning properly can lead to a bumpy, unsafe driving experience.
+                    </p>
+                    <h3 class="subsection-title">What to Look For:</h3>
+                    <ul class="section-list">
+                        <li><strong>Tire Tread Depth:</strong> Check the tire tread for uneven wear, which could
+                            indicate an alignment issue or suspension problems. If the tires are excessively worn, you
+                            may need to replace them soon, which can be an additional expense. Learn more about tire
+                            safety at <a
+                                href="https://www.tirerack.com/upgrade-garage/how-does-tire-rack-test-tires#:~:text=To%20evaluate%20the%20contribution%20tires,vehicle%20to%20a%20complete%20stop."
+                                target="_blank">TireRack</a>.</li>
+                        <li><strong>Tire Age:</strong> Look for the manufacturing date on the tire sidewalls (usually a
+                            four-digit code). Tires over six years old may be prone to cracking and might need to be
+                            replaced.</li>
+                        <li><strong>Suspension Condition:</strong> During your test drive, listen for any unusual sounds
+                            like clunking or squeaking, which can be signs of worn suspension parts. Pay attention to
+                            how the car handles bumps—if the ride feels bouncy or unstable, the suspension might be
+                            compromised.</li>
+                    </ul>
+                    <p class="section-paragraph">
+                        Replacing tires and suspension components can be expensive, so it’s important to factor in the
+                        condition of these parts when negotiating the price of the vehicle.
+                    </p>
+                </section>
+
+                <!-- Section 6: Test the Car’s Performance with a Test Drive -->
+                <section id="sec-test-drive" class="content-section">
+                    <h2 class="section-title">5. Test the Car’s Performance with a Test Drive</h2>
+                    <p class="section-paragraph">
+                        One of the best ways to evaluate a used car is by taking it for a test drive. This will allow
+                        you to assess how the car performs in real-world conditions and identify any potential issues
+                        that may not be visible during a static inspection.
+                    </p>
+                    <h3 class="subsection-title">What to Focus On:</h3>
+                    <ul class="section-list">
+                        <li><strong>Engine Performance:</strong> Pay attention to how the engine starts and whether it
+                            runs smoothly. A rough idle or hesitation when accelerating could indicate engine trouble.
+                        </li>
+                        <li><strong>Braking:</strong> Test the brakes by driving in a safe area and gently pressing down
+                            on the brake pedal. If the car pulls to one side, the brakes might need attention. Listen
+                            for squealing or grinding sounds, which can indicate worn brake pads.</li>
+                        <li><strong>Steering & Handling:</strong> Check for any difficulty steering or vibrations in the
+                            wheel. These could be signs of alignment issues or worn-out steering components.</li>
+                        <li><strong>Transmission Shifting:</strong> As mentioned earlier, ensure that the car shifts
+                            smoothly between gears. Any rough or jerky shifts can point to a transmission issue.</li>
+                    </ul>
+                    <p class="section-paragraph">
+                        A <a href="https://www.mazdausa.com/resource-center/how-to-test-drive-car" target="_blank">test
+                            drive</a> is a crucial step in ensuring that the car runs as expected and that it will meet
+                        your needs on the road.
+                    </p>
+                </section>
+
+                <!-- Section 7: Bonus Tip -->
+                <section id="sec-bonus-tip" class="content-section">
+                    <h2 class="section-title">Bonus Tip: Get a Professional Pre-Purchase Inspection</h2>
+                    <p class="section-paragraph">
+                        While these inspection tips are a great starting point, the best way to ensure that you’re
+                        making a sound investment is by having the car inspected by a professional mechanic. A mechanic
+                        can perform a more in-depth assessment of the vehicle and uncover any hidden issues that you
+                        might have missed.
+                    </p> <br>
+                    <p class="section-paragraph">
+                        Many sellers may offer a pre-sale inspection report, but it's always a good idea to get your own
+                        independent inspection to confirm the vehicle's condition. This extra step can give you peace of
+                        mind and help you make a more informed decision. To learn more, visit <a
+                            href="http://127.0.0.1:5500/comprehensive-vehicle-inspection-checklist.html"
+                            target="_blank">What Does a Pre-Purchase Inspection Include?</a>.
+                    </p>
+                </section>
+
+                <!-- Section 8: Conclusion -->
+                <section id="sec-conclusion" class="content-section">
+                    <h2 class="section-title">Conclusion</h2>
+                    <p class="section-paragraph">
+                        Purchasing a used car is a significant investment, and performing a thorough inspection is one
+                        of the most effective ways to ensure that you’re getting good value for your money. By following
+                        these top five inspection tips, you can identify potential issues early, avoid costly surprises,
+                        and drive away with confidence in your new vehicle.
+                    </p> <br>
+                    <p class="section-paragraph">
+                        Remember, buying a used car doesn’t have to be risky if you take the right precautions. Inspect
+                        the exterior and interior, check under the hood, assess the tires and suspension, and always
+                        take the car for a <a href="https://www.mazdausa.com/resource-center/how-to-test-drive-car"
+                            target="_blank">test drive</a>. With these steps, you’ll be well on your way to making a
+                        smart purchase that will serve you for years to come.
+                    </p>
+                    <h2 class="section-title">Key Takeaways</h2>
+                    <ul class="section-list">
+                        <li>Inspect the exterior for signs of damage, rust, or repainting.</li>
+                        <li>Evaluate the interior for wear and functionality of key features.</li>
+                        <li>Check the engine and transmission for leaks and fluid levels.</li>
+                        <li>Examine the tires and suspension for wear or issues.</li>
+                        <li>Take the car for a test drive to assess its performance on the road.</li>
+                    </ul>
+                </section>
+
+                <section id="sec-related-posts" class="content-section">
+
+                    <div class="container" style="box-shadow: none;">
+                        <h2 class="section-title">Related Posts</h2>
+
+                        <div class="blog-post" data-category="verification buying">
+                            <img src="../static/inspecting_a_used_car.jpg" alt="Inspecting A Used Car" loading="lazy">
+                            <div class="blog-post-content">
+                                <a href="used-car-inspections-guide-smart-decisions.html" class="blog-post-title">Used
+                                    Car
+                                    Inspections: Your Ultimate Guide to Smart and Safe Buying Decisions</a>
+                                <div class="blog-post-meta">Published on: 2024-12-01</div>
+                                <p class="blog-post-description">Understand why pre-purchase inspections are crucial for
+                                    ensuring
+                                    your investment in a used car is worthwhile.</p>
+                            </div>
+                        </div>
+
+                        <div class="blog-post" data-category="verification buying">
+                            <img src="../static/questions_before_purchasing_a_used_car.jpeg" alt="Questions before Buying Car"
+                                loading="lazy">
+                            <div class="blog-post-content">
+                                <a href="essential-questions-before-buying-a-used-car.html"
+                                    class="blog-post-title">Essential
+                                    Questions to Ask Before Buying a Used Car</a>
+                                <div class="blog-post-meta">Published on: 2025-01-01</div>
+                                <p class="blog-post-description">Ask these crucial questions to ensure a smooth and
+                                    informed used
+                                    car buying experience.</p>
+                            </div>
+                        </div>
+
+                        <div class="blog-post" data-category="verification">
+                            <img src="../static/comprehensive_vehicle_checklist.jpeg" alt="Analyzing Vehicle Checklist" loading="lazy">
+                            <div class="blog-post-content">
+                                <a href="comprehensive-vehicle-inspection-checklist.html"
+                                    class="blog-post-title">Comprehensive
+                                    Vehicle Inspection Checklist: What’s Included?</a>
+                                <div class="blog-post-meta">Published on: 2024-12-15</div>
+                                <p class="blog-post-description">Explore the essential components of a thorough vehicle
+                                    inspection
+                                    to ensure safety and reliability.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    window.addEventListener("load", function () {
+        setTimeout(function () {
+            var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/670a5f212480f5b4f58c82b2/1ia087778';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        }, 3000); // Delay by 3 seconds
+    });
+</script>
+<!--End of Tawk.to Script-->
+
+    <!--footer-->
+    <footer>
+        <div class="footer-container">
+            <!-- Logo and Description -->
+            <div class="footer-section logo-description">
+                <img src="../static/logo.webp" alt="Auto_Inspect logo" class="footer-logo">
+                <p>We provide reliable car verification and maintenance as well as easy buying/selling services to keep
+                    your vehicle in top shape. Trust us for expert advice, detailed inspections, and high-quality
+                    services.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Our Services -->
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Vehicle Verification Report</a></li>
+                    <li><a href="https://www.yourmechanic.com/book/newuser#zip" target="_blank">Maintenance & Repair</a>
+                    </li>
+                    <li>
+                        <a target="_blank"
+                            href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1"
+                            class="footer-action">
+                            Buy A Car
+                        </a>
+                        <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024"
+                            alt="eBay Tracking Pixel" style="display: none;">
+                    </li>
+                    <li><a href="car_sell.html">Sell Your Car</a></li>
+                    <li><a href="https://tawk.to/chat/670a5f212480f5b4f58c82b2/1ia087778" target="_blank">24/7
+                            Support</a></li>
+                </ul>
+            </div>
+
+
+            <!-- Contact Info -->
+            <div class="footer-section" target="_blank">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li><a href="mailto:zanecarter.9388@gmail.com"><strong>Email:</strong>
+                            support@autoinspect.netlify.app</a></li>
+                    <li><a href="tel:+1 (775) 204-1487"><strong>Phone:</strong> +1 (775) 204-1487</a></li>
+                    <li><strong>Address:</strong> 23600 Mercantile Road Suite C-100 Postbox ZH008223 Beachwood OH 44122,
+                        United States</li>
+                </ul>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/" class="footer-social-icon" aria-label="Follow us on Facebook"
+                        target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" class="footer-social-icon"
+                        aria-label="Connect with us on LinkedIn" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" class="footer-social-icon" aria-label="Follow us on Instagram"
+                        target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://tawk.to/chat/670a5f212480f5b4f58c82b2/1ia087778" class="footer-social-icon"
+                        aria-label="Chat with us" target="_blank">
+                        <i class="fas fa-comment-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Auto Inspect. All rights reserved. | <a href="policy.html">Privacy Policy</a> | <a
+                    href="terms.html">Terms of Service</a></p>
+            <p class="powered-by">Powered by Netlify</p>
+        </div>
+    </footer>
+</body>
+
+</html>
