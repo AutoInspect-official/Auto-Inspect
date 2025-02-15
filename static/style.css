@@ -893,7 +893,6 @@ button:hover {
 /* Rating */
 .ratings-section {
     padding: 40px;
-    background-color: #f4f4f4;
     border-radius: 10px;
     margin: 10vw auto;
     max-width: 1000px;
@@ -1300,7 +1299,6 @@ label {
 
 /* Mission Section */
 .mission-section {
-    background-color: #f4f4f4;
     padding: 60px 0;
 }
 
@@ -1617,9 +1615,6 @@ label {
 .faq-container {
     margin: 8vh 10vw;
     padding: 2rem;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .faq-container h2 {
@@ -1646,7 +1641,7 @@ label {
     cursor: pointer;
     margin-bottom: 1rem;
     position: relative;
-    background-color: #f9f9f9;
+    background-color: #f4f4f4;
     transition: color 0.3s ease, background-color 0.3s ease;
     padding: 0.5rem;
     border-radius: 5px;

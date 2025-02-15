@@ -1,0 +1,235 @@
+/* 
+.cardealer_phone_team
+{
+  font-size: 10pt;
+  margin: 0px;
+  color: white;
+  padding: 10px;
+  text-align:  left;
+  margin-top: -10px;
+}
+.cardealer_skype_team
+{
+  font-size: 10pt;
+  margin: 0px;
+  color: white;
+  padding: 10px;
+  text-align:  left;
+    margin-top: -10px;
+}
+.cardealer_email_team
+{
+  font-size: 10pt;
+  margin-top: -10px;
+  margin-bottom: 0px;
+  color: white;
+  padding: 10px;
+  text-align:  left;
+}
+.cardealer_wrapteam
+{
+  margin:  0px auto;
+  text-align: center;
+  border: 0px solid red;
+  height: 100%;
+  background: gray;
+  text-align:  left;
+  padding: 0px 10px 0px 10px;
+  border: 0px solid red;
+  border-radius: 7px;
+  max-width: 100%;
+}
+.cardealer_wrapindividual
+{
+  text-align: center;
+  border-top: 0px solid white;
+  border-left: 0px solid white;
+ 
+  background: gray;
+  padding: 0px 0px 8px 0px;
+
+  margin-top: 0px;
+  padding-bottom:  10px;
+  margin-bottom: 0px;
+    margin:  10px auto;
+
+  border-bottom:  0px solid red;
+}
+.reatestateimg-img_team {
+ 
+border: 0px solid red;
+width: 100%;
+margin: 0px auto;
+text-align: center;
+margin-top: 0px;
+}
+
+.cardealer_iconswrap {
+  height: 20px;
+  border: 0px solid green;
+}
+
+.cardealer_iconsteam {
+  margin-top: -0px;
+  float: left;
+  margin-left: 10px;
+  margin-bottom: 0px;
+  position: relative;
+  border: 0px solid blue;
+}
+
+.cardealer_iconsteam a {
+  color: white;
+}
+
+.cardealer_iconsteam a:hover {
+  color: yellow;
+}
+
+.cardealer_team {
+  width: 100%;
+  margin: 0px auto;
+  text-align: center;
+  font-size: 12pt;
+  color: #666666;
+  background: #EDEDED;
+  padding: 0px;
+
+  border: 0px solid blue;
+  margin-bottom: 20px;
+  padding: 20px;
+  height: auto;
+}
+
+.cardealer_fototeam {
+  float: left;
+  width: 35%;
+  height: 100%;
+  margin-right: 10px;
+}
+
+.cardealer_textoteam {
+  margin: 0px auto;
+  width: 65%;
+  text-align: left;
+  line-height: 14pt;
+  margin-top: 60px;
+}
+
+.cardealer_nameteam {
+  font-size: 14pt;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: white;
+  padding: 10px;
+}
+
+.cardealer_descriptionteam {
+  font-size: 10pt;
+  margin-top: -20px;
+  color: white;
+  text-align: left;
+  padding: 10px;
+}
+
+.cardealer_cardealer_team_function {
+  font-size: 12pt;
+  margin-top: -20px;
+  margin-bottom: 20px;
+  color: white;
+  padding: 10px;
+}
+
+*/
+.cardealer_wrapteam {
+  margin: 0 auto;
+  text-align: center;
+  background: gray;
+  border-radius: 7px;
+  max-width: 100%;
+  padding: 0;
+  /*20px 10px;*/
+  /* Mantido para dar espaço interno */
+}
+
+.cardealer_wrapindividual {
+  text-align: center;
+  /* background: gray; */
+  /*
+  margin: 10px auto;
+  padding: 10px 0;
+  */
+  margin: 0;
+
+  /* Remover margens externas */
+  padding: 0;
+  padding-top: 20px;
+  /* Remover padding interno */
+
+  /* Mantido para uniformidade */
+  border-bottom: 0px solid white;
+  /* Se não precisar do border, pode remover */
+  max-width: 32%;
+  min-height: 300px !important;
+}
+
+.reatestateimg-img_team {
+  border-radius: 30%;
+  /* Para imagens em formato de círculo */
+  width: 50%;
+  /* Ajuste a largura conforme necessário */
+  max-width: 30%;
+  /* Define um tamanho máximo para as imagens */
+  height: auto;
+  /* Mantém a proporção da imagem */
+  margin: 0 auto;
+  /* Centraliza a imagem */
+
+}
+
+.cardealer_nameteam {
+  font-size: 16pt;
+  /* Aumenta o tamanho da fonte para mais destaque */
+  color: #fff;
+  /* Cor branca para melhor visibilidade */
+  margin: 10px 0;
+  /* Margem para espaçamento vertical */
+}
+
+.cardealer_descriptionteam {
+  font-size: 12pt;
+  /* Mantido para boa legibilidade */
+  color: #fff;
+  /* Cor branca para melhor visibilidade */
+  text-align: center;
+  /* Centraliza a descrição */
+  padding: 0 10px;
+  /* Adiciona um pouco de padding lateral */
+}
+
+.cardealer_iconswrap {
+  margin-top: 10px;
+  /* Margem superior para espaçamento */
+  text-align: center;
+  /* Centraliza os ícones */
+}
+
+.cardealer_iconsteam {
+  margin: 0 5px;
+  /* Margem lateral para ícones */
+  display: inline-block;
+  /* Alinha os ícones horizontalmente */
+}
+
+.cardealer_phone_team,
+.cardealer_skype_team,
+.cardealer_email_team {
+  font-size: 12pt;
+  /* Tamanho da fonte para legibilidade */
+  color: #fff;
+  /* Cor branca para bom contraste */
+  padding: 5px 0;
+  /* Ajusta o padding para espaçamento uniforme */
+  margin: 5px 0;
+  /* Margem para espaçamento vertical */
+}

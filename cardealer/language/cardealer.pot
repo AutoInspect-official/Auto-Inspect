@@ -1,0 +1,2648 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: CarDealer\n"
+"POT-Creation-Date: 2025-01-19 07:13+0000\n"
+"PO-Revision-Date: 2024-09-09 14:02+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: cardealer.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: includes/vendor\n"
+
+#: cardealer.php:61
+msgid "Car Dealer Plugin: Could not load the localization file (Language file)"
+msgstr ""
+
+#: cardealer.php:63
+msgid ""
+"Please, take a look in our site, FAQ page, item => How can i translate this "
+"plugin?"
+msgstr ""
+
+#: cardealer.php:331
+msgid "Body Type"
+msgstr ""
+
+#: cardealer.php:332 includes/post-type/meta-box.php:49
+#: includes/post-type/meta-box.php:50
+msgid "Condition"
+msgstr ""
+
+#: cardealer.php:340 dashboard/main.php:256
+#: includes/functions/functions.php:1159
+msgid "Go Pro"
+msgstr ""
+
+#: dashboard/dashboard.php:15
+msgid "Server Check"
+msgstr ""
+
+#: dashboard/dashboard.php:19
+msgid "Memory Status"
+msgstr ""
+
+#: dashboard/dashboard.php:25 dashboard/memory.php:13
+msgid "Unable to get your Memory Info"
+msgstr ""
+
+#: dashboard/dashboard.php:46
+msgid "Memory Usage"
+msgstr ""
+
+#: dashboard/dashboard.php:48
+msgid "of"
+msgstr ""
+
+#: dashboard/dashboard.php:48
+msgid "Usage"
+msgstr ""
+
+#: dashboard/dashboard.php:50
+msgid "For details, click the Memory Checkup Tab above."
+msgstr ""
+
+#: dashboard/dashboard.php:56
+msgid "Permalink Settings"
+msgstr ""
+
+#: dashboard/dashboard.php:63
+msgid "Wrong Permalink settings !"
+msgstr ""
+
+#: dashboard/dashboard.php:65
+msgid "Please, fix it to avoid 404 error page."
+msgstr ""
+
+#: dashboard/dashboard.php:67
+msgid "To correct, just follow this steps:"
+msgstr ""
+
+#: dashboard/dashboard.php:69
+msgid "Dashboard => Settings => Permalinks => Post Name (check)"
+msgstr ""
+
+#: dashboard/dashboard.php:71
+msgid "Click Save Changes"
+msgstr ""
+
+#: dashboard/dashboard.php:79
+msgid "Premium Version Disabled."
+msgstr ""
+
+#: dashboard/dashboard.php:80
+msgid "Get more Grid template"
+msgstr ""
+
+#: dashboard/dashboard.php:82
+msgid "Get more 3 single page templates"
+msgstr ""
+
+#: dashboard/dashboard.php:84
+msgid "Template Visual Customizer (also colors)"
+msgstr ""
+
+#: dashboard/dashboard.php:86
+msgid "Get more shortcodes:"
+msgstr ""
+
+#: dashboard/dashboard.php:88
+msgid "- Filter Cars for Type (Van, Sedan, and so on)"
+msgstr ""
+
+#: dashboard/dashboard.php:90
+msgid "- Last Cars"
+msgstr ""
+
+#: dashboard/dashboard.php:92
+msgid "- Featured Cars"
+msgstr ""
+
+#: dashboard/dashboard.php:94
+msgid "- Order by Price/Year Ascending/Descending"
+msgstr ""
+
+#: dashboard/dashboard.php:96
+msgid "- Create Blocks type Gallery or Page List"
+msgstr ""
+
+#: dashboard/dashboard.php:98
+msgid "- Combine Shortcodes"
+msgstr ""
+
+#: dashboard/dashboard.php:100
+msgid "- Number of Cars to show"
+msgstr ""
+
+#: dashboard/dashboard.php:102
+msgid "- Show or Hide Pagination"
+msgstr ""
+
+#: dashboard/dashboard.php:104
+msgid "- Show or Hide Search Box"
+msgstr ""
+
+#: dashboard/dashboard.php:107 dashboard/memory.php:59
+#: dashboard/mybanners.php:47 includes/diagnose/class_bill_diagnose.php:624
+#: includes/diagnose/class_bill_diagnose.php:645
+#: includes/install-checkup/_class_bill_install.php:314
+#: includes/install-checkup/_class_bill_install.php:383
+#: includes/install-checkup/class_bill_install.php:334
+#: includes/install-checkup/class_bill_install.php:403
+msgid "Learn More"
+msgstr ""
+
+#: dashboard/dashboard.php:116
+msgid "Follow this 3 steps after install the plugin:"
+msgstr ""
+
+#: dashboard/dashboard.php:121
+msgid "Configurate Settings"
+msgstr ""
+
+#: dashboard/dashboard.php:122
+msgid "Go to"
+msgstr ""
+
+#: dashboard/dashboard.php:123
+msgid "Dashboard=>Car Dealer=>Settings"
+msgstr ""
+
+#: dashboard/dashboard.php:125
+msgid "Fill out the information"
+msgstr ""
+
+#: dashboard/dashboard.php:127
+msgid "- Your Currency"
+msgstr ""
+
+#: dashboard/dashboard.php:129
+msgid "- Miles - Km"
+msgstr ""
+
+#: dashboard/dashboard.php:131
+msgid "- Your Contact eMail"
+msgstr ""
+
+#: dashboard/dashboard.php:133
+msgid "- And So On ..."
+msgstr ""
+
+#: dashboard/dashboard.php:135
+msgid "Import Demo Data:"
+msgstr ""
+
+#: dashboard/dashboard.php:137
+msgid ""
+"If you want import demo data, click the Help Button at top right corner and "
+"take a look Import Demo Data or, if you are using our theme, you can import "
+"together with theme demo import."
+msgstr ""
+
+#: dashboard/dashboard.php:139
+msgid "If you import demo data, you can skip step 2."
+msgstr ""
+
+#: dashboard/dashboard.php:143
+msgid "Fill Out the Fields and Car Tables"
+msgstr ""
+
+#: dashboard/dashboard.php:144
+msgid "Go to Fields Table:"
+msgstr ""
+
+#: dashboard/dashboard.php:145
+msgid "Dashboard=>Car Dealer=>Fields Table"
+msgstr ""
+
+#: dashboard/dashboard.php:147
+msgid "They are the fields to show up at your cars form."
+msgstr ""
+
+#: dashboard/dashboard.php:148 dashboard/dashboard.php:165
+#: includes/help/help.php:104
+msgid "For example:"
+msgstr ""
+
+#: dashboard/dashboard.php:150
+msgid "- Number of Doors"
+msgstr ""
+
+#: dashboard/dashboard.php:152
+msgid "- Passenger Capacity"
+msgstr ""
+
+#: dashboard/dashboard.php:154
+msgid "- Body Color"
+msgstr ""
+
+#: dashboard/dashboard.php:156 dashboard/dashboard.php:171
+msgid "- And So On."
+msgstr ""
+
+#: dashboard/dashboard.php:158
+msgid ""
+"You don't need include this fields: Price, Year, Miles, HP, Transmission "
+"Type, Fuel Type, Condition and Featured."
+msgstr ""
+
+#: dashboard/dashboard.php:160
+msgid "Go to Cars Table:"
+msgstr ""
+
+#: dashboard/dashboard.php:161
+msgid "Dashboard=>Car Dealer=>Cars table"
+msgstr ""
+
+#: dashboard/dashboard.php:163
+msgid "And fill out this table with yours products."
+msgstr ""
+
+#: dashboard/dashboard.php:167
+msgid "- Cars"
+msgstr ""
+
+#: dashboard/dashboard.php:169
+msgid "- Vans"
+msgstr ""
+
+#: dashboard/dashboard.php:175
+msgid "Paste the code in your page:"
+msgstr ""
+
+#: dashboard/dashboard.php:176
+msgid "Go to your page and copy and paste this code:"
+msgstr ""
+
+#: dashboard/dashboard.php:180
+msgid "To create one Team page, just past this shortcode in your page:"
+msgstr ""
+
+#: dashboard/dashboard.php:184
+msgid "To show only the Search Bar, just past this shortcode in your page:"
+msgstr ""
+
+#: dashboard/dashboard.php:188
+msgid ""
+"The Premium Version have dozens of extra codes and visual template editor, "
+"also colors control."
+msgstr ""
+
+#: dashboard/dashboard.php:196
+msgid "Help, Demo, Support, Troubleshooting:"
+msgstr ""
+
+#: dashboard/dashboard.php:201
+msgid "Help and more tips"
+msgstr ""
+
+#: dashboard/dashboard.php:202
+msgid ""
+"Just click the HELP button at top right corner this page for context help. "
+"Also <em>Tooltip</em> available in Fields form."
+msgstr ""
+
+#: dashboard/dashboard.php:207
+msgid "OnLine Guide, Support, Demo, Demo Video, Faq..."
+msgstr ""
+
+#: dashboard/dashboard.php:208
+msgid ""
+"You will find our complete and updated OnLine guide, demo, demo video, faqs "
+"page, link to support page and more usefull stuff in our site."
+msgstr ""
+
+#: dashboard/dashboard.php:211
+msgid "Go"
+msgstr ""
+
+#: dashboard/dashboard.php:215
+msgid "Troubleshooting Guide"
+msgstr ""
+
+#: dashboard/dashboard.php:216
+msgid ""
+"Use old WordPress version, Low memory, some plugin with Javascript error, "
+"wrong permalink settings are some possible problems. Read this and fix it "
+"quickly!"
+msgstr ""
+
+#: dashboard/dashboard.php:218
+msgid "Troubleshooting Page"
+msgstr ""
+
+#: dashboard/main.php:139
+msgid "Fields Table"
+msgstr ""
+
+#: dashboard/main.php:148
+msgid "Cars Table"
+msgstr ""
+
+#: dashboard/main.php:157 includes/help/help.php:377
+#: includes/post-type/post-functions.php:56
+msgid "Makes"
+msgstr ""
+
+#: dashboard/main.php:166 includes/post-type/post-functions.php:117
+msgid "Locations"
+msgstr ""
+
+#: dashboard/main.php:175 includes/help/help.php:367
+#: includes/post-type/post-functions.php:87
+msgid "Team"
+msgstr ""
+
+#: dashboard/main.php:211
+msgid "Settings"
+msgstr ""
+
+#: dashboard/memory.php:18
+msgid "Memory Info"
+msgstr ""
+
+#: dashboard/memory.php:35
+msgid "Current memory WordPress Limit:"
+msgstr ""
+
+#: dashboard/memory.php:40
+msgid "Your usage now:"
+msgstr ""
+
+#: dashboard/memory.php:44
+msgid "Total Server Memory:"
+msgstr ""
+
+#: dashboard/memory.php:56
+msgid ""
+"If you want adjust and control your WordPress Memory Limit and PHP Memory "
+"Limit quickly, try our free plugin WPmemory:"
+msgstr ""
+
+#: dashboard/memory.php:64
+msgid "Follow this instructions to do it manually:"
+msgstr ""
+
+#: dashboard/memory.php:71
+msgid ""
+"To increase the WordPress memory limit, add this info to your file wp-config."
+"php (located at root folder of your server)"
+msgstr ""
+
+#: dashboard/memory.php:73
+msgid "(just copy and paste)"
+msgstr ""
+
+#: dashboard/memory.php:80
+msgid "before this row:"
+msgstr ""
+
+#: dashboard/memory.php:86
+msgid "If you need more, just replace 128 with the new memory limit."
+msgstr ""
+
+#: dashboard/memory.php:88
+msgid "To increase your total server memory, talk with your hosting company."
+msgstr ""
+
+#: dashboard/memory.php:94
+msgid "How to Tell if Your Site Needs a Shot of more Memory:"
+msgstr ""
+
+#: dashboard/memory.php:97
+msgid ""
+"If your site is behaving slowly, or pages fail to load, you \n"
+"    get random white screens of death or 500 \n"
+"    internal server error you may need more memory. \n"
+"Several things consume memory, such as WordPress itself, the plugins "
+"installed, the \n"
+"theme you're using and the site content."
+msgstr ""
+
+#: dashboard/memory.php:103
+msgid ""
+"Basically, the more content and features you add to your site, \n"
+"the bigger your memory limit has to be.\n"
+"if you're only running a small \n"
+"site with basic functions without a Page Builder and Theme \n"
+"Options (for example the native Twenty Sixteen). However, once \n"
+"you use a Premium WordPress theme and you start encountering \n"
+"unexpected issues, it may be time to adjust your memory limit \n"
+"to meet the standards for a modern WordPress installation."
+msgstr ""
+
+#: dashboard/memory.php:112
+msgid ""
+"   \n"
+"    Increase the WP Memory Limit is a standard practice in \n"
+"WordPress and you find instructions also in the official \n"
+"WordPress documentation (Increasing memory allocated to PHP)."
+msgstr ""
+
+#: dashboard/memory.php:117
+msgid "Here is the link: "
+msgstr ""
+
+#: dashboard/mybanners.php:19
+msgid "Car Dealer Premium: More Features, More Control, More Sales!"
+msgstr ""
+
+#: dashboard/mybanners.php:23
+msgid "Access Advanced Features for Design and Car Filtering!"
+msgstr ""
+
+#: dashboard/mybanners.php:27
+msgid "Unlock the Full Potential of Your Showroom with Car Dealer Premium!"
+msgstr ""
+
+#: dashboard/mybanners.php:37
+msgid "Many Features are not included in the free version"
+msgstr ""
+
+#: dashboard/mybanners.php:38
+msgid "More Shortcodes to increase your control over the show room page"
+msgstr ""
+
+#: dashboard/mybanners.php:39
+msgid "Filter Cars for Type (Van, Sedan, and so on…)"
+msgstr ""
+
+#: dashboard/mybanners.php:40
+msgid "Last Cars and Featured Cars Page"
+msgstr ""
+
+#: dashboard/mybanners.php:41
+msgid "More Show Room and Single Car Page Templates"
+msgstr ""
+
+#: dashboard/mybanners.php:42
+msgid "Complete real time visual template design functionality."
+msgstr ""
+
+#: dashboard/mybanners.php:43
+msgid "Unlimited Colours Setup to match your site theme"
+msgstr ""
+
+#: dashboard/mybanners.php:44
+msgid "Dedicated Premium Support"
+msgstr ""
+
+#: dashboard/mybanners.php:45
+msgid "A Lot More..."
+msgstr ""
+
+#: dashboard/mybanners.php:223
+msgid "Did you like the CarDealer Plugin?"
+msgstr ""
+
+#: dashboard/mybanners.php:225
+msgid ""
+"Please support us by rating our plugin on WordPress.org. Help us keep this "
+"plugin live and updated."
+msgstr ""
+
+#: dashboard/mybanners.php:228 dashboard/mybanners.php:237
+msgid "Rate"
+msgstr ""
+
+#: dashboard/mybanners.php:231
+msgid "Please help us keep the plugin live & up-to-date"
+msgstr ""
+
+#: dashboard/mybanners.php:234
+msgid ""
+"If you use & enjoy CarDealer Plugin, please rate it on WordPress.org. It "
+"only takes a second and helps us keep the plugin live and maintained. Thank "
+"you!"
+msgstr ""
+
+#: includes/chat/class_bill_chat.php:48
+msgid "Chat messages reset successfully."
+msgstr ""
+
+#: includes/chat/class_bill_chat.php:49
+msgid "Error resetting chat messages."
+msgstr ""
+
+#: includes/chat/class_bill_chat.php:50
+msgid "Invalid message received:"
+msgstr ""
+
+#: includes/chat/class_bill_chat.php:51
+msgid "Invalid response format:"
+msgstr ""
+
+#: includes/chat/class_bill_chat.php:52
+msgid "Error processing server response:"
+msgstr ""
+
+#: includes/chat/class_bill_chat.php:53
+msgid "Response is not valid JSON."
+msgstr ""
+
+#: includes/chat/class_bill_chat.php:54
+msgid "AJAX request failed:"
+msgstr ""
+
+#: includes/chat/class_bill_chat.php:55
+msgid "Error sending the message. Please try again later."
+msgstr ""
+
+#: includes/chat/class_bill_chat.php:56
+msgid "Please enter a message!"
+msgstr ""
+
+#: includes/chat/class_bill_chat.php:292
+msgid ""
+"Error contacting the Artificial Intelligence (API). Please try again later."
+msgstr ""
+
+#: includes/chat/class_bill_chat.php:319
+msgid "Error to get response from AI source!"
+msgstr ""
+
+#: includes/contact-form/multi-contact-show-form.php:22
+msgid "Request Information"
+msgstr ""
+
+#: includes/contact-form/multi-contact-show-form.php:26
+msgid "Your Name"
+msgstr ""
+
+#: includes/contact-form/multi-contact-show-form.php:29
+msgid "Please type your name"
+msgstr ""
+
+#: includes/contact-form/multi-contact-show-form.php:32
+msgid "Your Email"
+msgstr ""
+
+#: includes/contact-form/multi-contact-show-form.php:35
+msgid "Please type your email"
+msgstr ""
+
+#: includes/contact-form/multi-contact-show-form.php:39
+msgid "Your Message"
+msgstr ""
+
+#: includes/contact-form/multi-contact-show-form.php:41
+msgid "Please type your message"
+msgstr ""
+
+#: includes/contact-form/multi-contact-show-form.php:47
+#: includes/diagnose/class_bill_diagnose.php:564
+msgid "Send"
+msgstr ""
+
+#: includes/contact-form/multi-contact-show-form.php:48
+#: includes/feedback-last/feedback-last.php:274
+msgid "Cancel"
+msgstr ""
+
+#: includes/contact-form/multi-contact-show-form.php:53
+msgid "Sending your message. Please wait..."
+msgstr ""
+
+#: includes/contact-form/multi-contact-show-form.php:54
+msgid "Thanks for your message! We'll get back to you shortly."
+msgstr ""
+
+#: includes/contact-form/multi-contact-show-form.php:55
+msgid "There was a problem sending your message. Please try again."
+msgstr ""
+
+#: includes/contact-form/multi-contact-show-form.php:56
+msgid "Please enter one valid email address."
+msgstr ""
+
+#: includes/contact-form/multi-contact-show-form.php:57
+msgid "Please complete all the fields in the form before sending."
+msgstr ""
+
+#: includes/contact-form/multi-contact-show-form.php:58
+msgid "Name Error. Use only alpha."
+msgstr ""
+
+#: includes/contact-form/multi-contact-show-form.php:59
+msgid "Message Error. Only Use only alpha and numbers."
+msgstr ""
+
+#: includes/customizer/_customizer.php:17 includes/customizer/customizer.php:18
+msgid "Cardealer Custom Design"
+msgstr ""
+
+#: includes/customizer/_customizer.php:20 includes/customizer/customizer.php:21
+msgid ""
+"Click the Templates icon at the top left of the preview window to change "
+"your template. To customize further, simply click on any element, or it's "
+"corresponding shortcut icon, to edit it's styling. "
+msgstr ""
+
+#: includes/customizer/_customizer.php:31 includes/customizer/customizer.php:32
+msgid "Help"
+msgstr ""
+
+#: includes/customizer/_customizer.php:62 includes/customizer/customizer.php:63
+msgid "Templates"
+msgstr ""
+
+#: includes/customizer/_customizer.php:65 includes/customizer/customizer.php:66
+msgid "Choose the Car Dealer Template to Use."
+msgstr ""
+
+#: includes/customizer/_customizer.php:76
+msgid "Single Car Templates"
+msgstr ""
+
+#: includes/customizer/_customizer.php:79
+msgid "Choose the Single Car Template to Use."
+msgstr ""
+
+#: includes/customizer/_customizer.php:90 includes/customizer/customizer.php:93
+msgid "Search Box LayOut"
+msgstr ""
+
+#: includes/customizer/_customizer.php:92 includes/customizer/customizer.php:95
+msgid "Design the Search Box"
+msgstr ""
+
+#: includes/customizer/_customizer.php:98
+#: includes/customizer/customizer.php:101
+msgid "Search Box Fields"
+msgstr ""
+
+#: includes/customizer/_customizer.php:100
+#: includes/customizer/customizer.php:103
+msgid "Manage the Design fields"
+msgstr ""
+
+#: includes/customizer/_customizer.php:105
+#: includes/customizer/customizer.php:108
+msgid "Search Box Slider"
+msgstr ""
+
+#: includes/customizer/_customizer.php:107
+#: includes/customizer/customizer.php:110
+msgid "Customize the price Slider."
+msgstr ""
+
+#: includes/customizer/_customizer.php:112
+#: includes/customizer/customizer.php:115
+msgid "Search Box Button"
+msgstr ""
+
+#: includes/customizer/_customizer.php:114
+#: includes/customizer/customizer.php:117
+msgid "Customize the Search Box Button."
+msgstr ""
+
+#: includes/customizer/_customizer.php:119
+#: includes/customizer/customizer.php:122
+msgid "Car Template and Widgets"
+msgstr ""
+
+#: includes/customizer/_customizer.php:122
+#: includes/customizer/customizer.php:125
+msgid "Customize the Car Template and Widgets."
+msgstr ""
+
+#: includes/customizer/_customizer.php:129
+msgid "Single Car Template"
+msgstr ""
+
+#: includes/customizer/_customizer.php:131
+msgid "Customize the Single Car Template."
+msgstr ""
+
+#: includes/customizer/_customizer.php:136
+msgid "Buttons Back and Contact Us"
+msgstr ""
+
+#: includes/customizer/_customizer.php:139
+msgid "Customize the Buttons Back and Contact Us."
+msgstr ""
+
+#: includes/customizer/_customizer.php:210
+#: includes/customizer/customizer.php:216
+msgid "Search Fields Label Color"
+msgstr ""
+
+#: includes/customizer/_customizer.php:223
+#: includes/customizer/customizer.php:229
+msgid "Search Fields Controls Color"
+msgstr ""
+
+#: includes/customizer/_customizer.php:236
+#: includes/customizer/customizer.php:242
+msgid "Search Fields Controls Background Color"
+msgstr ""
+
+#: includes/customizer/_customizer.php:254
+#: includes/customizer/customizer.php:260
+msgid "Search Fields Controls Border Radius"
+msgstr ""
+
+#: includes/customizer/_customizer.php:255
+#: includes/customizer/_customizer.php:330
+#: includes/customizer/_customizer.php:419
+#: includes/customizer/_customizer.php:605
+#: includes/customizer/_customizer.php:691
+#: includes/customizer/_customizer.php:1034
+#: includes/customizer/customizer.php:261
+#: includes/customizer/customizer.php:336
+#: includes/customizer/customizer.php:425
+#: includes/customizer/customizer.php:614
+#: includes/customizer/customizer.php:700
+msgid "Border Radius: from 0 to 30."
+msgstr ""
+
+#: includes/customizer/_customizer.php:272
+#: includes/customizer/customizer.php:278
+msgid "Search Slider Label Color"
+msgstr ""
+
+#: includes/customizer/_customizer.php:285
+#: includes/customizer/customizer.php:291
+msgid "Search Slider Color"
+msgstr ""
+
+#: includes/customizer/_customizer.php:298
+#: includes/customizer/customizer.php:304
+msgid "Search Slider Handle Color"
+msgstr ""
+
+#: includes/customizer/_customizer.php:311
+#: includes/customizer/customizer.php:317
+msgid "Search Slider Background Color"
+msgstr ""
+
+#: includes/customizer/_customizer.php:329
+#: includes/customizer/customizer.php:335
+msgid "Search Slider Border Radius"
+msgstr ""
+
+#: includes/customizer/_customizer.php:347
+#: includes/customizer/customizer.php:353
+msgid "Search Slider Border Color"
+msgstr ""
+
+#: includes/customizer/_customizer.php:367
+#: includes/customizer/customizer.php:373
+msgid "Search Box Button Text Color"
+msgstr ""
+
+#: includes/customizer/_customizer.php:382
+#: includes/customizer/customizer.php:388
+msgid "Search Box Button Background Color"
+msgstr ""
+
+#: includes/customizer/_customizer.php:399
+#: includes/customizer/customizer.php:405
+msgid "Search Box Button Width"
+msgstr ""
+
+#: includes/customizer/_customizer.php:400
+#: includes/customizer/_customizer.php:625
+#: includes/customizer/customizer.php:406
+#: includes/customizer/customizer.php:634
+msgid "Button width: from 100 to 300."
+msgstr ""
+
+#: includes/customizer/_customizer.php:418
+#: includes/customizer/customizer.php:424
+msgid "Search Box Button Border Radius"
+msgstr ""
+
+#: includes/customizer/_customizer.php:447
+#: includes/customizer/customizer.php:453
+msgid "Template Name"
+msgstr ""
+
+#: includes/customizer/_customizer.php:485
+msgid "Single Car Template Name"
+msgstr ""
+
+#: includes/customizer/_customizer.php:507
+msgid "Single Car Template Pop Up Modal Width"
+msgstr ""
+
+#: includes/customizer/_customizer.php:527
+msgid "Template Text Color"
+msgstr ""
+
+#: includes/customizer/_customizer.php:542
+#: includes/customizer/customizer.php:551
+msgid "Template Background Color (works with templates gallery and list view)"
+msgstr ""
+
+#: includes/customizer/_customizer.php:557
+#: includes/customizer/customizer.php:566
+msgid "Template Title Color"
+msgstr ""
+
+#: includes/customizer/_customizer.php:572
+#: includes/customizer/customizer.php:581
+msgid "Template Button View Color"
+msgstr ""
+
+#: includes/customizer/_customizer.php:587
+#: includes/customizer/customizer.php:596
+msgid "Template Button View Background Color"
+msgstr ""
+
+#: includes/customizer/_customizer.php:604
+#: includes/customizer/customizer.php:613
+msgid "Template Button View Border Radius"
+msgstr ""
+
+#: includes/customizer/_customizer.php:624
+#: includes/customizer/customizer.php:633
+msgid "Template Button View Width"
+msgstr ""
+
+#: includes/customizer/_customizer.php:642
+#: includes/customizer/customizer.php:651
+msgid "Template List View Separator Color"
+msgstr ""
+
+#: includes/customizer/_customizer.php:658
+#: includes/customizer/customizer.php:667
+msgid "Template Grid Border Color"
+msgstr ""
+
+#: includes/customizer/_customizer.php:673
+#: includes/customizer/customizer.php:682
+msgid "Template Gallery and Widgets Border Color"
+msgstr ""
+
+#: includes/customizer/_customizer.php:690
+#: includes/customizer/customizer.php:699
+msgid "Template Gallery and Widgets Border Radius"
+msgstr ""
+
+#: includes/customizer/_customizer.php:707
+#: includes/customizer/customizer.php:716
+msgid "Template Gallery and Widgets Title Color"
+msgstr ""
+
+#: includes/customizer/_customizer.php:722
+#: includes/customizer/customizer.php:731
+msgid "Template Gallery and Widgets Title Background Color"
+msgstr ""
+
+#: includes/customizer/_customizer.php:738
+#: includes/customizer/customizer.php:747
+msgid "Widget Search Background Color"
+msgstr ""
+
+#: includes/customizer/_customizer.php:757
+#: includes/customizer/customizer.php:766
+msgid "Single Car Template Background Color (works with templates 1 and 4"
+msgstr ""
+
+#: includes/customizer/_customizer.php:772
+#: includes/customizer/customizer.php:781
+msgid "Single Car Template Color"
+msgstr ""
+
+#: includes/customizer/_customizer.php:788
+#: includes/customizer/customizer.php:797
+msgid "Single Car Template Features Title Background Color"
+msgstr ""
+
+#: includes/customizer/_customizer.php:805
+#: includes/customizer/customizer.php:814
+msgid "Single Car Template Features Title Color"
+msgstr ""
+
+#: includes/customizer/_customizer.php:826
+#: includes/customizer/customizer.php:835
+msgid "Single Car Template Features Border Color"
+msgstr ""
+
+#: includes/customizer/_customizer.php:850
+#: includes/customizer/customizer.php:859
+msgid "Features Border Radius"
+msgstr ""
+
+#: includes/customizer/_customizer.php:851
+#: includes/customizer/customizer.php:860
+msgid "Features Border Radius: from 0 to 30."
+msgstr ""
+
+#: includes/customizer/_customizer.php:874
+#: includes/customizer/customizer.php:883
+msgid "Background Color"
+msgstr ""
+
+#: includes/customizer/_customizer.php:890
+#: includes/customizer/customizer.php:899
+msgid "Border Size"
+msgstr ""
+
+#: includes/customizer/_customizer.php:892
+#: includes/customizer/customizer.php:901
+msgid "Border Size: from 0 to 5. Mark 0 to hide the Boarder."
+msgstr ""
+
+#: includes/customizer/_customizer.php:911
+#: includes/customizer/customizer.php:921
+msgid "Border Radius"
+msgstr ""
+
+#: includes/customizer/_customizer.php:912
+#: includes/customizer/customizer.php:922
+msgid "Border Radius: from 1 to 70px."
+msgstr ""
+
+#: includes/customizer/_customizer.php:929
+#: includes/customizer/customizer.php:939
+msgid "Border Color"
+msgstr ""
+
+#: includes/customizer/_customizer.php:946
+#: includes/customizer/customizer.php:956
+msgid "Margin Bottom"
+msgstr ""
+
+#: includes/customizer/_customizer.php:947
+#: includes/customizer/customizer.php:957
+msgid "Margin Bottom: from 0 to 30."
+msgstr ""
+
+#: includes/customizer/_customizer.php:968
+msgid "Back and Contact Us Buttons Color"
+msgstr ""
+
+#: includes/customizer/_customizer.php:984
+msgid "Back and Contact Us Buttons Background Color"
+msgstr ""
+
+#: includes/customizer/_customizer.php:1005
+msgid "Back and Contact Us Buttons width"
+msgstr ""
+
+#: includes/customizer/_customizer.php:1006
+msgid "Border Radius: from 100 to 300."
+msgstr ""
+
+#: includes/customizer/_customizer.php:1033
+msgid "Back and Contact Us Buttons Border Radius"
+msgstr ""
+
+#: includes/diagnose/class_bill_diagnose.php:82
+msgid ""
+"Here are some details about error and memory monitoring for your plugin. "
+"Errors and low memory can prevent your site from functioning properly. On "
+"this page, you will find a partial list of the most recent errors and "
+"warnings. If you need more details, use the chat form, which will search for "
+"additional information using Artificial Intelligence.  \n"
+"If you need to dive deeper, install the free plugin WPTools, which provides "
+"more in-depth insights."
+msgstr ""
+
+#: includes/diagnose/class_bill_diagnose.php:89
+msgid "Memory & Error Monitoring"
+msgstr ""
+
+#: includes/diagnose/class_bill_diagnose.php:90
+msgid "Welcome to plugin Insights!"
+msgstr ""
+
+#: includes/diagnose/class_bill_diagnose.php:487
+msgid "Our plugin"
+msgstr ""
+
+#: includes/diagnose/class_bill_diagnose.php:489
+msgid ""
+"cannot function properly because your WordPress Memory Limit is too low. "
+"Your site will experience serious issues, even if you deactivate our plugin."
+msgstr ""
+
+#: includes/diagnose/class_bill_diagnose.php:495
+msgid "Learn more"
+msgstr ""
+
+#: includes/diagnose/class_bill_diagnose.php:513
+msgctxt "Site Health"
+msgid "Critical Issues"
+msgstr ""
+
+#: includes/diagnose/class_bill_diagnose.php:543
+msgid ""
+"Displaying the latest recurring errors (Javascript Included) from your error "
+"log file and eventually alert about low WordPress memory limit is a courtesy "
+"of plugin"
+msgstr ""
+
+#: includes/diagnose/class_bill_diagnose.php:545
+msgid ""
+"Disabling our plugin does not stop the errors from occurring; it simply "
+"means you will no longer be notified here that they are happening, but they "
+"can still harm your site."
+msgstr ""
+
+#: includes/diagnose/class_bill_diagnose.php:547
+msgid ""
+"Click the help button in the top right or go directly to the AI chat box "
+"below for more specific information on the issues listed."
+msgstr ""
+
+#: includes/diagnose/class_bill_diagnose.php:554
+msgid "Artificial Intelligence Support Chat for Issues and Solutions"
+msgstr ""
+
+#: includes/diagnose/class_bill_diagnose.php:563
+msgid "Enter your message..."
+msgstr ""
+
+#: includes/diagnose/class_bill_diagnose.php:567
+msgid ""
+"Enter a message and click 'Send', or just click 'Auto Checkup' to analyze "
+"the site's error log."
+msgstr ""
+
+#: includes/diagnose/class_bill_diagnose.php:572
+msgid "Auto Checkup"
+msgstr ""
+
+#: includes/diagnose/class_bill_diagnose.php:580
+msgid "Potential Problems"
+msgstr ""
+
+#: includes/diagnose/class_bill_diagnose.php:588
+msgid "Low WordPress Memory Limit"
+msgstr ""
+
+#: includes/diagnose/class_bill_diagnose.php:601
+msgid "Your usage now"
+msgstr ""
+
+#: includes/diagnose/class_bill_diagnose.php:609
+msgid "Total Php Server Memory"
+msgstr ""
+
+#: includes/diagnose/class_bill_diagnose.php:618
+#: includes/install-checkup/_class_bill_install.php:305
+#: includes/install-checkup/class_bill_install.php:325
+msgid ""
+"Your WordPress Memory Limit is too low, which can lead to critical issues on "
+"your site due to insufficient resources. Promptly address this issue before "
+"continuing."
+msgstr ""
+
+#: includes/diagnose/class_bill_diagnose.php:636
+msgid "Site Errors"
+msgstr ""
+
+#: includes/diagnose/class_bill_diagnose.php:641
+msgid ""
+"Your site has experienced errors for the past 2 days. These errors, "
+"including JavaScript issues, can result in visual problems or disrupt "
+"functionality, ranging from minor glitches to critical site failures. "
+"JavaScript errors can terminate JavaScript execution, leaving all subsequent "
+"commands inoperable."
+msgstr ""
+
+#: includes/diagnose/class_bill_diagnose.php:690
+msgid "This is a partial list of the errors found."
+msgstr ""
+
+#: includes/diagnose/class_bill_diagnose.php:702
+msgid "File not readable."
+msgstr ""
+
+#: includes/diagnose/class_bill_diagnose.php:707
+msgid "Size not determined."
+msgstr ""
+
+#: includes/diagnose/class_bill_diagnose.php:721
+msgid "Invalid size."
+msgstr ""
+
+#: includes/diagnose/class_bill_diagnose.php:745
+msgid "File Size: "
+msgstr ""
+
+#: includes/diagnose/class_bill_diagnose.php:1109
+msgid ""
+"These are critical issues that can have a significant impact on your site's "
+"performance. They can cause many plugins and functionalities to malfunction "
+"and, in some cases, render your site completely inoperative, depending on "
+"their severity. Address them promptly."
+msgstr ""
+
+#: includes/diagnose/class_bill_diagnose.php:1114
+msgid "Critical Issues"
+msgstr ""
+
+#: includes/feedback-last/feedback-last.php:239
+msgid "We're sorry to hear that you're leaving."
+msgstr ""
+
+#: includes/feedback-last/feedback-last.php:241
+msgid "Hello,"
+msgstr ""
+
+#: includes/feedback-last/feedback-last.php:245
+msgid ""
+"Thank you for using our products. Before you deactivate, we'd like to offer "
+"a few options to improve your experience:"
+msgstr ""
+
+#: includes/feedback-last/feedback-last.php:248
+msgid "Explore more plugins - Discover our other free plugins and themes."
+msgstr ""
+
+#: includes/feedback-last/feedback-last.php:250
+msgid "Support - Need help? Visit our support page."
+msgstr ""
+
+#: includes/feedback-last/feedback-last.php:252
+msgid "Cancel deactivation - Changed your mind? Keep using this plugin."
+msgstr ""
+
+#: includes/feedback-last/feedback-last.php:254
+msgid "Deactivate - Proceed with deactivation."
+msgstr ""
+
+#: includes/feedback-last/feedback-last.php:257
+msgid ""
+"Trusted by over 50,000 users, our 20+ free plugins and 6 themes can "
+"supercharge your site's security, functionality, and backups."
+msgstr ""
+
+#: includes/feedback-last/feedback-last.php:259
+msgid "Best regards!"
+msgstr ""
+
+#: includes/feedback-last/feedback-last.php:268
+msgid "Discover New FREE Plugins"
+msgstr ""
+
+#: includes/feedback-last/feedback-last.php:271
+msgid "Support Page"
+msgstr ""
+
+#: includes/feedback-last/feedback-last.php:277
+msgid "Just Deactivate"
+msgstr ""
+
+#: includes/functions/functions.php:414
+msgid "Coupe"
+msgstr ""
+
+#: includes/functions/functions.php:415
+msgid "Luxury Car"
+msgstr ""
+
+#: includes/functions/functions.php:416
+msgid "Sedan"
+msgstr ""
+
+#: includes/functions/functions.php:417
+msgid "Sports Car"
+msgstr ""
+
+#: includes/functions/functions.php:418
+msgid "Sport Utility Vehicle"
+msgstr ""
+
+#: includes/functions/functions.php:419
+msgid "Van"
+msgstr ""
+
+#: includes/functions/functions.php:420
+msgid "Wagon"
+msgstr ""
+
+#: includes/functions/functions.php:421 includes/post-type/meta-box.php:82
+#: includes/search/search-function.php:213
+#: includes/search/search-function.php:214
+#: includes/search/search-function_ajax.php:225
+#: includes/search/search-function_ajax.php:226
+msgid "Other"
+msgstr ""
+
+#: includes/functions/functions.php:722
+msgid "United Arab Emirates Dirham (&#1583;.&#1573;)"
+msgstr ""
+
+#: includes/functions/functions.php:723
+msgid "Afghan Afghani (&#1547;)"
+msgstr ""
+
+#: includes/functions/functions.php:724
+msgid "Angolan Kwanza"
+msgstr ""
+
+#: includes/functions/functions.php:725
+msgid "Argentine Pesos (&#36;)"
+msgstr ""
+
+#: includes/functions/functions.php:726
+msgid "Australian Dollars (&#36;)"
+msgstr ""
+
+#: includes/functions/functions.php:727
+msgid "Brazilian Real (R&#36;)"
+msgstr ""
+
+#: includes/functions/functions.php:728
+msgid "Bulgarian Lev"
+msgstr ""
+
+#: includes/functions/functions.php:729
+msgid "Canadian Dollars (&#36;)"
+msgstr ""
+
+#: includes/functions/functions.php:730
+msgid "Swiss Franc"
+msgstr ""
+
+#: includes/functions/functions.php:731
+msgid "Chinese Yuan (&yen;)"
+msgstr ""
+
+#: includes/functions/functions.php:732
+msgid "Czech Koruna"
+msgstr ""
+
+#: includes/functions/functions.php:733
+msgid "Danish Krone"
+msgstr ""
+
+#: includes/functions/functions.php:734
+msgid "Euros (&euro;)"
+msgstr ""
+
+#: includes/functions/functions.php:735
+msgid "Pound Sterling (&pound;)"
+msgstr ""
+
+#: includes/functions/functions.php:736
+msgid "Hong Kong Dollar (&#36;)"
+msgstr ""
+
+#: includes/functions/functions.php:737
+msgid "Croatian Kuna"
+msgstr ""
+
+#: includes/functions/functions.php:738
+msgid "Hungarian Forint"
+msgstr ""
+
+#: includes/functions/functions.php:739
+msgid "Indonesian Rupiah (Rp)"
+msgstr ""
+
+#: includes/functions/functions.php:740
+msgid "Israeli Shekel (&#8362;)"
+msgstr ""
+
+#: includes/functions/functions.php:741
+msgid "Indian Rupee (&#8377;)"
+msgstr ""
+
+#: includes/functions/functions.php:742
+msgid "Japanese Yen (&yen;)"
+msgstr ""
+
+#: includes/functions/functions.php:743
+msgid "South Korean Won (&#8361;)"
+msgstr ""
+
+#: includes/functions/functions.php:744
+msgid "Mexican Peso (&#36;)"
+msgstr ""
+
+#: includes/functions/functions.php:745
+msgid "Malaysian Ringgits"
+msgstr ""
+
+#: includes/functions/functions.php:746
+msgid "Nigerian Naira"
+msgstr ""
+
+#: includes/functions/functions.php:747
+msgid "Norwegian Krone"
+msgstr ""
+
+#: includes/functions/functions.php:748
+msgid "New Zealand Dollar (&#36;)"
+msgstr ""
+
+#: includes/functions/functions.php:749
+msgid "Philippine Pesos"
+msgstr ""
+
+#: includes/functions/functions.php:750
+msgid "Polish Zloty"
+msgstr ""
+
+#: includes/functions/functions.php:751
+msgid "Pakistani Rupee (₨)"
+msgstr ""
+
+#: includes/functions/functions.php:752
+msgid "Pesos Chilenos($)"
+msgstr ""
+
+#: includes/functions/functions.php:753
+msgid "Romanian Leu"
+msgstr ""
+
+#: includes/functions/functions.php:754
+msgid "Russian Rubles"
+msgstr ""
+
+#: includes/functions/functions.php:755
+msgid "Saudi Riyal (&#65020;)"
+msgstr ""
+
+#: includes/functions/functions.php:756
+msgid "Swedish Krona"
+msgstr ""
+
+#: includes/functions/functions.php:757
+msgid "Singapore Dollar (&#36;)"
+msgstr ""
+
+#: includes/functions/functions.php:758
+msgid "Thai Baht (&#3647;)"
+msgstr ""
+
+#: includes/functions/functions.php:759
+msgid "Turkish Lira (&#8378;)"
+msgstr ""
+
+#: includes/functions/functions.php:760
+msgid "Taiwan New Dollars"
+msgstr ""
+
+#: includes/functions/functions.php:761
+msgid "US Dollars (&#36;)"
+msgstr ""
+
+#: includes/functions/functions.php:762
+msgid "Vietnamese Dong (&#8363;)"
+msgstr ""
+
+#: includes/functions/functions.php:763
+msgid "Yen (&yen;)"
+msgstr ""
+
+#: includes/functions/functions.php:764
+msgid "South African Rand"
+msgstr ""
+
+#: includes/functions/functions.php:1122
+msgid "Dashboard"
+msgstr ""
+
+#: includes/help/help.php:47
+msgid "The easiest way to manage, list and sell yours cars online."
+msgstr ""
+
+#: includes/help/help.php:49
+msgid ""
+"Follow the 3 steps in the Dashboard screen (Car Dealer => Dashboad) after "
+"install the plugin."
+msgstr ""
+
+#: includes/help/help.php:51
+msgid "You will find Context Help in many screens."
+msgstr ""
+
+#: includes/help/help.php:53
+msgid "You can find also our complete OnLine Guide"
+msgstr ""
+
+#: includes/help/help.php:55
+msgid "here."
+msgstr ""
+
+#: includes/help/help.php:59
+msgid "If you want to import demo data, download the demo data from this link:"
+msgstr ""
+
+#: includes/help/help.php:63
+msgid "After download:"
+msgstr ""
+
+#: includes/help/help.php:65
+msgid "1. Log in to that site as an administrator. "
+msgstr ""
+
+#: includes/help/help.php:67
+msgid "2. Go to Tools: Import in the WordPress admin panel."
+msgstr ""
+
+#: includes/help/help.php:69
+msgid "3. Install the \"WordPress\" importer from the list."
+msgstr ""
+
+#: includes/help/help.php:71
+msgid "4. Activate & Run Importer."
+msgstr ""
+
+#: includes/help/help.php:73
+msgid "5. Upload the file downloaded using the form provided on that page."
+msgstr ""
+
+#: includes/help/help.php:75
+msgid ""
+"6. You will first be asked to map the authors in this export file to users"
+msgstr ""
+
+#: includes/help/help.php:77
+msgid "on the site. For each author, you may choose to map to an"
+msgstr ""
+
+#: includes/help/help.php:79
+msgid "existing user on the site or to create a new user. "
+msgstr ""
+
+#: includes/help/help.php:81
+msgid "7. WordPress will then import the demo data into you site."
+msgstr ""
+
+#: includes/help/help.php:85 includes/help/help.php:198
+#: includes/help/help.php:362 includes/help/help.php:404
+#: includes/help/help.php:431 includes/help/help.php:464
+msgid "Overview"
+msgstr ""
+
+#: includes/help/help.php:90
+msgid "Import Demo Data"
+msgstr ""
+
+#: includes/help/help.php:98
+msgid ""
+"In the FIELDS screen you can manage the main table fields.\n"
+"    This fields will show up\n"
+"    in your main cars form management, search bar and search widget"
+msgstr ""
+
+#: includes/help/help.php:102
+msgid "Each row represents one field."
+msgstr ""
+
+#: includes/help/help.php:108
+msgid "Number Doors"
+msgstr ""
+
+#: includes/help/help.php:111
+msgid "Number Passengers"
+msgstr ""
+
+#: includes/help/help.php:114
+msgid "Alarm"
+msgstr ""
+
+#: includes/help/help.php:117 includes/help/help.php:158
+#: includes/help/help.php:253
+msgid "And So On"
+msgstr ""
+
+#: includes/help/help.php:123
+msgid ""
+"You don\\'t need include this fields: Price, Year, Miles, HP, Transmission "
+"Type, Fuel Type, Condition and Featured."
+msgstr ""
+
+#: includes/help/help.php:126
+msgid "Technical WordPress guys call this of Metadata."
+msgstr ""
+
+#: includes/help/help.php:128
+msgid "Don\\'t create 2 fields with the same name."
+msgstr ""
+
+#: includes/help/help.php:133 includes/help/help.php:231
+msgid ""
+"To add fields in the table, click the button Add New. This can open the "
+"empty window to include your information:"
+msgstr ""
+
+#: includes/help/help.php:137 includes/help/help.php:235
+msgid "Field Name"
+msgstr ""
+
+#: includes/help/help.php:140 includes/help/help.php:238
+msgid "Field Label"
+msgstr ""
+
+#: includes/help/help.php:143 includes/help/help.php:241
+msgid "Field Order"
+msgstr ""
+
+#: includes/help/help.php:146 includes/help/help.php:244
+msgid "Show in Search Bar (your frontpage)"
+msgstr ""
+
+#: includes/help/help.php:149 includes/help/help.php:247
+msgid "Show in Search Widget (your frontpage)"
+msgstr ""
+
+#: includes/help/help.php:154 includes/help/help.php:250
+msgid "Type of Field"
+msgstr ""
+
+#: includes/help/help.php:161 includes/help/help.php:256
+msgid ""
+"In that screen, move the mouse pointer over each field to get help about "
+"that field."
+msgstr ""
+
+#: includes/help/help.php:163 includes/help/help.php:258
+msgid "Just fill out and click OK button."
+msgstr ""
+
+#: includes/help/help.php:167
+msgid "You have available this types of fields (Control Types):"
+msgstr ""
+
+#: includes/help/help.php:171
+msgid ""
+"Text (Used by text and numbers). It is not possible include this type of "
+"field in Search Bars."
+msgstr ""
+
+#: includes/help/help.php:174
+msgid "CheckBox"
+msgstr ""
+
+#: includes/help/help.php:177
+msgid "Drop Down (also called select box)"
+msgstr ""
+
+#: includes/help/help.php:180
+msgid "Range Select (you can define de value min, max and step)"
+msgstr ""
+
+#: includes/help/help.php:184
+msgid "For more details about HTML input types, please, check this page:"
+msgstr ""
+
+#: includes/help/help.php:190
+msgid "You can manage the table, i mean, Add, Edit and Trash Fields."
+msgstr ""
+
+#: includes/help/help.php:192
+msgid ""
+"At the Add Fields and Edit Fields forms, put the mouse over each row and the "
+"menu show up. Then, click over Edit or Trash."
+msgstr ""
+
+#: includes/help/help.php:194
+msgid ""
+"To know more about Edit Fields, please, check the Add Fields Form Option at "
+"this help menu."
+msgstr ""
+
+#: includes/help/help.php:203
+msgid "Field Types"
+msgstr ""
+
+#: includes/help/help.php:208
+msgid "Add Fields Form"
+msgstr ""
+
+#: includes/help/help.php:213
+msgid "Edit and Trash Fields"
+msgstr ""
+
+#: includes/help/help.php:220
+msgid ""
+"In the CARS screen you can manage (include, edit or delete) items in your "
+"Cars table."
+msgstr ""
+
+#: includes/help/help.php:221
+msgid "This cars will show up in your site front page."
+msgstr ""
+
+#: includes/help/help.php:223
+msgid ""
+"We suggest you take some time to complete your Field table before this step."
+msgstr ""
+
+#: includes/help/help.php:225
+msgid "Dashboard => CarDealer => Fields Table."
+msgstr ""
+
+#: includes/help/help.php:227
+msgid ""
+"You will find some fields automatically included by the system (Price, Year, "
+"Miles, HP, Transmission type, Type, Fuel, Condition and Featured)."
+msgstr ""
+
+#: includes/help/help.php:228
+msgid "Just add your cars in this table."
+msgstr ""
+
+#: includes/help/help.php:262
+msgid "Use the Team control it is optional. To add new members, go to:"
+msgstr ""
+
+#: includes/help/help.php:268
+msgid ""
+"Use the Location control it is optional. Maybe you want use it if you have "
+"more than one location."
+msgstr ""
+
+#: includes/help/help.php:269
+msgid "To add new locations, go to:"
+msgstr ""
+
+#: includes/help/help.php:273 includes/help/help.php:415
+msgid "If you are, for example, in Florida, maybe you want add:"
+msgstr ""
+
+#: includes/help/help.php:275 includes/help/help.php:418
+msgid "Fort Lauderdale"
+msgstr ""
+
+#: includes/help/help.php:278 includes/help/help.php:421
+msgid "Miami"
+msgstr ""
+
+#: includes/help/help.php:281 includes/help/help.php:303
+#: includes/help/help.php:424
+msgid "And So On..."
+msgstr ""
+
+#: includes/help/help.php:289 includes/help/help.php:438
+msgid "Use the Makes control it is optional."
+msgstr ""
+
+#: includes/help/help.php:290 includes/help/help.php:439
+msgid "To add new makes, go to:"
+msgstr ""
+
+#: includes/help/help.php:294
+msgid "Maybe you want add:"
+msgstr ""
+
+#: includes/help/help.php:297
+msgid "Ford"
+msgstr ""
+
+#: includes/help/help.php:300
+msgid "Toyota"
+msgstr ""
+
+#: includes/help/help.php:310
+msgid "You can manage the table, i mean, Add, Edit and Trash Cars."
+msgstr ""
+
+#: includes/help/help.php:312
+msgid ""
+"Use the Add New Buttom or to Edit, put the mouse over each row and the menu "
+"will show up. Then, click over Edit or Trash."
+msgstr ""
+
+#: includes/help/help.php:318
+msgid "You can add one main image to each car."
+msgstr ""
+
+#: includes/help/help.php:319
+msgid ""
+"In the Cars Form, click the button Set Featured Image at bottom right corner."
+msgstr ""
+
+#: includes/help/help.php:321
+msgid ""
+"Read below Images and Gallery menu voice about how to create a Image\\'s "
+"gallery with many images to show up at the top of your car\\'s page."
+msgstr ""
+
+#: includes/help/help.php:327
+msgid "You can add many Images or one gallery for each car."
+msgstr ""
+
+#: includes/help/help.php:328
+msgid ""
+"Just go to Cars Form and add the images (or the gallery) in the main "
+"description field (click the Add Media buttom)."
+msgstr ""
+
+#: includes/help/help.php:331
+msgid ""
+"Use the default WordPress Gallery or our plugin will create automatically "
+"one nice slider gallery. To enable the plugin gallery, go to"
+msgstr ""
+
+#: includes/help/help.php:335
+msgid "and look for"
+msgstr ""
+
+#: includes/help/help.php:337 settings/options/_plugin_options_tabbed.php:141
+#: settings/options/plugin_options_tabbed.php:145
+msgid "Replace the Wordpress Gallery with Flexslider Gallery"
+msgstr ""
+
+#: includes/help/help.php:341
+msgid "Then, check Yes and Save Changes."
+msgstr ""
+
+#: includes/help/help.php:343
+msgid "This images and gallery will be visible in single car page."
+msgstr ""
+
+#: includes/help/help.php:345
+msgid "Look"
+msgstr ""
+
+#: includes/help/help.php:347
+msgid "our demo"
+msgstr ""
+
+#: includes/help/help.php:349
+msgid "about how to upload and crop images easily (less than 2 minutes)."
+msgstr ""
+
+#: includes/help/help.php:351
+msgid "To get more info about galleries,"
+msgstr ""
+
+#: includes/help/help.php:353
+msgid "visit WordPress Help site."
+msgstr ""
+
+#: includes/help/help.php:372 includes/templates/template-functions.php:260
+#: includes/templates/template-functions4.php:49
+msgid "Location"
+msgstr ""
+
+#: includes/help/help.php:382
+msgid "Edit and Trash Cars"
+msgstr ""
+
+#: includes/help/help.php:387 includes/post-type/post-functions.php:656
+msgid "Featured Image"
+msgstr ""
+
+#: includes/help/help.php:392
+msgid "Images and Gallery"
+msgstr ""
+
+#: includes/help/help.php:399
+msgid "Use the Team table it is optional."
+msgstr ""
+
+#: includes/help/help.php:411
+msgid ""
+"Use the Location table it is optional. Maybe you want use it if you have "
+"more than one location."
+msgstr ""
+
+#: includes/help/help.php:443
+msgid "Maybe you want add alguns some makes. (Ford, Toyota...)"
+msgstr ""
+
+#: includes/help/help.php:493
+msgid "Help Available for this Window!"
+msgstr ""
+
+#: includes/help/help.php:494
+msgid "Just Click Help Button to get content help for this window."
+msgstr ""
+
+#: includes/multi/multi-functions.php:12
+msgid "Search Fields"
+msgstr ""
+
+#: includes/multi/multi-functions.php:27
+msgid "Order"
+msgstr ""
+
+#: includes/multi/multi-functions.php:28
+msgid "Type Field"
+msgstr ""
+
+#: includes/multi/multi-functions.php:29
+msgid "Label"
+msgstr ""
+
+#: includes/multi/multi-functions.php:30
+msgid "Search Bar"
+msgstr ""
+
+#: includes/multi/multi-functions.php:31
+msgid "Widget"
+msgstr ""
+
+#: includes/post-type/meta-box.php:5
+msgid "The amount of Km"
+msgstr ""
+
+#: includes/post-type/meta-box.php:7
+msgid "The amount of Miles"
+msgstr ""
+
+#: includes/post-type/meta-box.php:8 includes/post-type/meta-box.php:12
+msgid "Only numbers, no point, no comma."
+msgstr ""
+
+#: includes/post-type/meta-box.php:10
+msgid "Engine"
+msgstr ""
+
+#: includes/post-type/meta-box.php:18 includes/post-type/post-functions.php:657
+msgid "Featured"
+msgstr ""
+
+#: includes/post-type/meta-box.php:19
+msgid "Mark to show up at Featured Widget."
+msgstr ""
+
+#: includes/post-type/meta-box.php:23 includes/post-type/post-functions.php:655
+#: includes/search/search-function.php:436
+#: includes/search/search-function_ajax.php:412
+msgid "Price"
+msgstr ""
+
+#: includes/post-type/meta-box.php:24
+msgid ""
+"No special characters here (\"$\" \",\" \".\"), the plugin will auto format "
+"the number."
+msgstr ""
+
+#: includes/post-type/meta-box.php:30 includes/post-type/post-functions.php:658
+#: includes/search/search-function.php:112
+#: includes/search/search-function_ajax.php:134
+#: includes/templates/template-functions.php:247
+#: includes/templates/template-functions4.php:37
+#: includes/templates/template-showroom.php:136
+#: includes/templates/template-showroom2.php:81 includes/widgets/widgets.php:74
+#: includes/widgets/widgets.php:245
+msgid "Year"
+msgstr ""
+
+#: includes/post-type/meta-box.php:31
+msgid "The year of the product. Only numbers, no point, no comma."
+msgstr ""
+
+#: includes/post-type/meta-box.php:54
+msgid "New"
+msgstr ""
+
+#: includes/post-type/meta-box.php:55
+msgid "Used"
+msgstr ""
+
+#: includes/post-type/meta-box.php:56
+msgid "Damaged"
+msgstr ""
+
+#: includes/post-type/meta-box.php:61 includes/search/search-function.php:145
+#: includes/search/search-function_ajax.php:162
+#: includes/templates/template-functions.php:137
+#: includes/templates/template-functions4.php:197
+#: includes/templates/template-showroom.php:138
+#: includes/templates/template-showroom2.php:83
+msgid "Transmission"
+msgstr ""
+
+#: includes/post-type/meta-box.php:62
+msgid "What kind of Transmission is this"
+msgstr ""
+
+#: includes/post-type/meta-box.php:66 includes/search/search-function.php:152
+#: includes/search/search-function.php:153
+#: includes/search/search-function.php:154
+#: includes/search/search-function_ajax.php:169
+#: includes/search/search-function_ajax.php:170
+#: includes/search/search-function_ajax.php:171
+msgid "Automatic"
+msgstr ""
+
+#: includes/post-type/meta-box.php:67 includes/search/search-function.php:157
+#: includes/search/search-function.php:158
+#: includes/search/search-function_ajax.php:174
+#: includes/search/search-function_ajax.php:175
+msgid "Manual"
+msgstr ""
+
+#: includes/post-type/meta-box.php:68 includes/search/search-function.php:160
+#: includes/search/search-function.php:161
+#: includes/search/search-function.php:162
+#: includes/search/search-function_ajax.php:177
+#: includes/search/search-function_ajax.php:178
+#: includes/search/search-function_ajax.php:179
+msgid "Tiptronic"
+msgstr ""
+
+#: includes/post-type/meta-box.php:70 includes/post-type/meta-box.php:71
+msgid "Fuel Type."
+msgstr ""
+
+#: includes/post-type/meta-box.php:75 includes/search/search-function.php:186
+#: includes/search/search-function.php:187
+#: includes/search/search-function_ajax.php:198
+#: includes/search/search-function_ajax.php:199
+msgid "Diesel"
+msgstr ""
+
+#: includes/post-type/meta-box.php:76 includes/search/search-function.php:189
+#: includes/search/search-function.php:190
+#: includes/search/search-function.php:191
+#: includes/search/search-function_ajax.php:201
+#: includes/search/search-function_ajax.php:202
+#: includes/search/search-function_ajax.php:203
+msgid "Gasoline"
+msgstr ""
+
+#: includes/post-type/meta-box.php:77 includes/search/search-function.php:194
+#: includes/search/search-function.php:195
+#: includes/search/search-function_ajax.php:206
+#: includes/search/search-function_ajax.php:207
+msgid "Hybrid"
+msgstr ""
+
+#: includes/post-type/meta-box.php:78 includes/search/search-function.php:197
+#: includes/search/search-function.php:198
+#: includes/search/search-function.php:199
+#: includes/search/search-function_ajax.php:209
+#: includes/search/search-function_ajax.php:210
+#: includes/search/search-function_ajax.php:211
+msgid "Electric"
+msgstr ""
+
+#: includes/post-type/meta-box.php:79 includes/search/search-function.php:202
+#: includes/search/search-function.php:203
+#: includes/search/search-function.php:204
+#: includes/search/search-function_ajax.php:214
+#: includes/search/search-function_ajax.php:215
+#: includes/search/search-function_ajax.php:216
+msgid "Biodiesel"
+msgstr ""
+
+#: includes/post-type/meta-box.php:80 includes/search/search-function.php:208
+#: includes/search/search-function_ajax.php:220
+msgid "CNG"
+msgstr ""
+
+#: includes/post-type/meta-box.php:81 includes/search/search-function.php:210
+#: includes/search/search-function.php:211
+#: includes/search/search-function_ajax.php:222
+#: includes/search/search-function_ajax.php:223
+msgid "Ethanol"
+msgstr ""
+
+#: includes/post-type/meta-box.php:183
+#: includes/templates/template-functions.php:35
+#: includes/templates/template-functions4.php:72
+msgid "Details"
+msgstr ""
+
+#: includes/post-type/meta-box.php:219 includes/post-type/meta-box.php:223
+msgid "Specs"
+msgstr ""
+
+#: includes/post-type/meta-box.php:220 includes/post-type/meta-box.php:297
+#: includes/templates/template-functions.php:67
+#: includes/templates/template-functions4.php:104
+msgid "Features"
+msgstr ""
+
+#: includes/post-type/meta-box.php:288
+msgid "Add any Feature Field (Settings => Field Features)"
+msgstr ""
+
+#: includes/post-type/post-functions.php:15
+msgid "Cars"
+msgstr ""
+
+#: includes/post-type/post-functions.php:19
+msgid "Edit Cars"
+msgstr ""
+
+#: includes/post-type/post-functions.php:20
+msgid "Search Cars"
+msgstr ""
+
+#: includes/post-type/post-functions.php:58
+msgid "Search makes"
+msgstr ""
+
+#: includes/post-type/post-functions.php:60
+msgid "All makes"
+msgstr ""
+
+#: includes/post-type/post-functions.php:61
+msgid "Parent makes"
+msgstr ""
+
+#: includes/post-type/post-functions.php:62
+msgid "Parent makes:"
+msgstr ""
+
+#: includes/post-type/post-functions.php:63
+msgid "Edit makes"
+msgstr ""
+
+#: includes/post-type/post-functions.php:64
+msgid "Update makes"
+msgstr ""
+
+#: includes/post-type/post-functions.php:65
+msgid "Add New makes"
+msgstr ""
+
+#: includes/post-type/post-functions.php:66
+msgid "New makes"
+msgstr ""
+
+#: includes/post-type/post-functions.php:67
+msgid "Separate makes with commas"
+msgstr ""
+
+#: includes/post-type/post-functions.php:68
+msgid "Add or Remove makes"
+msgstr ""
+
+#: includes/post-type/post-functions.php:69
+#: includes/post-type/post-functions.php:100
+msgid "Choose from the most used makers"
+msgstr ""
+
+#: includes/post-type/post-functions.php:89
+msgid "Search team"
+msgstr ""
+
+#: includes/post-type/post-functions.php:91
+msgid "All Team"
+msgstr ""
+
+#: includes/post-type/post-functions.php:92
+msgid "Parent team"
+msgstr ""
+
+#: includes/post-type/post-functions.php:93
+msgid "Parent team:"
+msgstr ""
+
+#: includes/post-type/post-functions.php:94
+msgid "Edit team member"
+msgstr ""
+
+#: includes/post-type/post-functions.php:95
+msgid "Update team"
+msgstr ""
+
+#: includes/post-type/post-functions.php:96
+msgid "Add New team member"
+msgstr ""
+
+#: includes/post-type/post-functions.php:97
+msgid "New team"
+msgstr ""
+
+#: includes/post-type/post-functions.php:98
+msgid "Separate team with commas"
+msgstr ""
+
+#: includes/post-type/post-functions.php:99
+msgid "Add or Remove team"
+msgstr ""
+
+#: includes/post-type/post-functions.php:119
+msgid "Search Locations"
+msgstr ""
+
+#: includes/post-type/post-functions.php:121
+msgid "All Locations"
+msgstr ""
+
+#: includes/post-type/post-functions.php:122
+msgid "Parent locations"
+msgstr ""
+
+#: includes/post-type/post-functions.php:123
+msgid "Parent locations:"
+msgstr ""
+
+#: includes/post-type/post-functions.php:124
+msgid "Edit locations"
+msgstr ""
+
+#: includes/post-type/post-functions.php:125
+msgid "Update locations"
+msgstr ""
+
+#: includes/post-type/post-functions.php:126
+msgid "Add New locations"
+msgstr ""
+
+#: includes/post-type/post-functions.php:127
+msgid "New locations"
+msgstr ""
+
+#: includes/post-type/post-functions.php:128
+msgid "Separate locations with commas"
+msgstr ""
+
+#: includes/post-type/post-functions.php:129
+msgid "Add or Remove locations"
+msgstr ""
+
+#: includes/post-type/post-functions.php:130
+msgid "Choose from the most used locations"
+msgstr ""
+
+#: includes/post-type/post-functions.php:244
+#: includes/post-type/post-functions.php:359
+msgid "Order:"
+msgstr ""
+
+#: includes/post-type/post-functions.php:246
+msgid "Order to display. For example: 1 (first) 2 (second) and so on ..."
+msgstr ""
+
+#: includes/post-type/post-functions.php:249
+#: includes/post-type/post-functions.php:370
+msgid "Profile Image:"
+msgstr ""
+
+#: includes/post-type/post-functions.php:256
+msgid "Just click the Button to Select Upload Image"
+msgstr ""
+
+#: includes/post-type/post-functions.php:262
+#: includes/post-type/post-functions.php:395
+msgid "Position:"
+msgstr ""
+
+#: includes/post-type/post-functions.php:264
+#: includes/post-type/post-functions.php:401
+msgid "For example: Sales Manager, Agent, and so on ..."
+msgstr ""
+
+#: includes/post-type/post-functions.php:267
+#: includes/post-type/post-functions.php:406
+msgid "Phone:"
+msgstr ""
+
+#: includes/post-type/post-functions.php:271
+#: includes/post-type/post-functions.php:416
+msgid "Email address:"
+msgstr ""
+
+#: includes/post-type/post-functions.php:275
+#: includes/post-type/post-functions.php:426
+msgid "Skype:"
+msgstr ""
+
+#: includes/post-type/post-functions.php:279
+#: includes/post-type/post-functions.php:436
+msgid "Facebook URL:"
+msgstr ""
+
+#: includes/post-type/post-functions.php:283
+#: includes/post-type/post-functions.php:446
+msgid "Twitter URL:"
+msgstr ""
+
+#: includes/post-type/post-functions.php:287
+#: includes/post-type/post-functions.php:456
+msgid "Linkedin URL:"
+msgstr ""
+
+#: includes/post-type/post-functions.php:291
+#: includes/post-type/post-functions.php:466
+msgid "Youtube URL:"
+msgstr ""
+
+#: includes/post-type/post-functions.php:295
+#: includes/post-type/post-functions.php:476
+msgid "Instagram URL:"
+msgstr ""
+
+#: includes/post-type/post-functions.php:299
+#: includes/post-type/post-functions.php:486
+msgid "Vimeo URL:"
+msgstr ""
+
+#: includes/post-type/post-functions.php:365
+msgid "Order to display. For example: 1 (first), 2 (second) and so on ..."
+msgstr ""
+
+#: includes/post-type/post-functions.php:390
+msgid "the Button to Select Upload Image"
+msgstr ""
+
+#: includes/post-type/post-functions.php:682
+msgid "Call For Price"
+msgstr ""
+
+#: includes/search/do_search.php:287
+msgid "No posts found"
+msgstr ""
+
+#: includes/search/do_search.php:303
+#: includes/templates/template-showroom.php:188
+#: includes/templates/template-showroom1.php:232
+#: includes/templates/template-showroom3.php:201
+msgid "Not Found !"
+msgstr ""
+
+#: includes/search/search-function.php:14
+#: includes/search/search-function.php:470
+#: includes/search/search-function_ajax.php:41
+#: includes/search/search-function_ajax.php:427
+#: includes/widgets/widgets.php:317
+msgid "Search"
+msgstr ""
+
+#: includes/search/search-function.php:86
+#: includes/search/search-function_ajax.php:109
+#: includes/templates/template-functions.php:112
+#: includes/templates/template-functions4.php:171
+msgid "Make"
+msgstr ""
+
+#: includes/search/search-function.php:94
+#: includes/search/search-function.php:117
+#: includes/search/search-function.php:151
+#: includes/search/search-function.php:185
+#: includes/search/search-function.php:260
+#: includes/search/search-function.php:283
+#: includes/search/search-function.php:304
+#: includes/search/search-function.php:329
+#: includes/search/search-function_ajax.php:117
+#: includes/search/search-function_ajax.php:139
+#: includes/search/search-function_ajax.php:168
+#: includes/search/search-function_ajax.php:197
+#: includes/search/search-function_ajax.php:276
+#: includes/search/search-function_ajax.php:300
+#: includes/search/search-function_ajax.php:317
+#: includes/search/search-function_ajax.php:344
+msgid "Any"
+msgstr ""
+
+#: includes/search/search-function.php:179
+#: includes/search/search-function_ajax.php:191
+#: includes/templates/template-functions4.php:199
+#: includes/templates/template-showroom.php:137
+#: includes/templates/template-showroom2.php:82
+msgid "Fuel"
+msgstr ""
+
+#: includes/search/search-function.php:322
+#: includes/search/search-function_ajax.php:337
+msgid "Order By"
+msgstr ""
+
+#: includes/search/search-function.php:332
+#: includes/search/search-function_ajax.php:347
+msgid "Year newest first"
+msgstr ""
+
+#: includes/search/search-function.php:337
+#: includes/search/search-function_ajax.php:352
+msgid "Year oldest first"
+msgstr ""
+
+#: includes/search/search-function.php:342
+#: includes/search/search-function_ajax.php:357
+msgid "Price higher first"
+msgstr ""
+
+#: includes/search/search-function.php:347
+#: includes/search/search-function_ajax.php:362
+msgid "Price lower first"
+msgstr ""
+
+#: includes/search/search-function.php:352
+#: includes/search/search-function_ajax.php:367
+msgid "Mileage higher first"
+msgstr ""
+
+#: includes/search/search-function.php:357
+#: includes/search/search-function_ajax.php:372
+msgid "Mileage lower first"
+msgstr ""
+
+#: includes/search/search-function.php:399
+#: includes/search/search-function_ajax.php:392
+msgid "Price Range"
+msgstr ""
+
+#: includes/team/team.php:114
+msgid "No Team Member Added!"
+msgstr ""
+
+#: includes/templates/template-functions.php:55
+msgid "Yes"
+msgstr ""
+
+#: includes/templates/template-functions.php:57
+msgid "No"
+msgstr ""
+
+#: includes/templates/template-functions.php:117
+#: includes/templates/template-functions.php:126
+#: includes/templates/template-functions4.php:176
+#: includes/templates/template-functions4.php:185
+msgid "Model"
+msgstr ""
+
+#: includes/templates/template-functions.php:180
+#: includes/templates/template-showroom.php:144
+#: includes/templates/template-showroom1.php:186
+#: includes/templates/template-showroom2.php:90
+#: includes/templates/template-showroom3.php:127
+#: settings/options/_plugin_options_tabbed.php:107
+#: settings/options/plugin_options_tabbed.php:111
+msgid "Miles"
+msgstr ""
+
+#: includes/templates/template-functions.php:184
+#: includes/templates/template-showroom.php:148
+#: includes/templates/template-showroom1.php:188
+#: includes/templates/template-showroom2.php:94
+#: includes/templates/template-showroom3.php:129
+#: settings/options/_plugin_options_tabbed.php:109
+#: settings/options/plugin_options_tabbed.php:113
+msgid "Hours"
+msgstr ""
+
+#: includes/templates/template-functions.php:188
+#: includes/templates/template-showroom.php:152
+#: includes/templates/template-showroom1.php:190
+#: includes/templates/template-showroom2.php:98
+#: includes/templates/template-showroom3.php:131
+#: settings/options/_plugin_options_tabbed.php:108
+#: settings/options/plugin_options_tabbed.php:112
+msgid "Kms"
+msgstr ""
+
+#: includes/templates/template-functions.php:199
+#: includes/templates/template-functions4.php:224
+msgid "Cond"
+msgstr ""
+
+#: includes/templates/template-functions.php:204
+#: includes/templates/template-functions4.php:229
+#: includes/templates/template-showroom.php:132
+#: includes/templates/template-showroom1.php:156
+#: includes/templates/template-showroom2.php:77
+#: includes/templates/template-showroom3.php:96
+msgid "HP"
+msgstr ""
+
+#: includes/templates/template-functions.php:207
+#: includes/templates/template-functions4.php:232
+#: includes/templates/template-showroom.php:134
+#: includes/templates/template-showroom1.php:158
+#: includes/templates/template-showroom2.php:79
+#: includes/templates/template-showroom3.php:98
+msgid "KW"
+msgstr ""
+
+#: includes/templates/template-functions.php:244
+#: includes/templates/template-functions4.php:34
+#: includes/templates/template-showroom.php:124
+#: includes/templates/template-showroom1.php:149
+#: includes/templates/template-showroom2.php:69
+#: includes/templates/template-showroom3.php:88 includes/widgets/widgets.php:72
+#: includes/widgets/widgets.php:243
+msgid "Call for Price"
+msgstr ""
+
+#: includes/templates/template-showroom.php:177
+#: includes/templates/template-showroom1.php:221
+#: includes/templates/template-showroom2.php:174
+#: includes/templates/template-showroom3.php:173
+#: includes/templates/template-single2.php:101
+#: includes/templates/template-single3.php:82
+msgid "Back"
+msgstr ""
+
+#: includes/templates/template-showroom.php:178
+#: includes/templates/template-showroom1.php:222
+#: includes/templates/template-showroom2.php:188
+#: includes/templates/template-showroom3.php:187
+msgid "Onward"
+msgstr ""
+
+#: includes/templates/template-showroom1.php:208
+#: includes/templates/template-showroom3.php:148
+msgid "View"
+msgstr ""
+
+#: includes/templates/template-single2.php:122
+#: includes/templates/template-single3.php:96
+msgid "Contact Us"
+msgstr ""
+
+#: includes/widgets/widgets.php:16
+msgid "A list of Recent cars"
+msgstr ""
+
+#: includes/widgets/widgets.php:43
+msgid "New Arrivals"
+msgstr ""
+
+#: includes/widgets/widgets.php:183
+msgid "A list of Featured car-s"
+msgstr ""
+
+#: includes/widgets/widgets.php:207
+msgid "Featured cars"
+msgstr ""
+
+#: includes/widgets/widgets.php:291
+msgid "Search cars"
+msgstr ""
+
+#: includes/widgets/widgets.php:303
+msgid "Title"
+msgstr ""
+
+#: settings/options/_plugin_options_tabbed.php:17
+#: settings/options/plugin_options_tabbed.php:20
+msgid "Choose your currency, metric system and so on."
+msgstr ""
+
+#: settings/options/_plugin_options_tabbed.php:55
+#: settings/options/plugin_options_tabbed.php:58
+msgid "Currency"
+msgstr ""
+
+#: settings/options/_plugin_options_tabbed.php:105
+#: settings/options/plugin_options_tabbed.php:109
+msgid "Miles - Km"
+msgstr ""
+
+#: settings/options/_plugin_options_tabbed.php:115
+#: settings/options/plugin_options_tabbed.php:119
+msgid "Liters - Gallons"
+msgstr ""
+
+#: settings/options/_plugin_options_tabbed.php:117
+#: settings/options/plugin_options_tabbed.php:121
+msgid "Liters"
+msgstr ""
+
+#: settings/options/_plugin_options_tabbed.php:118
+#: settings/options/plugin_options_tabbed.php:122
+msgid "Gallons"
+msgstr ""
+
+#: settings/options/_plugin_options_tabbed.php:124
+#: settings/options/plugin_options_tabbed.php:128
+msgid "How many cars would you like to display per page?"
+msgstr ""
+
+#: settings/options/_plugin_options_tabbed.php:150
+#: settings/options/plugin_options_tabbed.php:154
+msgid "Use thumbnails size 2:1 or 4:3 ?"
+msgstr ""
+
+#: settings/options/_plugin_options_tabbed.php:159
+msgid "Enable Contact Form in Single Product Page?"
+msgstr ""
+
+#: settings/options/_plugin_options_tabbed.php:168
+#: settings/options/plugin_options_tabbed.php:174
+msgid ""
+"Fill out your contact email to receive email from your Contact Form at "
+"bottom of the individual car page."
+msgstr ""
+
+#: settings/options/_plugin_options_tabbed.php:176
+#: settings/options/plugin_options_tabbed.php:182
+msgid "Do you use HP or KW?"
+msgstr ""
+
+#: settings/options/_plugin_options_tabbed.php:187
+#: settings/options/plugin_options_tabbed.php:193
+msgid ""
+"In Show Room Page, Template List View or Grid, Choose the thumbnail image "
+"size - width (Works only in Premium Version)"
+msgstr ""
+
+#: settings/options/_plugin_options_tabbed.php:225
+msgid "Add Right Sidebar to Search Result Page (Premium Version)"
+msgstr ""
+
+#: settings/options/_plugin_options_tabbed.php:256
+#: settings/options/plugin_options_tabbed.php:263
+msgid ""
+"Here you can manage the car features/equipments fields to your car form."
+msgstr ""
+
+#: settings/options/_plugin_options_tabbed.php:257
+#: settings/options/plugin_options_tabbed.php:264
+msgid "Just add one or more field names - one for each line -"
+msgstr ""
+
+#: settings/options/_plugin_options_tabbed.php:258
+#: settings/options/plugin_options_tabbed.php:265
+msgid "For example: GPS, DVD, and so on... "
+msgstr ""
+
+#: settings/options/_plugin_options_tabbed.php:259
+#: settings/options/plugin_options_tabbed.php:266
+msgid "Don't use special characters."
+msgstr ""
+
+#: settings/options/_plugin_options_tabbed.php:265
+#: settings/options/plugin_options_tabbed.php:272
+msgid "Add this fields to Car Form. Only one field each line:"
+msgstr ""
+
+#: settings/options/_plugin_options_tabbed.php:268
+#: settings/options/plugin_options_tabbed.php:275
+msgid ""
+"Customize your Search Options. Choose the fields to show on the front end "
+"search bar."
+msgstr ""
+
+#: settings/options/_plugin_options_tabbed.php:273
+#: settings/options/_plugin_options_tabbed.php:330
+#: settings/options/plugin_options_tabbed.php:280
+#: settings/options/plugin_options_tabbed.php:337
+msgid "Show the Make control"
+msgstr ""
+
+#: settings/options/_plugin_options_tabbed.php:282
+#: settings/options/_plugin_options_tabbed.php:339
+#: settings/options/plugin_options_tabbed.php:289
+#: settings/options/plugin_options_tabbed.php:346
+msgid "Show the Fuel type control"
+msgstr ""
+
+#: settings/options/_plugin_options_tabbed.php:291
+#: settings/options/_plugin_options_tabbed.php:348
+#: settings/options/plugin_options_tabbed.php:298
+#: settings/options/plugin_options_tabbed.php:355
+msgid "Show the Year control"
+msgstr ""
+
+#: settings/options/_plugin_options_tabbed.php:300
+#: settings/options/_plugin_options_tabbed.php:366
+#: settings/options/plugin_options_tabbed.php:307
+#: settings/options/plugin_options_tabbed.php:373
+msgid "Show the Transmission control"
+msgstr ""
+
+#: settings/options/_plugin_options_tabbed.php:309
+#: settings/options/plugin_options_tabbed.php:316
+msgid "Show the Price slider"
+msgstr ""
+
+#: settings/options/_plugin_options_tabbed.php:318
+#: settings/options/_plugin_options_tabbed.php:375
+#: settings/options/plugin_options_tabbed.php:325
+#: settings/options/plugin_options_tabbed.php:382
+msgid "Show the Order By Control"
+msgstr ""
+
+#: settings/options/_plugin_options_tabbed.php:325
+#: settings/options/plugin_options_tabbed.php:332
+msgid ""
+"Customize your Search Widget Options. Choose the fields to show on the "
+"Search Widget."
+msgstr ""
+
+#: settings/options/_plugin_options_tabbed.php:357
+#: settings/options/plugin_options_tabbed.php:364
+msgid "Show the Price control"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "CarDealer"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://cardealerplugin.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Car Dealer Plugin for Car Dealer agency."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Bill Minozzi"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://billminozzi.com"
+msgstr ""

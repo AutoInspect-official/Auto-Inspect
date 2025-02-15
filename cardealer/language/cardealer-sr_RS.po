@@ -1,0 +1,2814 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: CarDealer\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-19 07:01+0000\n"
+"PO-Revision-Date: 2025-01-19 07:14+0000\n"
+"Last-Translator: \n"
+"Language-Team: Serbian\n"
+"Language: sr_RS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && n"
+"%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: cardealer.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Loco-Version: 2.6.14; wp-6.7.1\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: includes/vendor\n"
+
+#: cardealer.php:61
+msgid "Car Dealer Plugin: Could not load the localization file (Language file)"
+msgstr ""
+"Додатак за продавце аутомобила: Није могуће учитати датотеку за локализацију "
+"(језичка датотека)"
+
+#: cardealer.php:63
+msgid ""
+"Please, take a look in our site, FAQ page, item => How can i translate this "
+"plugin?"
+msgstr ""
+"Молим вас, погледајте нашу страницу, страницу са честим питањима, ставку => "
+"Како могу да преведем овај додатак?"
+
+#: cardealer.php:331
+msgid "Body Type"
+msgstr "Тип тела"
+
+#: cardealer.php:332 includes/post-type/meta-box.php:49
+#: includes/post-type/meta-box.php:50
+msgid "Condition"
+msgstr "Стање"
+
+#: cardealer.php:340 dashboard/main.php:256
+#: includes/functions/functions.php:1159
+msgid "Go Pro"
+msgstr "Го Про"
+
+#: dashboard/dashboard.php:15
+msgid "Server Check"
+msgstr "Провера сервера"
+
+#: dashboard/dashboard.php:19
+msgid "Memory Status"
+msgstr "Статус меморије"
+
+#: dashboard/dashboard.php:25 dashboard/memory.php:13
+msgid "Unable to get your Memory Info"
+msgstr "Није могуће добити информације о вашој меморији"
+
+#: dashboard/dashboard.php:46
+msgid "Memory Usage"
+msgstr "Употреба меморије"
+
+#: dashboard/dashboard.php:48
+msgid "of"
+msgstr "оф"
+
+#: dashboard/dashboard.php:48
+msgid "Usage"
+msgstr "Употреба"
+
+#: dashboard/dashboard.php:50
+msgid "For details, click the Memory Checkup Tab above."
+msgstr "За детаље кликните на картицу Провера меморије изнад."
+
+#: dashboard/dashboard.php:56
+msgid "Permalink Settings"
+msgstr "Пермалинк Сеттингс"
+
+#: dashboard/dashboard.php:63
+msgid "Wrong Permalink settings !"
+msgstr "Погрешна подешавања сталне везе!"
+
+#: dashboard/dashboard.php:65
+msgid "Please, fix it to avoid 404 error page."
+msgstr "Поправите то да бисте избегли страницу са грешком 404."
+
+#: dashboard/dashboard.php:67
+msgid "To correct, just follow this steps:"
+msgstr "Да бисте исправили, само следите ове кораке:"
+
+#: dashboard/dashboard.php:69
+msgid "Dashboard => Settings => Permalinks => Post Name (check)"
+msgstr "Контролна табла => Подешавања => Пермалинкови => Име поста (провери)"
+
+#: dashboard/dashboard.php:71
+msgid "Click Save Changes"
+msgstr "Кликните на Сачувај промене"
+
+#: dashboard/dashboard.php:79
+msgid "Premium Version Disabled."
+msgstr "Премиум верзија је онемогућена."
+
+#: dashboard/dashboard.php:80
+msgid "Get more Grid template"
+msgstr "Набавите више шаблона мреже"
+
+#: dashboard/dashboard.php:82
+msgid "Get more 3 single page templates"
+msgstr "Набавите још 3 шаблона за једну страницу"
+
+#: dashboard/dashboard.php:84
+msgid "Template Visual Customizer (also colors)"
+msgstr "Визуелни прилагођавач шаблона (такође боје)"
+
+#: dashboard/dashboard.php:86
+msgid "Get more shortcodes:"
+msgstr "Набавите још кратких кодова:"
+
+#: dashboard/dashboard.php:88
+msgid "- Filter Cars for Type (Van, Sedan, and so on)"
+msgstr "- Филтрирајте аутомобиле по типу (комби, лимузина и тако даље)"
+
+#: dashboard/dashboard.php:90
+msgid "- Last Cars"
+msgstr "- Последњи аутомобили"
+
+#: dashboard/dashboard.php:92
+msgid "- Featured Cars"
+msgstr "- Истакнути аутомобили"
+
+#: dashboard/dashboard.php:94
+msgid "- Order by Price/Year Ascending/Descending"
+msgstr "- Редослед по цени/години узлазно/опадајуће"
+
+#: dashboard/dashboard.php:96
+msgid "- Create Blocks type Gallery or Page List"
+msgstr "- Креирајте блокове типа Галерија или Листа страница"
+
+#: dashboard/dashboard.php:98
+msgid "- Combine Shortcodes"
+msgstr "- Комбинујте кратке кодове"
+
+#: dashboard/dashboard.php:100
+msgid "- Number of Cars to show"
+msgstr "- Број аутомобила за приказ"
+
+#: dashboard/dashboard.php:102
+msgid "- Show or Hide Pagination"
+msgstr "- Прикажи или Сакриј пагинацију"
+
+#: dashboard/dashboard.php:104
+msgid "- Show or Hide Search Box"
+msgstr "- Прикажи или Сакриј оквир за претрагу"
+
+#: dashboard/dashboard.php:107 dashboard/memory.php:59
+#: dashboard/mybanners.php:47 includes/diagnose/class_bill_diagnose.php:624
+#: includes/diagnose/class_bill_diagnose.php:645
+#: includes/install-checkup/_class_bill_install.php:314
+#: includes/install-checkup/_class_bill_install.php:383
+#: includes/install-checkup/class_bill_install.php:334
+#: includes/install-checkup/class_bill_install.php:403
+msgid "Learn More"
+msgstr "Сазнајте више"
+
+#: dashboard/dashboard.php:116
+msgid "Follow this 3 steps after install the plugin:"
+msgstr "Следите ова 3 корака након инсталације додатка:"
+
+#: dashboard/dashboard.php:121
+msgid "Configurate Settings"
+msgstr "Конфигуришите подешавања"
+
+#: dashboard/dashboard.php:122
+msgid "Go to"
+msgstr "Иди на"
+
+#: dashboard/dashboard.php:123
+msgid "Dashboard=>Car Dealer=>Settings"
+msgstr "Контролна табла=>Продавац аутомобила=>Подешавања"
+
+#: dashboard/dashboard.php:125
+msgid "Fill out the information"
+msgstr "Попуните податке"
+
+#: dashboard/dashboard.php:127
+msgid "- Your Currency"
+msgstr "- Ваша валута"
+
+#: dashboard/dashboard.php:129
+msgid "- Miles - Km"
+msgstr "- Милес - Км"
+
+#: dashboard/dashboard.php:131
+msgid "- Your Contact eMail"
+msgstr "- Ваша контакт е-пошта"
+
+#: dashboard/dashboard.php:133
+msgid "- And So On ..."
+msgstr "- И тако даље..."
+
+#: dashboard/dashboard.php:135
+msgid "Import Demo Data:"
+msgstr "Увезите демо податке:"
+
+#: dashboard/dashboard.php:137
+msgid ""
+"If you want import demo data, click the Help Button at top right corner and "
+"take a look Import Demo Data or, if you are using our theme, you can import "
+"together with theme demo import."
+msgstr ""
+"Ако желите да увезете демо податке, кликните на дугме Помоћ у горњем десном "
+"углу и погледајте Увези демо податке или, ако користите нашу тему, можете да "
+"увезете заједно са увозом демонстрације теме."
+
+#: dashboard/dashboard.php:139
+msgid "If you import demo data, you can skip step 2."
+msgstr "Ако увозите демо податке, можете прескочити 2. корак."
+
+#: dashboard/dashboard.php:143
+msgid "Fill Out the Fields and Car Tables"
+msgstr "Попуните поља и табеле аутомобила"
+
+#: dashboard/dashboard.php:144
+msgid "Go to Fields Table:"
+msgstr "Идите на табелу поља:"
+
+#: dashboard/dashboard.php:145
+msgid "Dashboard=>Car Dealer=>Fields Table"
+msgstr "Контролна табла=>Продавац аутомобила=>Табела поља"
+
+#: dashboard/dashboard.php:147
+msgid "They are the fields to show up at your cars form."
+msgstr "То су поља која се појављују у формулару за аутомобиле."
+
+#: dashboard/dashboard.php:148 dashboard/dashboard.php:165
+#: includes/help/help.php:104
+msgid "For example:"
+msgstr "на пример:"
+
+#: dashboard/dashboard.php:150
+msgid "- Number of Doors"
+msgstr "- Број врата"
+
+#: dashboard/dashboard.php:152
+msgid "- Passenger Capacity"
+msgstr "- Капацитет путника"
+
+#: dashboard/dashboard.php:154
+msgid "- Body Color"
+msgstr "- Боја тела"
+
+#: dashboard/dashboard.php:156 dashboard/dashboard.php:171
+msgid "- And So On."
+msgstr "- И тако даље."
+
+#: dashboard/dashboard.php:158
+msgid ""
+"You don't need include this fields: Price, Year, Miles, HP, Transmission "
+"Type, Fuel Type, Condition and Featured."
+msgstr ""
+"Не морате да укључите ова поља: Цена, Година, Миље, ХП, Тип мењача, Врста "
+"горива, Стање и Истакнуто."
+
+#: dashboard/dashboard.php:160
+msgid "Go to Cars Table:"
+msgstr "Идите на табелу аутомобила:"
+
+#: dashboard/dashboard.php:161
+msgid "Dashboard=>Car Dealer=>Cars table"
+msgstr "Контролна табла=>Продавац аутомобила=>Табела аутомобила"
+
+#: dashboard/dashboard.php:163
+msgid "And fill out this table with yours products."
+msgstr "И попуните ову табелу својим производима."
+
+#: dashboard/dashboard.php:167
+msgid "- Cars"
+msgstr "- Аутомобили"
+
+#: dashboard/dashboard.php:169
+msgid "- Vans"
+msgstr "- Ванс"
+
+#: dashboard/dashboard.php:175
+msgid "Paste the code in your page:"
+msgstr "Налепите код на своју страницу:"
+
+#: dashboard/dashboard.php:176
+msgid "Go to your page and copy and paste this code:"
+msgstr "Идите на своју страницу и копирајте и налепите овај код:"
+
+#: dashboard/dashboard.php:180
+msgid "To create one Team page, just past this shortcode in your page:"
+msgstr ""
+"Да бисте направили једну страницу тима, само пређите овај кратки код на "
+"своју страницу:"
+
+#: dashboard/dashboard.php:184
+msgid "To show only the Search Bar, just past this shortcode in your page:"
+msgstr ""
+"Да бисте приказали само траку за претрагу, само прођите овај кратки код на "
+"својој страници:"
+
+#: dashboard/dashboard.php:188
+msgid ""
+"The Premium Version have dozens of extra codes and visual template editor, "
+"also colors control."
+msgstr ""
+"Премиум верзија има десетине додатних кодова и визуелни уређивач шаблона, "
+"као и контролу боја."
+
+#: dashboard/dashboard.php:196
+msgid "Help, Demo, Support, Troubleshooting:"
+msgstr "Помоћ, Демо, Подршка, Решавање проблема:"
+
+#: dashboard/dashboard.php:201
+msgid "Help and more tips"
+msgstr "Помоћ и још савета"
+
+#: dashboard/dashboard.php:202
+msgid ""
+"Just click the HELP button at top right corner this page for context help. "
+"Also <em>Tooltip</em> available in Fields form."
+msgstr ""
+"Само кликните на дугме ПОМОЋ у горњем десном углу ове странице за помоћ у "
+"контексту. Такође <ем>Тоолтип</ем> доступан у форми поља."
+
+#: dashboard/dashboard.php:207
+msgid "OnLine Guide, Support, Demo, Demo Video, Faq..."
+msgstr "Он-лине водич, подршка, демо, демо видео, честа питања..."
+
+#: dashboard/dashboard.php:208
+msgid ""
+"You will find our complete and updated OnLine guide, demo, demo video, faqs "
+"page, link to support page and more usefull stuff in our site."
+msgstr ""
+"Наш комплетан и ажуриран ОнЛине водич, демо, демо видео, страница са честим "
+"питањима, линк до странице за подршку и још корисних ствари наћи ћете на "
+"нашој веб локацији."
+
+#: dashboard/dashboard.php:211
+msgid "Go"
+msgstr "Иди"
+
+#: dashboard/dashboard.php:215
+msgid "Troubleshooting Guide"
+msgstr "Водич за решавање проблема"
+
+#: dashboard/dashboard.php:216
+msgid ""
+"Use old WordPress version, Low memory, some plugin with Javascript error, "
+"wrong permalink settings are some possible problems. Read this and fix it "
+"quickly!"
+msgstr ""
+"Користите стару верзију ВордПресс-а, мало меморије, неки додатак са "
+"Јавасцрипт грешком, погрешна подешавања сталне везе су неки од могућих "
+"проблема. Прочитајте ово и брзо поправите!"
+
+#: dashboard/dashboard.php:218
+msgid "Troubleshooting Page"
+msgstr "Страница за решавање проблема"
+
+#: dashboard/main.php:139
+msgid "Fields Table"
+msgstr "Табела поља"
+
+#: dashboard/main.php:148
+msgid "Cars Table"
+msgstr "Царс Табле"
+
+#: dashboard/main.php:157 includes/help/help.php:377
+#: includes/post-type/post-functions.php:56
+msgid "Makes"
+msgstr "Макес"
+
+#: dashboard/main.php:166 includes/post-type/post-functions.php:117
+msgid "Locations"
+msgstr "Локације"
+
+#: dashboard/main.php:175 includes/help/help.php:367
+#: includes/post-type/post-functions.php:87
+msgid "Team"
+msgstr "Тим"
+
+#: dashboard/main.php:211
+msgid "Settings"
+msgstr "Подешавања"
+
+#: dashboard/memory.php:18
+msgid "Memory Info"
+msgstr "Информације о меморији"
+
+#: dashboard/memory.php:35
+msgid "Current memory WordPress Limit:"
+msgstr "Тренутна меморија ВордПресс ограничење:"
+
+#: dashboard/memory.php:40
+msgid "Your usage now:"
+msgstr "Ваша употреба сада:"
+
+#: dashboard/memory.php:44
+msgid "Total Server Memory:"
+msgstr "Укупна серверска меморија:"
+
+#: dashboard/memory.php:56
+msgid ""
+"If you want adjust and control your WordPress Memory Limit and PHP Memory "
+"Limit quickly, try our free plugin WPmemory:"
+msgstr ""
+"Ако желите брзо да прилагодите и контролишете своје ограничење меморије у "
+"ВордПресс-у и ограничење ПХП меморије, испробајте наш бесплатни додатак "
+"ВПмемори:"
+
+#: dashboard/memory.php:64
+msgid "Follow this instructions to do it manually:"
+msgstr "Пратите ова упутства да бисте то урадили ручно:"
+
+#: dashboard/memory.php:71
+msgid ""
+"To increase the WordPress memory limit, add this info to your file wp-config."
+"php (located at root folder of your server)"
+msgstr ""
+"Да бисте повећали ограничење ВордПресс меморије, додајте ове информације у "
+"своју датотеку вп-цонфиг.пхп (која се налази у основној фасцикли вашег "
+"сервера)"
+
+#: dashboard/memory.php:73
+msgid "(just copy and paste)"
+msgstr "(само копирајте и налепите)"
+
+#: dashboard/memory.php:80
+msgid "before this row:"
+msgstr "пре овог реда:"
+
+#: dashboard/memory.php:86
+msgid "If you need more, just replace 128 with the new memory limit."
+msgstr "Ако вам треба више, само замените 128 новим ограничењем меморије."
+
+#: dashboard/memory.php:88
+msgid "To increase your total server memory, talk with your hosting company."
+msgstr ""
+"Да бисте повећали укупну меморију сервера, разговарајте са својом компанијом "
+"за хостовање."
+
+#: dashboard/memory.php:94
+msgid "How to Tell if Your Site Needs a Shot of more Memory:"
+msgstr "Како знати да ли вашој веб локацији треба мало више меморије:"
+
+#: dashboard/memory.php:97
+msgid ""
+"If your site is behaving slowly, or pages fail to load, you \n"
+"    get random white screens of death or 500 \n"
+"    internal server error you may need more memory. \n"
+"Several things consume memory, such as WordPress itself, the plugins "
+"installed, the \n"
+"theme you're using and the site content."
+msgstr ""
+"Ако ваш сајт ради споро или се странице не учитавају, ви \n"
+"    добијте насумичне беле екране смрти или 500 \n"
+"    интерна грешка сервера можда ће вам требати више меморије. \n"
+"Неколико ствари троше меморију, као што је сам ВордПресс, инсталирани "
+"додаци, итд \n"
+"тема коју користите и садржај сајта."
+
+#: dashboard/memory.php:103
+msgid ""
+"Basically, the more content and features you add to your site, \n"
+"the bigger your memory limit has to be.\n"
+"if you're only running a small \n"
+"site with basic functions without a Page Builder and Theme \n"
+"Options (for example the native Twenty Sixteen). However, once \n"
+"you use a Premium WordPress theme and you start encountering \n"
+"unexpected issues, it may be time to adjust your memory limit \n"
+"to meet the standards for a modern WordPress installation."
+msgstr ""
+"У суштини, што више садржаја и функција додате на своју веб локацију, \n"
+"што је ограничење ваше меморије веће.\n"
+"ако водите само мали \n"
+"сајт са основним функцијама без прављења страница и теме \n"
+"Опције (на пример изворни Твенти Сиктеен). Међутим, једном \n"
+"користите Премиум ВордПресс тему и почињете да се сусрећете \n"
+"неочекиваних проблема, можда је време да прилагодите ограничење меморије \n"
+"да испуни стандарде за модерну инсталацију ВордПресс-а."
+
+#: dashboard/memory.php:112
+msgid ""
+"   \n"
+"    Increase the WP Memory Limit is a standard practice in \n"
+"WordPress and you find instructions also in the official \n"
+"WordPress documentation (Increasing memory allocated to PHP)."
+msgstr ""
+"   \n"
+"    Повећање ограничења ВП меморије је стандардна пракса у \n"
+"ВордПресс и упутства ћете наћи иу званичном \n"
+"ВордПресс документација (Повећање меморије додељене ПХП-у)."
+
+#: dashboard/memory.php:117
+msgid "Here is the link: "
+msgstr "ево линка: "
+
+#: dashboard/mybanners.php:19
+msgid "Car Dealer Premium: More Features, More Control, More Sales!"
+msgstr "Цар Деалер Премиум: Више функција, више контроле, више продаје!"
+
+#: dashboard/mybanners.php:23
+msgid "Access Advanced Features for Design and Car Filtering!"
+msgstr "Приступите напредним функцијама за дизајн и филтрирање аутомобила!"
+
+#: dashboard/mybanners.php:27
+msgid "Unlock the Full Potential of Your Showroom with Car Dealer Premium!"
+msgstr ""
+"Откључајте пун потенцијал свог изложбеног простора уз Цар Деалер Премиум!"
+
+#: dashboard/mybanners.php:37
+msgid "Many Features are not included in the free version"
+msgstr "Многе функције нису укључене у бесплатну верзију"
+
+#: dashboard/mybanners.php:38
+msgid "More Shortcodes to increase your control over the show room page"
+msgstr "Више кратких кодова за повећање контроле над страницом изложбене собе"
+
+#: dashboard/mybanners.php:39
+msgid "Filter Cars for Type (Van, Sedan, and so on…)"
+msgstr "Филтрирајте аутомобиле по типу (комби, лимузина и тако даље…)"
+
+#: dashboard/mybanners.php:40
+msgid "Last Cars and Featured Cars Page"
+msgstr "Страница Последњи аутомобили и Истакнути аутомобили"
+
+#: dashboard/mybanners.php:41
+msgid "More Show Room and Single Car Page Templates"
+msgstr "Више шаблона за изложбене просторе и странице за један аутомобил"
+
+#: dashboard/mybanners.php:42
+msgid "Complete real time visual template design functionality."
+msgstr "Комплетна функционалност визуелног дизајна шаблона у реалном времену."
+
+#: dashboard/mybanners.php:43
+msgid "Unlimited Colours Setup to match your site theme"
+msgstr "Подешавање неограничених боја у складу са темом вашег сајта"
+
+#: dashboard/mybanners.php:44
+msgid "Dedicated Premium Support"
+msgstr "Посебна премиум подршка"
+
+#: dashboard/mybanners.php:45
+msgid "A Lot More..."
+msgstr "Много више..."
+
+#: dashboard/mybanners.php:223
+msgid "Did you like the CarDealer Plugin?"
+msgstr "Да ли вам се допао додатак ЦарДеалер?"
+
+#: dashboard/mybanners.php:225
+msgid ""
+"Please support us by rating our plugin on WordPress.org. Help us keep this "
+"plugin live and updated."
+msgstr ""
+"Подржите нас тако што ћете оценити наш додатак на ВордПресс.орг. Помозите "
+"нам да овај додатак буде активан и ажуриран."
+
+#: dashboard/mybanners.php:228 dashboard/mybanners.php:237
+msgid "Rate"
+msgstr "Рате"
+
+#: dashboard/mybanners.php:231
+msgid "Please help us keep the plugin live & up-to-date"
+msgstr "Молимо вас да нам помогнете да додатак буде активан и ажуран"
+
+#: dashboard/mybanners.php:234
+msgid ""
+"If you use & enjoy CarDealer Plugin, please rate it on WordPress.org. It "
+"only takes a second and helps us keep the plugin live and maintained. Thank "
+"you!"
+msgstr ""
+"Ако користите и уживате у додатку ЦарДеалер, оцените га на ВордПресс.орг. "
+"Потребно је само секунду и помаже нам да додатак буде активан и одржаван. "
+"Хвала вам!"
+
+#: includes/chat/class_bill_chat.php:48
+msgid "Chat messages reset successfully."
+msgstr "Поруке ћаскања су успешно ресетоване."
+
+#: includes/chat/class_bill_chat.php:49
+msgid "Error resetting chat messages."
+msgstr "Грешка при ресетовању порука ћаскања."
+
+#: includes/chat/class_bill_chat.php:50
+msgid "Invalid message received:"
+msgstr "Примљена је неважећа порука:"
+
+#: includes/chat/class_bill_chat.php:51
+msgid "Invalid response format:"
+msgstr "Неважећи формат одговора:"
+
+#: includes/chat/class_bill_chat.php:52
+msgid "Error processing server response:"
+msgstr "Грешка при обради одговора сервера:"
+
+#: includes/chat/class_bill_chat.php:53
+msgid "Response is not valid JSON."
+msgstr "Одговор није важећи ЈСОН."
+
+#: includes/chat/class_bill_chat.php:54
+msgid "AJAX request failed:"
+msgstr "АЈАКС захтев није успео:"
+
+#: includes/chat/class_bill_chat.php:55
+msgid "Error sending the message. Please try again later."
+msgstr "Дошло је до проблема при слању ваше поруке. Покушајте поново."
+
+#: includes/chat/class_bill_chat.php:56
+msgid "Please enter a message!"
+msgstr "Унесите своју поруку"
+
+#: includes/chat/class_bill_chat.php:292
+msgid ""
+"Error contacting the Artificial Intelligence (API). Please try again later."
+msgstr ""
+"Грешка при контактирању вештачке интелигенције (АПИ). Покушајте поново "
+"касније."
+
+#: includes/chat/class_bill_chat.php:319
+msgid "Error to get response from AI source!"
+msgstr "Грешка при добијању одговора од АИ извора!"
+
+#: includes/contact-form/multi-contact-show-form.php:22
+msgid "Request Information"
+msgstr "Захтевајте информације"
+
+#: includes/contact-form/multi-contact-show-form.php:26
+msgid "Your Name"
+msgstr "Ваше име"
+
+#: includes/contact-form/multi-contact-show-form.php:29
+msgid "Please type your name"
+msgstr "Унесите своје име"
+
+#: includes/contact-form/multi-contact-show-form.php:32
+msgid "Your Email"
+msgstr "Ваша е-пошта"
+
+#: includes/contact-form/multi-contact-show-form.php:35
+msgid "Please type your email"
+msgstr "Унесите своју е-пошту"
+
+#: includes/contact-form/multi-contact-show-form.php:39
+msgid "Your Message"
+msgstr "Ваша порука"
+
+#: includes/contact-form/multi-contact-show-form.php:41
+msgid "Please type your message"
+msgstr "Унесите своју поруку"
+
+#: includes/contact-form/multi-contact-show-form.php:47
+#: includes/diagnose/class_bill_diagnose.php:564
+msgid "Send"
+msgstr "Пошаљи"
+
+#: includes/contact-form/multi-contact-show-form.php:48
+#: includes/feedback-last/feedback-last.php:274
+msgid "Cancel"
+msgstr "Откажи"
+
+#: includes/contact-form/multi-contact-show-form.php:53
+msgid "Sending your message. Please wait..."
+msgstr "Слање ваше поруке. сачекајте..."
+
+#: includes/contact-form/multi-contact-show-form.php:54
+msgid "Thanks for your message! We'll get back to you shortly."
+msgstr "Хвала на поруци! Јавићемо вам се ускоро."
+
+#: includes/contact-form/multi-contact-show-form.php:55
+msgid "There was a problem sending your message. Please try again."
+msgstr "Дошло је до проблема при слању ваше поруке. Покушајте поново."
+
+#: includes/contact-form/multi-contact-show-form.php:56
+msgid "Please enter one valid email address."
+msgstr "Унесите једну важећу адресу е-поште."
+
+#: includes/contact-form/multi-contact-show-form.php:57
+msgid "Please complete all the fields in the form before sending."
+msgstr "Молимо попуните сва поља у обрасцу пре слања."
+
+#: includes/contact-form/multi-contact-show-form.php:58
+msgid "Name Error. Use only alpha."
+msgstr "Грешка у имену. Користите само алфа."
+
+#: includes/contact-form/multi-contact-show-form.php:59
+msgid "Message Error. Only Use only alpha and numbers."
+msgstr "Порука Грешка. Користите само алфа и бројеве."
+
+#: includes/customizer/_customizer.php:17 includes/customizer/customizer.php:18
+msgid "Cardealer Custom Design"
+msgstr "Цардеалер Цустом Десигн"
+
+#: includes/customizer/_customizer.php:20 includes/customizer/customizer.php:21
+msgid ""
+"Click the Templates icon at the top left of the preview window to change "
+"your template. To customize further, simply click on any element, or it's "
+"corresponding shortcut icon, to edit it's styling. "
+msgstr ""
+"Кликните на икону Шаблони у горњем левом углу прозора за преглед да бисте "
+"променили шаблон. Да бисте додатно прилагодили, једноставно кликните на било "
+"који елемент, или одговарајућу икону пречице, да бисте уредили његов стил. "
+
+#: includes/customizer/_customizer.php:31 includes/customizer/customizer.php:32
+msgid "Help"
+msgstr "Помоћ"
+
+#: includes/customizer/_customizer.php:62 includes/customizer/customizer.php:63
+msgid "Templates"
+msgstr "Шаблони"
+
+#: includes/customizer/_customizer.php:65 includes/customizer/customizer.php:66
+msgid "Choose the Car Dealer Template to Use."
+msgstr "Изаберите шаблон продавача аутомобила који ћете користити."
+
+#: includes/customizer/_customizer.php:76
+msgid "Single Car Templates"
+msgstr "Шаблони за један аутомобил"
+
+#: includes/customizer/_customizer.php:79
+msgid "Choose the Single Car Template to Use."
+msgstr "Изаберите шаблон за један аутомобил који ћете користити."
+
+#: includes/customizer/_customizer.php:90 includes/customizer/customizer.php:93
+msgid "Search Box LayOut"
+msgstr "Изглед оквира за претрагу"
+
+#: includes/customizer/_customizer.php:92 includes/customizer/customizer.php:95
+msgid "Design the Search Box"
+msgstr "Дизајнирајте оквир за претрагу"
+
+#: includes/customizer/_customizer.php:98
+#: includes/customizer/customizer.php:101
+msgid "Search Box Fields"
+msgstr "Поља оквира за претрагу"
+
+#: includes/customizer/_customizer.php:100
+#: includes/customizer/customizer.php:103
+msgid "Manage the Design fields"
+msgstr "Управљајте пољима дизајна"
+
+#: includes/customizer/_customizer.php:105
+#: includes/customizer/customizer.php:108
+msgid "Search Box Slider"
+msgstr "Клизач оквира за претрагу"
+
+#: includes/customizer/_customizer.php:107
+#: includes/customizer/customizer.php:110
+msgid "Customize the price Slider."
+msgstr "Прилагодите клизач цене."
+
+#: includes/customizer/_customizer.php:112
+#: includes/customizer/customizer.php:115
+msgid "Search Box Button"
+msgstr "Дугме оквира за претрагу"
+
+#: includes/customizer/_customizer.php:114
+#: includes/customizer/customizer.php:117
+msgid "Customize the Search Box Button."
+msgstr "Прилагодите дугме оквира за претрагу."
+
+#: includes/customizer/_customizer.php:119
+#: includes/customizer/customizer.php:122
+msgid "Car Template and Widgets"
+msgstr "Шаблон аутомобила и виџети"
+
+#: includes/customizer/_customizer.php:122
+#: includes/customizer/customizer.php:125
+msgid "Customize the Car Template and Widgets."
+msgstr "Прилагодите шаблон аутомобила и виџете."
+
+#: includes/customizer/_customizer.php:129
+msgid "Single Car Template"
+msgstr "Шаблон за један аутомобил"
+
+#: includes/customizer/_customizer.php:131
+msgid "Customize the Single Car Template."
+msgstr "Прилагодите шаблон за један аутомобил."
+
+#: includes/customizer/_customizer.php:136
+msgid "Buttons Back and Contact Us"
+msgstr "Дугмад Назад и контактирајте нас"
+
+#: includes/customizer/_customizer.php:139
+msgid "Customize the Buttons Back and Contact Us."
+msgstr "Прилагодите дугмад Назад и контактирајте нас."
+
+#: includes/customizer/_customizer.php:210
+#: includes/customizer/customizer.php:216
+msgid "Search Fields Label Color"
+msgstr "Боја ознаке поља за претрагу"
+
+#: includes/customizer/_customizer.php:223
+#: includes/customizer/customizer.php:229
+msgid "Search Fields Controls Color"
+msgstr "Поља за претрагу Контроле Боја"
+
+#: includes/customizer/_customizer.php:236
+#: includes/customizer/customizer.php:242
+msgid "Search Fields Controls Background Color"
+msgstr "Поља за претрагу Контролише боју позадине"
+
+#: includes/customizer/_customizer.php:254
+#: includes/customizer/customizer.php:260
+msgid "Search Fields Controls Border Radius"
+msgstr "Поља за претрагу контролишу радијус границе"
+
+#: includes/customizer/_customizer.php:255
+#: includes/customizer/_customizer.php:330
+#: includes/customizer/_customizer.php:419
+#: includes/customizer/_customizer.php:605
+#: includes/customizer/_customizer.php:691
+#: includes/customizer/_customizer.php:1034
+#: includes/customizer/customizer.php:261
+#: includes/customizer/customizer.php:336
+#: includes/customizer/customizer.php:425
+#: includes/customizer/customizer.php:614
+#: includes/customizer/customizer.php:700
+msgid "Border Radius: from 0 to 30."
+msgstr "Радијус границе: од 0 до 30."
+
+#: includes/customizer/_customizer.php:272
+#: includes/customizer/customizer.php:278
+msgid "Search Slider Label Color"
+msgstr "Претрага боја налепнице клизача"
+
+#: includes/customizer/_customizer.php:285
+#: includes/customizer/customizer.php:291
+msgid "Search Slider Color"
+msgstr "Боја клизача претраге"
+
+#: includes/customizer/_customizer.php:298
+#: includes/customizer/customizer.php:304
+msgid "Search Slider Handle Color"
+msgstr "Боја дршке клизача за претрагу"
+
+#: includes/customizer/_customizer.php:311
+#: includes/customizer/customizer.php:317
+msgid "Search Slider Background Color"
+msgstr "Боја позадине клизача за претрагу"
+
+#: includes/customizer/_customizer.php:329
+#: includes/customizer/customizer.php:335
+msgid "Search Slider Border Radius"
+msgstr "Полупречник ивице клизача за претрагу"
+
+#: includes/customizer/_customizer.php:347
+#: includes/customizer/customizer.php:353
+msgid "Search Slider Border Color"
+msgstr "Боја ивице клизача претраге"
+
+#: includes/customizer/_customizer.php:367
+#: includes/customizer/customizer.php:373
+msgid "Search Box Button Text Color"
+msgstr "Боја текста дугмета оквира за претрагу"
+
+#: includes/customizer/_customizer.php:382
+#: includes/customizer/customizer.php:388
+msgid "Search Box Button Background Color"
+msgstr "Боја позадине дугмета за поље за претрагу"
+
+#: includes/customizer/_customizer.php:399
+#: includes/customizer/customizer.php:405
+msgid "Search Box Button Width"
+msgstr "Ширина дугмета оквира за претрагу"
+
+#: includes/customizer/_customizer.php:400
+#: includes/customizer/_customizer.php:625
+#: includes/customizer/customizer.php:406
+#: includes/customizer/customizer.php:634
+msgid "Button width: from 100 to 300."
+msgstr "Ширина дугмета: од 100 до 300."
+
+#: includes/customizer/_customizer.php:418
+#: includes/customizer/customizer.php:424
+msgid "Search Box Button Border Radius"
+msgstr "Радијус ивице оквира за претрагу"
+
+#: includes/customizer/_customizer.php:447
+#: includes/customizer/customizer.php:453
+msgid "Template Name"
+msgstr "Име шаблона"
+
+#: includes/customizer/_customizer.php:485
+msgid "Single Car Template Name"
+msgstr "Назив шаблона за један аутомобил"
+
+#: includes/customizer/_customizer.php:507
+msgid "Single Car Template Pop Up Modal Width"
+msgstr "Модална ширина искачућег шаблона за један аутомобил"
+
+#: includes/customizer/_customizer.php:527
+msgid "Template Text Color"
+msgstr "Боја текста шаблона"
+
+#: includes/customizer/_customizer.php:542
+#: includes/customizer/customizer.php:551
+msgid "Template Background Color (works with templates gallery and list view)"
+msgstr "Боја позадине шаблона (ради са галеријом шаблона и приказом листе)"
+
+#: includes/customizer/_customizer.php:557
+#: includes/customizer/customizer.php:566
+msgid "Template Title Color"
+msgstr "Боја наслова шаблона"
+
+#: includes/customizer/_customizer.php:572
+#: includes/customizer/customizer.php:581
+msgid "Template Button View Color"
+msgstr "Боја приказа дугмета шаблона"
+
+#: includes/customizer/_customizer.php:587
+#: includes/customizer/customizer.php:596
+msgid "Template Button View Background Color"
+msgstr "Дугме шаблона Прикажи боју позадине"
+
+#: includes/customizer/_customizer.php:604
+#: includes/customizer/customizer.php:613
+msgid "Template Button View Border Radius"
+msgstr "Предложак Дугме Приказ границе радијуса"
+
+#: includes/customizer/_customizer.php:624
+#: includes/customizer/customizer.php:633
+msgid "Template Button View Width"
+msgstr "Ширина приказа дугмета шаблона"
+
+#: includes/customizer/_customizer.php:642
+#: includes/customizer/customizer.php:651
+msgid "Template List View Separator Color"
+msgstr "Боја сепаратора приказа листе шаблона"
+
+#: includes/customizer/_customizer.php:658
+#: includes/customizer/customizer.php:667
+msgid "Template Grid Border Color"
+msgstr "Боја ивице мреже шаблона"
+
+#: includes/customizer/_customizer.php:673
+#: includes/customizer/customizer.php:682
+msgid "Template Gallery and Widgets Border Color"
+msgstr "Боја ивице галерије шаблона и виџета"
+
+#: includes/customizer/_customizer.php:690
+#: includes/customizer/customizer.php:699
+msgid "Template Gallery and Widgets Border Radius"
+msgstr "Полупречник границе галерије шаблона и виџета"
+
+#: includes/customizer/_customizer.php:707
+#: includes/customizer/customizer.php:716
+msgid "Template Gallery and Widgets Title Color"
+msgstr "Боја наслова галерије шаблона и виџета"
+
+#: includes/customizer/_customizer.php:722
+#: includes/customizer/customizer.php:731
+msgid "Template Gallery and Widgets Title Background Color"
+msgstr "Галерија шаблона и виџети Боја позадине наслова"
+
+#: includes/customizer/_customizer.php:738
+#: includes/customizer/customizer.php:747
+msgid "Widget Search Background Color"
+msgstr "Боја позадине претраге виџета"
+
+#: includes/customizer/_customizer.php:757
+#: includes/customizer/customizer.php:766
+msgid "Single Car Template Background Color (works with templates 1 and 4"
+msgstr "Боја позадине шаблона за један аутомобил (ради са шаблонима 1 и 4"
+
+#: includes/customizer/_customizer.php:772
+#: includes/customizer/customizer.php:781
+msgid "Single Car Template Color"
+msgstr "Боја шаблона за један аутомобил"
+
+#: includes/customizer/_customizer.php:788
+#: includes/customizer/customizer.php:797
+msgid "Single Car Template Features Title Background Color"
+msgstr "Предложак за један аутомобил има боју позадине наслова"
+
+#: includes/customizer/_customizer.php:805
+#: includes/customizer/customizer.php:814
+msgid "Single Car Template Features Title Color"
+msgstr "Предложак за један аутомобил има боју наслова"
+
+#: includes/customizer/_customizer.php:826
+#: includes/customizer/customizer.php:835
+msgid "Single Car Template Features Border Color"
+msgstr "Шаблон за један аутомобил има боју ивице"
+
+#: includes/customizer/_customizer.php:850
+#: includes/customizer/customizer.php:859
+msgid "Features Border Radius"
+msgstr "Карактеристике Бордер Радиус"
+
+#: includes/customizer/_customizer.php:851
+#: includes/customizer/customizer.php:860
+msgid "Features Border Radius: from 0 to 30."
+msgstr "Карактеристике Гранични радијус: од 0 до 30."
+
+#: includes/customizer/_customizer.php:874
+#: includes/customizer/customizer.php:883
+msgid "Background Color"
+msgstr "Боја позадине"
+
+#: includes/customizer/_customizer.php:890
+#: includes/customizer/customizer.php:899
+msgid "Border Size"
+msgstr "Бордер Сизе"
+
+#: includes/customizer/_customizer.php:892
+#: includes/customizer/customizer.php:901
+msgid "Border Size: from 0 to 5. Mark 0 to hide the Boarder."
+msgstr "Величина ивице: од 0 до 5. Означите 0 да бисте сакрили ивицу."
+
+#: includes/customizer/_customizer.php:911
+#: includes/customizer/customizer.php:921
+msgid "Border Radius"
+msgstr "Гранични радијус"
+
+#: includes/customizer/_customizer.php:912
+#: includes/customizer/customizer.php:922
+msgid "Border Radius: from 1 to 70px."
+msgstr "Радијус ивице: од 1 до 70 пиксела."
+
+#: includes/customizer/_customizer.php:929
+#: includes/customizer/customizer.php:939
+msgid "Border Color"
+msgstr "Бордер Цолор"
+
+#: includes/customizer/_customizer.php:946
+#: includes/customizer/customizer.php:956
+msgid "Margin Bottom"
+msgstr "Маргин Боттом"
+
+#: includes/customizer/_customizer.php:947
+#: includes/customizer/customizer.php:957
+msgid "Margin Bottom: from 0 to 30."
+msgstr "Дно маргине: од 0 до 30."
+
+#: includes/customizer/_customizer.php:968
+msgid "Back and Contact Us Buttons Color"
+msgstr "Боја дугмади за повратак и контакт са нама"
+
+#: includes/customizer/_customizer.php:984
+msgid "Back and Contact Us Buttons Background Color"
+msgstr "Назад и контактирајте нас Дугмад Боја позадине"
+
+#: includes/customizer/_customizer.php:1005
+msgid "Back and Contact Us Buttons width"
+msgstr "Назад и контактирајте нас Ширина дугмади"
+
+#: includes/customizer/_customizer.php:1006
+msgid "Border Radius: from 100 to 300."
+msgstr "Радијус границе: од 100 до 300."
+
+#: includes/customizer/_customizer.php:1033
+msgid "Back and Contact Us Buttons Border Radius"
+msgstr "Назад и Контактирајте нас Дугмад Бордер Радиус"
+
+#: includes/diagnose/class_bill_diagnose.php:82
+msgid ""
+"Here are some details about error and memory monitoring for your plugin. "
+"Errors and low memory can prevent your site from functioning properly. On "
+"this page, you will find a partial list of the most recent errors and "
+"warnings. If you need more details, use the chat form, which will search for "
+"additional information using Artificial Intelligence.  \n"
+"If you need to dive deeper, install the free plugin WPTools, which provides "
+"more in-depth insights."
+msgstr ""
+"Ево неких детаља о грешкама и праћењу меморије за ваш додатак. Грешке и мало "
+"меморије могу спречити да ваша веб локација правилно функционише. На овој "
+"страници ћете пронаћи делимичну листу најновијих грешака и упозорења. Ако "
+"вам треба више детаља, користите образац за ћаскање, који ће тражити додатне "
+"информације помоћу вештачке интелигенције.  \n"
+"Ако желите да зароните дубље, инсталирајте бесплатни додатак ВПТоолс, који "
+"пружа детаљнији увид."
+
+#: includes/diagnose/class_bill_diagnose.php:89
+msgid "Memory & Error Monitoring"
+msgstr "Мониторинг меморије и грешака"
+
+#: includes/diagnose/class_bill_diagnose.php:90
+msgid "Welcome to plugin Insights!"
+msgstr "Добродошли у плугин Инсигхтс!"
+
+#: includes/diagnose/class_bill_diagnose.php:487
+msgid "Our plugin"
+msgstr "Наш додатак"
+
+#: includes/diagnose/class_bill_diagnose.php:489
+msgid ""
+"cannot function properly because your WordPress Memory Limit is too low. "
+"Your site will experience serious issues, even if you deactivate our plugin."
+msgstr ""
+"не може исправно да функционише јер је ограничење ваше меморије за ВордПресс "
+"прениско. Ваш сајт ће имати озбиљне проблеме, чак и ако деактивирате наш "
+"додатак."
+
+#: includes/diagnose/class_bill_diagnose.php:495
+msgid "Learn more"
+msgstr "Сазнајте више"
+
+#: includes/diagnose/class_bill_diagnose.php:513
+msgctxt "Site Health"
+msgid "Critical Issues"
+msgstr "Критична питања"
+
+#: includes/diagnose/class_bill_diagnose.php:543
+msgid ""
+"Displaying the latest recurring errors (Javascript Included) from your error "
+"log file and eventually alert about low WordPress memory limit is a courtesy "
+"of plugin"
+msgstr ""
+"Приказивање најновијих грешака које се понављају из ваше датотеке евиденције "
+"грешака и евентуалног упозорења о ниском ограничењу ВордПресс меморије је "
+"захваљујући додатку"
+
+#: includes/diagnose/class_bill_diagnose.php:545
+msgid ""
+"Disabling our plugin does not stop the errors from occurring; it simply "
+"means you will no longer be notified here that they are happening, but they "
+"can still harm your site."
+msgstr ""
+"Онемогућавање нашег додатка не спречава појаву грешака; \n"
+"                то једноставно значи да више нећете бити обавештени овде да "
+"се дешавају, али и даље могу да нашкоде вашој веб локацији."
+
+#: includes/diagnose/class_bill_diagnose.php:547
+msgid ""
+"Click the help button in the top right or go directly to the AI chat box "
+"below for more specific information on the issues listed."
+msgstr ""
+"Кликните на дугме за помоћ у горњем десном углу или идите директно на АИ "
+"поље за ћаскање у наставку да бисте добили конкретније информације о "
+"наведеним проблемима."
+
+#: includes/diagnose/class_bill_diagnose.php:554
+msgid "Artificial Intelligence Support Chat for Issues and Solutions"
+msgstr "Чет за подршку вештачкој интелигенцији за проблеме и решења"
+
+#: includes/diagnose/class_bill_diagnose.php:563
+msgid "Enter your message..."
+msgstr "Унесите своју поруку"
+
+#: includes/diagnose/class_bill_diagnose.php:567
+msgid ""
+"Enter a message and click 'Send', or just click 'Auto Checkup' to analyze "
+"the site's error log."
+msgstr ""
+"Унесите поруку и кликните на „Пошаљи“ или само кликните на „Аутоматска "
+"провера“ да бисте анализирали евиденцију грешака на сајту."
+
+#: includes/diagnose/class_bill_diagnose.php:572
+msgid "Auto Checkup"
+msgstr "Ауто Цхецкуп"
+
+#: includes/diagnose/class_bill_diagnose.php:580
+msgid "Potential Problems"
+msgstr "Потенцијални проблеми"
+
+#: includes/diagnose/class_bill_diagnose.php:588
+msgid "Low WordPress Memory Limit"
+msgstr "Ниско ограничење меморије за ВордПресс"
+
+#: includes/diagnose/class_bill_diagnose.php:601
+msgid "Your usage now"
+msgstr "Ваша употреба сада"
+
+#: includes/diagnose/class_bill_diagnose.php:609
+msgid "Total Php Server Memory"
+msgstr "Укупна ПХП меморија сервера"
+
+#: includes/diagnose/class_bill_diagnose.php:618
+#: includes/install-checkup/_class_bill_install.php:305
+#: includes/install-checkup/class_bill_install.php:325
+msgid ""
+"Your WordPress Memory Limit is too low, which can lead to critical issues on "
+"your site due to insufficient resources. Promptly address this issue before "
+"continuing."
+msgstr ""
+"Ограничење ваше ВордПресс меморије је прениско, што може довести до "
+"критичних проблема на вашој веб локацији због недовољних ресурса. Одмах "
+"решите овај проблем пре него што наставите."
+
+#: includes/diagnose/class_bill_diagnose.php:636
+msgid "Site Errors"
+msgstr "Грешке на сајту"
+
+#: includes/diagnose/class_bill_diagnose.php:641
+msgid ""
+"Your site has experienced errors for the past 2 days. These errors, "
+"including JavaScript issues, can result in visual problems or disrupt "
+"functionality, ranging from minor glitches to critical site failures. "
+"JavaScript errors can terminate JavaScript execution, leaving all subsequent "
+"commands inoperable."
+msgstr ""
+"Ваш сајт је имао грешке у последња 2 дана. Ове грешке, укључујући проблеме "
+"са ЈаваСцрипт-ом, могу да доведу до визуелних проблема или поремете "
+"функционалност, у распону од мањих грешака до критичних грешака на сајту. "
+"ЈаваСцрипт грешке могу прекинути извршавање ЈаваСцрипта, остављајући све "
+"наредне команде неоперативним."
+
+#: includes/diagnose/class_bill_diagnose.php:690
+msgid "This is a partial list of the errors found."
+msgstr "Ово је делимична листа пронађених грешака."
+
+#: includes/diagnose/class_bill_diagnose.php:702
+msgid "File not readable."
+msgstr "Фајл није читљив."
+
+#: includes/diagnose/class_bill_diagnose.php:707
+msgid "Size not determined."
+msgstr "Величина није одређена."
+
+#: includes/diagnose/class_bill_diagnose.php:721
+msgid "Invalid size."
+msgstr "Неважећа величина."
+
+#: includes/diagnose/class_bill_diagnose.php:745
+msgid "File Size: "
+msgstr "Величина датотеке: "
+
+#: includes/diagnose/class_bill_diagnose.php:1109
+msgid ""
+"These are critical issues that can have a significant impact on your site's "
+"performance. They can cause many plugins and functionalities to malfunction "
+"and, in some cases, render your site completely inoperative, depending on "
+"their severity. Address them promptly."
+msgstr ""
+"Ово су критични проблеми који могу имати значајан утицај на учинак вашег "
+"сајта. Они могу проузроковати неисправност многих додатака и функционалности "
+"и, у неким случајевима, учинити ваш сајт потпуно неоперативним, у зависности "
+"од њихове озбиљности. Одмах им се обратите."
+
+#: includes/diagnose/class_bill_diagnose.php:1114
+msgid "Critical Issues"
+msgstr "Критична питања"
+
+#: includes/feedback-last/feedback-last.php:239
+msgid "We're sorry to hear that you're leaving."
+msgstr "Жао нам је што одлазите."
+
+#: includes/feedback-last/feedback-last.php:241
+msgid "Hello,"
+msgstr "здраво,"
+
+#: includes/feedback-last/feedback-last.php:245
+msgid ""
+"Thank you for using our products. Before you deactivate, we'd like to offer "
+"a few options to improve your experience:"
+msgstr ""
+"Хвала вам што користите наше производе. Пре него што деактивирате, желели "
+"бисмо да понудимо неколико опција за побољшање вашег искуства:"
+
+#: includes/feedback-last/feedback-last.php:248
+msgid "Explore more plugins - Discover our other free plugins and themes."
+msgstr ""
+"Истражите више додатака - Откријте наше друге бесплатне додатке и теме."
+
+#: includes/feedback-last/feedback-last.php:250
+msgid "Support - Need help? Visit our support page."
+msgstr "Подршка - Потребна вам је помоћ? Посетите нашу страницу за подршку."
+
+#: includes/feedback-last/feedback-last.php:252
+msgid "Cancel deactivation - Changed your mind? Keep using this plugin."
+msgstr ""
+"Откажите деактивацију - Предомислили сте се? Наставите да користите овај "
+"додатак."
+
+#: includes/feedback-last/feedback-last.php:254
+msgid "Deactivate - Proceed with deactivation."
+msgstr "Деактивирај - Наставите са деактивацијом."
+
+#: includes/feedback-last/feedback-last.php:257
+msgid ""
+"Trusted by over 50,000 users, our 20+ free plugins and 6 themes can "
+"supercharge your site's security, functionality, and backups."
+msgstr ""
+"У које верује више од 50.000 корисника, наших 20+ бесплатних додатака и 6 "
+"тема могу да побољшају безбедност, функционалност и резервне копије ваше веб "
+"локације."
+
+#: includes/feedback-last/feedback-last.php:259
+msgid "Best regards!"
+msgstr "Срдачан поздрав!"
+
+#: includes/feedback-last/feedback-last.php:268
+msgid "Discover New FREE Plugins"
+msgstr "Откријте нове БЕСПЛАТНЕ додатке"
+
+#: includes/feedback-last/feedback-last.php:271
+msgid "Support Page"
+msgstr "Страница за подршку"
+
+#: includes/feedback-last/feedback-last.php:277
+msgid "Just Deactivate"
+msgstr "Само деактивирај"
+
+#: includes/functions/functions.php:414
+msgid "Coupe"
+msgstr "Цоупе"
+
+#: includes/functions/functions.php:415
+msgid "Luxury Car"
+msgstr "Лукури Цар"
+
+#: includes/functions/functions.php:416
+msgid "Sedan"
+msgstr "Седан"
+
+#: includes/functions/functions.php:417
+msgid "Sports Car"
+msgstr "Спортс Цар"
+
+#: includes/functions/functions.php:418
+msgid "Sport Utility Vehicle"
+msgstr "Спортско теренско возило"
+
+#: includes/functions/functions.php:419
+msgid "Van"
+msgstr "Ван"
+
+#: includes/functions/functions.php:420
+msgid "Wagon"
+msgstr "Вагон"
+
+#: includes/functions/functions.php:421 includes/post-type/meta-box.php:82
+#: includes/search/search-function.php:213
+#: includes/search/search-function.php:214
+#: includes/search/search-function_ajax.php:225
+#: includes/search/search-function_ajax.php:226
+msgid "Other"
+msgstr "Остало"
+
+#: includes/functions/functions.php:722
+msgid "United Arab Emirates Dirham (&#1583;.&#1573;)"
+msgstr "дирхам Уједињених Арапских Емирата (د.ا)"
+
+#: includes/functions/functions.php:723
+msgid "Afghan Afghani (&#1547;)"
+msgstr "авганистански авгани (؋)"
+
+#: includes/functions/functions.php:724
+msgid "Angolan Kwanza"
+msgstr "анголска кванза"
+
+#: includes/functions/functions.php:725
+msgid "Argentine Pesos (&#36;)"
+msgstr "аргентински пезос ($)"
+
+#: includes/functions/functions.php:726
+msgid "Australian Dollars (&#36;)"
+msgstr "аустралијски долар ($)"
+
+#: includes/functions/functions.php:727
+msgid "Brazilian Real (R&#36;)"
+msgstr "бразилски реал (Р$)"
+
+#: includes/functions/functions.php:728
+msgid "Bulgarian Lev"
+msgstr "бугарски лев"
+
+#: includes/functions/functions.php:729
+msgid "Canadian Dollars (&#36;)"
+msgstr "канадски долар ($)"
+
+#: includes/functions/functions.php:730
+msgid "Swiss Franc"
+msgstr "швајцарски франак"
+
+#: includes/functions/functions.php:731
+msgid "Chinese Yuan (&yen;)"
+msgstr "кинески јуан (¥)"
+
+#: includes/functions/functions.php:732
+msgid "Czech Koruna"
+msgstr "Чешка круна"
+
+#: includes/functions/functions.php:733
+msgid "Danish Krone"
+msgstr "данска круна"
+
+#: includes/functions/functions.php:734
+msgid "Euros (&euro;)"
+msgstr "евра (€)"
+
+#: includes/functions/functions.php:735
+msgid "Pound Sterling (&pound;)"
+msgstr "фунта стерлинга (£)"
+
+#: includes/functions/functions.php:736
+msgid "Hong Kong Dollar (&#36;)"
+msgstr "Хонгконшки долар ($)"
+
+#: includes/functions/functions.php:737
+msgid "Croatian Kuna"
+msgstr "хрватска куна"
+
+#: includes/functions/functions.php:738
+msgid "Hungarian Forint"
+msgstr "мађарска форинта"
+
+#: includes/functions/functions.php:739
+msgid "Indonesian Rupiah (Rp)"
+msgstr "индонежанска рупија (Рп)"
+
+#: includes/functions/functions.php:740
+msgid "Israeli Shekel (&#8362;)"
+msgstr "израелски шекел (₪)"
+
+#: includes/functions/functions.php:741
+msgid "Indian Rupee (&#8377;)"
+msgstr "индијска рупија (₹)"
+
+#: includes/functions/functions.php:742
+msgid "Japanese Yen (&yen;)"
+msgstr "јапански јен (¥)"
+
+#: includes/functions/functions.php:743
+msgid "South Korean Won (&#8361;)"
+msgstr "јужнокорејски вон (₩)"
+
+#: includes/functions/functions.php:744
+msgid "Mexican Peso (&#36;)"
+msgstr "мексички пезос ($)"
+
+#: includes/functions/functions.php:745
+msgid "Malaysian Ringgits"
+msgstr "малезијски рингити"
+
+#: includes/functions/functions.php:746
+msgid "Nigerian Naira"
+msgstr "нигеријска наира"
+
+#: includes/functions/functions.php:747
+msgid "Norwegian Krone"
+msgstr "норвешка круна"
+
+#: includes/functions/functions.php:748
+msgid "New Zealand Dollar (&#36;)"
+msgstr "новозеландски долар ($)"
+
+#: includes/functions/functions.php:749
+msgid "Philippine Pesos"
+msgstr "филипински пезос"
+
+#: includes/functions/functions.php:750
+msgid "Polish Zloty"
+msgstr "пољски злот"
+
+#: includes/functions/functions.php:751
+msgid "Pakistani Rupee (₨)"
+msgstr "пакистанска рупија (₨)"
+
+#: includes/functions/functions.php:752
+msgid "Pesos Chilenos($)"
+msgstr "Чиленски пезос ($)"
+
+#: includes/functions/functions.php:753
+msgid "Romanian Leu"
+msgstr "румунски леу"
+
+#: includes/functions/functions.php:754
+msgid "Russian Rubles"
+msgstr "Руске рубље"
+
+#: includes/functions/functions.php:755
+msgid "Saudi Riyal (&#65020;)"
+msgstr "саудијски ријал (﷼)"
+
+#: includes/functions/functions.php:756
+msgid "Swedish Krona"
+msgstr "шведска круна"
+
+#: includes/functions/functions.php:757
+msgid "Singapore Dollar (&#36;)"
+msgstr "сингапурски долар ($)"
+
+#: includes/functions/functions.php:758
+msgid "Thai Baht (&#3647;)"
+msgstr "тајландски бат (฿)"
+
+#: includes/functions/functions.php:759
+msgid "Turkish Lira (&#8378;)"
+msgstr "турска лира (₺)"
+
+#: includes/functions/functions.php:760
+msgid "Taiwan New Dollars"
+msgstr "Тајвански нови долари"
+
+#: includes/functions/functions.php:761
+msgid "US Dollars (&#36;)"
+msgstr "амерички долар ($)"
+
+#: includes/functions/functions.php:762
+msgid "Vietnamese Dong (&#8363;)"
+msgstr "вијетнамски донг (₫)"
+
+#: includes/functions/functions.php:763
+msgid "Yen (&yen;)"
+msgstr "јен (¥)"
+
+#: includes/functions/functions.php:764
+msgid "South African Rand"
+msgstr "јужноафрички ранд"
+
+#: includes/functions/functions.php:1122
+msgid "Dashboard"
+msgstr "Дасхбоард"
+
+#: includes/help/help.php:47
+msgid "The easiest way to manage, list and sell yours cars online."
+msgstr ""
+"Најлакши начин за управљање, листање и продају својих аутомобила на мрежи."
+
+#: includes/help/help.php:49
+msgid ""
+"Follow the 3 steps in the Dashboard screen (Car Dealer => Dashboad) after "
+"install the plugin."
+msgstr ""
+"Пратите 3 корака на екрану контролне табле (Продавац аутомобила => Контролна "
+"табла) након што инсталирате додатак."
+
+#: includes/help/help.php:51
+msgid "You will find Context Help in many screens."
+msgstr "Контекстну помоћ ћете пронаћи на многим екранима."
+
+#: includes/help/help.php:53
+msgid "You can find also our complete OnLine Guide"
+msgstr "Такође можете пронаћи наш комплетан ОнЛине водич"
+
+#: includes/help/help.php:55
+msgid "here."
+msgstr "овде."
+
+#: includes/help/help.php:59
+msgid "If you want to import demo data, download the demo data from this link:"
+msgstr ""
+"Ако желите да увезете демо податке, преузмите демо податке са ове везе:"
+
+#: includes/help/help.php:63
+msgid "After download:"
+msgstr "Након преузимања:"
+
+#: includes/help/help.php:65
+msgid "1. Log in to that site as an administrator. "
+msgstr "1. Пријавите се на ту локацију као администратор. "
+
+#: includes/help/help.php:67
+msgid "2. Go to Tools: Import in the WordPress admin panel."
+msgstr "2. Идите на Тоолс: Импорт у ВордПресс админ панелу."
+
+#: includes/help/help.php:69
+msgid "3. Install the \"WordPress\" importer from the list."
+msgstr "3. Инсталирајте увозник „ВордПресс“ са листе."
+
+#: includes/help/help.php:71
+msgid "4. Activate & Run Importer."
+msgstr "4. Активирајте и покрените увозник."
+
+#: includes/help/help.php:73
+msgid "5. Upload the file downloaded using the form provided on that page."
+msgstr ""
+"5. Отпремите преузету датотеку помоћу обрасца који се налази на тој страници."
+
+#: includes/help/help.php:75
+msgid ""
+"6. You will first be asked to map the authors in this export file to users"
+msgstr ""
+"6. Прво ће бити затражено да мапирате ауторе у овој експорт датотеци са "
+"корисницима"
+
+#: includes/help/help.php:77
+msgid "on the site. For each author, you may choose to map to an"
+msgstr "на сајту. За сваког аутора, можете изабрати да мапирате на"
+
+#: includes/help/help.php:79
+msgid "existing user on the site or to create a new user. "
+msgstr "постојећег корисника на сајту или да креирате новог корисника. "
+
+#: includes/help/help.php:81
+msgid "7. WordPress will then import the demo data into you site."
+msgstr "7. ВордПресс ће затим увести демо податке на вашу веб локацију."
+
+#: includes/help/help.php:85 includes/help/help.php:198
+#: includes/help/help.php:362 includes/help/help.php:404
+#: includes/help/help.php:431 includes/help/help.php:464
+msgid "Overview"
+msgstr "Преглед"
+
+#: includes/help/help.php:90
+msgid "Import Demo Data"
+msgstr "Увезите демо податке"
+
+#: includes/help/help.php:98
+msgid ""
+"In the FIELDS screen you can manage the main table fields.\n"
+"    This fields will show up\n"
+"    in your main cars form management, search bar and search widget"
+msgstr ""
+"На екрану ФИЕЛДС можете управљати пољима главне табеле.\n"
+"    Ова поља ће се појавити\n"
+"    у вашим главним аутомобилима за управљање обрасцима, траку за претрагу и "
+"виџет за претрагу"
+
+#: includes/help/help.php:102
+msgid "Each row represents one field."
+msgstr "Сваки ред представља једно поље."
+
+#: includes/help/help.php:108
+msgid "Number Doors"
+msgstr "Број врата"
+
+#: includes/help/help.php:111
+msgid "Number Passengers"
+msgstr "Број путника"
+
+#: includes/help/help.php:114
+msgid "Alarm"
+msgstr "Аларм"
+
+#: includes/help/help.php:117 includes/help/help.php:158
+#: includes/help/help.php:253
+msgid "And So On"
+msgstr "И тако даље"
+
+#: includes/help/help.php:123
+msgid ""
+"You don\\'t need include this fields: Price, Year, Miles, HP, Transmission "
+"Type, Fuel Type, Condition and Featured."
+msgstr ""
+"Не морате да укључите ова поља: Цена, Година, Миље, ХП, Тип мењача, Врста "
+"горива, Стање и Истакнуто."
+
+#: includes/help/help.php:126
+msgid "Technical WordPress guys call this of Metadata."
+msgstr "Технички ВордПресс момци то зову метаподаци."
+
+#: includes/help/help.php:128
+msgid "Don\\'t create 2 fields with the same name."
+msgstr "Немојте креирати 2 поља са истим именом."
+
+#: includes/help/help.php:133 includes/help/help.php:231
+msgid ""
+"To add fields in the table, click the button Add New. This can open the "
+"empty window to include your information:"
+msgstr ""
+"Да бисте додали поља у табелу, кликните на дугме Додај ново. Ово може да "
+"отвори празан прозор да укључи ваше информације:"
+
+#: includes/help/help.php:137 includes/help/help.php:235
+msgid "Field Name"
+msgstr "Име поља"
+
+#: includes/help/help.php:140 includes/help/help.php:238
+msgid "Field Label"
+msgstr "Ознака поља"
+
+#: includes/help/help.php:143 includes/help/help.php:241
+msgid "Field Order"
+msgstr "Фиелд Ордер"
+
+#: includes/help/help.php:146 includes/help/help.php:244
+msgid "Show in Search Bar (your frontpage)"
+msgstr "Прикажи у траци за претрагу (на насловној страници)"
+
+#: includes/help/help.php:149 includes/help/help.php:247
+msgid "Show in Search Widget (your frontpage)"
+msgstr "Прикажи у виџету за претрагу (ваша насловна страница)"
+
+#: includes/help/help.php:154 includes/help/help.php:250
+msgid "Type of Field"
+msgstr "Врста поља"
+
+#: includes/help/help.php:161 includes/help/help.php:256
+msgid ""
+"In that screen, move the mouse pointer over each field to get help about "
+"that field."
+msgstr ""
+"На том екрану померите показивач миша преко сваког поља да бисте добили "
+"помоћ о том пољу."
+
+#: includes/help/help.php:163 includes/help/help.php:258
+msgid "Just fill out and click OK button."
+msgstr "Само попуните и кликните на дугме ОК."
+
+#: includes/help/help.php:167
+msgid "You have available this types of fields (Control Types):"
+msgstr "На располагању су вам ове врсте поља (Типови контроле):"
+
+#: includes/help/help.php:171
+msgid ""
+"Text (Used by text and numbers). It is not possible include this type of "
+"field in Search Bars."
+msgstr ""
+"Текст (користи се текстом и бројевима). Није могуће укључити ову врсту поља "
+"у траке за претрагу."
+
+#: includes/help/help.php:174
+msgid "CheckBox"
+msgstr "ЦхецкБок"
+
+#: includes/help/help.php:177
+msgid "Drop Down (also called select box)"
+msgstr "Падајући мени (који се назива и оквир за избор)"
+
+#: includes/help/help.php:180
+msgid "Range Select (you can define de value min, max and step)"
+msgstr "Избор опсега (можете дефинисати мин, максималну вредност и корак)"
+
+#: includes/help/help.php:184
+msgid "For more details about HTML input types, please, check this page:"
+msgstr "За више детаља о типовима ХТМЛ уноса, погледајте ову страницу:"
+
+#: includes/help/help.php:190
+msgid "You can manage the table, i mean, Add, Edit and Trash Fields."
+msgstr "Можете управљати табелом, мислим, додавати, уређивати и смеће поља."
+
+#: includes/help/help.php:192
+msgid ""
+"At the Add Fields and Edit Fields forms, put the mouse over each row and the "
+"menu show up. Then, click over Edit or Trash."
+msgstr ""
+"На обрасцима за додавање поља и уређивање поља ставите миш преко сваког реда "
+"и појавиће се мени. Затим кликните на Уреди или Отпад."
+
+#: includes/help/help.php:194
+msgid ""
+"To know more about Edit Fields, please, check the Add Fields Form Option at "
+"this help menu."
+msgstr ""
+"Да бисте сазнали више о уређивању поља, молимо вас да проверите опцију "
+"обрасца за додавање поља у овом менију помоћи."
+
+#: includes/help/help.php:203
+msgid "Field Types"
+msgstr "Типови поља"
+
+#: includes/help/help.php:208
+msgid "Add Fields Form"
+msgstr "Образац за додавање поља"
+
+#: includes/help/help.php:213
+msgid "Edit and Trash Fields"
+msgstr "Поља за уређивање и смеће"
+
+#: includes/help/help.php:220
+msgid ""
+"In the CARS screen you can manage (include, edit or delete) items in your "
+"Cars table."
+msgstr ""
+"На екрану АУТОМОБИЛА можете да управљате (укључујете, мењате или бришете) "
+"ставкама у табели Аутомобили."
+
+#: includes/help/help.php:221
+msgid "This cars will show up in your site front page."
+msgstr "Ови аутомобили ће се појавити на насловној страници вашег сајта."
+
+#: includes/help/help.php:223
+msgid ""
+"We suggest you take some time to complete your Field table before this step."
+msgstr ""
+"Предлажемо да одвојите мало времена да попуните табелу поља пре овог корака."
+
+#: includes/help/help.php:225
+msgid "Dashboard => CarDealer => Fields Table."
+msgstr "Контролна табла => ЦарДеалер => Табела поља."
+
+#: includes/help/help.php:227
+msgid ""
+"You will find some fields automatically included by the system (Price, Year, "
+"Miles, HP, Transmission type, Type, Fuel, Condition and Featured)."
+msgstr ""
+"Наћи ћете нека поља која су аутоматски укључена у систем (Цена, Година, "
+"Миље, ХП, Тип мењача, Тип, Гориво, Стање и Истакнуто)."
+
+#: includes/help/help.php:228
+msgid "Just add your cars in this table."
+msgstr "Само додајте своје аутомобиле у ову табелу."
+
+#: includes/help/help.php:262
+msgid "Use the Team control it is optional. To add new members, go to:"
+msgstr ""
+"Користите контролу тима, она је опциона. Да бисте додали нове чланове, идите "
+"на:"
+
+#: includes/help/help.php:268
+msgid ""
+"Use the Location control it is optional. Maybe you want use it if you have "
+"more than one location."
+msgstr ""
+"Користите контролу локације, она је опциона. Можда желите да га користите "
+"ако имате више локација."
+
+#: includes/help/help.php:269
+msgid "To add new locations, go to:"
+msgstr "Да бисте додали нове локације, идите на:"
+
+#: includes/help/help.php:273 includes/help/help.php:415
+msgid "If you are, for example, in Florida, maybe you want add:"
+msgstr "Ако сте, на пример, на Флориди, можда желите да додате:"
+
+#: includes/help/help.php:275 includes/help/help.php:418
+msgid "Fort Lauderdale"
+msgstr "Форт Лодердејл"
+
+#: includes/help/help.php:278 includes/help/help.php:421
+msgid "Miami"
+msgstr "Мајами"
+
+#: includes/help/help.php:281 includes/help/help.php:303
+#: includes/help/help.php:424
+msgid "And So On..."
+msgstr "И тако даље..."
+
+#: includes/help/help.php:289 includes/help/help.php:438
+msgid "Use the Makes control it is optional."
+msgstr "Користите контролу Макес, она је опциона."
+
+#: includes/help/help.php:290 includes/help/help.php:439
+msgid "To add new makes, go to:"
+msgstr "Да бисте додали нове марке, идите на:"
+
+#: includes/help/help.php:294
+msgid "Maybe you want add:"
+msgstr "Можда желите да додате:"
+
+#: includes/help/help.php:297
+msgid "Ford"
+msgstr "Форд"
+
+#: includes/help/help.php:300
+msgid "Toyota"
+msgstr "Тоиота"
+
+#: includes/help/help.php:310
+msgid "You can manage the table, i mean, Add, Edit and Trash Cars."
+msgstr ""
+"Можете управљати табелом, мислим, додавати, уређивати и бацати аутомобиле за "
+"смеће."
+
+#: includes/help/help.php:312
+msgid ""
+"Use the Add New Buttom or to Edit, put the mouse over each row and the menu "
+"will show up. Then, click over Edit or Trash."
+msgstr ""
+"Користите дугме Додај ново дугме или за уређивање, ставите миш преко сваког "
+"реда и мени ће се појавити. Затим кликните на Уреди или Отпад."
+
+#: includes/help/help.php:318
+msgid "You can add one main image to each car."
+msgstr "Можете додати једну главну слику сваком аутомобилу."
+
+#: includes/help/help.php:319
+msgid ""
+"In the Cars Form, click the button Set Featured Image at bottom right corner."
+msgstr ""
+"У обрасцу за аутомобиле кликните на дугме Постави истакнуту слику у доњем "
+"десном углу."
+
+#: includes/help/help.php:321
+msgid ""
+"Read below Images and Gallery menu voice about how to create a Image\\'s "
+"gallery with many images to show up at the top of your car\\'s page."
+msgstr ""
+"У наставку прочитајте глас менија Слике и галерије о томе како да направите "
+"галерију слика са много слика које ће се појавити на врху странице вашег "
+"аутомобила."
+
+#: includes/help/help.php:327
+msgid "You can add many Images or one gallery for each car."
+msgstr "Можете додати много слика или једну галерију за сваки аутомобил."
+
+#: includes/help/help.php:328
+msgid ""
+"Just go to Cars Form and add the images (or the gallery) in the main "
+"description field (click the Add Media buttom)."
+msgstr ""
+"Само идите на образац за аутомобиле и додајте слике (или галерију) у главно "
+"поље за опис (кликните на дугме Додај медије)."
+
+#: includes/help/help.php:331
+msgid ""
+"Use the default WordPress Gallery or our plugin will create automatically "
+"one nice slider gallery. To enable the plugin gallery, go to"
+msgstr ""
+"Користите подразумевану ВордПресс галерију или ће наш додатак аутоматски "
+"креирати једну лепу галерију клизача. Да бисте омогућили галерију додатака, "
+"идите на"
+
+#: includes/help/help.php:335
+msgid "and look for"
+msgstr "и тражити"
+
+#: includes/help/help.php:337 settings/options/_plugin_options_tabbed.php:141
+#: settings/options/plugin_options_tabbed.php:145
+msgid "Replace the Wordpress Gallery with Flexslider Gallery"
+msgstr "Замените Вордпресс галерију са Флекслидер галеријом"
+
+#: includes/help/help.php:341
+msgid "Then, check Yes and Save Changes."
+msgstr "Затим означите Да и Сачувај промене."
+
+#: includes/help/help.php:343
+msgid "This images and gallery will be visible in single car page."
+msgstr "Ове слике и галерија ће бити видљиве на страници једног аутомобила."
+
+#: includes/help/help.php:345
+msgid "Look"
+msgstr "Погледај"
+
+#: includes/help/help.php:347
+msgid "our demo"
+msgstr "наш демо"
+
+#: includes/help/help.php:349
+msgid "about how to upload and crop images easily (less than 2 minutes)."
+msgstr "о томе како лако отпремати и исецати слике (мање од 2 минута)."
+
+#: includes/help/help.php:351
+msgid "To get more info about galleries,"
+msgstr "Да бисте добили више информација о галеријама,"
+
+#: includes/help/help.php:353
+msgid "visit WordPress Help site."
+msgstr "посетите сајт за помоћ за ВордПресс."
+
+#: includes/help/help.php:372 includes/templates/template-functions.php:260
+#: includes/templates/template-functions4.php:49
+msgid "Location"
+msgstr "Локација"
+
+#: includes/help/help.php:382
+msgid "Edit and Trash Cars"
+msgstr "Уређивање и смеће аутомобила"
+
+#: includes/help/help.php:387 includes/post-type/post-functions.php:656
+msgid "Featured Image"
+msgstr "Феатуред Имаге"
+
+#: includes/help/help.php:392
+msgid "Images and Gallery"
+msgstr "Слике и галерија"
+
+#: includes/help/help.php:399
+msgid "Use the Team table it is optional."
+msgstr "Користите табелу тимова, она је опциона."
+
+#: includes/help/help.php:411
+msgid ""
+"Use the Location table it is optional. Maybe you want use it if you have "
+"more than one location."
+msgstr ""
+"Користите табелу локација, она је опциона. Можда желите да га користите ако "
+"имате више локација."
+
+#: includes/help/help.php:443
+msgid "Maybe you want add alguns some makes. (Ford, Toyota...)"
+msgstr "Можда желите да додате алгуне неких произвођача. (Форд, Тојота...)"
+
+#: includes/help/help.php:493
+msgid "Help Available for this Window!"
+msgstr "Доступна помоћ за овај прозор!"
+
+#: includes/help/help.php:494
+msgid "Just Click Help Button to get content help for this window."
+msgstr ""
+"Само кликните на дугме Помоћ да бисте добили помоћ за садржај за овај прозор."
+
+#: includes/multi/multi-functions.php:12
+msgid "Search Fields"
+msgstr "Сеарцх Фиелдс"
+
+#: includes/multi/multi-functions.php:27
+msgid "Order"
+msgstr "Ред"
+
+#: includes/multi/multi-functions.php:28
+msgid "Type Field"
+msgstr "Типе Фиелд"
+
+#: includes/multi/multi-functions.php:29
+msgid "Label"
+msgstr "Лабел"
+
+#: includes/multi/multi-functions.php:30
+msgid "Search Bar"
+msgstr "Трака за претрагу"
+
+#: includes/multi/multi-functions.php:31
+msgid "Widget"
+msgstr "Видгет"
+
+#: includes/post-type/meta-box.php:5
+msgid "The amount of Km"
+msgstr "Износ од км"
+
+#: includes/post-type/meta-box.php:7
+msgid "The amount of Miles"
+msgstr "Количина миља"
+
+#: includes/post-type/meta-box.php:8 includes/post-type/meta-box.php:12
+msgid "Only numbers, no point, no comma."
+msgstr "Само бројеви, без тачке, без зареза."
+
+#: includes/post-type/meta-box.php:10
+msgid "Engine"
+msgstr "Мотор"
+
+#: includes/post-type/meta-box.php:18 includes/post-type/post-functions.php:657
+msgid "Featured"
+msgstr "Феатуред"
+
+#: includes/post-type/meta-box.php:19
+msgid "Mark to show up at Featured Widget."
+msgstr "Означите да бисте се појавили у Истакнутом виџету."
+
+#: includes/post-type/meta-box.php:23 includes/post-type/post-functions.php:655
+#: includes/search/search-function.php:436
+#: includes/search/search-function_ajax.php:412
+msgid "Price"
+msgstr "Цена"
+
+#: includes/post-type/meta-box.php:24
+msgid ""
+"No special characters here (\"$\" \",\" \".\"), the plugin will auto format "
+"the number."
+msgstr ""
+"Овде нема посебних знакова (\"$\" \",\" \".\"), додатак ће аутоматски "
+"форматирати број."
+
+#: includes/post-type/meta-box.php:30 includes/post-type/post-functions.php:658
+#: includes/search/search-function.php:112
+#: includes/search/search-function_ajax.php:134
+#: includes/templates/template-functions.php:247
+#: includes/templates/template-functions4.php:37
+#: includes/templates/template-showroom.php:136
+#: includes/templates/template-showroom2.php:81 includes/widgets/widgets.php:74
+#: includes/widgets/widgets.php:245
+msgid "Year"
+msgstr "Година"
+
+#: includes/post-type/meta-box.php:31
+msgid "The year of the product. Only numbers, no point, no comma."
+msgstr "Година производа. Само бројеви, без тачке, без зареза."
+
+#: includes/post-type/meta-box.php:54
+msgid "New"
+msgstr "Ново"
+
+#: includes/post-type/meta-box.php:55
+msgid "Used"
+msgstr "Користи се"
+
+#: includes/post-type/meta-box.php:56
+msgid "Damaged"
+msgstr "Оштећен"
+
+#: includes/post-type/meta-box.php:61 includes/search/search-function.php:145
+#: includes/search/search-function_ajax.php:162
+#: includes/templates/template-functions.php:137
+#: includes/templates/template-functions4.php:197
+#: includes/templates/template-showroom.php:138
+#: includes/templates/template-showroom2.php:83
+msgid "Transmission"
+msgstr "Преношење"
+
+#: includes/post-type/meta-box.php:62
+msgid "What kind of Transmission is this"
+msgstr "Какав је ово пренос"
+
+#: includes/post-type/meta-box.php:66 includes/search/search-function.php:152
+#: includes/search/search-function.php:153
+#: includes/search/search-function.php:154
+#: includes/search/search-function_ajax.php:169
+#: includes/search/search-function_ajax.php:170
+#: includes/search/search-function_ajax.php:171
+msgid "Automatic"
+msgstr "Аутоматски"
+
+#: includes/post-type/meta-box.php:67 includes/search/search-function.php:157
+#: includes/search/search-function.php:158
+#: includes/search/search-function_ajax.php:174
+#: includes/search/search-function_ajax.php:175
+msgid "Manual"
+msgstr "Мануал"
+
+#: includes/post-type/meta-box.php:68 includes/search/search-function.php:160
+#: includes/search/search-function.php:161
+#: includes/search/search-function.php:162
+#: includes/search/search-function_ajax.php:177
+#: includes/search/search-function_ajax.php:178
+#: includes/search/search-function_ajax.php:179
+msgid "Tiptronic"
+msgstr "Типтрониц"
+
+#: includes/post-type/meta-box.php:70 includes/post-type/meta-box.php:71
+msgid "Fuel Type."
+msgstr "Врста горива."
+
+#: includes/post-type/meta-box.php:75 includes/search/search-function.php:186
+#: includes/search/search-function.php:187
+#: includes/search/search-function_ajax.php:198
+#: includes/search/search-function_ajax.php:199
+msgid "Diesel"
+msgstr "Диесел"
+
+#: includes/post-type/meta-box.php:76 includes/search/search-function.php:189
+#: includes/search/search-function.php:190
+#: includes/search/search-function.php:191
+#: includes/search/search-function_ajax.php:201
+#: includes/search/search-function_ajax.php:202
+#: includes/search/search-function_ajax.php:203
+msgid "Gasoline"
+msgstr "Бензин"
+
+#: includes/post-type/meta-box.php:77 includes/search/search-function.php:194
+#: includes/search/search-function.php:195
+#: includes/search/search-function_ajax.php:206
+#: includes/search/search-function_ajax.php:207
+msgid "Hybrid"
+msgstr "Хибрид"
+
+#: includes/post-type/meta-box.php:78 includes/search/search-function.php:197
+#: includes/search/search-function.php:198
+#: includes/search/search-function.php:199
+#: includes/search/search-function_ajax.php:209
+#: includes/search/search-function_ajax.php:210
+#: includes/search/search-function_ajax.php:211
+msgid "Electric"
+msgstr "Електрични"
+
+#: includes/post-type/meta-box.php:79 includes/search/search-function.php:202
+#: includes/search/search-function.php:203
+#: includes/search/search-function.php:204
+#: includes/search/search-function_ajax.php:214
+#: includes/search/search-function_ajax.php:215
+#: includes/search/search-function_ajax.php:216
+msgid "Biodiesel"
+msgstr "Биодиесел"
+
+#: includes/post-type/meta-box.php:80 includes/search/search-function.php:208
+#: includes/search/search-function_ajax.php:220
+msgid "CNG"
+msgstr "ЦНГ"
+
+#: includes/post-type/meta-box.php:81 includes/search/search-function.php:210
+#: includes/search/search-function.php:211
+#: includes/search/search-function_ajax.php:222
+#: includes/search/search-function_ajax.php:223
+msgid "Ethanol"
+msgstr "Етанол"
+
+#: includes/post-type/meta-box.php:183
+#: includes/templates/template-functions.php:35
+#: includes/templates/template-functions4.php:72
+msgid "Details"
+msgstr "Детаљи"
+
+#: includes/post-type/meta-box.php:219 includes/post-type/meta-box.php:223
+msgid "Specs"
+msgstr "Спецс"
+
+#: includes/post-type/meta-box.php:220 includes/post-type/meta-box.php:297
+#: includes/templates/template-functions.php:67
+#: includes/templates/template-functions4.php:104
+msgid "Features"
+msgstr "Карактеристике"
+
+#: includes/post-type/meta-box.php:288
+msgid "Add any Feature Field (Settings => Field Features)"
+msgstr "Додајте било које поље функције (Подешавања => Карактеристике поља)"
+
+#: includes/post-type/post-functions.php:15
+msgid "Cars"
+msgstr "Аутомобили"
+
+#: includes/post-type/post-functions.php:19
+msgid "Edit Cars"
+msgstr "Уреди аутомобиле"
+
+#: includes/post-type/post-functions.php:20
+msgid "Search Cars"
+msgstr "Сеарцх Царс"
+
+#: includes/post-type/post-functions.php:58
+msgid "Search makes"
+msgstr "Претрага чини"
+
+#: includes/post-type/post-functions.php:60
+msgid "All makes"
+msgstr "Све марке"
+
+#: includes/post-type/post-functions.php:61
+msgid "Parent makes"
+msgstr "Родитељ прави"
+
+#: includes/post-type/post-functions.php:62
+msgid "Parent makes:"
+msgstr "Родитељ прави:"
+
+#: includes/post-type/post-functions.php:63
+msgid "Edit makes"
+msgstr "Едит маке"
+
+#: includes/post-type/post-functions.php:64
+msgid "Update makes"
+msgstr "Ажурирање чини"
+
+#: includes/post-type/post-functions.php:65
+msgid "Add New makes"
+msgstr "Додај нове марке"
+
+#: includes/post-type/post-functions.php:66
+msgid "New makes"
+msgstr "Нове марке"
+
+#: includes/post-type/post-functions.php:67
+msgid "Separate makes with commas"
+msgstr "Одвојите ознаке зарезима"
+
+#: includes/post-type/post-functions.php:68
+msgid "Add or Remove makes"
+msgstr "Додај или Уклони марке"
+
+#: includes/post-type/post-functions.php:69
+#: includes/post-type/post-functions.php:100
+msgid "Choose from the most used makers"
+msgstr "Изаберите од најчешће коришћених произвођача"
+
+#: includes/post-type/post-functions.php:89
+msgid "Search team"
+msgstr "Тим за претрагу"
+
+#: includes/post-type/post-functions.php:91
+msgid "All Team"
+msgstr "Алл Теам"
+
+#: includes/post-type/post-functions.php:92
+msgid "Parent team"
+msgstr "Родитељски тим"
+
+#: includes/post-type/post-functions.php:93
+msgid "Parent team:"
+msgstr "Родитељски тим:"
+
+#: includes/post-type/post-functions.php:94
+msgid "Edit team member"
+msgstr "Уредите члана тима"
+
+#: includes/post-type/post-functions.php:95
+msgid "Update team"
+msgstr "Ажурирај тим"
+
+#: includes/post-type/post-functions.php:96
+msgid "Add New team member"
+msgstr "Додај новог члана тима"
+
+#: includes/post-type/post-functions.php:97
+msgid "New team"
+msgstr "Нови тим"
+
+#: includes/post-type/post-functions.php:98
+msgid "Separate team with commas"
+msgstr "Одвојите тим зарезима"
+
+#: includes/post-type/post-functions.php:99
+msgid "Add or Remove team"
+msgstr "Додај или уклони тим"
+
+#: includes/post-type/post-functions.php:119
+msgid "Search Locations"
+msgstr "Сеарцх Лоцатионс"
+
+#: includes/post-type/post-functions.php:121
+msgid "All Locations"
+msgstr "Све локације"
+
+#: includes/post-type/post-functions.php:122
+msgid "Parent locations"
+msgstr "Родитељске локације"
+
+#: includes/post-type/post-functions.php:123
+msgid "Parent locations:"
+msgstr "Родитељске локације:"
+
+#: includes/post-type/post-functions.php:124
+msgid "Edit locations"
+msgstr "Уредите локације"
+
+#: includes/post-type/post-functions.php:125
+msgid "Update locations"
+msgstr "Ажурирајте локације"
+
+#: includes/post-type/post-functions.php:126
+msgid "Add New locations"
+msgstr "Додајте нове локације"
+
+#: includes/post-type/post-functions.php:127
+msgid "New locations"
+msgstr "Нове локације"
+
+#: includes/post-type/post-functions.php:128
+msgid "Separate locations with commas"
+msgstr "Одвојите локације зарезима"
+
+#: includes/post-type/post-functions.php:129
+msgid "Add or Remove locations"
+msgstr "Додајте или уклоните локације"
+
+#: includes/post-type/post-functions.php:130
+msgid "Choose from the most used locations"
+msgstr "Изаберите неку од најчешће коришћених локација"
+
+#: includes/post-type/post-functions.php:244
+#: includes/post-type/post-functions.php:359
+msgid "Order:"
+msgstr "Наручите:"
+
+#: includes/post-type/post-functions.php:246
+msgid "Order to display. For example: 1 (first) 2 (second) and so on ..."
+msgstr "Ред за приказ. На пример: 1 (први) 2 (други) и тако даље ..."
+
+#: includes/post-type/post-functions.php:249
+#: includes/post-type/post-functions.php:370
+msgid "Profile Image:"
+msgstr "Слика профила:"
+
+#: includes/post-type/post-functions.php:256
+msgid "Just click the Button to Select Upload Image"
+msgstr "Само кликните на дугме да бисте изабрали Отпреми слику"
+
+#: includes/post-type/post-functions.php:262
+#: includes/post-type/post-functions.php:395
+msgid "Position:"
+msgstr "позиција:"
+
+#: includes/post-type/post-functions.php:264
+#: includes/post-type/post-functions.php:401
+msgid "For example: Sales Manager, Agent, and so on ..."
+msgstr "На пример: менаџер продаје, агент и тако даље..."
+
+#: includes/post-type/post-functions.php:267
+#: includes/post-type/post-functions.php:406
+msgid "Phone:"
+msgstr "Телефон:"
+
+#: includes/post-type/post-functions.php:271
+#: includes/post-type/post-functions.php:416
+msgid "Email address:"
+msgstr "Адреса е-поште:"
+
+#: includes/post-type/post-functions.php:275
+#: includes/post-type/post-functions.php:426
+msgid "Skype:"
+msgstr "Скипе:"
+
+#: includes/post-type/post-functions.php:279
+#: includes/post-type/post-functions.php:436
+msgid "Facebook URL:"
+msgstr "Фацебоок УРЛ:"
+
+#: includes/post-type/post-functions.php:283
+#: includes/post-type/post-functions.php:446
+msgid "Twitter URL:"
+msgstr "Твиттер УРЛ:"
+
+#: includes/post-type/post-functions.php:287
+#: includes/post-type/post-functions.php:456
+msgid "Linkedin URL:"
+msgstr "Линкедин УРЛ:"
+
+#: includes/post-type/post-functions.php:291
+#: includes/post-type/post-functions.php:466
+msgid "Youtube URL:"
+msgstr "Иоутубе УРЛ:"
+
+#: includes/post-type/post-functions.php:295
+#: includes/post-type/post-functions.php:476
+msgid "Instagram URL:"
+msgstr "Инстаграм УРЛ:"
+
+#: includes/post-type/post-functions.php:299
+#: includes/post-type/post-functions.php:486
+msgid "Vimeo URL:"
+msgstr "Вимео УРЛ:"
+
+#: includes/post-type/post-functions.php:365
+msgid "Order to display. For example: 1 (first), 2 (second) and so on ..."
+msgstr "Ред за приказ. На пример: 1 (први), 2 (други) и тако даље ..."
+
+#: includes/post-type/post-functions.php:390
+msgid "the Button to Select Upload Image"
+msgstr "дугме за избор Отпреми слику"
+
+#: includes/post-type/post-functions.php:682
+msgid "Call For Price"
+msgstr "Позовите за цену"
+
+#: includes/search/do_search.php:287
+msgid "No posts found"
+msgstr "Нот Фоунд !"
+
+#: includes/search/do_search.php:303
+#: includes/templates/template-showroom.php:188
+#: includes/templates/template-showroom1.php:232
+#: includes/templates/template-showroom3.php:201
+msgid "Not Found !"
+msgstr "Нот Фоунд !"
+
+#: includes/search/search-function.php:14
+#: includes/search/search-function.php:470
+#: includes/search/search-function_ajax.php:41
+#: includes/search/search-function_ajax.php:427
+#: includes/widgets/widgets.php:317
+msgid "Search"
+msgstr "Тражи"
+
+#: includes/search/search-function.php:86
+#: includes/search/search-function_ajax.php:109
+#: includes/templates/template-functions.php:112
+#: includes/templates/template-functions4.php:171
+msgid "Make"
+msgstr "Маке"
+
+#: includes/search/search-function.php:94
+#: includes/search/search-function.php:117
+#: includes/search/search-function.php:151
+#: includes/search/search-function.php:185
+#: includes/search/search-function.php:260
+#: includes/search/search-function.php:283
+#: includes/search/search-function.php:304
+#: includes/search/search-function.php:329
+#: includes/search/search-function_ajax.php:117
+#: includes/search/search-function_ajax.php:139
+#: includes/search/search-function_ajax.php:168
+#: includes/search/search-function_ajax.php:197
+#: includes/search/search-function_ajax.php:276
+#: includes/search/search-function_ajax.php:300
+#: includes/search/search-function_ajax.php:317
+#: includes/search/search-function_ajax.php:344
+msgid "Any"
+msgstr "Било који"
+
+#: includes/search/search-function.php:179
+#: includes/search/search-function_ajax.php:191
+#: includes/templates/template-functions4.php:199
+#: includes/templates/template-showroom.php:137
+#: includes/templates/template-showroom2.php:82
+msgid "Fuel"
+msgstr "Гориво"
+
+#: includes/search/search-function.php:322
+#: includes/search/search-function_ajax.php:337
+msgid "Order By"
+msgstr "Ордер Би"
+
+#: includes/search/search-function.php:332
+#: includes/search/search-function_ajax.php:347
+msgid "Year newest first"
+msgstr "Прво најновија година"
+
+#: includes/search/search-function.php:337
+#: includes/search/search-function_ajax.php:352
+msgid "Year oldest first"
+msgstr "Прво година најстарији"
+
+#: includes/search/search-function.php:342
+#: includes/search/search-function_ajax.php:357
+msgid "Price higher first"
+msgstr "Прво виша цена"
+
+#: includes/search/search-function.php:347
+#: includes/search/search-function_ajax.php:362
+msgid "Price lower first"
+msgstr "Прво нижа цена"
+
+#: includes/search/search-function.php:352
+#: includes/search/search-function_ajax.php:367
+msgid "Mileage higher first"
+msgstr "Прво већа километража"
+
+#: includes/search/search-function.php:357
+#: includes/search/search-function_ajax.php:372
+msgid "Mileage lower first"
+msgstr "Прво нижа километража"
+
+#: includes/search/search-function.php:399
+#: includes/search/search-function_ajax.php:392
+msgid "Price Range"
+msgstr "Распон цена"
+
+#: includes/team/team.php:114
+msgid "No Team Member Added!"
+msgstr "Ниједан члан тима није додат!"
+
+#: includes/templates/template-functions.php:55
+msgid "Yes"
+msgstr "Да"
+
+#: includes/templates/template-functions.php:57
+msgid "No"
+msgstr "бр"
+
+#: includes/templates/template-functions.php:117
+#: includes/templates/template-functions.php:126
+#: includes/templates/template-functions4.php:176
+#: includes/templates/template-functions4.php:185
+msgid "Model"
+msgstr "Модел"
+
+#: includes/templates/template-functions.php:180
+#: includes/templates/template-showroom.php:144
+#: includes/templates/template-showroom1.php:186
+#: includes/templates/template-showroom2.php:90
+#: includes/templates/template-showroom3.php:127
+#: settings/options/_plugin_options_tabbed.php:107
+#: settings/options/plugin_options_tabbed.php:111
+msgid "Miles"
+msgstr "Милес"
+
+#: includes/templates/template-functions.php:184
+#: includes/templates/template-showroom.php:148
+#: includes/templates/template-showroom1.php:188
+#: includes/templates/template-showroom2.php:94
+#: includes/templates/template-showroom3.php:129
+#: settings/options/_plugin_options_tabbed.php:109
+#: settings/options/plugin_options_tabbed.php:113
+msgid "Hours"
+msgstr "Сати"
+
+#: includes/templates/template-functions.php:188
+#: includes/templates/template-showroom.php:152
+#: includes/templates/template-showroom1.php:190
+#: includes/templates/template-showroom2.php:98
+#: includes/templates/template-showroom3.php:131
+#: settings/options/_plugin_options_tabbed.php:108
+#: settings/options/plugin_options_tabbed.php:112
+msgid "Kms"
+msgstr "Кмс"
+
+#: includes/templates/template-functions.php:199
+#: includes/templates/template-functions4.php:224
+msgid "Cond"
+msgstr "Конд"
+
+#: includes/templates/template-functions.php:204
+#: includes/templates/template-functions4.php:229
+#: includes/templates/template-showroom.php:132
+#: includes/templates/template-showroom1.php:156
+#: includes/templates/template-showroom2.php:77
+#: includes/templates/template-showroom3.php:96
+msgid "HP"
+msgstr "ХП"
+
+#: includes/templates/template-functions.php:207
+#: includes/templates/template-functions4.php:232
+#: includes/templates/template-showroom.php:134
+#: includes/templates/template-showroom1.php:158
+#: includes/templates/template-showroom2.php:79
+#: includes/templates/template-showroom3.php:98
+msgid "KW"
+msgstr "КВ"
+
+#: includes/templates/template-functions.php:244
+#: includes/templates/template-functions4.php:34
+#: includes/templates/template-showroom.php:124
+#: includes/templates/template-showroom1.php:149
+#: includes/templates/template-showroom2.php:69
+#: includes/templates/template-showroom3.php:88 includes/widgets/widgets.php:72
+#: includes/widgets/widgets.php:243
+msgid "Call for Price"
+msgstr "Позовите за цену"
+
+#: includes/templates/template-showroom.php:177
+#: includes/templates/template-showroom1.php:221
+#: includes/templates/template-showroom2.php:174
+#: includes/templates/template-showroom3.php:173
+#: includes/templates/template-single2.php:101
+#: includes/templates/template-single3.php:82
+msgid "Back"
+msgstr "Назад"
+
+#: includes/templates/template-showroom.php:178
+#: includes/templates/template-showroom1.php:222
+#: includes/templates/template-showroom2.php:188
+#: includes/templates/template-showroom3.php:187
+msgid "Onward"
+msgstr "Напред"
+
+#: includes/templates/template-showroom1.php:208
+#: includes/templates/template-showroom3.php:148
+msgid "View"
+msgstr "Виев"
+
+#: includes/templates/template-single2.php:122
+#: includes/templates/template-single3.php:96
+msgid "Contact Us"
+msgstr "Контактирајте нас"
+
+#: includes/widgets/widgets.php:16
+msgid "A list of Recent cars"
+msgstr "Листа најновијих аутомобила"
+
+#: includes/widgets/widgets.php:43
+msgid "New Arrivals"
+msgstr "Нев Арривалс"
+
+#: includes/widgets/widgets.php:183
+msgid "A list of Featured car-s"
+msgstr "Листа истакнутих аутомобила"
+
+#: includes/widgets/widgets.php:207
+msgid "Featured cars"
+msgstr "Истакнути аутомобили"
+
+#: includes/widgets/widgets.php:291
+msgid "Search cars"
+msgstr "Претражите аутомобиле"
+
+#: includes/widgets/widgets.php:303
+msgid "Title"
+msgstr "Наслов"
+
+#: settings/options/_plugin_options_tabbed.php:17
+#: settings/options/plugin_options_tabbed.php:20
+msgid "Choose your currency, metric system and so on."
+msgstr "Изаберите своју валуту, метрички систем и тако даље."
+
+#: settings/options/_plugin_options_tabbed.php:55
+#: settings/options/plugin_options_tabbed.php:58
+msgid "Currency"
+msgstr "Валута"
+
+#: settings/options/_plugin_options_tabbed.php:105
+#: settings/options/plugin_options_tabbed.php:109
+msgid "Miles - Km"
+msgstr "Милес - Км"
+
+#: settings/options/_plugin_options_tabbed.php:115
+#: settings/options/plugin_options_tabbed.php:119
+msgid "Liters - Gallons"
+msgstr "Литри - галони"
+
+#: settings/options/_plugin_options_tabbed.php:117
+#: settings/options/plugin_options_tabbed.php:121
+msgid "Liters"
+msgstr "Литара"
+
+#: settings/options/_plugin_options_tabbed.php:118
+#: settings/options/plugin_options_tabbed.php:122
+msgid "Gallons"
+msgstr "Галони"
+
+#: settings/options/_plugin_options_tabbed.php:124
+#: settings/options/plugin_options_tabbed.php:128
+msgid "How many cars would you like to display per page?"
+msgstr "Колико аутомобила желите да прикажете по страници?"
+
+#: settings/options/_plugin_options_tabbed.php:150
+#: settings/options/plugin_options_tabbed.php:154
+msgid "Use thumbnails size 2:1 or 4:3 ?"
+msgstr "Користити сличице величине 2:1 или 4:3?"
+
+#: settings/options/_plugin_options_tabbed.php:159
+msgid "Enable Contact Form in Single Product Page?"
+msgstr "Омогућити образац за контакт на страници са једним производом?"
+
+#: settings/options/_plugin_options_tabbed.php:168
+#: settings/options/plugin_options_tabbed.php:174
+msgid ""
+"Fill out your contact email to receive email from your Contact Form at "
+"bottom of the individual car page."
+msgstr ""
+"Попуните своју е-пошту за контакт да бисте примали е-пошту из свог контакт "
+"обрасца на дну странице за појединачне аутомобиле."
+
+#: settings/options/_plugin_options_tabbed.php:176
+#: settings/options/plugin_options_tabbed.php:182
+msgid "Do you use HP or KW?"
+msgstr "Да ли користите ХП или КВ?"
+
+#: settings/options/_plugin_options_tabbed.php:187
+#: settings/options/plugin_options_tabbed.php:193
+msgid ""
+"In Show Room Page, Template List View or Grid, Choose the thumbnail image "
+"size - width (Works only in Premium Version)"
+msgstr ""
+"На страници изложбене собе, приказу листе шаблона или мрежи, изаберите "
+"величину сличице - ширину (ради само у премијум верзији)"
+
+#: settings/options/_plugin_options_tabbed.php:225
+msgid "Add Right Sidebar to Search Result Page (Premium Version)"
+msgstr ""
+"Додајте десну бочну траку на страницу резултата претраге (премиум верзија)"
+
+#: settings/options/_plugin_options_tabbed.php:256
+#: settings/options/plugin_options_tabbed.php:263
+msgid ""
+"Here you can manage the car features/equipments fields to your car form."
+msgstr ""
+"Овде можете управљати пољима за карактеристике/опрему аутомобила у обрасцу "
+"вашег аутомобила."
+
+#: settings/options/_plugin_options_tabbed.php:257
+#: settings/options/plugin_options_tabbed.php:264
+msgid "Just add one or more field names - one for each line -"
+msgstr "Само додајте једно или више имена поља - по једно за сваки ред -"
+
+#: settings/options/_plugin_options_tabbed.php:258
+#: settings/options/plugin_options_tabbed.php:265
+msgid "For example: GPS, DVD, and so on... "
+msgstr "На пример: ГПС, ДВД и тако даље... "
+
+#: settings/options/_plugin_options_tabbed.php:259
+#: settings/options/plugin_options_tabbed.php:266
+msgid "Don't use special characters."
+msgstr "Не користите посебне знакове."
+
+#: settings/options/_plugin_options_tabbed.php:265
+#: settings/options/plugin_options_tabbed.php:272
+msgid "Add this fields to Car Form. Only one field each line:"
+msgstr "Додајте ова поља у образац аутомобила. Само једно поље у сваком реду:"
+
+#: settings/options/_plugin_options_tabbed.php:268
+#: settings/options/plugin_options_tabbed.php:275
+msgid ""
+"Customize your Search Options. Choose the fields to show on the front end "
+"search bar."
+msgstr ""
+"Прилагодите своје опције претраге. Изаберите поља која ће се приказати на "
+"предњој траци за претрагу."
+
+#: settings/options/_plugin_options_tabbed.php:273
+#: settings/options/_plugin_options_tabbed.php:330
+#: settings/options/plugin_options_tabbed.php:280
+#: settings/options/plugin_options_tabbed.php:337
+msgid "Show the Make control"
+msgstr "Прикажите контролу Маке"
+
+#: settings/options/_plugin_options_tabbed.php:282
+#: settings/options/_plugin_options_tabbed.php:339
+#: settings/options/plugin_options_tabbed.php:289
+#: settings/options/plugin_options_tabbed.php:346
+msgid "Show the Fuel type control"
+msgstr "Прикажите контролу врсте горива"
+
+#: settings/options/_plugin_options_tabbed.php:291
+#: settings/options/_plugin_options_tabbed.php:348
+#: settings/options/plugin_options_tabbed.php:298
+#: settings/options/plugin_options_tabbed.php:355
+msgid "Show the Year control"
+msgstr "Прикажи контролу године"
+
+#: settings/options/_plugin_options_tabbed.php:300
+#: settings/options/_plugin_options_tabbed.php:366
+#: settings/options/plugin_options_tabbed.php:307
+#: settings/options/plugin_options_tabbed.php:373
+msgid "Show the Transmission control"
+msgstr "Прикажите контролу преноса"
+
+#: settings/options/_plugin_options_tabbed.php:309
+#: settings/options/plugin_options_tabbed.php:316
+msgid "Show the Price slider"
+msgstr "Прикажи клизач Цена"
+
+#: settings/options/_plugin_options_tabbed.php:318
+#: settings/options/_plugin_options_tabbed.php:375
+#: settings/options/plugin_options_tabbed.php:325
+#: settings/options/plugin_options_tabbed.php:382
+msgid "Show the Order By Control"
+msgstr "Прикажи ред по контроли"
+
+#: settings/options/_plugin_options_tabbed.php:325
+#: settings/options/plugin_options_tabbed.php:332
+msgid ""
+"Customize your Search Widget Options. Choose the fields to show on the "
+"Search Widget."
+msgstr ""
+"Прилагодите опције виџета за претрагу. Изаберите поља која ће се приказати "
+"на виџету за претрагу."
+
+#: settings/options/_plugin_options_tabbed.php:357
+#: settings/options/plugin_options_tabbed.php:364
+msgid "Show the Price control"
+msgstr "Прикажи контролу цена"
+
+#. Plugin Name of the plugin/theme
+msgid "CarDealer"
+msgstr "ЦарДеалер"
+
+#. Plugin URI of the plugin/theme
+msgid "http://cardealerplugin.com"
+msgstr "хттп://цардеалерплугин.цом"
+
+#. Description of the plugin/theme
+msgid "Car Dealer Plugin for Car Dealer agency."
+msgstr "Додатак за продавце аутомобила за агенцију за продавце аутомобила."
+
+#. Author of the plugin/theme
+msgid "Bill Minozzi"
+msgstr "Билл Миноззи"
+
+#. Author URI of the plugin/theme
+msgid "http://billminozzi.com"
+msgstr "хттп://биллминоззи.цом"

@@ -28,7 +28,7 @@
     <meta property="og:description"
         content="Sell your car effortlessly with AutoInspect. Our platform offers a reliable and streamlined process, detailed insights, and expert advice to ensure a seamless car-selling experience in the USA.">
     <meta property="og:image" content="https://autoinspect.netlify.app/static/icon.png">
-    <meta property="og:url" content="https://autoinspect.netlify.app/sell_car">
+    <meta property="og:url" content="https://autoinspect.netlify.app/car_sell">
     <meta property="og:type" content="website">
 
     <!-- Twitter Card Meta Tags -->
@@ -107,69 +107,66 @@
     </script>
 
     <main>
-        <!-- Hero Section -->
-        <section class="hero sell" style="height: 91vh; margin-bottom: 20px">
-            <h1
-                style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
-                Want to sell a perfect car?</h1>
-            <h1
-                style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
-                or a car with multiple issues?</h1>
-            <h2>No problem! We could buy your car in any condition.</h2>
-            <p>Note: We will buy your car with a price range based on the authentic market price. We also provide it in
-                our <a href="index.html" style="color: white; text-decoration: underline;">vehicle history report</a>.
-            </p>
-            <br>
-            <a href="#sell-container" class="submit-btn">Start Selling</a>
-        </section>
+<!-- Hero Section -->
+<section class="hero sell" style="height: 91vh; margin-bottom: 20px">
+    <h1 style="font-family: 'Trebuchet MS', Arial, sans-serif;">
+        Sell Your Car for the Highest Possible Price
+    </h1>
+    <h2 style="font-family: 'Trebuchet MS', Arial, sans-serif;">
+        Perfect Condition or Some Dents? No Problem!
+    </h2>
+    <h2>We Buy Cars in Any Condition.</h2>
+    <p>
+        Our partners offer prices based on the authentic market value, detailed in our
+        <a href="index.html" style="color: white; text-decoration: underline;">Vehicle History Report</a>.
+    </p>
+    <br>
+    <a href="#sell-container" class="submit-btn">Start Selling</a>
+</section>
+
 
         <!-- Selling Info Section -->
-        <br>
-        <div class="sell-car-container" id="sell-container" style="margin: 25px 10px 30px 10px; justify-content: center;">
-            <h2 class="section-title"><u>Sell Your Car</u></h2>
-            <h2>Experience a seamless selling process with our secure form for just $5.00</h2>
-            <p>Your transaction is safe, and our team is here to assist you.</p>
+        <div class="container" id="sell-container" style="box-shadow: none;">
+            <h2 class="section-title">Sell Your Car Instantly</h2>
+            <p>Experience a seamless selling process by completing our secure form for just $5.00. After submission, you'll receive an instant cash offer for your vehicle, valid for 7 days. If you accept the offer, you'll be guided to the nearest CarMax location to finalize the sale and receive payment promptly.</p>
+            <br><p>Before proceeding, please read the <a href="#faq-container" style="color: inherit;">FAQ</a> below. Your satisfaction is our top priority.</p>
         </div>
-
+        
         <!-- PayPal SDK Script -->
-        <script
-            src="https://www.paypal.com/sdk/js?client-id=BAAionfD-Ah0HIyyIV9_8dxh7QMLCU9S0HMAbeqAU6hRMq4k6Mn697UITlhsoDuD8Pgy490HOPg3C2OjjY&components=buttons,hosted-buttons&disable-funding=venmo&currency=USD"></script>
-
+        <script src="https://www.paypal.com/sdk/js?client-id=BAAionfD-Ah0HIyyIV9_8dxh7QMLCU9S0HMAbeqAU6hRMq4k6Mn697UITlhsoDuD8Pgy490HOPg3C2OjjY&components=buttons,hosted-buttons&disable-funding=venmo&currency=USD"></script>
+        
         <!-- Hosted Button Container -->
-        <style>
-            label {
+        <div id="paypal-button-container"></div>
+        
+        <!-- Car Selling Form Section -->
+         <style>
+            #car-sell-form label{
                 color: black;
             }
-        </style>
-        <div id="paypal-button-container"></div>
-
-        <!-- Car Selling Form Section -->
+         </style>
         <section id="sell-form" class="sell-form-section" style="display: none;">
-            <h2 class="section-title"><u>Tell Us About Your Car</u></h2>
+            <h2 class="section-title">Tell Us About Your Car</h2>
             <form action="https://formbold.com/s/3jgOq" method="POST" id="car-sell-form">
                 <label for="vin">Car VIN:</label>
-                <input type="text" id="vin" name="message" placeholder="4T1BE30K12U058669" required><br><br>
-
+                <input type="text" id="vin" name="vin" placeholder="4T1BE30K12U058669" required><br><br>
+        
                 <label for="make">Car Make:</label>
                 <input type="text" id="make" name="make" placeholder="Toyota" required><br><br>
-
+        
                 <label for="model">Car Model:</label>
                 <input type="text" id="model" name="model" placeholder="Camry LE / SE / XLE" required><br><br>
-
+        
                 <label for="year">Car Year:</label>
                 <input type="number" id="year" name="year" placeholder="2002" required><br><br>
-
-                <label for="price">Car Price (USD):</label>
-                <input type="number" id="price" name="price" placeholder="6,000" required><br><br>
-
+        
                 <!-- Hidden fields to store email and subject -->
                 <input type="hidden" name="email" id="form-email" value="">
                 <input type="hidden" name="subject" value="New Car Sale Submission">
-
+        
                 <button type="submit" class="submit-button">Submit Car Details</button>
             </form>
         </section>
-
+        
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 // Initialize PayPal Hosted Buttons
@@ -185,15 +182,12 @@
                     onApprove: function (data, actions) {
                         return actions.order.capture().then(function (details) {
                             alert('Payment completed by ' + details.payer.name.given_name);
-
+        
                             // Show the car selling form
                             document.querySelector('.sell-form-section').style.display = 'block';
-
+        
                             // Populate the email field in the form with PayPal payer's email
                             document.getElementById('form-email').value = details.payer.email_address;
-
-                            // Automatically submit the form to FormBold
-                            document.getElementById('car-sell-form').submit();
                         });
                     },
                     onError: function (err) {
@@ -201,10 +195,116 @@
                         alert('An error occurred during the transaction. Please try again or contact support.');
                     }
                 }).render("#paypal-button-container");
+        
+                // Handle form submission
+                document.getElementById('car-sell-form').addEventListener('submit', function (e) {
+                    e.preventDefault();
+        
+                    const vin = document.getElementById('vin').value;
+                    const make = document.getElementById('make').value.toLowerCase();
+                    const model = document.getElementById('model').value.toLowerCase();
+                    const year = document.getElementById('year').value;
+        
+                    // Submit the form data to FormBold
+                    fetch(this.action, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                        body: new URLSearchParams(new FormData(this)).toString(),
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            // Redirect to Edmunds appraisal page
+                            const appraisalUrl = `https://www.edmunds.com/${make}/${model}/${year}/appraisal-value/?vin=${vin}`;
+                            window.location.href = appraisalUrl;
+                        } else {
+                            alert('There was an issue submitting your car details. Please try again.');
+                        }
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                        alert('An error occurred while submitting your car details. Please try again.');
+                    });
+                });
             });
         </script>
 
         <br>
+
+        <div class="faq-container" id="faq-container">
+            <h2 class="section-title" style="text-transform: uppercase;"><u>Frequently Asked Questions</u></h2>
+        
+            <div class="faq-item">
+                <h3>How does the car selling process work?</h3>
+                <p>Start by completing our secure form for a $5.00 fee. After submission, you'll receive an appraisal from our partner, Edmunds, who will analyze your vehicle's details and provide you with most competitive, redeemable cash offer valid for seven days, ensuring a swift and competitive selling experience.</p>
+            </div>
+        
+            <div class="faq-item">
+                <h3>Why is there a $5.00 fee for the form?</h3>
+                <p>This nominal fee ensures the reliability and security of our platform, allowing us to maintain high-quality services and connect you with reputable partners for the best offers.</p>
+            </div>
+        
+            <div class="faq-item">
+                <h3>What information do I need to provide?</h3>
+                <p>You'll need to provide basic details about your vehicle, including the Vehicle Identification Number (VIN), make, model, and year. Accurate information helps our partners make the most competitive offers. Please double-check your input before submitting the form.</p>
+            </div>
+        
+            <div class="faq-item">
+                <h3>How do I find my vehicle's VIN?</h3>
+                <p>The VIN is typically located on the dashboard, visible through the windshield on the driver's side, or on the driver's side door frame. It's also found on important documents like your vehicle's registration or insurance papers.</p>
+            </div>
+        
+            <div class="faq-item">
+                <h3>What happens after I submit the form?</h3>
+                <p>Upon form submission, you'll receive an appraisal from our partner, Edmunds, where your vehicle's information will be analyzed. They will present you with a redeemable cash offer valid for seven days, allowing you time to consider the offer.</p>
+            </div>
+        
+            <div class="faq-item">
+                <h3>Can I set my desired selling price?</h3>
+                <p>Our partners evaluate the market and present the highest offers. You have the flexibility to choose the offer that best meets your expectations. For further assistance, please contact us via live chat.</p>
+            </div>
+        
+            <div class="faq-item">
+                <h3>What types of vehicles can I sell through your service?</h3>
+                <p>Our partners accept all types of vehicles based in the USA, including new, used, and damaged cars. You can sell your vehicle quickly and effortlessly, regardless of its condition.</p>
+            </div>
+        
+            <div class="faq-item">
+                <h3>Why is it beneficial to have a Vehicle History Report?</h3>
+                <p>A Vehicle History Report provides potential buyers with confidence by detailing your car's past, including any accidents, title status, and mileage. A clear history can justify a higher selling price and ensures accurate information during the selling process. <a href="index.html" target="_blank">Click here</a> to get your report</p>
+            </div>
+        
+            <div class="faq-item">
+                <h3>Why should I sell my car via AutoInspect?</h3>
+                <p>AutoInspect collaborates with trusted partners like Edmunds to provide you with reliable and efficient services, ensuring you can sell your car instantly at the highest possible price in today's market.</p>
+            </div>
+        
+            <div class="faq-item">
+                <h3>What payment methods are supported?</h3>
+                <p>We offer a variety of secure payment options, including credit cards, bank transfers, and trusted online payment methods, ensuring convenience for all users.</p>
+            </div>
+        
+            <div class="faq-item">
+                <h3>How do I proceed after selecting the highest offer?</h3>
+                <p>After choosing the most attractive offer, you'll be guided to the respective platform to complete the sale. Follow their instructions to finalize the transaction seamlessly.</p>
+            </div>
+        
+            <div class="faq-item">
+                <h3>How can I contact customer support?</h3>
+                <p>Our customer support team is available 24/7 via email or online chat. Visit our <a href="contact.html" style="color: #555;">Contact Us</a> page for more details.</p>
+            </div>
+        </div>                
+        
+        <script>
+            // FAQ Toggle Functionality
+            document.querySelectorAll('.faq-item h3').forEach(item => {
+                item.addEventListener('click', function () {
+                    const faqItem = this.parentElement;
+                    faqItem.classList.toggle('active');
+                });
+            });
+        </script>
         <br>
         <br>
         <!--Start of Tawk.to Script-->
