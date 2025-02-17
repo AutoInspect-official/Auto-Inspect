@@ -20,13 +20,16 @@ p {
     line-height: 1.6;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     margin: 0 0 0.5em 0;
+}
+
+.container {
+    color: black;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+    overflow: hidden;
 }
 
 /* Header */
@@ -433,7 +436,7 @@ html {
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.6);
     padding: 20px 15px;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
     z-index: 0;
     width: 55%;
@@ -589,42 +592,6 @@ form {
     box-sizing: border-box;
 }
 
-.tooltip {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 250px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 5px;
-    padding: 8px;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -125px;
-    opacity: 0;
-    transition: opacity 0.3s;
-    font-size: 0.9em;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-}
-
-.learn-more {
-    color: #1e90ff;
-    text-decoration: underline;
-    cursor: pointer;
-    font-size: 0.9em !important;
-}
-
 button {
     margin-top: 15px;
     padding: 15px;
@@ -706,16 +673,6 @@ button:hover {
     to {
         opacity: 1;
     }
-}
-
-.container {
-    color: black;
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #f4f4f4;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Partners Section */
@@ -890,210 +847,14 @@ button:hover {
     }
 }
 
-/* Rating */
-.ratings-section {
-    padding: 40px;
-    border-radius: 10px;
-    margin: 10vw auto;
-    max-width: 1000px;
-    text-align: center;
-    border: 40px black;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 2s ease-out, visibility 2s ease-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.ratings-section.show {
-    opacity: 1;
-    visibility: visible;
-    animation: fadeIn 0.6s ease-out;
-}
-
-.rating-stars {
-    margin: 16px auto;
-}
-
-.rating-stars i {
-    color: #ffc107;
-    font-size: 20px;
-    margin-right: 3px;
-}
-
-.rating-text {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.heading-label {
-    font-size: 20px;
-    color: #333;
-    font-weight: bold;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-.review-box {
-    background-color: #fff;
-    padding: 15px;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    text-align: left;
-    opacity: 0;
-    animation: fadeIn 0.5s forwards;
-}
-
-.review-box.visible {
-    opacity: 1;
-}
-
-.review-box:hover {
-    transform: translateY(-2px);
-}
-
-.reviewer-name {
-    font-weight: bold;
-    font-size: 20px;
-    margin-bottom: 5px;
-    color: rgba(0, 0, 0, 0.90);
-}
-
-.review-text {
-    font-size: 18px;
-    color: #555;
-}
-
-#toggleReviewsBtn {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 18px;
-    margin-top: 20px;
-    transition: background-color 0.3s ease, transform 0.2s;
-}
-
-#toggleReviewsBtn:hover {
-    background-color: #555;
-    transform: scale(1.05);
-}
-
-/* Rating Form */
-.star-rating {
-    display: flex;
-    justify-content: center;
-    margin: 10px auto;
-}
-
-.star {
-    font-size: 30px;
-    color: #e0e0e0;
-    cursor: pointer;
-    margin-right: 5px;
-    transition: color 0.3s ease;
-}
-
-.star.filled {
-    color: #ffc107;
-}
-
-textarea,
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #bbb8b8;
-    margin-bottom: 10px;
-    transition: border-color 0.3s;
-}
-
-textarea:focus,
-input[type="text"]:focus {
-    border-color: #ffc107;
-}
-
-button[type="button"] {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s;
-}
-
-button[type="button"]:hover {
-    background-color: #555;
-    transform: scale(1.05);
-}
-
-/* car sell */
-.sell-car-container {
-    margin: 25px 10px;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    color: Black;
-}
-
-.sell-car-container h1 {
-    font-size: auto;
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: Black;
-}
-
-.sell-car-container h2 {
-    font-size: auto;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: Black;
-}
-
-.sell-car-container p {
-    font-size: auto;
-    margin-top: 10px;
-    color: #272727;
-}
-
 /* Car Sell Form */
 .sell-form-section {
     padding: 4rem 2rem;
     background-color: white;
     max-width: 800px;
-    margin: 40vh auto;
+    margin: 10vh auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-}
-
-.sell-form-section h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2rem;
 }
 
 form {
@@ -1105,6 +866,7 @@ label {
     color: black;
     font-weight: bold;
     margin: 15px 0;
+    font-size: large;
 }
 
 input,
@@ -1119,36 +881,20 @@ textarea {
     resize: none;
 }
 
-label {
-    color: white;
-    margin-right: 10px;
-}
-
 /* Services - Home */
-.container {
-    background-color: #f4f4f4;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
 
 .section {
     display: flex;
     align-items: center;
     margin: 40px 0;
     opacity: 0;
-    /* Initial state: invisible */
     transform: translateY(50px);
-    /* Initial state: moved down */
     transition: all 0.5s ease-in-out;
-    /* Smooth animation */
 }
 
 .section.visible {
     opacity: 1;
-    /* Fade in */
     transform: translateY(0);
-    /* Reset position */
 }
 
 .section:nth-child(even) {
@@ -1198,16 +944,6 @@ label {
 }
 
 /* Services Container */
-.container {
-    background-color: #f4f4f4;
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 30px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-    overflow: hidden;
-    color: #272727;
-}
 
 .services-section {
     background-color: #f4f4f4;

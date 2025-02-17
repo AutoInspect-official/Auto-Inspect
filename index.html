@@ -37,18 +37,18 @@
     <!-- Structured Data (Schema.org) -->
     <script type="application/ld+json">
         {
-            "@context": "https://schema.org",
-            "@type": "WebSite",
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "AutoInspect",
+          "url": "https://autoinspect.netlify.app",
+          "description": "Explore trusted car inspection services, pre-purchase car checks, and expert maintenance tips. Buy or sell your car effortlessly with AutoInspect USA.",
+          "publisher": {
+            "@type": "Organization",
             "name": "AutoInspect",
-            "url": "https://autoinspect.netlify.app",
-            "description": "Explore trusted car inspection services, pre-purchase car checks, and expert maintenance tips. Buy or sell your car effortlessly with AutoInspect USA.",
-            "publisher": {
-                "@type": "Organization",
-                "name": "AutoInspect",
-                "logo": "https://autoinspect.netlify.app/static/icon.png"
-            }
+            "logo": "https://autoinspect.netlify.app/static/icon.png"
+          },
         }
-        </script>
+        </script>        
 </head>
 
 <main>
@@ -102,10 +102,10 @@
     <!-- Featured slide -->
     <div class="slideshow-container" style="background-color: rgba(0, 0, 0, 0.90);">
         <div class="mySlides fade">
-            <img src="../static/car_washing.webp" alt="Car being washed" class="responsive-image">
+            <img src="../static/car_fixing.webp" alt="Fixing a car in the garage" class="responsive-image">
         </div>
         <div class="mySlides fade">
-            <img src="../static/car_fixing.webp" alt="Fixing a car in the garage" class="responsive-image">
+            <img src="../static/car_washing.webp" alt="Car being washed" class="responsive-image">
         </div>
         <div class="mySlides fade">
             <img src="../static/over_all.webp" alt="Car maintenance overview" class="responsive-image">
@@ -119,7 +119,7 @@
         <form id="vinForm">
             <h2 class="section-title" style="color: white; text-transform: uppercase; margin-bottom: 5px">
                 <u>Get Your Free Vehicle Report Instantly</u></h2>
-            <p style="font-size: x-large;">Enter your car's US based <span class="tooltip" title="VIN (Vehicle Identification Number) is a unique 17-character code used to identify individual motor vehicles. It is located on the dashboard, typically near the windshield, or on the driver's side door frame."><u>VIN number</u></span>
+            <p style="font-size: x-large;">Enter your car's US based <span class="tooltip" style="cursor: pointer;" title="VIN (Vehicle Identification Number) is a unique 17-character code used to identify individual motor vehicles. It is located on the dashboard, typically near the windshield, or on the driver's side door frame."><u>VIN number</u></span>
                 below:</p>
             <hr class="custom-line">
             <div class="form-group">
@@ -165,7 +165,7 @@
 
     <!-- Partners Section -->
     <section class="partners-section">
-        <div class="container" style="border: none; box-shadow: none;">
+        <div class="container">
             <h2 class="section-title"><u>Trusted Partners in Automotive Excellence</u></h2>
             <p>We proudly collaborate with trusted industry leaders to provide top-tier automotive services, ensuring
                 accuracy and reliability for our valued customers.</p>
@@ -221,14 +221,14 @@
                 3 days</b> of purchase.</p>
         <p>Our reports are sourced from authorized NMVTIS providers, guaranteeing reliable data. Requesting a refund is
             simple—just contact our support team, and we’ll process it within three business days.</p>
-        <p>Read our <a href="policy.html" style="color: white;">detailed refund policy</a> for more information.</p>
+        <p>Read our <a href="terms.html#refund-terms" style="color: white;">detailed refund policy</a> for more information.</p>
         <br>
         <p>Thank you for choosing us!</p>
     </div>
     <br>
     <br>
 
-<div class="container" style="box-shadow: none;">
+<div class="container">
     <!-- Section: Verify Your Car -->
     <div class="section">
         <div class="text">
@@ -443,7 +443,7 @@
         }
     </style>
 
-    <div class="container" style="box-shadow: none;">
+    <div class="container">
         <h2 class="section-title"><u><a href="blog.html" style="color: inherit;"><u>OUR BLOG POSTS</u></a></u></h2>
 
         <div class="blog-post" data-category="verification maintenance">
@@ -469,7 +469,7 @@
         </div>
 
         <div class="blog-post" data-category="verification buying">
-            <img src="../static/inspecting_a_used_car.jpg" alt="Inspecting A Used Car" loading="lazy">
+            <img src="../static/inspecting_a_used_car.webp" alt="Inspecting A Used Car" loading="lazy">
             <div class="blog-post-content">
                 <a href="used-car-inspections-guide-smart-decisions.html" class="blog-post-title">Used Car Inspections:
                     Your Ultimate Guide to Smart and Safe Buying Decisions</a>
@@ -586,110 +586,18 @@
         </div>
     </section>
 
-    <!-- Ratings Section -->
-    <section class="ratings-section">
-        <h2 class="section-title" style="text-transform: uppercase;"><u>What Our Customers Say</u></h2>
-        <div class="rating-stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
-        </div>
-        <p class="rating-text">4.5 out of 5 stars</p>
-        <div class="customer-reviews">
-            <p>Discover why thousands of automotive buyers, sellers, and owners across the USA trust Auto Inspect for
-                reliable vehicle history reports, seamless services, and expert advice.</p>
-            <br>
-            <!-- Initial visible reviews -->
-            <div class="review-box">
-                <p class="reviewer-name">Emily Parker</p>
-                <p class="review-text">“The vehicle history report saved me from buying a car with hidden accident
-                    damage. 9/10 from my side!”</p>
-            </div>
-            <div class="review-box">
-                <p class="reviewer-name">Harry Scott</p>
-                <p class="review-text">“Amazing service! The process was smooth, and the details were spot-on.
-                    Definitely worth it.”</p>
-            </div>
-
-            <div class="review-box">
-                <p class="reviewer-name">James Thompson</p>
-                <p class="review-text">“I was here to verify the car i bought but realized that its just for USA based
-                    cars”</p>
-            </div>
-
-            <div class="review-box">
-                <p class="reviewer-name">Jane Smith</p>
-                <p class="review-text">“Thanks to Auto Inspect, I found my dream car! Highly recommend their services.”
-                </p>
-            </div>
-
-            <!-- Hidden reviews -->
-            <div class="extra-reviews" style="display: none;">
-
-                <div class="review-box">
-                    <p class="reviewer-name">John freidman</p>
-                    <p class="review-text">“Wow! This service saved me from buying a real lemon. The details were
-                        incredibly thorough. Thank you so much!”</p>
-                </div>
-
-                <div class="review-box">
-                    <p class="reviewer-name">Mark Johnson</p>
-                    <p class="review-text">“Booked a maintenance service through their partner, and the experience was
-                        fantastic. My car is running perfectly now.”</p>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Show More/Less Button -->
-        <button id="toggleReviewsBtn" onclick="toggleReviews()">Show More</button>
-
+    <section class="container">
+        <h2 class="section-title" style="text-transform: uppercase;"><u>Customer Testimonials</u></h2>
         <br>
-        <p>Join the growing community of satisfied customers. <a href="services.html" style="color: #222;">Explore Our
-                Services</a> today!</p>
+        <p>Discover insights from our satisfied customers to help you make informed decisions. Experience our services and share your feedback to assist us in continuous improvement.</p>
         <br>
-        <br>
-        <br>
-        <!-- Rating Form -->
-        <h2 class="section-title" style="text-transform: uppercase;"><u>Rate Us and Leave a Comment</u></h2>
-        <form id="ratingForm">
-            <label for="rating" class="heading-label">Rate us:</label>
-            <div class="star-rating">
-                <span class="star" data-value="1">&#9733;</span>
-                <span class="star" data-value="2">&#9733;</span>
-                <span class="star" data-value="3">&#9733;</span>
-                <span class="star" data-value="4">&#9733;</span>
-                <span class="star" data-value="5">&#9733;</span>
-            </div>
-            <br>
-
-            <label for="name" class="heading-label">Your Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
-            <br>
-            <label for="comment" class="heading-label">Your Comment:</label>
-            <textarea id="comment" name="comment" rows="4" placeholder="Write your comment here..."></textarea>
-            <br>
-
-            <button type="button" onclick="submitReview()">Submit</button>
-        </form>
-    </section>
     
-    <!--Start of Tawk.to Script--
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-        (function () {
-            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/670a5f212480f5b4f58c82b2/1ia087778';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-    </script>
-    !--End of Tawk.to Script-->
-
+        <!-- Elfsight Google Reviews Widget -->
+        <script src="https://static.elfsight.com/platform/platform.js" async></script>
+        <div class="elfsight-app-bd9758c9-8659-49e3-9f7b-960040902e70" data-elfsight-app-lazy></div>
+        <br>
+    </section>    
+    
     <!--Start of Tawk.to Script-->
 <script type="text/javascript">
     window.addEventListener("load", function () {
@@ -706,7 +614,7 @@
 </script>
 <!--End of Tawk.to Script-->
 
-    <script src="../static/script.js"></script>
+    <script src="../static/script.js" defer></script>
 
 </main>
 

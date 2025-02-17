@@ -112,7 +112,7 @@
         <h1 style="text-transform: uppercase;"><u>Services</u></h1>
         <h2>Get served by the best professionals in the industry.</h2>
     </section>
-    <h2 style="text-align: center; margin: 90px auto; font-size: 45px; text-transform: uppercase;"></h2>
+    
     <div class="container">
         <section class="services-section">
             <section>
@@ -160,7 +160,7 @@
     </div>
 
     <section id="our-missions" class="mission-section">
-        <div class="container" style="box-shadow: none;">
+        <div class="container">
             <h2 class="section-title"><u>Our Mission</u></h2>
             <div class="mission-content">
                 <p>At Auto Inspect, our mission is to simplify all vehicle-related matters into a single, user-friendly
@@ -207,226 +207,18 @@
         </div>
     </section>
 
-    <!-- Ratings Section -->
-    <section class="ratings-section">
-        <h2 class="section-title" style="text-transform: uppercase;"><u>What Our Customers Say</u></h2>
-        <div class="rating-stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
-        </div>
-        <p class="rating-text">4.5 out of 5 stars</p>
-        <div class="customer-reviews">
-            <p>Discover why thousands of automotive buyers, sellers, and owners across the USA trust Auto Inspect for
-                reliable vehicle history reports, seamless services, and expert advice.</p>
-            <br>
-            <!-- Initial visible reviews -->
-            <div class="review-box">
-                <p class="reviewer-name">Emily Parker</p>
-                <p class="review-text">“The vehicle history report saved me from buying a car with hidden accident
-                    damage. 9/10 from my side!”</p>
-            </div>
-            <div class="review-box">
-                <p class="reviewer-name">Harry Scott</p>
-                <p class="review-text">“Amazing service! The process was smooth, and the details were spot-on.
-                    Definitely worth it.”</p>
-            </div>
-
-            <div class="review-box">
-                <p class="reviewer-name">James Thompson</p>
-                <p class="review-text">“I was here to verify the car i bought but realized that its just for USA based
-                    cars”</p>
-            </div>
-
-            <div class="review-box">
-                <p class="reviewer-name">Jane Smith</p>
-                <p class="review-text">“Thanks to Auto Inspect, I found my dream car! Highly recommend their services.”
-                </p>
-            </div>
-
-            <!-- Hidden reviews -->
-            <div class="extra-reviews" style="display: none;">
-
-                <div class="review-box">
-                    <p class="reviewer-name">John freidman</p>
-                    <p class="review-text">“Wow! This service saved me from buying a real lemon. The details were
-                        incredibly thorough. Thank you so much!”</p>
-                </div>
-
-                <div class="review-box">
-                    <p class="reviewer-name">Mark Johnson</p>
-                    <p class="review-text">“Booked a maintenance service through their partner, and the experience was
-                        fantastic. My car is running perfectly now.”</p>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Show More/Less Button -->
-        <button id="toggleReviewsBtn" onclick="toggleReviews()">Show More</button>
+    <section class="container">
+        <h2 class="section-title" style="text-transform: uppercase;"><u>Customer Testimonials</u></h2>
         <br>
-        <p>Join the growing community of satisfied customers. <a href="services.html"
-                style="color: #222; font-weight: bold;">Explore Our Services</a> today!</p>
+        <p>Discover insights from our satisfied customers to help you make informed decisions. Experience our services and share your feedback to assist us in continuous improvement.</p>
         <br>
+    
+        <!-- Elfsight Google Reviews Widget -->
+        <script src="https://static.elfsight.com/platform/platform.js" async></script>
+        <div class="elfsight-app-bd9758c9-8659-49e3-9f7b-960040902e70" data-elfsight-app-lazy></div>
         <br>
-        <!-- Rating Form -->
-        <h2 class="section-title"><u>Rate Us and Leave a Comment</u></h2>
-        <form id="ratingForm">
-            <label for="rating" class="heading-label">Rate us:</label>
-            <div class="star-rating">
-                <span class="star" data-value="1">&#9733;</span>
-                <span class="star" data-value="2">&#9733;</span>
-                <span class="star" data-value="3">&#9733;</span>
-                <span class="star" data-value="4">&#9733;</span>
-                <span class="star" data-value="5">&#9733;</span>
-            </div>
-            <br>
-
-            <label for="name" class="heading-label">Your Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
-            <br>
-            <label for="comment" class="heading-label">Your Comment:</label>
-            <textarea id="comment" name="comment" rows="4" placeholder="Write your comment here..."></textarea>
-            <br>
-
-            <button type="button" onclick="submitReview()">Submit</button>
-        </form>
     </section>
-
-    <script>
-        // Ratings
-        let selectedRating = 0;
-
-        // Star hover and click events
-        document.querySelectorAll('.star').forEach(star => {
-            star.addEventListener('mouseover', () => {
-                resetStars();
-                fillStars(star.getAttribute('data-value'));
-            });
-
-            star.addEventListener('mouseout', () => {
-                resetStars();
-                if (selectedRating !== 0) {
-                    fillStars(selectedRating);
-                }
-            });
-
-            star.addEventListener('click', () => {
-                selectedRating = star.getAttribute('data-value');
-                fillStars(selectedRating);
-            });
-        });
-
-        // Fill stars based on rating
-        function fillStars(rating) {
-            document.querySelectorAll('.star').forEach(star => {
-                if (star.getAttribute('data-value') <= rating) {
-                    star.classList.add('filled');
-                }
-            });
-        }
-
-        // Reset all stars to unfilled
-        function resetStars() {
-            document.querySelectorAll('.star').forEach(star => {
-                star.classList.remove('filled');
-            });
-        }
-
-        // Submit review and add it to the review section
-        function submitReview() {
-            const name = document.getElementById('name').value;
-            const comment = document.getElementById('comment').value;
-
-            if (selectedRating && name && comment) {
-                const reviewSection = document.querySelector('.customer-reviews');
-                const newReview = document.createElement('div');
-                newReview.classList.add('review-box');
-                newReview.innerHTML = `<p class="reviewer-name">${name}</p><p class="review-text">"${comment}"</p>`;
-
-                // Prepend new review and reset the form
-                reviewSection.prepend(newReview);
-                document.getElementById('ratingForm').reset();
-                selectedRating = 0;
-                resetStars();
-                alert('Your review has been submitted!');
-
-                // Show extra reviews if the limit is reached
-                limitReviews();
-            } else {
-                alert('Please provide a name, rating, and a comment.');
-            }
-        }
-
-        // Toggle visibility of extra reviews
-        function toggleReviews() {
-            const extraReviews = document.querySelector('.extra-reviews');
-            const toggleBtn = document.getElementById('toggleReviewsBtn');
-
-            if (extraReviews.style.display === 'none') {
-                extraReviews.style.display = 'block';
-                toggleBtn.textContent = 'Show Less';
-            } else {
-                extraReviews.style.display = 'none';
-                toggleBtn.textContent = 'Show More';
-            }
-        }
-
-        // Limit visible reviews to four initially
-        function limitReviews() {
-            const reviews = document.querySelectorAll('.review-box');
-            const toggleBtn = document.getElementById('toggleReviewsBtn');
-
-            reviews.forEach((review, index) => {
-                review.style.display = index < 4 ? 'block' : 'none';
-            });
-
-            // Show toggle button if there are more than four reviews
-            toggleBtn.style.display = reviews.length > 4 ? 'block' : 'none';
-        }
-
-        // Initial setup on page load
-        limitReviews();
-
-        // Slide-in animation when section is in view
-        document.addEventListener("DOMContentLoaded", () => {
-            const ratingsSection = document.querySelector('.ratings-section');
-
-            if (ratingsSection) {
-                const observer = new IntersectionObserver(entries => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            ratingsSection.classList.add('show');  // Add class when section in view
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.1 });
-
-                observer.observe(ratingsSection);
-            }
-        });
-
-        // rating animation
-
-        // JavaScript to trigger the animation when the element comes into view
-        document.addEventListener("DOMContentLoaded", function () {
-            const ratingsSection = document.querySelector('.ratings-section');
-
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        ratingsSection.classList.add('show');
-                        observer.unobserve(ratingsSection); // Stop observing once visible
-                    }
-                });
-            });
-
-            observer.observe(ratingsSection);
-        });
-    </script>
-
+    
 
     <!--Start of Tawk.to Script-->
 <script type="text/javascript">
