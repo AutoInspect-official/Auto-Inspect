@@ -18,7 +18,7 @@
     <link rel="canonical" href="https://autoinspect.netlify.app/car_info">
 
     <!-- Favicon -->
-    <link rel="icon" href="../static/icon.png" type="image/png">
+    <link rel="icon" href="../static/icon.webp" type="image/png">
 
     <link rel="stylesheet" href="../static/css/all.min.css">
     <link rel="stylesheet" href="../static/style.css">
@@ -27,7 +27,7 @@
     <meta property="og:title" content="AutoInspect | Comprehensive Car History Reports & Expert Vehicle Insights">
     <meta property="og:description"
         content="Discover trusted car history reports and detailed vehicle insights for informed buying and selling. AutoInspect makes vehicle research easy and reliable.">
-    <meta property="og:image" content="../static/icon.png">
+    <meta property="og:image" content="../static/icon.webp">
     <meta property="og:url" content="https://autoinspect.netlify.app/car_info">
     <meta property="og:type" content="website">
 
@@ -36,7 +36,7 @@
     <meta name="twitter:title" content="AutoInspect | Comprehensive Car History Reports">
     <meta name="twitter:description"
         content="Get reliable car history reports and insights for smart buying and selling. Trust AutoInspect for expert vehicle information.">
-    <meta name="twitter:image" content="../static/icon.png">
+    <meta name="twitter:image" content="../static/icon.webp">
 
     <!-- Structured Data (Schema.org) -->
     <script type="application/ld+json">
@@ -48,7 +48,7 @@
             "publisher": {
                 "@type": "Organization",
                 "name": "AutoInspect",
-                "logo": "https://autoinspect.netlify.app/static/icon.png"
+                "logo": "https://autoinspect.netlify.app/static/icon.webp"
             }
         }
         </script>
@@ -62,7 +62,7 @@
     <header>
         <nav class="navbar">
             <div class="logo" style="display: flex; align-items: center;">
-                <img src="../static/logo.png" alt="AutoInspect"
+                <img src="../static/icon.webp" alt="AutoInspect"
                     style="width: 40px; height: 40px; margin-top: auto; border-radius: 50%; margin-right: 20px; filter: contrast(100%); filter: opacity(100%); pointer-events: none;">
                 <a href="index.html" style="display: flex; flex-direction: column;">
                     <h1 style="margin: 0; font-size: 30px;">AutoInspect</h1>
@@ -199,7 +199,6 @@
 
     </script>
 
-    <!-- Premium Plan Section -->
 <section class="premium-plan-section">
     <div class="container" style="border: black; background-color: white; display: flex;">
         <div class="content-box">
@@ -210,44 +209,37 @@
             <p>Gain access to a comprehensive vehicle history report with our premium plan for only
                 <strong>$45.50</strong> for confident vehicle trade.</p>
 
-            <!-- Form -->
             <form id="paymentForm">
                 <style>
                     label { color: black !important; }
                 </style>
 
-                <!-- Full Name -->
                 <div class="form-group">
                     <label for="fullName">Full Name</label>
                     <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
                 </div>
 
-                <!-- Email -->
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 </div>
 
-                <!-- Phone -->
                 <div class="form-group">
                     <label for="phone">Phone</label>
                     <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
                 </div>
 
-                <!-- VIN -->
                 <div class="form-group">
                     <label for="vin">VIN</label>
                     <input type="text" id="vin" name="vin" value="" readonly>
                 </div>
 
-                <!-- PayPal Payment Button -->
-                <div id="paypal-container"></div>
+                <div id="paypal-container-8RMFKBQB234FA"></div>
             </form>
         </div>
     </div>
 </section>
 
-<!-- Web3Forms Hidden Submission -->
 <form id="web3Form" action="https://api.web3forms.com/submit" method="POST" style="display:none;">
     <input type="hidden" name="access_key" value="f1d1b19d-cc8f-4a6d-85ff-aa8d573a90e5">
     <input type="hidden" name="name" id="web3FormName">
@@ -256,8 +248,7 @@
     <input type="hidden" name="message" id="web3FormVIN">
 </form>
 
-<!-- PayPal SDK -->
-<script src="https://www.paypal.com/sdk/js?client-id=BAAionfD-Ah0HIyyIV9_8dxh7QMLCU9S0HMAbeqAU6hRMq4k6Mn697UITlhsoDuD8Pgy490HOPg3C2OjjY&components=buttons&disable-funding=venmo&currency=USD"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=BAAionfD-Ah0HIyyIV9_8dxh7QMLCU9S0HMAbeqAU6hRMq4k6Mn697UITlhsoDuD8Pgy490HOPg3C2OjjY&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
 
 <script>
     // Function to get URL parameters
@@ -288,45 +279,60 @@
         return true; // Allow PayPal to proceed
     }
 
-    // PayPal Button Integration
-    paypal.Buttons({
-        createOrder: function (data, actions) {
-            if (!validateForm()) return; // Ensure form is filled before payment starts
-
-            return actions.order.create({
-                purchase_units: [{
-                    amount: { value: '45.50' }
-                }]
-            });
-        },
-        onApprove: function (data, actions) {
-            return actions.order.capture().then(function (details) {
-                alert('Payment completed successfully! Your vehicle history report will be emailed to you soon.');
-
-                // Populate Web3Forms hidden inputs with form data
-                document.getElementById('web3FormName').value = document.getElementById('fullName').value;
-                document.getElementById('web3FormEmail').value = document.getElementById('email').value;
-                document.getElementById('web3FormPhone').value = document.getElementById('phone').value;
-                document.getElementById('web3FormVIN').value = document.getElementById('vin').value;
-
-                // Submit Web3Forms form
-                document.getElementById('web3Form').submit();
-
-                // Wait for Web3Forms to process, then redirect
-                setTimeout(() => {
-                    window.location.href = "https://autoinspect.netlify.app/car_info?success=true";
-                }, 1500);
-            });
-        },
-        onCancel: function (data) {
-            alert('Payment was canceled. You have not been charged.');
-            // Optionally, redirect the user or provide additional instructions
-        },
-        onError: function (err) {
-            alert('An error occurred during the payment process. Please try again or contact support.');
-            console.error('PayPal Error:', err);
+    // PayPal Hosted Button Integration
+    paypal.HostedButtons({
+        hostedButtonId: "8RMFKBQB234FA",
+        onClick: ()=>{
+            if (!validateForm()) {
+                return false;
+            }
+            localStorage.setItem('paymentStarted', 'true'); 
         }
-    }).render("#paypal-container");
+    }).render("#paypal-container-8RMFKBQB234FA");
+
+    //This function will run after the paypal button redirect.
+    const urlParams = new URLSearchParams(window.location.search);
+    if(urlParams.get('success') === 'true'){
+        if (localStorage.getItem('paymentStarted') === 'true') { 
+            localStorage.removeItem('paymentStarted'); 
+            document.getElementById('web3FormName').value = document.getElementById('fullName').value;
+            document.getElementById('web3FormEmail').value = document.getElementById('email').value;
+            document.getElementById('web3FormPhone').value = document.getElementById('phone').value;
+            document.getElementById('web3FormVIN').value = document.getElementById('vin').value;
+
+            // Submit Web3Forms form
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: new FormData(document.getElementById('web3Form')),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    //Success message
+                    displaySuccessMessage();
+                } else {
+                    alert('Form submission failed. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred during form submission.');
+            });
+
+        } else {
+            console.log("Payment started flag was not found. Potential attempt to bypass payment.");
+            alert("Payment verification failed. Please contact support.");
+        }
+    }
+
+    function displaySuccessMessage(){
+        const successDiv = document.createElement('div');
+        successDiv.innerHTML = "<p style='color: green; font-weight: bold;'>Payment and vehicle report request successful! Your report will be emailed to you shortly.</p>";
+        document.body.appendChild(successDiv);
+    }
 </script>
 
 <style>
@@ -406,7 +412,7 @@
         <div class="footer-container">
             <!-- Logo and Description -->
             <div class="footer-section logo-description">
-                <img src="../static/logo.webp" alt="Auto_Inspect logo" class="footer-logo">
+                <img src="../static/icon.webp" alt="Auto_Inspect logo" class="footer-logo">
                 <p>We provide reliable car verification and maintenance as well as easy buying/selling services to keep
                     your vehicle in top shape. Trust us for expert advice, detailed inspections, and high-quality
                     services.

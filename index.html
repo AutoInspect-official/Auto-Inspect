@@ -16,15 +16,18 @@
     <meta name="google-site-verification" content="k4SUwh2-N5XahEXqwttK4phPwJIfdMIxkFu1qJL1iRI">
 
     <!-- Favicon -->
-    <link rel="icon" href="../static/icon.png" type="image/x-icon">
+    <link rel="icon" href="../static/icon.webp" type="image/x-icon">
 
-    <link rel="stylesheet" href="../static/css/all.min.css">
-    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="../static/css/all.min.css">
+    </noscript>
+        <link rel="stylesheet" href="../static/style.css">
 
     <!-- Open Graph Meta Tags (Social Sharing) -->
     <meta property="og:title" content="AutoInspect – Trusted Car Inspections & Easy Car Selling USA">
     <meta property="og:description" content="Looking for reliable car inspection services, maintenance tips, or seamless car buying/selling in the USA? AutoInspect has you covered.">
-    <meta property="og:image" content="../static/icon.png">
+    <meta property="og:image" content="../static/icon.webp">
     <meta property="og:url" content="https://autoinspect.netlify.app">
     <meta property="og:type" content="website">
 
@@ -32,7 +35,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="AutoInspect – Trusted Car Inspections & Easy Car Selling USA">
     <meta name="twitter:description" content="Find expert car inspection services, pre-purchase checks, and effortless car transactions with AutoInspect. Trusted across the USA.">
-    <meta name="twitter:image" content="../static/icon.png">
+    <meta name="twitter:image" content="../static/icon.webp">
 
     <!-- Structured Data (Schema.org) -->
     <script type="application/ld+json">
@@ -45,7 +48,7 @@
           "publisher": {
             "@type": "Organization",
             "name": "AutoInspect",
-            "logo": "https://autoinspect.netlify.app/static/icon.png"
+            "logo": "https://autoinspect.netlify.app/static/icon.webp"
           },
         }
         </script>        
@@ -55,7 +58,7 @@
     <header>
         <nav class="navbar">
             <div class="logo" style="display: flex; align-items: center;">
-                <img src="../static/logo.png" alt="AutoInspect"
+                <img src="../static/icon.webp" alt="AutoInspect"
                     style="width: 40px; height: 40px; margin-top: auto; border-radius: 50%; margin-right: 20px; filter: contrast(100%); filter: opacity(100%); pointer-events: none;">
                 <a href="index.html" style="display: flex; flex-direction: column;">
                     <div role="banner"><h1 style="margin: 0; font-size: 30px;">AutoInspect</h1> </div>
@@ -102,16 +105,16 @@
     <!-- Featured slide -->
     <div class="slideshow-container" style="background-color: rgba(0, 0, 0, 0.90);">
         <div class="mySlides fade">
-            <img src="../static/car_fixing.webp" alt="Fixing a car in the garage" class="responsive-image">
+            <img src="../static/car_fixing.webp" alt="Fixing a car in the garage" class="responsive-image" loading="eager">
         </div>
         <div class="mySlides fade">
-            <img src="../static/car_washing.webp" alt="Car being washed" class="responsive-image">
+            <img src="../static/car_washing.webp" alt="Car being washed" class="responsive-image" loading="lazy">
         </div>
         <div class="mySlides fade">
-            <img src="../static/over_all.webp" alt="Car maintenance overview" class="responsive-image">
+            <img src="../static/over_all.webp" alt="Car maintenance overview" class="responsive-image" loading="lazy">
         </div>
         <div class="mySlides fade">
-            <img src="../static/car_evolution.webp" alt="Evolution of cars through history" class="responsive-image">
+            <img src="../static/car_evolution.webp" alt="Evolution of cars through history" class="responsive-image" loading="lazy">
         </div>
     </div>
 
@@ -623,7 +626,7 @@
     <div class="footer-container">
         <!-- Logo and Description -->
         <div class="footer-section logo-description">
-            <img src="../static/logo.webp" alt="Auto_Inspect logo" class="footer-logo">
+            <img src="../static/icon.webp" alt="Auto_Inspect logo" class="footer-logo">
             <p>We provide reliable car verification and maintenance as well as easy buying/selling services to keep your
                 vehicle in top shape. Trust us for expert advice, detailed inspections, and high-quality services.
             </p>
