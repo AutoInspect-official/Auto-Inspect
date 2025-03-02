@@ -105,11 +105,9 @@
             navLinks.classList.toggle('open');
         });
     </script>
-    <br>
-    <br>
 
-    <div class="container" id="car_info" style="margin-top: 10px;">
-        <h2 class="section-title"><u>Vehicle Details:</u></h2>
+    <div class="container" id="car_info" style="margin-top: 0;">
+        <h2 class="section-title"><u>VEHICLE DETAILS:</u></h2>
         <div id="loading-message">Loading VIN data, please wait...</div>
         <div id="error-message" style="display: none;">Failed to retrieve VIN data. Retrying...</div>
         <p><strong>VIN:</strong> <span id="carVin"></span></p>
@@ -314,7 +312,7 @@
                     //Success message
                     displaySuccessMessage();
                 } else {
-                    alert('Form submission failed. Please try again.');
+                    alert('Form submission failed. Please try again or contact support.');
                 }
             })
             .catch(error => {
@@ -372,13 +370,13 @@
 
 <div class="parent-container">
     <div class="reportinfo">
-        <h2 class="section-title">Our Premium Vehicle History Includes:</h2>
+        <h2 class="section-title" style="text-transform: uppercase;">Our Premium Vehicle History Includes:</h2>
         <p>Basic Vehicle Information</p>
         <p>Vehicle Style and Dimensions</p>
         <p>Body-Part Information & Efficiency</p>
         <p>Built-in Features & Upgrades</p>
         <p>Warranty Information</p>
-        <p>Recalls and Defects</strong> </p>
+        <p>Recalls and Defects</p>
         <p>Title Check</p>
         <p>Additional History (if applicable) </p>
         <p>Market Price Analysis</p>
