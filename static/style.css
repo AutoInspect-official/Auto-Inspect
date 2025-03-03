@@ -27,15 +27,27 @@ h1, h2, h3, h4, h5, h6 {
 .container {
     color: black;
     max-width: 1000px;
+    width: 90%; /* Make it flexible */
     margin: 0 auto;
     padding: 40px;
     overflow: hidden;
 }
 
 img {
-    max-width: 100%;  /* Ensures images never exceed their original size */
-    height: auto;     /* Maintains aspect ratio naturally */
-    display: block;   /* Prevents unwanted space below inline images */
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px; /* Less padding on small screens */
+    }
+
+    p {
+        font-size: 1.2rem; /* Smaller font size on small screens */
+    }
 }
 
 /* Header */
@@ -55,6 +67,28 @@ h1 {
     color: white;
     font-family: "Times New Roman", serif;
     margin: 0;
+}
+
+.powered-by {
+    font-size: 13px;
+    color: rgb(223, 223, 223);
+    margin-top: 2px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .powered-by {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.5em !important;
+    }
+    .powered-by {
+        display: none;
+    }
 }
 
 .logo {
@@ -99,19 +133,6 @@ h1 {
 .nav-links li a:hover {
     background-color: #5c5c5c;
     border-radius: 5px;
-}
-
-.powered-by {
-    font-size: 13px;
-    color: rgb(223, 223, 223);
-    margin-top: 2px;
-    text-align: center;
-}
-
-@media (max-width: 768px) {
-    .powered-by {
-        font-size: 10px;
-    }
 }
 
 .nav-links .dropdown .dropdown-menu {
@@ -342,6 +363,12 @@ h1 {
 
 html {
     scroll-behavior: smooth;
+}
+
+@media (max-width: 294px) {
+    .html{
+        min-width: 100%;
+    }
 }
 
 .submit-btn {
@@ -1474,6 +1501,7 @@ footer {
     background-color: rgba(0, 0, 0, 0.90);
     padding: 40px 20px;
     color: white;
+    min-width: fit-content;
 }
 
 .footer-container {
@@ -1481,6 +1509,8 @@ footer {
     justify-content: space-between;
     flex-wrap: wrap;
     text-align: left;
+    max-width: 1800px; /* Add max-width */
+    margin: 0 auto; /* Center the container */
 }
 
 .footer-section {
@@ -1493,6 +1523,7 @@ footer {
     flex: 1;
     min-width: 250px;
     margin-right: 25px;
+    text-align: justify;
 }
 
 .footer-logo {
@@ -1557,6 +1588,13 @@ footer {
     .footer-section {
         margin-bottom: 30px;
     }
+
+    footer {
+        padding: 20px 10px;
+    }
+    .footer-logo {
+        justify-self: center;
+    }
 }
 
 footer .powered-by {
@@ -1566,4 +1604,10 @@ footer .powered-by {
     pointer-events: none;
     user-select: none;
     cursor: default;
+}
+
+@media (min-width: 769px) {
+    .footer-section {
+        margin-right: 20px;
+    }
 }
