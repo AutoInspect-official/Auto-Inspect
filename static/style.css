@@ -4,8 +4,24 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Poppins';
+    src: url('../static/webfonts/Poppins-Regular.woff2') format('woff2'),
+         url('../static/webfonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400; /* Regular */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../static/webfonts/Poppins-Bold.woff2') format('woff2'),
+         url('../static/webfonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: 500; /* Bold */
+    font-style: normal;
+}
+
 body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Poppins', sans-serif !important;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
@@ -22,6 +38,7 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0 0 0.5em 0;
+    font-weight: 600; /* Regular */
 }
 
 .container {
@@ -511,7 +528,7 @@ html {
 }
 
 form p {
-    font-size: 1em;
+    font-size: 1.2em !important;
     text-align: center;
     color: white;
     margin: 5px 0;
@@ -722,6 +739,12 @@ button:hover {
     margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+@media (max-width: 740px) {
+    .section-title{
+        font-size: 25px !important;
+    }
 }
 
 .partners-slider {
@@ -1509,8 +1532,8 @@ footer {
     justify-content: space-between;
     flex-wrap: wrap;
     text-align: left;
-    max-width: 1800px; /* Add max-width */
-    margin: 0 auto; /* Center the container */
+    max-width: 1800px; 
+    margin: 0 auto; 
 }
 
 .footer-section {
@@ -1523,7 +1546,6 @@ footer {
     flex: 1;
     min-width: 250px;
     margin-right: 25px;
-    text-align: justify;
 }
 
 .footer-logo {
