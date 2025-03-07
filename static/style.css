@@ -6,16 +6,14 @@
 
 @font-face {
     font-family: 'Poppins';
-    src: url('../static/webfonts/Poppins-Regular.woff2') format('woff2'),
-         url('../static/webfonts/Poppins-Regular.ttf') format('truetype');
+    src: url('../static/webfonts/Poppins-Regular.ttf') format('truetype');
     font-weight: 400; /* Regular */
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url('../static/webfonts/Poppins-Bold.woff2') format('woff2'),
-         url('../static/webfonts/Poppins-Bold.ttf') format('truetype');
+    src: url('../static/webfonts/Poppins-Bold.ttf') format('truetype');
     font-weight: 500; /* Bold */
     font-style: normal;
 }
