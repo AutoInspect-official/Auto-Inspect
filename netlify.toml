@@ -2,6 +2,7 @@
   base = "."                       # Ensure it points to the correct root of the project
   publish = "./"                   # The folder where the built site will be published
   ignore = "exit 0"                # Skip deployment if a build fails
+  functions = "netlifyfunctions"   # Directory for Netlify functions
 
 [[redirects]]
   from = "/*"                      # Catch all paths
