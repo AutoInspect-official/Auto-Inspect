@@ -23,6 +23,7 @@
         <link rel="stylesheet" href="../static/css/all.min.css">
     </noscript>
         <link rel="stylesheet" href="../static/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Open Graph Meta Tags (Social Sharing) -->
     <meta property="og:title" content="AutoInspect – Trusted Car Inspections & Easy Car Selling USA">
@@ -64,906 +65,925 @@
 </head>
 
 <main>
-    <header>
-        <nav class="navbar">
-            <div class="logo" style="display: flex; align-items: center;">
-                <img src="../static/icon.webp" alt="AutoInspect"
-                    style="width: 40px; height: 40px; margin-top: auto; border-radius: 50%; margin-right: 20px; filter: contrast(100%); filter: opacity(100%); pointer-events: none;">
-                <a href="index.html" style="display: flex; flex-direction: column;">
-                    <div role="banner"><h1 style="margin: 0; font-size: 30px;">AutoInspect</h1> </div>
-                </a>
-                <span class="powered-by" aria-hidden="true">&nbsp; | Powered by Netlify</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li class="dropdown">
-                    <a class="buy-sell" href="#">Buy/Sell</a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a target="_blank"
-                                href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1"
-                                class="dropdown-link">
-                                Buy a Car
-                            </a>
-                            <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024"
-                                alt="eBay Tracking Pixel" style="display: none;">
-                        </li>
-                        <li><a href="car_sell.html">Sell Your Car</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-        </nav>
-    </header>
+    <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo-container">
+        <img src="../static/icon.webp" alt="Logo">
+        <div class="logo">AutoInspect</div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="dropdown">
+          <a class="buy-sell" href="#">MarketPlace</a>
+          <ul class="dropdown-menu">
+            <li>
+              <a target="_blank"
+                href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1"
+                class="dropdown-link">
+                > Buy a Car
+              </a>
+              <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024"
+                alt="eBay Tracking Pixel" style="display: none;">
+            </li>
+            <li><a href="car_sell.html">> Sell Your Car</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
+  </header>
 
-    <script>
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
+  <script>
+    // Add background color to header on scroll
+window.addEventListener("scroll", () => {
+  const header = document.querySelector("header");
+  if (window.scrollY > 50) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
 
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('open');
-        });
-    </script>
+// Toggle mobile menu
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
 
-    <!-- Featured slide -->
-    <div class="slideshow-container" style="background-color: rgba(0, 0, 0, 0.90);">
-        <div class="mySlides fade">
-            <img src="../static/car_fixing.webp" alt="Fixing a car in the garage" class="responsive-image" loading="eager">
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("open");
+  navLinks.classList.toggle("open");
+});
+
+// Enhanced active link detection (works for all pages)
+document.addEventListener('DOMContentLoaded', function() {
+  // Get current page path (works for both .html and extensionless URLs)
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const navLinks = document.querySelectorAll('.nav-links li a');
+
+  navLinks.forEach(link => {
+    const linkPath = link.getAttribute('href');
+    
+    // Remove .html if present for comparison
+    const cleanCurrent = currentPath.replace('.html', '');
+    const cleanLink = linkPath.replace('.html', '');
+    
+    // Set active class if paths match (with or without .html)
+    if (cleanCurrent === cleanLink || 
+        (cleanCurrent === 'index' && cleanLink === '') ||
+        (cleanCurrent === '' && cleanLink === 'index')) {
+      link.classList.add('active');
+    }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const header = document.querySelector('header');
+  const heroSection = document.querySelector('.hero-section');
+
+  window.addEventListener('scroll', function() {
+    const heroBottom = heroSection.getBoundingClientRect().bottom;
+    
+    // Add border when header touches hero's bottom
+    if (heroBottom <= header.offsetHeight) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+});
+</script>
+
+<main>
+  <!-- Hero Section -->
+  <section class="hero-section" style="height: 95vh;">
+    <div class="content">
+      <form id="vinForm">
+        <h2 class="section-title">
+            Get Your Free Vehicle Report Instantly</h2>
+        <p>Enter your car's US based VIN number</u> below:</p>
+        <div class="form-group">
+            <label for="vin">Enter VIN: </label>
+            <input type="text" id="vin" name="vin" maxlength="17" placeholder="Enter VIN here" required>
         </div>
-        <div class="mySlides fade">
-            <img src="../static/car_washing.webp" alt="Car being washed" class="responsive-image">
+        <div class="form-group">
+            <label id="captchaQuestion"></label>
+            <input type="text" id="captchaAnswer" placeholder="Answer" required>
         </div>
-        <div class="mySlides fade">
-            <img src="../static/over_all.webp" alt="Car maintenance overview" class="responsive-image">
+        <div class="form-group-right">
+            <button type="submit" class="btn btn-secondary">Submit</button>
         </div>
-        <div class="mySlides fade">
-            <img src="../static/car_evolution.webp" alt="Evolution of cars through history" class="responsive-image">
-        </div>
+    </form>
     </div>
-
-    <div class="form-container">
-        <form id="vinForm">
-            <h2 class="section-title" style="color: white; text-transform: uppercase; margin-bottom: 5px">
-                <u>Get Your Free Vehicle Report Instantly</u></h2>
-            <p style="font-size: x-large;">Enter your car's US based <span class="tooltip" style="cursor: pointer;" title="VIN (Vehicle Identification Number) is a unique 17-character code used to identify individual motor vehicles. It is located on the dashboard, typically near the windshield, or on the driver's side door frame."><u>VIN number</u></span>
-                below:</p>
-            <hr class="custom-line">
-            <div class="form-group">
-                <label for="vin">Enter VIN: </label>
-                <input type="text" id="vin" name="vin" maxlength="17" placeholder="Enter VIN here" required>
-            </div>
-            <div class="form-group">
-                <label id="captchaQuestion"></label>
-                <input type="text" id="captchaAnswer" placeholder="Answer" required>
-            </div>
-            <div class="form-group-right">
-                <button type="submit">Submit</button>
-            </div>
-        </form>
-    </div>    
-
-    <script>
-        document.getElementById('vinForm').addEventListener('submit', function (event) {
-            event.preventDefault();
-            const vin = document.getElementById('vin').value.trim();
-
-            if (vin) {
-                // Redirect to the car info page with VIN as query parameter
-                window.location.href = `${window.location.origin}/car_info.html?vin=${vin}`;
-            } else {
-                alert('Please enter a valid VIN.');
-            }
-        });
-    </script>
-
-    <!-- Next and previous buttons -->
-    <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
-    <button class="next" onclick="plusSlides(1)">&#10095;</button>
+    <div class="image-container">
+      <img src="../static/hero_car1.png" alt="Hero Image">
     </div>
+  </section>
 
-    <!-- Dots/circles -->
-    <div style="text-align: center;">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-    </div>
+<script>
+    document.getElementById('vinForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+        const vin = document.getElementById('vin').value.trim();
 
-    <!-- Partners Section -->
-    <section class="partners-section">
-        <div class="container">
-            <h2 class="section-title"><u>Trusted Partners in Automotive Excellence</u></h2>
-            <p>We proudly collaborate with trusted industry leaders to provide top-tier automotive services, ensuring
-                accuracy and reliability for our valued customers.</p>
-            <div class="partners-slider">
-                <div class="partner">
-                    <a href="https://www.carfax.com/" target="_blank">
-                        <img src="../static/carfax.webp" alt="CarFax Logo - Vehicle History Reports" class="partner-logo" loading="lazy">
-                    </a>
-                </div>
-                <div class="partner">
-                    <a href="https://www.yourmechanic.com/" target="_blank">
-                        <img src="../static/your_mechanic.webp" alt="YourMechanic Logo - Mobile Car Repairs" class="partner-logo" loading="lazy" style="border-radius: 50%;">
-                    </a>
-                </div>
-                <div class="partner">
-                    <a href="https://www.kbb.com/" target="_blank">
-                        <img src="../static/kbb.png" alt="Kelley Blue Book Logo - Vehicle Pricing" class="partner-logo" loading="lazy">
-                    </a>
-                </div>
-                <div class="partner">
-                    <a href="https://www.ebay.com/motors" target="_blank">
-                        <img src="../static/ebay.png" alt="eBay Motors Logo - Vehicle Parts Marketplace" class="partner-logo" loading="lazy">
-                    </a>
-                </div>
-                <div class="partner">
-                    <a href="https://vehiclehistory.bja.ojp.gov/" target="_blank">
-                        <img src="../static/nmvtis.png" alt="NMVTIS Logo - Title & History Data Provider" class="partner-logo" loading="lazy">
-                    </a>
-                </div>
-                <div class="partner">
-                    <a href="https://www.vincheck.info/" target="_blank">
-                        <img src="../static/vincheck.png" alt="VINCheck Logo - Free Recall Data" class="partner-logo" loading="lazy">
-                    </a>
-                </div>
-                <div class="partner">
-                    <a href="https://www.nhtsa.gov/" target="_blank">
-                        <img src="../static/nhtsa.webp" alt="NHTSA Logo - Affordable History Records" class="partner-logo" loading="lazy">
-                    </a>
-                </div>
-            </div>
-            <h2 class="section-title" style="margin-top: 50px; text-align: center;"><u>Partner with Us</u></h2>
-            <p><b>Collaborate with industry experts!</b> We invite businesses to join us in offering trusted vehicle
-                solutions. For inquiries, <a href="mailto:zanecarter.9388@gmail.com" style="color: #222">email us</a>
-                directly.
-                <br>Let’s help our customers together!
-            </p>
-        </div>
-    </section>
+        if (vin) {
+            // Redirect to the car info page with VIN as query parameter
+            window.location.href = `${window.location.origin}/car_info.html?vin=${vin}`;
+        } else {
+            alert('Please enter a valid VIN.');
+        }
+    });
+</script>
 
-    <div class="return-policy" style="padding: 10%; color: white; background-color: rgba(0, 0, 0, 0.90);">
-        <h2 class="section-title" style="color: white; text-transform: uppercase;"><u>Refund Policy</u></h2>
-        <p>We value your trust and confidence in our services. If you're not satisfied, we offer a <b>full refund within
-                3 days</b> of purchase.</p>
-        <p>Our reports are sourced from authorized NMVTIS providers, guaranteeing reliable data. Requesting a refund is
-            simple—just contact our support team, and we’ll process it within three business days.</p>
-        <p>Read our <a href="terms.html#refund-terms" style="color: white;">detailed refund policy</a> for more information.</p>
-        <br>
-        <p>Thank you for choosing us!</p>
-    </div>
-    <br>
-    <br>
+<!-- Partners Section -->
+<section class="partners-section">
+  <div class="container">
+      <h2 class="section-title">Trusted Partners</h2>
+      <p>We proudly collaborate with trusted industry leaders to provide top-tier automotive services, ensuring
+          accuracy and reliability for our valued customers.</p>
+      <div class="partners-slider">
+          <div class="partner">
+              <a href="https://www.carfax.com/" target="_blank">
+                  <img src="../static/carfax.webp" alt="CarFax Logo - Vehicle History Reports" class="partner-logo" loading="lazy">
+              </a>
+          </div>
+          <div class="partner">
+              <a href="https://www.yourmechanic.com/" target="_blank">
+                  <img src="../static/your_mechanic.webp" alt="YourMechanic Logo - Mobile Car Repairs" class="partner-logo" loading="lazy" style="border-radius: 50%;">
+              </a>
+          </div>
+          <div class="partner">
+              <a href="https://www.kbb.com/" target="_blank">
+                  <img src="../static/kbb.png" alt="Kelley Blue Book Logo - Vehicle Pricing" class="partner-logo" loading="lazy">
+              </a>
+          </div>
+          <div class="partner">
+              <a href="https://www.ebay.com/motors" target="_blank">
+                  <img src="../static/ebay.png" alt="eBay Motors Logo - Vehicle Parts Marketplace" class="partner-logo" loading="lazy">
+              </a>
+          </div>
+          <div class="partner">
+              <a href="https://vehiclehistory.bja.ojp.gov/" target="_blank">
+                  <img src="../static/nmvtis.png" alt="NMVTIS Logo - Title & History Data Provider" class="partner-logo" loading="lazy">
+              </a>
+          </div>
+          <div class="partner">
+              <a href="https://www.vincheck.info/" target="_blank">
+                  <img src="../static/vincheck.png" alt="VINCheck Logo - Free Recall Data" class="partner-logo" loading="lazy">
+              </a>
+          </div>
+          <div class="partner">
+              <a href="https://www.nhtsa.gov/" target="_blank">
+                  <img src="../static/nhtsa.webp" alt="NHTSA Logo - Affordable History Records" class="partner-logo" loading="lazy">
+              </a>
+          </div>
+      </div>
+      <h2 class="section-title" style="margin-top: 50px; text-align: center;">Partner with Us</h2>
+      <p><b>Collaborate with industry experts!</b> We invite businesses to join us in offering trusted vehicle
+          solutions. For inquiries, <a href="mailto:zanecarter.9388@gmail.com" style="color: #222">email us</a>
+          directly.
+          <br>Let’s help our customers together!
+      </p>
+  </div>
+</section>
+
+<div class="return-policy" style="padding: 10%; color: white; background-color: orange;" data-bg="orange">
+  <h2 class="section-title" style="color: white; text-transform: uppercase;">Refund Policy</h2>
+  <p>We value your trust and confidence in our services. If you're not satisfied, we offer a <b>full refund within
+          3 days</b> of purchase.</p>
+  <p>Our reports are sourced from authorized NMVTIS providers, guaranteeing reliable data. Requesting a refund is
+      simple—just contact our support team, and we’ll process it within three business days.</p>
+  <p>Read our <a href="terms.html#refund-terms" style="color: white;">detailed refund policy</a> for more information.</p>
+  <br>
+  <p>Thank you for choosing us!</p>
+</div>
+<br>
+<br>
 
 <div class="container">
-    <!-- Section: Verify Your Car -->
-    <div class="section">
-        <div class="text">
-            <h2>
-                <a href="index.html" style="color: Black;">VERIFY YOUR CAR</a>
-            </h2>
-            <p>
-                Make smarter decisions with our detailed vehicle verification reports. Get all the critical details you need, including accident history, recall status, and service records. Whether you're buying or selling, we give you the peace of mind that comes with complete transparency.
-            </p>
-        </div>
-        <div class="image">
-            <img src="../static/car_verify.webp" alt="Vehicle Verification" loading="lazy"/>
-        </div>
-    </div>
-
-    <!-- Section: Buy Your Ideal Car -->
-    <div class="section">
-        <div class="text">
-            <h2>
-                <a target="_blank"
-                    href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1"
-                    style="color: Black;">BUY YOUR IDEAL CAR</a>
-                <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024"
-                    alt="eBay Tracking Pixel" style="display: none;">
-            </h2>
-            <p>
-                Find your dream car with eBay Motors! From family-friendly vehicles to luxury models and powerful trucks, we’ve got a range that fits every budget and lifestyle. Shop with confidence knowing you’re getting the best deal on your next car.
-            </p><br>
-            <a target="_blank"
-                href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1"
-                class="service-action" style="color: white; text-decoration: none; font-weight: bold;">Browse
-                Cars</a>
-            <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024"
-                alt="eBay Tracking Pixel" style="display: none;" loading="lazy">
-        </div>
-        <div class="image">
-            <img src="../static/car_buy.png" alt="Find Your Ideal Car on eBay Motors" loading="lazy"/>
-        </div>
-    </div>
-
-    <!-- Section: Maintain Your Car -->
-    <div class="section">
-        <div class="text">
-            <h2>
-                <a href="https://www.yourmechanic.com/book/newuser#zip" style="color: Black;"
-                    target="_blank">MAINTAIN IT REGULARLY</a>
-            </h2>
-            <p>
-                Keep your car in top condition with regular maintenance. Our trusted partners offer everything from routine check-ups to expert repairs, ensuring your vehicle is always road-ready and safe for your drives.
-            </p>
-        </div>
-        <div class="image" style="z-index: 137;">
-            <img src="../static/car_maintenance2.png" alt="Vehicle Maintenance" loading="lazy"/>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="text">
-            <h2>
-                <a href="blog.html" style="color: Black;">LEARN FROM OUR BLOG</a>
-            </h2>
-            <p>
-                Discover expert insights and valuable tips to make informed decisions about your vehicle. From understanding pre-purchase inspections to maintaining your car’s value, our blog covers everything you need to stay ahead. Stay informed and drive smarter today!
-            </p>
-        </div>
-        <div class="image">
-            <img src="../static/car_blog.png" alt="learn from blog" loading="lazy" style="max-width: 300px;"/>
-        </div>
-    </div>
-
-    <!-- Section: Sell Your Car -->
-    <div class="section">
-        <div class="text">
-            <h2>
-                <a href="car_sell.html" style="color: Black;" target="_blank">GET TIRED? SELL YOUR CAR</a>
-            </h2>
-            <p>
-                Ready to sell your car? We make the process simple and hassle-free, whether your vehicle is new, used, or anywhere in between. Get a quick valuation and connect with buyers fast using our Live Chat feature. It’s that easy!
-            </p>
-        </div>
-        <div class="image" style="z-index: 137;">
-            <img src="../static/selling.webp" alt="Sell Your Vehicle" loading="lazy"/>
-        </div>
-    </div>
+<!-- Section: Verify Your Car -->
+<div class="section">
+  <div class="text">
+      <h2>
+          <a href="index.html" style="color: Black;">VERIFY YOUR CAR</a>
+      </h2>
+      <p>
+          Make smarter decisions with our detailed vehicle verification reports. Get all the critical details you need, including accident history, recall status, and service records. Whether you're buying or selling, we give you the peace of mind that comes with complete transparency.
+      </p>
+  </div>
+  <div class="image">
+      <img src="../static/car_verify.webp" alt="Vehicle Verification" loading="lazy"/>
+  </div>
 </div>
 
-    <script>
-        // Function to handle the intersection observer
-        const sections = document.querySelectorAll('.section');
+<!-- Section: Buy Your Ideal Car -->
+<div class="section">
+  <div class="text">
+      <h2>
+          <a target="_blank"
+              href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1"
+              style="color: #1d1d1d;">BUY YOUR IDEAL CAR</a>
+          <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024"
+              alt="eBay Tracking Pixel" style="display: none;">
+      </h2>
+      <p>
+          Find your dream car with eBay Motors! From family-friendly vehicles to luxury models and powerful trucks, we’ve got a range that fits every budget and lifestyle. Shop with confidence knowing you’re getting the best deal on your next car.
+      </p><br>
+      <a target="_blank"
+          href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1"
+          class="btn btn-primary">Browse
+          Cars</a>
+      <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024"
+          alt="eBay Tracking Pixel" style="display: none;" loading="lazy">
+  </div>
+  <div class="image">
+      <img src="../static/car_buy.png" alt="Find Your Ideal Car on eBay Motors" loading="lazy"/>
+  </div>
+</div>
 
-        const options = {
-            root: null,
-            threshold: 0.1
-        };
+<!-- Section: Maintain Your Car -->
+<div class="section">
+  <div class="text">
+      <h2>
+          <a href="https://www.yourmechanic.com/book/newuser#zip" style="color: #1d1d1d;"
+              target="_blank">MAINTAIN IT REGULARLY</a>
+      </h2>
+      <p>
+          Keep your car in top condition with regular maintenance. Our trusted partners offer everything from routine check-ups to expert repairs, ensuring your vehicle is always road-ready and safe for your drives.
+      </p>
+  </div>
+  <div class="image" style="z-index: 137;">
+      <img src="../static/car_maintenance2.png" alt="Vehicle Maintenance" loading="lazy"/>
+  </div>
+</div>
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, options);
+<div class="section">
+  <div class="text">
+      <h2>
+          <a href="blog.html" style="color: #1d1d1d;">LEARN FROM OUR BLOG</a>
+      </h2>
+      <p>
+          Discover expert insights and valuable tips to make informed decisions about your vehicle. From understanding pre-purchase inspections to maintaining your car’s value, our blog covers everything you need to stay ahead. Stay informed and drive smarter today!
+      </p>
+  </div>
+  <div class="image">
+      <img src="../static/car_blog.png" alt="learn from blog" loading="lazy" style="max-width: 300px;"/>
+  </div>
+</div>
 
-        // Observe each section
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    </script>
+<!-- Section: Sell Your Car -->
+<div class="section">
+  <div class="text">
+      <h2>
+          <a href="car_sell.html" style="color: #1d1d1d;" target="_blank">GET TIRED? SELL YOUR CAR</a>
+      </h2>
+      <p>
+          Ready to sell your car? We make the process simple and hassle-free, whether your vehicle is new, used, or anywhere in between. Get a quick valuation and connect with buyers fast using our Live Chat feature. It’s that easy!
+      </p>
+  </div>
+  <div class="image" style="z-index: 137;">
+      <img src="../static/selling.webp" alt="Sell Your Vehicle" loading="lazy"/>
+  </div>
+</div>
+</div>
 
-    <style>
-        /* Container for the blog posts */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 20px;
-        }
+<script>
+  // Function to handle the intersection observer
+  const sections = document.querySelectorAll('.section');
 
-        /* Title styling */
-        .section-title {
-            font-size: 2em;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 20px;
-            /* Reduced space below heading */
-            text-decoration: underline;
-            width: 100%;
-            /* Make sure the title takes full width */
-            text-align: center;
-            /* Center the title */
-        }
+  const options = {
+      root: null,
+      threshold: 0.1
+  };
 
-        /* Blog post styling */
-        .blog-post {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            width: 32%;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: inline-block;
-            text-align: left;
-        }
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+          }
+      });
+  }, options);
 
-        /* Hover effect for blog posts */
-        .blog-post:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
+  // Observe each section
+  sections.forEach(section => {
+      observer.observe(section);
+  });
 
-        /* Image styling */
-        .blog-post img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            border-bottom: 4px solid;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-        }
+  // Auto-detect orange background and switch color
+document.querySelectorAll('.section-title').forEach(title => {
+  const bgColor = getComputedStyle(title.parentElement).backgroundColor;
+  if (bgColor.includes('rgb(255, 165, 0)') || bgColor.includes('orange')) {
+    title.classList.add('override-orange');
+  }
+});
+</script>
 
-        /* Content inside the blog post */
-        .blog-post-content {
-            padding: 20px;
-        }
+<style>
+  /* Container for the blog posts */
+  .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+  }
 
-        /* Title styling within blog post */
-        .blog-post-title {
-            font-size: 1.6em;
-            font-weight: 600;
-            color: #333;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
+  /* Title styling */
+  .section-title {
+      font-size: 2em;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+      /* Reduced space below heading */
+      text-decoration: underline;
+      width: 100%;
+      /* Make sure the title takes full width */
+      text-align: center;
+      /* Center the title */
+  }
 
-        .blog-post-title:hover {
-            color: #0073e6;
-        }
+  /* Blog post styling */
+  .blog-post {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      width: 32%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: inline-block;
+      text-align: left;
+  }
 
-        /* Meta information styling */
-        .blog-post-meta {
-            font-size: 0.9em;
-            color: #888;
-            margin-top: 10px;
-            margin-bottom: 15px;
-        }
+  /* Hover effect for blog posts */
+  .blog-post:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
 
-        /* Description text */
-        .blog-post-description {
-            font-size: 1.3em;
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 0;
-        }
+  /* Image styling */
+  .blog-post img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-bottom: 4px solid;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+  }
 
-        /* Responsive design for blog posts */
-        @media (max-width: 1200px) {
-            .blog-post {
-                width: 48%;
-                /* Two blog posts in a row */
-            }
-        }
+  .blog-post img:hover {
+      filter: brightness(130%);      
+      filter: contrast(130%);
+      filter: hue-rotate(130%);
+  }
 
-        @media (max-width: 768px) {
-            .blog-post {
-                width: 100%;
-                /* One blog post per row on smaller screens */
-                margin-bottom: 30px;
-            }
-        }
-    </style>
+  /* Content inside the blog post */
+  .blog-post-content {
+      padding: 20px;
+  }
 
-    <div class="container">
-        <h2 class="section-title"><u><a href="blog.html" style="color: inherit;"><u>OUR BLOG POSTS</u></a></u></h2>
+  /* Title styling within blog post */
+  .blog-post-title {
+      font-size: 1.6em;
+      font-weight: 600;
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s ease;
+  }
 
-        <div class="blog-post" data-category="verification maintenance">
-            <img src="../static/important_insights_of_vehicle_report.jpeg" alt="Vehicle Infographic Report" loading="lazy">
-            <div class="blog-post-content">
-                <a href="key-insights-vehicle-history-report.html" class="blog-post-title">Why a Vehicle History
-                    Report Is a Must for Car Buyers: Key Insights You Should Know</a>
-                <div class="blog-post-meta">Published on: 2024-12-25</div>
-                <p class="blog-post-description">Learn why a Vehicle History Report is essential for car buyers.
-                    Understand its significance, and the key insights to ensure a safe and smart purchase.</p>
-            </div>
-        </div>
+  .blog-post-title:hover {
+      color: blue;
+  }
 
-        <div class="blog-post" data-category="buying selling">
-            <img src="../static/online_vs_physical_car_trade.jpeg" alt="Online or Physical Car Trade" loading="lazy">
-            <div class="blog-post-content">
-                <a href="online-vs-physical-car-trade.html" class="blog-post-title">Online vs. Physical Car Trade: Which Option Is Right for
-                    You?</a>
-                <div class="blog-post-meta">Published on: 2024-12-28</div>
-                <p class="blog-post-description">Weigh the pros and cons of trading cars online versus in-person to make
-                    an informed decision.</p>
-            </div>
-        </div>
+  /* Meta information styling */
+  .blog-post-meta {
+      font-size: 0.9em;
+      color: #888;
+      margin-top: 10px;
+      margin-bottom: 15px;
+  }
 
-        <div class="blog-post" data-category="verification buying">
-            <img src="../static/inspecting_a_used_car.webp" alt="Inspecting A Used Car" loading="lazy">
-            <div class="blog-post-content">
-                <a href="used-car-inspections-guide-smart-decisions.html" class="blog-post-title">Used Car Inspections:
-                    Your Ultimate Guide to Smart and Safe Buying Decisions</a>
-                <div class="blog-post-meta">Published on: 2024-12-01</div>
-                <p class="blog-post-description">Understand why pre-purchase inspections are crucial for ensuring your
-                    investment in a used car is worthwhile.</p>
-            </div>
-        </div>
-        
-    </div>
+  /* Description text */
+  .blog-post-description {
+      font-size: 1.3em;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 0;
+  }
 
-    <br> <br> <div class="newsletter-container">
-        <div class="newsletter-image">
-            <img src="../static/newsletter.webp" alt="Stay Inspired">
-        </div>
-        <div class="newsletter-content">
-            <h2 class="section-title">STAY INSPIRED</h2>
-            <p>Stay informed about the latest developments in the automotive industry with the AutoInspect newsletter.  We provide valuable insights, expert advice, and industry news to help you make informed decisions about your vehicle. Whether you're buying, selling, or simply maintaining your car, our newsletter will keep you up-to-date on the latest trends and best practices. Subscribe today and ensure you have the knowledge to navigate the automotive world with confidence.</p>
-            <form id="newsletterForm" name="newsletterForm" method="POST" data-netlify="true">
-                <input type="email" id="email" name="email" placeholder="you@email.com" required>
-                <button type="submit">Join</button>
-            </form>
-        </div>
-    </div>
-    
-    <style>
-    .newsletter-container {
-    display: flex;
-    align-items: center; 
-    width: 90%; 
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 1000px;
-    box-sizing: border-box;
+  /* Responsive design for blog posts */
+  @media (max-width: 1200px) {
+      .blog-post {
+          width: 48%;
+          /* Two blog posts in a row */
+      }
+  }
+
+  @media (max-width: 768px) {
+      .blog-post {
+          width: 100%;
+          /* One blog post per row on smaller screens */
+          margin-bottom: 30px;
+      }
+  }
+</style>
+
+<div class="container">
+  <h2 class="section-title"><a href="blog.html" style="color: inherit;">OUR BLOG POSTS</a></h2>
+
+  <div class="blog-post" data-category="verification maintenance">
+      <img src="../static/important_insights_of_vehicle_report.jpeg" alt="Vehicle Infographic Report" loading="lazy">
+      <div class="blog-post-content">
+          <a href="key-insights-vehicle-history-report.html" class="blog-post-title">Why a Vehicle History
+              Report Is a Must for Car Buyers: Key Insights You Should Know</a>
+          <div class="blog-post-meta">Published on: 2024-12-25</div>
+          <p class="blog-post-description">Learn why a Vehicle History Report is essential for car buyers.
+              Understand its significance, and the key insights to ensure a safe and smart purchase.</p>
+      </div>
+  </div>
+
+  <div class="blog-post" data-category="buying selling">
+      <img src="../static/online_vs_physical_car_trade.jpeg" alt="Online or Physical Car Trade" loading="lazy">
+      <div class="blog-post-content">
+          <a href="online-vs-physical-car-trade.html" class="blog-post-title">Online vs. Physical Car Trade: Which Option Is Right for
+              You?</a>
+          <div class="blog-post-meta">Published on: 2024-12-28</div>
+          <p class="blog-post-description">Weigh the pros and cons of trading cars online versus in-person to make
+              an informed decision.</p>
+      </div>
+  </div>
+
+  <div class="blog-post" data-category="verification buying">
+      <img src="../static/inspecting_a_used_car.webp" alt="Inspecting A Used Car" loading="lazy">
+      <div class="blog-post-content">
+          <a href="used-car-inspections-guide-smart-decisions.html" class="blog-post-title">Used Car Inspections:
+              Your Ultimate Guide to Smart and Safe Buying Decisions</a>
+          <div class="blog-post-meta">Published on: 2024-12-01</div>
+          <p class="blog-post-description">Understand why pre-purchase inspections are crucial for ensuring your
+              investment in a used car is worthwhile.</p>
+      </div>
+  </div>
+  
+</div>
+
+<br> <br> <div class="newsletter-container">
+  <div class="newsletter-image">
+      <img src="../static/newsletter.webp" alt="Stay Inspired">
+  </div>
+  <div class="newsletter-content">
+      <h2 class="section-title">STAY INSPIRED</h2>
+      <p>Stay informed about the latest developments in the automotive industry with the AutoInspect weekly newsletter.  We provide valuable insights, expert advice, and industry news to help you make informed decisions about your vehicle. Subscribe today and ensure you have the knowledge to navigate the automotive world with confidence.</p>
+      <form id="newsletterForm" name="newsletterForm" method="POST" data-netlify="true">
+          <input type="email" id="email" name="email" placeholder="you@email.com" required>
+          <button type="submit" class="btn btn-primary">Join</button>
+      </form>
+  </div>
+</div>
+
+<style>
+.newsletter-container {
+display: flex;
+align-items: center; 
+width: 90%; 
+margin: 20px auto;
+padding: 20px;
+max-width: 1000px;
+box-sizing: border-box;
 }
 
 .newsletter-image {
-    flex: 1;
-    text-align: center;
+flex: 1;
+text-align: center;
 }
 
 .newsletter-image img {
-    width: 90%;
-    height: auto;
+width: 90%;
+height: auto;
 }
 
 .newsletter-content {
-    flex: 2;
-    padding-left: 20px;
+flex: 2;
+padding-left: 20px;
 }
 
 .newsletter-content h2 {
-    margin-bottom: 10px;
+margin-bottom: 10px;
 }
 
 .newsletter-content p {
-    margin-bottom: 15px;
+margin-bottom: 15px;
 }
 
 .newsletter-content form {
-    display: flex;
-    align-items: center; 
+display: flex;
+align-items: center; 
 }
 
 .newsletter-content input[type="email"] {
-    flex-grow: 1; 
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px 0 0 4px;
-    height: 40px; 
-    width: 300px;
-    box-sizing: border-box;
+flex-grow: 1; 
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 4px 0 0 4px;
+height: 40px; 
+width: 300px;
+box-sizing: border-box;
 }
 
-.newsletter-content button {
-    padding: 10px 15px;
-    background-color: rgb(0, 0, 0, 0.9);
-    color: white;
-    border: none;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
-    height: 40px; 
-    min-width: 100px;
-    box-sizing: border-box;
+.newsletter-container button{
+  display: flex;
+  margin-top: 10px;
+
 }
 
 /* Media query for smaller screens (e.g., mobile) */
 @media (max-width: 768px) {
-    .newsletter-container {
-        flex-direction: column; 
-        justify-content: center;
-    }
-
-    .newsletter-image {
-        flex: 1 0 100%; 
-        margin-bottom: 20px; 
-        order: 1; 
-        justify-items: center;
-    }
-
-    .newsletter-image img {
-        width: 80%;
+.newsletter-container {
+  flex-direction: column; 
+  justify-content: center;
 }
 
-    .newsletter-content {
-        flex: 1 0 100%; 
-        padding-left: 0; 
-        order: 2; 
-    }
-
-    .newsletter-content form {
-        flex-direction: column; 
-        align-items: center;
-    }
-
-    .newsletter-content input[type="email"],
-    .newsletter-content button {
-        width: 100%; 
-        margin-bottom: 10px; 
-        border-radius: 4px; 
-    }
+.newsletter-image {
+  flex: 1 0 100%; 
+  margin-bottom: 20px; 
+  order: 1; 
+  justify-items: center;
 }
-    </style>
-    
-    <script>
-        document.getElementById('newsletterForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const email = document.getElementById('email').value;
-            alert(`Thank you for subscribing with ${email}! You have always got the option to unsubscribe the newsletter.`);
-        });
-    </script>
+
+.newsletter-image img {
+  width: 80%;
+}
+
+.newsletter-content {
+  flex: 1 0 100%; 
+  padding-left: 0; 
+  order: 2; 
+}
+
+.newsletter-content form {
+  flex-direction: column; 
+  align-items: center;
+}
+
+.newsletter-content input[type="email"]{
+  width: 100%; 
+  margin-bottom: 10px; 
+  border-radius: 4px; 
+}
+}
+</style>
+
+<script>
+  document.getElementById('newsletterForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const email = document.getElementById('email').value;
+      alert(`Thank you for subscribing with ${email}! You have always got the option to unsubscribe the newsletter.`);
+  });
+</script>
 
 <style>
-    /* Your existing CSS for #why-auto-inspect */
-    #why-auto-inspect {
-        padding: 40px 0;
-        margin-top: 8vh;
-    }
+/* Your existing CSS for #why-auto-inspect */
+#why-auto-inspect {
+  padding: auto;
+  margin-top: 8vh;
+}
 
-    .why-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        text-align: center;
-    }
+.why-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
 
-    .why-points {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        margin-top: 40px;
-    }
+.why-points {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
 
-    .why-point {
-        flex-basis: 25%;
-        padding: 20px;
-        background-color: #fff;
-        margin: 10px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        box-sizing: border-box;
-    }
+.why-point {
+  flex-basis: 25%;
+  padding: 20px;
+  background-color: #fff;
+  margin: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-sizing: border-box;
+}
 
-    @media(max-width: 700px) {
-        .why-point {
-            flex-basis: 50%;
-        }
-    }
+@media (max-width: 767px) {
+  .container .row {
+    justify-content: center; /* Center items instead of space-around */
+    gap: 20px; /* Add consistent gap between items */
+  }
+  
+  .col-sm-12 {
+    width: 100%;
+    max-width: 350px; /* Match your serviceBox max-width */
+    flex: 0 0 auto; /* Prevent flex-grow */
+  }
+  
+  .serviceBox {
+    margin: 15px auto !important; /* Override any existing margins */
+  }
+  
+  #why-auto-inspect {
+    padding: 20px 15px; /* Add proper mobile padding */
+  }
+}
 
-    .why-point h3 {
-        font-size: 24px;
-        color: #000;
-    }
+/* Existing .why-points mobile adjustment */
+@media (max-width: 700px) {
+  .why-point {
+    flex-basis: calc(50% - 20px); /* Account for gap */
+    margin: 10px;
+  }
+  
+  .why-points {
+    justify-content: center; /* Center the points */
+  }
+}
 
-    .why-point p {
-        font-size: 18px;
-        color: #000;
-    }
-    /* New service box CSS */
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800,1,900&display=swap');
-    :root{
-        --color1: #0fb513;
-        --color2: #d41271;
-        --color3: #ff4a26;
-        --color4: #1e3799;
-    }
-    .serviceBox{
-        color: #555;
-        font-family: "Poppins", serif;
-        text-align:center;
-        padding: 0 10px 20px;
-        border-radius: 30px 30px;
-        position: relative;
-        border: 3px solid var(--color1);
-        max-width: 350px; /* Adjust this value as needed */
-        margin: 30px auto; /* Center the boxes and add vertical spacing */
-        z-index: 1;
-    }
-    @media (min-width: 760px) {
-        .serviceBox{
-            height: 300px;
-        }
-    }
-    .serviceBox:before{
-        content:"";
-        background: #fff;
-        width: calc(100% - 10px);
-        height: calc(100% - 10px);
-        border-radius: 25px 25px;
-        transform: translateX(-50%) translateY(-50%);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-        transition: all 0.3s ease-in-out;
-        z-index: -1;
-    }
-    .serviceBox .service-icon{
-        color: #fff;
-        background: var(--color1);
-        font-size: 40px;
-        line-height: 115px;
-        height: 110px;
-        width: 110px;
-        margin: -50px auto 30px;
-        border-radius: 50%;
-        position: relative;
-        transition: all 0.3s;
-    }
-    .serviceBox .service-icon i{
-        transform: rotateY(0deg);
-        line-height:inherit;
-        transition: all 0.3s ease 0s;
-    }
-    .serviceBox:hover .service-icon i{ transform: rotateY(360deg); }
-    .serviceBox .service-icon:before{
-        content: "";
-        border: 6px solid #fff;
-        width: calc(100% - 5px);
-        height: calc(100% - 5px);
-        border-radius: 50% 50%;
-        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
-        transform: translateX(-50%) translateY(0);
-        position: absolute;
-        top: 6px;
-        left: 50%;
-    }
-    .serviceBox .title{
-        color: var(--color1);
-        font-size: 20px;
-        font-weight: 600;
-        text-transform: uppercase;
-        margin: 0 0 10px;
-    }
-    .serviceBox .description{
-        font-size: 15px;
-        line-height: 25px;
-    }
+/* New service box CSS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800,1,900&display=swap');
 
-    .serviceBox.magenta{ border:3px solid var(--color2);}
-    .serviceBox.magenta .service-icon{ background: var(--color2); }
-    .serviceBox.magenta .title{ color: var(--color2); }
+.serviceBox{
+  color: #555;
+  font-family: "Poppins", sans-serif;
+  text-align:center;
+  padding: 0 10px 20px;
+  border-radius: 30px 30px;
+  position: relative;
+  border: 3px solid blue;
+  max-width: 350px; /* Adjust this value as needed */
+  margin: 30px auto; /* Center the boxes and add vertical spacing */
+  z-index: 1;
+}
+@media (min-width: 760px) {
+  .serviceBox{
+      height: 300px;
+  }
+}
+.serviceBox:before{
+  content:"";
+  background: #fff;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  border-radius: 25px 25px;
+  transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+.serviceBox .service-icon{
+  color: #fff;
+  background: orange;
+  font-size: 40px;
+  line-height: 115px;
+  height: 110px;
+  width: 110px;
+  margin: -50px auto 30px;
+  border-radius: 50%;
+  position: relative;
+  transition: all 0.3s;
+}
+.serviceBox .service-icon i{
+  transform: rotateY(0deg);
+  line-height:inherit;
+  transition: all 0.3s ease 0s;
+}
+.serviceBox:hover .service-icon i{ transform: rotateY(360deg); }
+.serviceBox .service-icon:before{
+  content: "";
+  border: 6px solid #fff;
+  width: calc(100% - 5px);
+  height: calc(100% - 5px);
+  border-radius: 50% 50%;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
+  transform: translateX(-50%) translateY(0);
+  position: absolute;
+  top: 6px;
+  left: 50%;
+}
+.serviceBox .title{
+  color: blue;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+.serviceBox .description{
+  font-size: 15px;
+  line-height: 25px;
+}
 
-    .serviceBox.orange{ border:3px solid var(--color3);}
-    .serviceBox.orange .service-icon{ background: var(--color3); }
-    .serviceBox.orange .title{ color: var(--color3); }
+.serviceBox.orange{ border:3px solid blue;}
+.serviceBox.orange .service-icon{ background: orange; }
+.serviceBox.orange .title{ color: blue; }
 
-    .serviceBox.blue{ border:3px solid var(--color4);}
-    .serviceBox.blue .service-icon{ background: var(--color4); }
-    .serviceBox.blue .title{ color: var(--color4); }
+@media only screen and (max-width:990px){
+  .serviceBox{ margin: 0 0 30px; }
+}
 
-    @media only screen and (max-width:990px){
-        .serviceBox{ margin: 0 0 30px; }
-    }
-
-    /* Add the flexbox styles to the .row class */
-    .container .row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around; /* Optional: Adjust as needed */
-    }
+/* Add the flexbox styles to the .row class */
+.container .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Optional: Adjust as needed */
+}
 </style>
 
 <section id="why-auto-inspect">
-    <div class="why-container">
-        <h2 class="section-title"><u>WHY CHOOSE AUTOINSPECT?</u></h2>
-        <p>AutoInspect is your one-stop solution for reliable car services, including verifying, buying, selling,
-            and maintaining vehicles. Make informed decisions with our professional tools and trusted expertise.</p>
-    </div>
+<div class="why-container">
+  <h2 class="section-title">WHY CHOOSE AUTOINSPECT?</h2>
+  <p>AutoInspect is your one-stop solution for reliable car services, including verifying, buying, selling,
+      and maintaining vehicles. Make informed decisions with our professional tools and trusted expertise.</p>
+</div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="serviceBox">
-                    <div class="service-icon">
-                        <i class="fa fa-globe"></i>
-                    </div>
-                    <h3 class="title">Comprehensive Vehicle Reports</h3>
-                    <p class="description">Access detailed vehicle history, including accident records, title status, open recalls, and service logs. Stay informed when buying or selling a car.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="serviceBox orange">
-                    <div class="service-icon">
-                        <i class="fa fa-rocket"></i>
-                    </div>
-                    <h3 class="title">Expert Maintenance Advice</h3>
-                    <p class="description">Enhance your vehicle’s performance and lifespan with professional maintenance recommendations tailored to your car's needs.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="serviceBox magenta">
-                    <div class="service-icon">
-                        <i class="fa fa-briefcase"></i>
-                    </div>
-                    <h3 class="title">Find Your Perfect Car</h3>
-                    <p class="description">Discover a wide selection of vehicles with verified histories. Whether it’s a family car, a luxury model, or a powerful truck, we help you find the best match for your needs.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="serviceBox blue">
-                    <div class="service-icon">
-                        <i class="fa fa-mobile"></i>
-                    </div>
-                    <h3 class="title">Sell Your Car with Ease</h3>
-                    <p class="description">Get competitive offers for cars in any condition. Our seamless process helps you sell quickly and hassle-free.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="serviceBox">
-                    <div class="service-icon">
-                        <i class="fa fa-book"></i>
-                    </div>
-                    <h3 class="title">Learn About Your Car</h3>
-                    <p class="description">Looks like a car lover! We have chosen a best platform for your reliable learning.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="serviceBox orange">
-                    <div class="service-icon">
-                        <i class="fa fa-users"></i>
-                    </div>
-                    <h3 class="title">Trusted by Thousands</h3>
-                    <p class="description">Join thousands of satisfied customers who rely on our accurate, transparent, and trustworthy car services nationwide.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="serviceBox magenta">
-                    <div class="service-icon">
-                        <i class="fa fa-headphones"></i>
-                    </div>
-                    <h3 class="title">24/7 Customer Support</h3>
-                    <p class="description">Our dedicated support team is available around the clock to assist with any inquiries or service issues.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="serviceBox blue">
-                    <div class="service-icon">
-                        <i class="fa fa-credit-card"></i>
-                    </div>
-                    <h3 class="title">Secure and Easy Payments</h3>
-                    <p class="description">Enjoy multiple payment options with our fast, secure, and hassle-free checkout process, making every transaction worry-free.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="container">
+  <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="serviceBox">
+              <div class="service-icon">
+                  <i class="fa fa-globe"></i>
+              </div>
+              <h3 class="title">Comprehensive Vehicle Reports</h3>
+              <p class="description">Access detailed vehicle history, including accident records, title status, open recalls, and service logs. Stay informed when buying or selling a car.</p>
+          </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="serviceBox orange">
+              <div class="service-icon">
+                  <i class="fa fa-rocket"></i>
+              </div>
+              <h3 class="title">Expert Maintenance Advice</h3>
+              <p class="description">Enhance your vehicle’s performance and lifespan with professional maintenance recommendations tailored to your car's needs.</p>
+          </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="serviceBox magenta">
+              <div class="service-icon">
+                  <i class="fa fa-briefcase"></i>
+              </div>
+              <h3 class="title">Find Your Perfect Car</h3>
+              <p class="description">Discover a wide selection of vehicles with verified histories. Whether it’s a family car, a luxury model, or a powerful truck, we help you find the best match for your needs.</p>
+          </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="serviceBox blue">
+              <div class="service-icon">
+                  <i class="fa fa-mobile"></i>
+              </div>
+              <h3 class="title">Sell Your Car with Ease</h3>
+              <p class="description">Get competitive offers for cars in any condition. Our seamless process helps you sell quickly and hassle-free.</p>
+          </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="serviceBox">
+              <div class="service-icon">
+                  <i class="fa fa-book"></i>
+              </div>
+              <h3 class="title">Learn About Your Car</h3>
+              <p class="description">Looks like a car lover! We have chosen a best platform for your reliable learning.</p>
+          </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="serviceBox orange">
+              <div class="service-icon">
+                  <i class="fa fa-users"></i>
+              </div>
+              <h3 class="title">Trusted by Thousands</h3>
+              <p class="description">Join thousands of satisfied customers who rely on our accurate, transparent, and trustworthy car services nationwide.</p>
+          </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="serviceBox magenta">
+              <div class="service-icon">
+                  <i class="fa fa-headphones"></i>
+              </div>
+              <h3 class="title">24/7 Customer Support</h3>
+              <p class="description">Our dedicated support team is available around the clock to assist with any inquiries or service issues.</p>
+          </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="serviceBox blue">
+              <div class="service-icon">
+                  <i class="fa fa-credit-card"></i>
+              </div>
+              <h3 class="title">Secure and Easy Payments</h3>
+              <p class="description">Enjoy multiple payment options with our fast, secure, and hassle-free checkout process, making every transaction worry-free.</p>
+          </div>
+      </div>
+  </div>
+</div>
 </section>
 
-    <section class="container"> <br>
-        <h2 class="section-title" style="text-transform: uppercase;"><u>Customer Testimonials</u></h2>
-        <br>
-        <p>Discover insights from our satisfied customers to help you make informed decisions. Experience our services and share your feedback to assist us in continuous improvement.</p>
-        <br>
-        <!-- Begin widget code -->
-<div data-rw-slider="45463"></div>
-<script>var script = document.createElement("script");script.type = "module";script.src = "https://widgets.revue.us/2.0/rw-widget-slider.js";document.getElementsByTagName("head")[0].appendChild(script);</script>
-<!-- End widget code --> <br>
-        
-    </section> 
-    
+<section class="container"> <br>
+  <h2 class="section-title" style="text-transform: uppercase;">Customer Testimonials</h2>
+  <br>
+  <p>Discover insights from our satisfied customers to help you make informed decisions. Experience our services and share your feedback to assist us in continuous improvement.</p>
+  <br> 
+  <script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>
+  <div class="commonninja_component pid-e8281b8f-7099-4c9f-a77a-77548e32c802"></div></section> <br>
 
-    <!--Start of Tawk.to Script-->
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../static/script.js" defer></script>
+
+<!--Start of Tawk.to Script-->
 <script type="text/javascript">
-    window.addEventListener("load", function () {
-        setTimeout(function () {
-            var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/670a5f212480f5b4f58c82b2/1ia087778';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        }, 3000); // Delay by 3 seconds
-    });
+window.addEventListener("load", function () {
+  setTimeout(function () {
+      var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/670a5f212480f5b4f58c82b2/1ia087778';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+  }, 3000); // Delay by 3 seconds
+});
 </script>
 <!--End of Tawk.to Script-->
-
-    <script src="../static/script.js" defer></script>
-
 </main>
 
-<!--footer-->
+<!-- Footer -->
 <footer>
-    <div class="footer-container">
-        <!-- Logo and Description -->
-        <div class="footer-section logo-description">
-            <img src="../static/icon.webp" alt="Auto_Inspect logo" class="footer-logo">
-            <p>We provide reliable car verification and maintenance as well as easy buying/selling services to keep your
-                vehicle in top shape. Trust us for expert advice, detailed inspections, and high-quality services.
-            </p>
+  <div class="footer-wave"></div>
+  <div class="footer-container">
+    <div class="footer-grid">
+      <!-- Logo and Description -->
+      <div class="footer-section logo-description">
+        <img src="../static/icon.webp" alt="Auto_Inspect logo" class="footer-logo">
+        <p>We provide reliable car verification and maintenance as well as easy buying/selling services to keep your
+            vehicle in top shape. Trust us for expert advice, detailed inspections, and high-quality services.</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/" class="footer-social-icon" aria-label="Facebook" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.linkedin.com/" class="footer-social-icon" aria-label="LinkedIn" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.instagram.com/" class="footer-social-icon" aria-label="Instagram" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://tawk.to/chat/670a5f212480f5b4f58c82b2/1ia087778" class="footer-social-icon" aria-label="Live Chat" target="_blank">
+            <i class="fas fa-comment-alt"></i>
+          </a>
         </div>
+      </div>
 
-        <!-- Quick Links -->
-        <div class="footer-section">
-            <h3>Quick Links</h3>
-            <ul class="footer-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-            </ul>
-        </div>
+      <!-- Quick Links -->
+      <div class="footer-section">
+        <h3 class="footer-heading">Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
 
-        <!-- Our Services -->
-        <div class="footer-section">
-            <h3>Our Services</h3>
-            <ul class="footer-links">
-                <li><a href="index.html">Vehicle Verification Report</a></li>
-                <li><a href="https://www.yourmechanic.com/book/newuser#zip" target="_blank">Maintenance & Repair</a>
-                </li>
-                <li>
-                    <a target="_blank"
-                        href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1"
-                        class="footer-action">
-                        Buy A Car
-                    </a>
-                    <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024"
-                        alt="eBay Tracking Pixel" style="display: none;">
-                </li>
-                <li><a href="car_sell.html">Sell Your Car</a></li>
-                <li><a href="https://tawk.to/chat/670a5f212480f5b4f58c82b2/1ia087778" target="_blank">24/7 Support</a>
-                </li>
-            </ul>
-        </div>
+      <!-- Our Services -->
+      <div class="footer-section">
+        <h3 class="footer-heading">Our Services</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Vehicle Verification Report</a></li>
+          <li><a href="https://www.yourmechanic.com/book/newuser#zip" target="_blank">Maintenance & Repair</a></li>
+          <li><a href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117" target="_blank">Buy A Car</a></li>
+          <li><a href="car_sell.html">Sell Your Car</a></li>
+          <li><a href="https://tawk.to/chat/670a5f212480f5b4f58c82b2/1ia087778" target="_blank">24/7 Support</a></li>
+        </ul>
+      </div>
 
-
-        <!-- Contact Info -->
-        <div class="footer-section" target="_blank">
-            <h3>Contact Us</h3>
-            <ul class="footer-links">
-                <li><a href="mailto:zanecarter.9388@gmail.com"><strong>Email:</strong>
-                        support@autoinspect.netlify.app</a></li>
-                <li><a href="tel:+1 (775) 204-1487"><strong>Phone:</strong> +1 (775) 204-1487</a></li>
-                <li><strong>Address:</strong> 23600 Mercantile Road Suite C-100 Postbox ZH008223 Beachwood OH 44122,
-                    United States</li>
-            </ul>
-            <div class="footer-socials">
-                <a href="https://www.facebook.com/" class="footer-social-icon" aria-label="Follow us on Facebook"
-                    target="_blank">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.linkedin.com/" class="footer-social-icon" aria-label="Connect with us on LinkedIn"
-                    target="_blank">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://www.instagram.com/" class="footer-social-icon" aria-label="Follow us on Instagram"
-                    target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://tawk.to/chat/670a5f212480f5b4f58c82b2/1ia087778" class="footer-social-icon"
-                    aria-label="Chat with us" target="_blank">
-                    <i class="fas fa-comment-alt"></i>
-                </a>
-            </div>
-        </div>
+      <!-- Contact Info -->
+      <div class="footer-section">
+        <h3 class="footer-heading">Contact Us</h3>
+        <ul class="footer-contact">
+          <li><i class="fas fa-envelope"></i> <a href="mailto:support@autoinspect.netlify.app">support@autoinspect.netlify.app</a></li>
+          <li><i class="fas fa-phone"></i> <a href="tel:+17752041487">+1 (775) 204-1487</a></li>
+          <li><i class="fas fa-map-marker-alt"></i> 23600 Mercantile Road, Beachwood OH 44122</li>
+        </ul>
+      </div>
     </div>
 
     <div class="footer-bottom">
-        <p>&copy; 2025 AutoInspect. All rights reserved. | <a href="policy.html">Privacy Policy</a> | <a
-                href="terms.html">Terms of Service</a></p>
-        <p class="powered-by">Powered by Netlify</p>
+      <p>&copy; 2025 AutoInspect. All rights reserved. 
+        <span class="footer-legal">
+          <a href="policy.html">Privacy Policy</a> | 
+          <a href="terms.html">Terms of Service</a>
+        </span>
+      </p>
     </div>
+  </div>
 </footer>
 
 </body>

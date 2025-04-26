@@ -36,55 +36,102 @@
     <link rel="stylesheet" href="../static/css/all.min.css">
     <link rel="stylesheet" href="../static/style.css">
     <link rel="stylesheet" href="../static/blog.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
-    <header>
+<body style="padding-top: 70px; margin: 0; background-color: #fff;">
+    <header style="height: 60px;">
         <nav class="navbar">
-            <div class="logo" style="display: flex; align-items: center;">
-                <img src="../static/icon.webp" alt="AutoInspect"
-                    style="width: 40px; height: 40px; margin-top: auto; border-radius: 50%; margin-right: 20px; filter: contrast(100%); filter: opacity(100%); pointer-events: none;">
-                <a href="index.html" style="display: flex; flex-direction: column;">
-                    <h1 style="margin: 0; font-size: 30px;">AutoInspect</h1>
-                </a>
-                <span class="powered-by" aria-hidden="true">&nbsp; | Powered by Netlify</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li class="dropdown">
-                    <a class="buy-sell" href="#">Buy/Sell</a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a target="_blank"
-                                href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1"
-                                class="dropdown-link">
-                                Buy a Car
-                            </a>
-                            <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024"
-                                alt="eBay Tracking Pixel" style="display: none;">
-                        </li>
-                        <li><a href="car_sell.html">Sell Your Car</a></li>
-                    </ul>
+          <div class="logo-container">
+            <img src="../static/icon.webp" alt="Logo">
+            <div class="logo">AutoInspect</div>
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="dropdown">
+              <a class="buy-sell" href="#">MarketPlace</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a target="_blank"
+                    href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1"
+                    class="dropdown-link">
+                    > Buy a Car
+                  </a>
+                  <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024"
+                    alt="eBay Tracking Pixel" style="display: none;">
                 </li>
-            </ul>
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
+                <li><a href="car_sell.html">> Sell Your Car</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
         </nav>
-    </header>
-
+      </header>
+  
     <script>
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('open');
-        });
-    </script>
+      // Add background color to header on scroll
+  window.addEventListener("scroll", () => {
+    const header = document.querySelector("header");
+    if (window.scrollY > 50) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
+  
+  // Toggle mobile menu
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
+  
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("open");
+    navLinks.classList.toggle("open");
+  });
+  
+  // Enhanced active link detection (works for all pages)
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get current page path (works for both .html and extensionless URLs)
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.nav-links li a');
+  
+    navLinks.forEach(link => {
+      const linkPath = link.getAttribute('href');
+      
+      // Remove .html if present for comparison
+      const cleanCurrent = currentPath.replace('.html', '');
+      const cleanLink = linkPath.replace('.html', '');
+      
+      // Set active class if paths match (with or without .html)
+      if (cleanCurrent === cleanLink || 
+          (cleanCurrent === 'index' && cleanLink === '') ||
+          (cleanCurrent === '' && cleanLink === 'index')) {
+        link.classList.add('active');
+      }
+    });
+  });
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('header');
+    const heroSection = document.querySelector('.hero-section');
+  
+    window.addEventListener('scroll', function() {
+      const heroBottom = heroSection.getBoundingClientRect().bottom;
+      
+      // Add border when header touches hero's bottom
+      if (heroBottom <= header.offsetHeight) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  });
+  </script>
 
     <div id="content-wrapper">
         <!-- Table of Contents -->
@@ -475,88 +522,74 @@
 
     <!--footer-->
     <footer>
+        <div class="footer-wave"></div>
         <div class="footer-container">
+          <div class="footer-grid">
             <!-- Logo and Description -->
             <div class="footer-section logo-description">
-                <img src="../static/icon.webp" alt="Auto_Inspect logo" class="footer-logo">
-                <p>We provide reliable car verification and maintenance as well as easy buying/selling services to keep
-                    your vehicle in top shape. Trust us for expert advice, detailed inspections, and high-quality
-                    services.
-                </p>
+              <img src="../static/icon.webp" alt="Auto_Inspect logo" class="footer-logo">
+              <p>We provide reliable car verification and maintenance as well as easy buying/selling services to keep your
+                  vehicle in top shape. Trust us for expert advice, detailed inspections, and high-quality services.</p>
+              <div class="footer-socials">
+                <a href="https://www.facebook.com/" class="footer-social-icon" aria-label="Facebook" target="_blank">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.linkedin.com/" class="footer-social-icon" aria-label="LinkedIn" target="_blank">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/" class="footer-social-icon" aria-label="Instagram" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://tawk.to/chat/670a5f212480f5b4f58c82b2/1ia087778" class="footer-social-icon" aria-label="Live Chat" target="_blank">
+                  <i class="fas fa-comment-alt"></i>
+                </a>
+              </div>
             </div>
-
+      
             <!-- Quick Links -->
             <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                </ul>
+              <h3 class="footer-heading">Quick Links</h3>
+              <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+              </ul>
             </div>
-
+      
             <!-- Our Services -->
             <div class="footer-section">
-                <h3>Our Services</h3>
-                <ul class="footer-links">
-                    <li><a href="index.html">Vehicle Verification Report</a></li>
-                    <li><a href="https://www.yourmechanic.com/book/newuser#zip" target="_blank">Maintenance & Repair</a>
-                    </li>
-                    <li>
-                        <a target="_blank"
-                            href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339089980&customid=ALLCARS2024&toolid=10001&mkevt=1"
-                            class="footer-action">
-                            Buy A Car
-                        </a>
-                        <img src="https://www.ebayadservices.com/marketingtracking/v1/impression?mpt=51194301&mkcid=1&mkrid=711-53200-19255-0&mkevt=2&siteid=0&campid=5339089980&ad_type=0&toolid=10001&customid=ALLCARS2024"
-                            alt="eBay Tracking Pixel" style="display: none;">
-                    </li>
-                    <li><a href="car_sell.html">Sell Your Car</a></li>
-                    <li><a href="https://tawk.to/chat/670a5f212480f5b4f58c82b2/1ia087778" target="_blank">24/7
-                            Support</a></li>
-                </ul>
+              <h3 class="footer-heading">Our Services</h3>
+              <ul class="footer-links">
+                <li><a href="index.html">Vehicle Verification Report</a></li>
+                <li><a href="https://www.yourmechanic.com/book/newuser#zip" target="_blank">Maintenance & Repair</a></li>
+                <li><a href="https://www.ebay.com/b/Cars-Trucks/6001/bn_1865117" target="_blank">Buy A Car</a></li>
+                <li><a href="car_sell.html">Sell Your Car</a></li>
+                <li><a href="https://tawk.to/chat/670a5f212480f5b4f58c82b2/1ia087778" target="_blank">24/7 Support</a></li>
+              </ul>
             </div>
-
-
+      
             <!-- Contact Info -->
-            <div class="footer-section" target="_blank">
-                <h3>Contact Us</h3>
-                <ul class="footer-links">
-                    <li><a href="mailto:zanecarter.9388@gmail.com"><strong>Email:</strong>
-                            support@autoinspect.netlify.app</a></li>
-                    <li><a href="tel:+1 (775) 204-1487"><strong>Phone:</strong> +1 (775) 204-1487</a></li>
-                    <li><strong>Address:</strong> 23600 Mercantile Road Suite C-100 Postbox ZH008223 Beachwood OH 44122,
-                        United States</li>
-                </ul>
-                <div class="footer-socials">
-                    <a href="https://www.facebook.com/" class="footer-social-icon" aria-label="Follow us on Facebook"
-                        target="_blank">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/" class="footer-social-icon"
-                        aria-label="Connect with us on LinkedIn" target="_blank">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://www.instagram.com/" class="footer-social-icon" aria-label="Follow us on Instagram"
-                        target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://tawk.to/chat/670a5f212480f5b4f58c82b2/1ia087778" class="footer-social-icon"
-                        aria-label="Chat with us" target="_blank">
-                        <i class="fas fa-comment-alt"></i>
-                    </a>
-                </div>
+            <div class="footer-section">
+              <h3 class="footer-heading">Contact Us</h3>
+              <ul class="footer-contact">
+                <li><i class="fas fa-envelope"></i> <a href="mailto:support@autoinspect.netlify.app">support@autoinspect.netlify.app</a></li>
+                <li><i class="fas fa-phone"></i> <a href="tel:+17752041487">+1 (775) 204-1487</a></li>
+                <li><i class="fas fa-map-marker-alt"></i> 23600 Mercantile Road, Beachwood OH 44122</li>
+              </ul>
             </div>
+          </div>
+      
+          <div class="footer-bottom">
+            <p>&copy; 2025 AutoInspect. All rights reserved. 
+              <span class="footer-legal">
+                <a href="policy.html">Privacy Policy</a> | 
+                <a href="terms.html">Terms of Service</a>
+              </span>
+            </p>
+          </div>
         </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2025 AutoInspect. All rights reserved. | <a href="policy.html">Privacy Policy</a> | <a
-                    href="terms.html">Terms of Service</a></p>
-            <p class="powered-by">Powered by Netlify</p>
-        </div>
-    </footer>
+      </footer>
 </body>
-
 </html>
