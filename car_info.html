@@ -57,6 +57,8 @@
     <!-- Analytics and JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js" defer></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3881970404399022"
+     crossorigin="anonymous"></script>
 </head>
 
 <body style="padding-top: 70px; margin: 0; background-color: #fff;">
@@ -154,26 +156,225 @@
   });
   </script>
 
-    <div class="container" id="car_info" style="margin-top: 0; max-width: 1000px;">
-        <h2 class="section-title"><u>VEHICLE DETAILS:</u></h2>
-        <div id="loading-message">Loading VIN data, please wait...</div>
-        <div id="error-message" style="display: none;">Failed to retrieve VIN data. Retrying...</div>
-        <p><strong>VIN:</strong> <span id="carVin"></span></p>
-        <p><strong>Year:</strong> <span id="carYear"></span></p>
-        <p><strong>Make:</strong> <span id="carMake"></span></p>
-        <p><strong>Model:</strong> <span id="carModel"></span></p>
-        <p><strong>Style:</strong> <span id="carStyle"></span></p>
-        <p><strong>Made In:</strong> <span id="carMadeIn"></span></p>
-        <p><strong>Fuel Type:</strong> <span id="fuelType"></span></p>
-        <p><strong>Vehicle Type:</strong> <span id="vehicleType"></span></p>
-        <p><strong>Trim Level:</strong> <span id="trimLevel"></span></p>
-        <p><strong>Engine Type:</strong> <span id="engineType"></span></p>
-        <p><strong>Transmission Type:</strong> <span id="transmissionType"></span></p>
-        <p><strong>Body Type:</strong> <span id="bodyType"></span></p>
-        <p><strong>Safety Rating:</strong> <span id="safetyRating"></span></p>
-        <button id="scrollToPremium" class="btn btn-primary" style="margin-top: 15px;"
-            aria-label="Scroll to Premium Plan Section">Get Complete Report</button>
-    </div>
+<style>
+  .vehicle-details-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.vehicle-details-header {
+    margin-bottom: 1.5rem;
+}
+
+.vehicle-details-title {
+    font-weight: 600;
+    color: #2d3748;
+    margin: 0 0 0.5rem 0;
+}
+
+.title-divider {
+    height: 3px;
+    width: 60px;
+    background: blue;
+    border-radius: 3px;
+}
+
+.vehicle-details-status {
+    margin-bottom: 1.5rem;
+    min-height: 40px;
+}
+
+.loading-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: orange;
+    font-size: 0.95rem;
+}
+
+.loading-spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(66, 153, 225, 0.2);
+    border-radius: 50%;
+    border-top-color: blue;
+    animation: spin 1s ease-in-out infinite;
+}
+
+.error-notification {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #e53e3e;
+    font-size: 0.95rem;
+    padding: 0.75rem 1rem;
+    background: #fff5f5;
+    border-radius: 8px;
+    border-left: 3px solid #e53e3e;
+}
+
+.error-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.vehicle-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.detail-label {
+    color: #626c7c;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.detail-value {
+    color: #2d3748;
+    font-weight: 500;
+    padding: 0.25rem 0;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.vehicle-details-cta {
+    display: flex;
+    justify-content: center;
+}
+
+.cta-button {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.875rem 1.75rem;
+    background: blue;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(66, 153, 225, 0.3);
+}
+
+.cta-button:hover {
+    background: orange;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(66, 153, 225, 0.3);
+}
+
+.cta-button:active {
+    transform: translateY(0);
+}
+
+.cta-icon {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+</style>
+
+<div class="vehicle-details-container" id="car_info">
+  <div class="vehicle-details-header">
+      <h2 class="vehicle-details-title">Vehicle Details</h2>
+      <div class="title-divider"></div>
+  </div>
+
+  <div class="vehicle-details-status">
+      <div id="loading-message" class="loading-indicator">
+          <div class="loading-spinner"></div>
+          <span>Retrieving vehicle information...</span>
+      </div>
+      <div id="error-message" class="error-notification">
+          <svg class="error-icon" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+          </svg>
+          <span>Failed to retrieve VIN data. Please try again shortly.</span>
+      </div>
+  </div>
+
+  <div class="vehicle-details-grid">
+      <div class="detail-item">
+          <span class="detail-label">VIN</span>
+          <span id="carVin" class="detail-value">-</span>
+      </div>
+      <div class="detail-item">
+          <span class="detail-label">Year</span>
+          <span id="carYear" class="detail-value">-</span>
+      </div>
+      <div class="detail-item">
+          <span class="detail-label">Make</span>
+          <span id="carMake" class="detail-value">-</span>
+      </div>
+      <div class="detail-item">
+          <span class="detail-label">Model</span>
+          <span id="carModel" class="detail-value">-</span>
+      </div>
+      <div class="detail-item">
+          <span class="detail-label">Style</span>
+          <span id="carStyle" class="detail-value">-</span>
+      </div>
+      <div class="detail-item">
+          <span class="detail-label">Manufactured In</span>
+          <span id="carMadeIn" class="detail-value">-</span>
+      </div>
+      <div class="detail-item">
+          <span class="detail-label">Fuel Type</span>
+          <span id="fuelType" class="detail-value">-</span>
+      </div>
+      <div class="detail-item">
+          <span class="detail-label">Vehicle Type</span>
+          <span id="vehicleType" class="detail-value">-</span>
+      </div>
+      <div class="detail-item">
+          <span class="detail-label">Trim Level</span>
+          <span id="trimLevel" class="detail-value">-</span>
+      </div>
+      <div class="detail-item">
+          <span class="detail-label">Engine</span>
+          <span id="engineType" class="detail-value">-</span>
+      </div>
+      <div class="detail-item">
+          <span class="detail-label">Transmission</span>
+          <span id="transmissionType" class="detail-value">-</span>
+      </div>
+      <div class="detail-item">
+          <span class="detail-label">Body Type</span>
+          <span id="bodyType" class="detail-value">-</span>
+      </div>
+      <div class="detail-item">
+          <span class="detail-label">Safety Rating</span>
+          <span id="safetyRating" class="detail-value">-</span>
+      </div>
+  </div>
+
+  <div class="vehicle-details-cta">
+      <button id="scrollToPremium" class="cta-button" aria-label="Get complete vehicle report">
+          <span>Get Complete Vehicle Report</span>
+          <svg class="cta-icon" viewBox="0 0 24 24">
+              <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+          </svg>
+      </button>
+  </div>
+</div>
 
     <script>
         document.addEventListener("DOMContentLoaded", async () => {
